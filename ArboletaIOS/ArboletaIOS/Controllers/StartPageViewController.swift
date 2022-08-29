@@ -33,11 +33,15 @@ class StartPageViewController: UIViewController {
             personCard9
         ]
         
-        // add rounded corners, and a white border
-        for person in personCards {
-            person!.layer.cornerRadius = (person?.frame.size.height)! / 10
-            person!.layer.borderWidth = (person?.frame.size.height)! / 80
-            person!.layer.borderColor = UIColor.white.cgColor
-        }
+        PersonCard().AddRoundBorder(cards: personCards)
     }
+    
+    @IBAction func loginButton(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "startPageToLogIn", sender: self)
+    }
+    
+    @IBAction func signupButton(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "startPageToSignUp", sender: self)
+    }
+    
 }

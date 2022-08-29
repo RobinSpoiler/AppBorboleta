@@ -1,5 +1,5 @@
 //
-//  SignUpViewController.swift
+//  LogInViewController.swift
 //  ArboletaIOS
 //
 //  Created by Jorge Delgado on 28/08/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class LogInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,8 +15,8 @@ class SignUpViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func logInButton(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "signUpToLogIn", sender: self)
+    @IBAction func signUpButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "logInToSignUp", sender: self)
     }
     
     /*

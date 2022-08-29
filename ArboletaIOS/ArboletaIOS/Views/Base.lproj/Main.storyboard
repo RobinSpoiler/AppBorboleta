@@ -169,6 +169,9 @@
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Already have an account? Log in"/>
+                                                <connections>
+                                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mFW-hI-VM5"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3p-lB-TWv">
                                                 <rect key="frame" x="20" y="294" width="374" height="50"/>
@@ -180,6 +183,9 @@
                                                 <buttonConfiguration key="configuration" style="filled" title="Join now" cornerStyle="medium">
                                                     <color key="baseForegroundColor" red="0.59999999999999998" green="0.28627450980000002" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="signupButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jNZ-c4-Weo"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -224,6 +230,8 @@
                         <outlet property="personCard7" destination="I5p-ZN-c2r" id="9z2-x7-2c3"/>
                         <outlet property="personCard8" destination="S8P-h5-bPc" id="mqW-Jv-QLV"/>
                         <outlet property="personCard9" destination="GkH-w0-UsE" id="1Fn-gE-baa"/>
+                        <segue destination="kJ9-Zo-GTj" kind="presentation" identifier="startPageToSignUp" modalPresentationStyle="fullScreen" id="sB7-qx-xXs"/>
+                        <segue destination="omN-ge-9UH" kind="presentation" identifier="startPageToLogIn" modalPresentationStyle="fullScreen" id="55o-C3-HzA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -245,10 +253,13 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icc-UD-YhL">
-                                <rect key="frame" x="90.5" y="831" width="233" height="31"/>
+                                <rect key="frame" x="90.5" y="835" width="233" height="31"/>
                                 <color key="tintColor" red="0.035294117647058823" green="0.1764705882352941" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Already have an account? Log in"/>
+                                <connections>
+                                    <action selector="logInButton:" destination="kJ9-Zo-GTj" eventType="touchUpInside" id="6r3-Cy-aLm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dSA-dW-Was"/>
@@ -256,20 +267,23 @@
                         <constraints>
                             <constraint firstItem="qjv-Ob-AE9" firstAttribute="top" secondItem="dSA-dW-Was" secondAttribute="top" constant="40" id="5xX-OU-j8n"/>
                             <constraint firstItem="qjv-Ob-AE9" firstAttribute="leading" secondItem="dSA-dW-Was" secondAttribute="leading" constant="60" id="7b4-jJ-zcz"/>
+                            <constraint firstAttribute="bottom" secondItem="icc-UD-YhL" secondAttribute="bottom" constant="30" id="QEo-xK-esJ"/>
                             <constraint firstItem="dSA-dW-Was" firstAttribute="trailing" secondItem="qjv-Ob-AE9" secondAttribute="trailing" constant="60" id="XZd-ez-pIE"/>
                             <constraint firstItem="icc-UD-YhL" firstAttribute="centerX" secondItem="chg-VS-dvr" secondAttribute="centerX" id="bO5-U1-pZ6"/>
-                            <constraint firstItem="icc-UD-YhL" firstAttribute="bottom" secondItem="dSA-dW-Was" secondAttribute="bottom" id="f1n-wc-dVB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="omN-ge-9UH" kind="presentation" identifier="signUpToLogIn" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="SU2-bv-8Qm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jqJ-QX-WGx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="800.00000000000011" y="70.982142857142847"/>
+            <point key="canvasLocation" x="828" y="-272"/>
         </scene>
         <!--Log in-->
         <scene sceneID="SJb-Wm-yDu">
             <objects>
-                <viewController title="Log in" id="omN-ge-9UH" sceneMemberID="viewController">
+                <viewController title="Log in" id="omN-ge-9UH" customClass="LogInViewController" customModule="ArboletaIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Epz-nq-E51">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -281,10 +295,13 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjN-VV-D47">
-                                <rect key="frame" x="93" y="831" width="228" height="31"/>
+                                <rect key="frame" x="93" y="835" width="228" height="31"/>
                                 <color key="tintColor" red="0.035294117647058823" green="0.1764705882352941" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Don't have an account? Sign up"/>
+                                <connections>
+                                    <action selector="signUpButton:" destination="omN-ge-9UH" eventType="touchUpInside" id="BwZ-Lh-eQj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fK5-Vu-o8v"/>
@@ -292,18 +309,26 @@
                         <constraints>
                             <constraint firstItem="3fe-Iq-EnO" firstAttribute="top" secondItem="fK5-Vu-o8v" secondAttribute="top" constant="40" id="4zS-IY-T48"/>
                             <constraint firstItem="fK5-Vu-o8v" firstAttribute="trailing" secondItem="3fe-Iq-EnO" secondAttribute="trailing" constant="60" id="Gdb-Z0-I3G"/>
+                            <constraint firstAttribute="bottom" secondItem="fjN-VV-D47" secondAttribute="bottom" constant="30" id="Tvp-F6-4Si"/>
                             <constraint firstItem="3fe-Iq-EnO" firstAttribute="width" secondItem="3fe-Iq-EnO" secondAttribute="height" multiplier="10:3" id="mrG-Xh-PwT"/>
                             <constraint firstItem="3fe-Iq-EnO" firstAttribute="leading" secondItem="fK5-Vu-o8v" secondAttribute="leading" constant="60" id="rRb-La-NGj"/>
                             <constraint firstItem="fjN-VV-D47" firstAttribute="centerX" secondItem="Epz-nq-E51" secondAttribute="centerX" id="rbn-cp-PZq"/>
-                            <constraint firstItem="fK5-Vu-o8v" firstAttribute="bottom" secondItem="fjN-VV-D47" secondAttribute="bottom" id="tXB-18-nbF"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="a1y-OG-yL6"/>
+                    <connections>
+                        <segue destination="kJ9-Zo-GTj" kind="presentation" identifier="logInToSignUp" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="ir0-2u-Eli"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fVP-c0-zyJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1545" y="78"/>
+            <point key="canvasLocation" x="828" y="443"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="SU2-bv-8Qm"/>
+        <segue reference="ir0-2u-Eli"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="BORBOLETA_LOGOTIPO-3" width="1660" height="428"/>
         <image name="person1" width="540" height="360"/>

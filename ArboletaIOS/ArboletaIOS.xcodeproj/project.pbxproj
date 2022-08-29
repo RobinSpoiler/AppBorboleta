@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9036109D28BC54EB00BEC28A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036109C28BC54EB00BEC28A /* SignUpViewController.swift */; };
 		90B6C0E528BA9AC300E2B5E5 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B6C0E428BA9AC300E2B5E5 /* GradientView.swift */; };
+		90CCDBFA28BC86AA00FF56C0 /* PersonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CCDBF928BC86AA00FF56C0 /* PersonCard.swift */; };
+		90CCDBFC28BC8FF700FF56C0 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CCDBFB28BC8FF700FF56C0 /* LogInViewController.swift */; };
 		90F3CAEC28B47C3A00163B21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3CAEB28B47C3A00163B21 /* AppDelegate.swift */; };
 		90F3CAEE28B47C3A00163B21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3CAED28B47C3A00163B21 /* SceneDelegate.swift */; };
 		90F3CAF028B47C3A00163B21 /* StartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3CAEF28B47C3A00163B21 /* StartPageViewController.swift */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		9036109C28BC54EB00BEC28A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		90B6C0E428BA9AC300E2B5E5 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		90CCDBF928BC86AA00FF56C0 /* PersonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCard.swift; sourceTree = "<group>"; };
+		90CCDBFB28BC8FF700FF56C0 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		90F3CAE828B47C3A00163B21 /* ArboletaIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArboletaIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F3CAEB28B47C3A00163B21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90F3CAED28B47C3A00163B21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +50,7 @@
 			children = (
 				90F3CAEF28B47C3A00163B21 /* StartPageViewController.swift */,
 				9036109C28BC54EB00BEC28A /* SignUpViewController.swift */,
+				90CCDBFB28BC8FF700FF56C0 /* LogInViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -61,9 +66,8 @@
 		903610A028BC555C00BEC28A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				90F3CAEB28B47C3A00163B21 /* AppDelegate.swift */,
 				90B6C0E428BA9AC300E2B5E5 /* GradientView.swift */,
-				90F3CAED28B47C3A00163B21 /* SceneDelegate.swift */,
+				90CCDBF928BC86AA00FF56C0 /* PersonCard.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -87,6 +91,8 @@
 		90F3CAEA28B47C3A00163B21 /* ArboletaIOS */ = {
 			isa = PBXGroup;
 			children = (
+				90F3CAEB28B47C3A00163B21 /* AppDelegate.swift */,
+				90F3CAED28B47C3A00163B21 /* SceneDelegate.swift */,
 				903610A028BC555C00BEC28A /* Models */,
 				9036109F28BC553F00BEC28A /* Views */,
 				9036109E28BC551100BEC28A /* Controllers */,
@@ -169,7 +175,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				90F3CAF028B47C3A00163B21 /* StartPageViewController.swift in Sources */,
+				90CCDBFA28BC86AA00FF56C0 /* PersonCard.swift in Sources */,
 				90B6C0E528BA9AC300E2B5E5 /* GradientView.swift in Sources */,
+				90CCDBFC28BC8FF700FF56C0 /* LogInViewController.swift in Sources */,
 				90F3CAEC28B47C3A00163B21 /* AppDelegate.swift in Sources */,
 				90F3CAEE28B47C3A00163B21 /* SceneDelegate.swift in Sources */,
 				9036109D28BC54EB00BEC28A /* SignUpViewController.swift in Sources */,
