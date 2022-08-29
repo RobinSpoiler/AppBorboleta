@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9036109D28BC54EB00BEC28A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036109C28BC54EB00BEC28A /* SignUpViewController.swift */; };
 		90B6C0E528BA9AC300E2B5E5 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B6C0E428BA9AC300E2B5E5 /* GradientView.swift */; };
 		90B6C0FA28BAA21700E2B5E5 /* Poppins-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 90B6C0E728BAA21700E2B5E5 /* Poppins-SemiBoldItalic.otf */; };
 		90B6C0FB28BAA21700E2B5E5 /* Poppins-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 90B6C0E828BAA21700E2B5E5 /* Poppins-ExtraBoldItalic.otf */; };
@@ -29,13 +30,14 @@
 		90B6C10C28BAA21700E2B5E5 /* Poppins-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 90B6C0F928BAA21700E2B5E5 /* Poppins-ExtraBold.otf */; };
 		90F3CAEC28B47C3A00163B21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3CAEB28B47C3A00163B21 /* AppDelegate.swift */; };
 		90F3CAEE28B47C3A00163B21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3CAED28B47C3A00163B21 /* SceneDelegate.swift */; };
-		90F3CAF028B47C3A00163B21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3CAEF28B47C3A00163B21 /* ViewController.swift */; };
+		90F3CAF028B47C3A00163B21 /* StartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3CAEF28B47C3A00163B21 /* StartPageViewController.swift */; };
 		90F3CAF328B47C3A00163B21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F3CAF128B47C3A00163B21 /* Main.storyboard */; };
 		90F3CAF528B47C3C00163B21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F3CAF428B47C3C00163B21 /* Assets.xcassets */; };
 		90F3CAF828B47C3C00163B21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F3CAF628B47C3C00163B21 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9036109C28BC54EB00BEC28A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		90B6C0E428BA9AC300E2B5E5 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		90B6C0E728BAA21700E2B5E5 /* Poppins-SemiBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.otf"; sourceTree = "<group>"; };
 		90B6C0E828BAA21700E2B5E5 /* Poppins-ExtraBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBoldItalic.otf"; sourceTree = "<group>"; };
@@ -59,7 +61,7 @@
 		90F3CAE828B47C3A00163B21 /* ArboletaIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArboletaIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F3CAEB28B47C3A00163B21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90F3CAED28B47C3A00163B21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		90F3CAEF28B47C3A00163B21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		90F3CAEF28B47C3A00163B21 /* StartPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPageViewController.swift; sourceTree = "<group>"; };
 		90F3CAF228B47C3A00163B21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90F3CAF428B47C3C00163B21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90F3CAF728B47C3C00163B21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,6 +79,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9036109E28BC551100BEC28A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				90F3CAEF28B47C3A00163B21 /* StartPageViewController.swift */,
+				9036109C28BC54EB00BEC28A /* SignUpViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9036109F28BC553F00BEC28A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				90F3CAF128B47C3A00163B21 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		903610A028BC555C00BEC28A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				90F3CAEB28B47C3A00163B21 /* AppDelegate.swift */,
+				90B6C0E428BA9AC300E2B5E5 /* GradientView.swift */,
+				90F3CAED28B47C3A00163B21 /* SceneDelegate.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		90B6C0E628BAA21700E2B5E5 /* poppins */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,15 +151,13 @@
 		90F3CAEA28B47C3A00163B21 /* ArboletaIOS */ = {
 			isa = PBXGroup;
 			children = (
+				903610A028BC555C00BEC28A /* Models */,
+				9036109F28BC553F00BEC28A /* Views */,
 				90B6C0E628BAA21700E2B5E5 /* poppins */,
-				90F3CAEB28B47C3A00163B21 /* AppDelegate.swift */,
-				90F3CAED28B47C3A00163B21 /* SceneDelegate.swift */,
-				90F3CAEF28B47C3A00163B21 /* ViewController.swift */,
-				90F3CAF128B47C3A00163B21 /* Main.storyboard */,
+				9036109E28BC551100BEC28A /* Controllers */,
 				90F3CAF428B47C3C00163B21 /* Assets.xcassets */,
 				90F3CAF628B47C3C00163B21 /* LaunchScreen.storyboard */,
 				90F3CAF928B47C3C00163B21 /* Info.plist */,
-				90B6C0E428BA9AC300E2B5E5 /* GradientView.swift */,
 			);
 			path = ArboletaIOS;
 			sourceTree = "<group>";
@@ -225,10 +252,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90F3CAF028B47C3A00163B21 /* ViewController.swift in Sources */,
+				90F3CAF028B47C3A00163B21 /* StartPageViewController.swift in Sources */,
 				90B6C0E528BA9AC300E2B5E5 /* GradientView.swift in Sources */,
 				90F3CAEC28B47C3A00163B21 /* AppDelegate.swift in Sources */,
 				90F3CAEE28B47C3A00163B21 /* SceneDelegate.swift in Sources */,
+				9036109D28BC54EB00BEC28A /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

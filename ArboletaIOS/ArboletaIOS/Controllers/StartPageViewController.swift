@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class StartPageViewController: UIViewController {
 
     @IBOutlet weak var personCard1: UIImageView!
     @IBOutlet weak var personCard2: UIImageView!
