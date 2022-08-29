@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "8B1817BA-C000-438D-8269-916FF1976A42"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "27A68631-9686-4806-A459-C2E8AB11D006"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ArboletaIOS/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "27A68631-9686-4806-A459-C2E8AB11D006 - 54b4795714b36242"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ArboletaIOS.ViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; ArboletaIOS.ViewController"
+                  moduleName = "ArboletaIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jorgedel/Desktop/AppBorboleta/ArboletaIOS/ArboletaIOS/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "27A68631-9686-4806-A459-C2E8AB11D006 - 3693fb277568e784"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ArboletaIOS.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; ArboletaIOS.ViewController"
+                  moduleName = "ArboletaIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jorgedel/Desktop/AppBorboleta/ArboletaIOS/ArboletaIOS/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "256">
+               </Location>
+               <Location
+                  uuid = "27A68631-9686-4806-A459-C2E8AB11D006 - 37a566803861911"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ArboletaIOS.ViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;ArboletaIOS.ViewController&gt;"
+                  moduleName = "ArboletaIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jorgedel/Desktop/AppBorboleta/ArboletaIOS/ArboletaIOS/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "27A68631-9686-4806-A459-C2E8AB11D006 - c8fb6b37d64a9d91"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ArboletaIOS.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;ArboletaIOS.ViewController&gt;"
+                  moduleName = "ArboletaIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jorgedel/Desktop/AppBorboleta/ArboletaIOS/ArboletaIOS/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "27A68631-9686-4806-A459-C2E8AB11D006 - 993455897d7844d1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ArboletaIOS.ViewController.__deallocating_deinit"
+                  moduleName = "ArboletaIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jorgedel/Desktop/AppBorboleta/ArboletaIOS/ArboletaIOS/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2FC4BC6D-5CB1-46FE-A35D-FC19CCA0BF3A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ArboletaIOS/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
