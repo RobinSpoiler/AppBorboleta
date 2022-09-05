@@ -19,8 +19,13 @@ class StartPageViewController: UIViewController {
     @IBOutlet weak var personCard8: UIImageView!
     @IBOutlet weak var personCard9: UIImageView!
     
+    @IBOutlet weak var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loginButton.tintColor = UIColor.white
+        
         let personCards = [
             personCard1,
             personCard2,

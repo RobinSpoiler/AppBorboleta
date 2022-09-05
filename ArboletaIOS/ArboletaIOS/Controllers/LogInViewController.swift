@@ -9,10 +9,11 @@ import UIKit
 
 class LogInViewController: UIViewController {
 
+    @IBOutlet weak var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        loginButton.tintColor = UIColor.systemGray6
     }
     
     @IBAction func signUpButton(_ sender: Any) {
