@@ -20,6 +20,9 @@ class LogInViewController: UIViewController {
         self.performSegue(withIdentifier: "logInToSignUp", sender: self)
     }
     
+    @IBAction func goToFeed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "logInToFeed", sender: self)
+    }
     /*
     // MARK: - Navigation
 

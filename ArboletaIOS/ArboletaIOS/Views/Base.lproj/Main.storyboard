@@ -237,7 +237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="44.927536231884062" y="69.642857142857139"/>
+            <point key="canvasLocation" x="1314" y="-843"/>
         </scene>
         <!--Sign up-->
         <scene sceneID="Vrp-2D-E0z">
@@ -325,6 +325,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Sign up">
                                     <color key="baseForegroundColor" red="0.59999999999999998" green="0.14117647059999999" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToFeed:" destination="kJ9-Zo-GTj" eventType="touchUpInside" id="O5f-mk-bVC"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K62-cZ-kun">
                                 <rect key="frame" x="84" y="386" width="139" height="21"/>
@@ -431,11 +434,12 @@
                     <connections>
                         <outlet property="signUpButton" destination="rmW-Vr-Vll" id="uah-a0-sb6"/>
                         <segue destination="omN-ge-9UH" kind="presentation" identifier="signUpToLogIn" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="SU2-bv-8Qm"/>
+                        <segue destination="x58-kC-dj3" kind="presentation" identifier="signupToFeed" id="p0s-cQ-RAj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jqJ-QX-WGx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="826.875" y="-272.53521126760563"/>
+            <point key="canvasLocation" x="1686" y="-93"/>
         </scene>
         <!--Log in-->
         <scene sceneID="SJb-Wm-yDu">
@@ -519,6 +523,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Log in">
                                     <color key="baseForegroundColor" red="0.59999999999999998" green="0.14117647059999999" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToFeed:" destination="omN-ge-9UH" eventType="touchUpInside" id="Srq-gl-qeo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fK5-Vu-o8v"/>
@@ -563,22 +570,161 @@
                     <connections>
                         <outlet property="loginButton" destination="YBE-T8-qIJ" id="zAN-tz-CLU"/>
                         <segue destination="kJ9-Zo-GTj" kind="presentation" identifier="logInToSignUp" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="ir0-2u-Eli"/>
+                        <segue destination="x58-kC-dj3" kind="presentation" identifier="logInToFeed" id="BnC-Ni-maG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fVP-c0-zyJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828" y="437"/>
+            <point key="canvasLocation" x="939" y="-92"/>
+        </scene>
+        <!--Favorites Feed-->
+        <scene sceneID="z7q-r8-OL6">
+            <objects>
+                <viewController id="eV0-vM-gKY" userLabel="Favorites Feed" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9iM-PY-ZeV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="item 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghz-JO-yis">
+                                <rect key="frame" x="136" y="273.5" width="48" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="x1V-Mr-Zbq"/>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.28627450980000002" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ghz-JO-yis" firstAttribute="centerX" secondItem="9iM-PY-ZeV" secondAttribute="centerX" id="CiC-NS-wRB"/>
+                            <constraint firstItem="ghz-JO-yis" firstAttribute="centerY" secondItem="9iM-PY-ZeV" secondAttribute="centerY" id="bL2-28-f8j"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="heart" catalog="system" selectedImage="heart" id="dMj-0D-iRW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wH4-kz-jpt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="966" y="1510"/>
+        </scene>
+        <!--Home Feed-->
+        <scene sceneID="Fgm-up-d52">
+            <objects>
+                <viewController id="hO5-js-X95" userLabel="Home Feed" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1pT-fA-VmT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="item1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilI-O2-8xM">
+                                <rect key="frame" x="140" y="273.5" width="40" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2vr-DL-TeZ"/>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.28627450980000002" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ilI-O2-8xM" firstAttribute="centerY" secondItem="1pT-fA-VmT" secondAttribute="centerY" id="HIh-fs-KZ3"/>
+                            <constraint firstItem="ilI-O2-8xM" firstAttribute="centerX" secondItem="1pT-fA-VmT" secondAttribute="centerX" id="L7z-vH-EuU"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" image="house" catalog="system" selectedImage="house" id="Gc7-fg-2VK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="844-1f-UeX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="218" y="1511"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="Op9-6D-FSa">
+            <objects>
+                <tabBarController modalPresentationStyle="fullScreen" id="x58-kC-dj3" userLabel="Feed" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="p4N-EX-aY9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.59999999999999998" green="0.14117647059999999" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="hO5-js-X95" kind="relationship" relationship="viewControllers" id="MGP-IK-y5g"/>
+                        <segue destination="eV0-vM-gKY" kind="relationship" relationship="viewControllers" id="1ZT-E5-bW9"/>
+                        <segue destination="8Nj-h8-4Oi" kind="relationship" relationship="viewControllers" id="7ZI-yV-743"/>
+                        <segue destination="7ca-8s-MKO" kind="relationship" relationship="viewControllers" id="a7g-e5-CxW"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jys-z3-pVG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1313" y="695"/>
+        </scene>
+        <!--Chat Feed-->
+        <scene sceneID="Z9i-dK-POJ">
+            <objects>
+                <viewController id="8Nj-h8-4Oi" userLabel="Chat Feed" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fV0-bW-6sj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="item 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O84-Kt-0hl">
+                                <rect key="frame" x="136" y="273.5" width="48" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oyc-TW-bt4"/>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.28627450980000002" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="O84-Kt-0hl" firstAttribute="centerY" secondItem="fV0-bW-6sj" secondAttribute="centerY" id="Yrz-wM-whT"/>
+                            <constraint firstItem="O84-Kt-0hl" firstAttribute="centerX" secondItem="fV0-bW-6sj" secondAttribute="centerX" id="bAn-qu-Ml6"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="bubble.right" catalog="system" selectedImage="bubble.right" id="wtq-YP-XnX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oWN-lo-JT1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1688" y="1510"/>
+        </scene>
+        <!--Profile Feed-->
+        <scene sceneID="qqO-9l-WYB">
+            <objects>
+                <viewController id="7ca-8s-MKO" userLabel="Profile Feed" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sns-1z-SyQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="item 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irM-6S-FMQ">
+                                <rect key="frame" x="136" y="273.5" width="48" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XcJ-0C-rA2"/>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.28627450980000002" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="irM-6S-FMQ" firstAttribute="centerY" secondItem="sns-1z-SyQ" secondAttribute="centerY" id="MOi-C4-YiM"/>
+                            <constraint firstItem="irM-6S-FMQ" firstAttribute="centerX" secondItem="sns-1z-SyQ" secondAttribute="centerX" id="iYg-7n-ekH"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="person.circle.fill" catalog="system" selectedImage="person.circle.fill" id="01y-nJ-FkS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mgj-Zp-zqW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2409" y="1510"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="p0s-cQ-RAj"/>
         <segue reference="SU2-bv-8Qm"/>
         <segue reference="ir0-2u-Eli"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BORBOLETA_LOGOTIPO-3" width="1660" height="428"/>
+        <image name="bubble.right" catalog="system" width="128" height="110"/>
         <image name="envelope" catalog="system" width="128" height="93"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="house" catalog="system" width="128" height="106"/>
         <image name="lock.fill" catalog="system" width="128" height="128"/>
         <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person1" width="540" height="360"/>
         <image name="person2" width="520" height="347"/>
         <image name="person3" width="1000" height="1500"/>

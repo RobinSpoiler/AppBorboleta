@@ -13,13 +13,17 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         signUpButton.tintColor = UIColor.systemGray6
     }
     
     @IBAction func logInButton(_ sender: UIButton) {
         self.performSegue(withIdentifier: "signUpToLogIn", sender: self)
     }
+    
+    @IBAction func goToFeed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "signupToFeed", sender: self)
+    }
+    
     
     /*
     // MARK: - Navigation

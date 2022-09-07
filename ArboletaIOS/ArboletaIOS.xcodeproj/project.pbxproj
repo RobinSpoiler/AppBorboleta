@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9036109D28BC54EB00BEC28A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036109C28BC54EB00BEC28A /* SignUpViewController.swift */; };
 		90B6C0E528BA9AC300E2B5E5 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B6C0E428BA9AC300E2B5E5 /* GradientView.swift */; };
+		90BB7C3D28C852ED007CF0B1 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BB7C3C28C852ED007CF0B1 /* FeedViewController.swift */; };
 		90CCDBFA28BC86AA00FF56C0 /* PersonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CCDBF928BC86AA00FF56C0 /* PersonCard.swift */; };
 		90CCDBFC28BC8FF700FF56C0 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CCDBFB28BC8FF700FF56C0 /* LogInViewController.swift */; };
 		90F3CAEC28B47C3A00163B21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3CAEB28B47C3A00163B21 /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		9036109C28BC54EB00BEC28A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		90B6C0E428BA9AC300E2B5E5 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		90BB7C3C28C852ED007CF0B1 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		90CCDBF928BC86AA00FF56C0 /* PersonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCard.swift; sourceTree = "<group>"; };
 		90CCDBFB28BC8FF700FF56C0 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		90F3CAE828B47C3A00163B21 /* ArboletaIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArboletaIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +53,7 @@
 				90F3CAEF28B47C3A00163B21 /* StartPageViewController.swift */,
 				9036109C28BC54EB00BEC28A /* SignUpViewController.swift */,
 				90CCDBFB28BC8FF700FF56C0 /* LogInViewController.swift */,
+				90BB7C3C28C852ED007CF0B1 /* FeedViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				90CCDBFC28BC8FF700FF56C0 /* LogInViewController.swift in Sources */,
 				90F3CAEC28B47C3A00163B21 /* AppDelegate.swift in Sources */,
 				90F3CAEE28B47C3A00163B21 /* SceneDelegate.swift in Sources */,
+				90BB7C3D28C852ED007CF0B1 /* FeedViewController.swift in Sources */,
 				9036109D28BC54EB00BEC28A /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
