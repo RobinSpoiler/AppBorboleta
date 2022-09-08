@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		901D8E2428CA69E600B5E75B /* SuccessProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901D8E2328CA69E600B5E75B /* SuccessProfileViewController.swift */; };
 		901D8E2628CA6AD100B5E75B /* MatchesSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901D8E2528CA6AD100B5E75B /* MatchesSelectViewController.swift */; };
+		901D8E2828CA72B500B5E75B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901D8E2728CA72B500B5E75B /* ChatViewController.swift */; };
 		9036109D28BC54EB00BEC28A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036109C28BC54EB00BEC28A /* SignUpViewController.swift */; };
 		9081A62628CA3F270003A350 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9081A62528CA3F270003A350 /* MatchesViewController.swift */; };
 		9081A62828CA40890003A350 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9081A62728CA40890003A350 /* ProfileViewController.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		901D8E2328CA69E600B5E75B /* SuccessProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessProfileViewController.swift; sourceTree = "<group>"; };
 		901D8E2528CA6AD100B5E75B /* MatchesSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesSelectViewController.swift; sourceTree = "<group>"; };
+		901D8E2728CA72B500B5E75B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		9036109C28BC54EB00BEC28A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9081A62528CA3F270003A350 /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		9081A62728CA40890003A350 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				9081A62728CA40890003A350 /* ProfileViewController.swift */,
 				901D8E2328CA69E600B5E75B /* SuccessProfileViewController.swift */,
 				901D8E2528CA6AD100B5E75B /* MatchesSelectViewController.swift */,
+				901D8E2728CA72B500B5E75B /* ChatViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				9081A62628CA3F270003A350 /* MatchesViewController.swift in Sources */,
 				90CCDBFC28BC8FF700FF56C0 /* LogInViewController.swift in Sources */,
 				90F3CAEC28B47C3A00163B21 /* AppDelegate.swift in Sources */,
+				901D8E2828CA72B500B5E75B /* ChatViewController.swift in Sources */,
 				90F3CAEE28B47C3A00163B21 /* SceneDelegate.swift in Sources */,
 				90BB7C3D28C852ED007CF0B1 /* FeedViewController.swift in Sources */,
 				9036109D28BC54EB00BEC28A /* SignUpViewController.swift in Sources */,

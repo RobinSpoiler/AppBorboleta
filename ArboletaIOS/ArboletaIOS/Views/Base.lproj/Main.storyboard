@@ -677,7 +677,6 @@ PREGERENCES</string>
         <!--View Controller-->
         <scene sceneID="O52-AP-Yts">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="a5V-0f-Wwv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="X4a-45-Ysb" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lC6-yt-C8Z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -686,6 +685,7 @@ PREGERENCES</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a5V-0f-Wwv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="950" y="2973"/>
         </scene>
@@ -746,30 +746,95 @@ PREGERENCES</string>
         <!--Chat Feed-->
         <scene sceneID="Z9i-dK-POJ">
             <objects>
-                <viewController id="8Nj-h8-4Oi" userLabel="Chat Feed" sceneMemberID="viewController">
+                <viewController id="8Nj-h8-4Oi" userLabel="Chat Feed" customClass="ChatViewController" customModule="ArboletaIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fV0-bW-6sj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="item 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O84-Kt-0hl">
-                                <rect key="frame" x="183" y="437.5" width="48" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHATS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uM4-dc-u5r">
+                                <rect key="frame" x="32" y="75.5" width="99" height="35.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <color key="textColor" red="0.035294117649999998" green="0.1764705882" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="square.and.pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Mu6-cz-Y3X">
+                                <rect key="frame" x="352" y="76" width="32" height="33"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="eEJ-84-du1"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" background="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="WkK-hv-MGf">
+                                <rect key="frame" x="32" y="140" width="352" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="gnf-5h-ibZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="i2I-yy-dsE">
+                                <rect key="frame" x="39" y="149.5" width="21" height="20"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="msgs" translatesAutoresizingMaskIntoConstraints="NO" id="gWT-5N-WFe">
+                                <rect key="frame" x="16" y="173" width="382" height="640"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzq-st-f4E">
+                                <rect key="frame" x="39" y="259" width="355" height="14"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="gotoChat:" destination="8Nj-h8-4Oi" eventType="touchUpInside" id="3be-qq-wn5"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="msg" translatesAutoresizingMaskIntoConstraints="NO" id="RNm-sp-L2C">
+                                <rect key="frame" x="-87" y="76" width="581" height="737"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPB-EX-gle">
+                                <rect key="frame" x="22" y="110" width="67" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="Rb5-9R-WsI"/>
+                                    <constraint firstAttribute="height" constant="31" id="YzD-5n-O3r"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="gotoMessages:" destination="8Nj-h8-4Oi" eventType="touchUpInside" id="fHN-8X-AuK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oyc-TW-bt4"/>
-                        <color key="backgroundColor" name="FeedBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="O84-Kt-0hl" firstAttribute="centerY" secondItem="fV0-bW-6sj" secondAttribute="centerY" id="Yrz-wM-whT"/>
-                            <constraint firstItem="O84-Kt-0hl" firstAttribute="centerX" secondItem="fV0-bW-6sj" secondAttribute="centerX" id="bAn-qu-Ml6"/>
+                            <constraint firstItem="Jzq-st-f4E" firstAttribute="leading" secondItem="oyc-TW-bt4" secondAttribute="leading" constant="39" id="1hL-f2-gvw"/>
+                            <constraint firstItem="WkK-hv-MGf" firstAttribute="top" secondItem="uM4-dc-u5r" secondAttribute="bottom" constant="29" id="7qu-Gl-yoM"/>
+                            <constraint firstItem="WkK-hv-MGf" firstAttribute="leading" secondItem="uM4-dc-u5r" secondAttribute="leading" id="FzM-gy-d3Q"/>
+                            <constraint firstItem="Jzq-st-f4E" firstAttribute="trailing" secondItem="fV0-bW-6sj" secondAttribute="trailingMargin" id="LrY-Ye-LHb"/>
+                            <constraint firstItem="Jzq-st-f4E" firstAttribute="top" secondItem="WkK-hv-MGf" secondAttribute="bottom" constant="79" id="PrE-s3-x3m"/>
+                            <constraint firstItem="Mu6-cz-Y3X" firstAttribute="centerY" secondItem="uM4-dc-u5r" secondAttribute="centerY" id="Uja-03-BHT"/>
+                            <constraint firstItem="Jzq-st-f4E" firstAttribute="leading" secondItem="i2I-yy-dsE" secondAttribute="leading" id="W9x-Dh-Z9d"/>
+                            <constraint firstItem="bPB-EX-gle" firstAttribute="leading" secondItem="oyc-TW-bt4" secondAttribute="leading" constant="22" id="g1F-u9-ea5"/>
+                            <constraint firstItem="bPB-EX-gle" firstAttribute="top" secondItem="oyc-TW-bt4" secondAttribute="top" constant="66" id="gii-fs-frc"/>
+                            <constraint firstItem="oyc-TW-bt4" firstAttribute="trailing" secondItem="WkK-hv-MGf" secondAttribute="trailing" constant="30" id="hAt-8U-TM5"/>
+                            <constraint firstItem="WkK-hv-MGf" firstAttribute="top" secondItem="Mu6-cz-Y3X" secondAttribute="bottom" constant="29.5" id="hgO-8R-I0i"/>
+                            <constraint firstItem="WkK-hv-MGf" firstAttribute="leading" secondItem="oyc-TW-bt4" secondAttribute="leading" constant="32" id="jD2-7h-cqo"/>
+                            <constraint firstItem="Mu6-cz-Y3X" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="uM4-dc-u5r" secondAttribute="trailing" constant="8" symbolic="YES" id="kG5-WJ-G81"/>
+                            <constraint firstItem="Mu6-cz-Y3X" firstAttribute="top" secondItem="oyc-TW-bt4" secondAttribute="top" constant="32" id="rcT-M6-ihm"/>
+                            <constraint firstItem="oyc-TW-bt4" firstAttribute="bottom" secondItem="WkK-hv-MGf" secondAttribute="bottom" constant="633" id="s2B-YU-ffe"/>
+                            <constraint firstItem="WkK-hv-MGf" firstAttribute="trailing" secondItem="Mu6-cz-Y3X" secondAttribute="trailing" id="tXB-BR-Sue"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="bubble.right" catalog="system" selectedImage="bubble.right" id="wtq-YP-XnX"/>
+                    <connections>
+                        <outlet property="convImg" destination="RNm-sp-L2C" id="f2n-yP-vJQ"/>
+                        <outlet property="msgImg" destination="gWT-5N-WFe" id="tkG-yN-bSr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oWN-lo-JT1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1688" y="1510"/>
+            <point key="canvasLocation" x="1686.9565217391305" y="1509.375"/>
         </scene>
         <!--Profile Feed-->
         <scene sceneID="qqO-9l-WYB">
@@ -942,6 +1007,9 @@ PREGERENCES</string>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="lock.fill" catalog="system" width="128" height="128"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="msg" width="592" height="1162"/>
+        <image name="msgs" width="572" height="818"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person1" width="540" height="360"/>
@@ -953,6 +1021,7 @@ PREGERENCES</string>
         <image name="person7" width="408" height="424"/>
         <image name="person8" width="202" height="250"/>
         <image name="person9" width="801" height="1200"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <image name="successProfile" width="422" height="386"/>
         <image name="truco" width="644" height="852"/>
         <namedColor name="AccentColor">
