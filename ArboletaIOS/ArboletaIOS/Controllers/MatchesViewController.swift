@@ -8,27 +8,30 @@
 import UIKit
 
 class MatchesViewController: UIViewController {
-
-    var currentView : String?
     
-    
-    @IBOutlet weak var btn: UIButton!
+    @IBOutlet weak var imgCards: UIImageView!
+    @IBOutlet weak var indiapp: UIImageView!
+    @IBOutlet weak var prompt: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if(currentView == nil) {
-            
-        }
-        
+        indiapp.alpha = 0
+        imgCards.alpha = 1
+        prompt.alpha = 0
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func nextButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "completedProfile", sender: self)
+    @IBAction func gotoNext(_ sender: UIButton) {
+        indiapp.alpha = 1
+        imgCards.alpha = 0
     }
     
+     @IBAction func createapp(_ sender: UIButton) {
+         indiapp.alpha = 0.5
+         prompt.alpha = 1
+         prompt.layer.cornerRadius = 25
+     }
     /*
-    // MARK: - Navigation
+     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
