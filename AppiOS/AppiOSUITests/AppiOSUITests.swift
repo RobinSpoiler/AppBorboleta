@@ -1,13 +1,13 @@
 //
-//  BorboletaUITests.swift
-//  BorboletaUITests
+//  AppiOSUITests.swift
+//  AppiOSUITests
 //
 //  Created by Jorge Delgado on 11/09/22.
 //
 
 import XCTest
 
-class BorboletaUITests: XCTestCase {
+class AppiOSUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

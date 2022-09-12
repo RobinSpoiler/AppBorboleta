@@ -1,13 +1,13 @@
 //
-//  BorboletaUITestsLaunchTests.swift
-//  BorboletaUITests
+//  AppiOSUITestsLaunchTests.swift
+//  AppiOSUITests
 //
 //  Created by Jorge Delgado on 11/09/22.
 //
 
 import XCTest
 
-class BorboletaUITestsLaunchTests: XCTestCase {
+class AppiOSUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
