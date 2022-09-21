@@ -89,6 +89,19 @@ REGRESO</string>
                                 <color key="textColor" red="0.7783303802" green="0.17659440139999999" blue="0.13845421599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6y-1r-9eW">
+                                <rect key="frame" x="328" y="483.5" width="26" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="xmr-WT-qSQ"/>
+                                    <constraint firstAttribute="width" constant="26" id="yQg-Vo-m0g"/>
+                                </constraints>
+                                <color key="tintColor" name="Color3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="eye" catalog="system"/>
+                                <connections>
+                                    <action selector="PasswordVisibilityButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UZo-l0-mR9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
@@ -103,10 +116,12 @@ REGRESO</string>
                             <constraint firstAttribute="trailing" secondItem="mhv-L7-Opo" secondAttribute="trailing" constant="40" id="BCP-sz-UpO"/>
                             <constraint firstItem="mhv-L7-Opo" firstAttribute="top" secondItem="pKk-Zn-4oQ" secondAttribute="bottom" constant="5" id="ChT-Xg-rc7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bhd-xC-98M" secondAttribute="trailing" constant="80" id="DdM-jS-Lea"/>
+                            <constraint firstItem="M6y-1r-9eW" firstAttribute="top" secondItem="4Vc-7Y-LSA" secondAttribute="bottom" constant="5" id="Ee2-n6-tPM"/>
                             <constraint firstItem="mhv-L7-Opo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Eqo-nU-he2"/>
                             <constraint firstAttribute="trailing" secondItem="5R0-Ai-hmf" secondAttribute="trailing" constant="40" id="Fl4-jU-f0N"/>
                             <constraint firstItem="5R0-Ai-hmf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="KPp-DA-gQc"/>
                             <constraint firstItem="Qbo-kZ-CEX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Lkk-jI-r9U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M6y-1r-9eW" secondAttribute="trailing" constant="60" id="Mcj-oA-8EA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xbt-a6-zI8" secondAttribute="bottom" constant="10" id="OTA-N2-8nR"/>
                             <constraint firstItem="xbt-a6-zI8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VBP-fW-ylO"/>
                             <constraint firstItem="bhd-xC-98M" firstAttribute="top" secondItem="pKk-Zn-4oQ" secondAttribute="bottom" constant="65" id="WZR-IR-xfs"/>
@@ -132,6 +147,7 @@ REGRESO</string>
                         <outlet property="LoginButon" destination="bhd-xC-98M" id="xKf-xl-iA2"/>
                         <outlet property="PasswordErrorLabel" destination="mhv-L7-Opo" id="fGk-7G-f4r"/>
                         <outlet property="PasswordInput" destination="pKk-Zn-4oQ" id="nV6-b8-3Up"/>
+                        <outlet property="PasswordVisibility" destination="M6y-1r-9eW" id="3lf-C0-nQu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -141,6 +157,7 @@ REGRESO</string>
     </scenes>
     <resources>
         <image name="FullLogo" width="2251" height="2251"/>
+        <image name="eye" catalog="system" width="128" height="79"/>
         <namedColor name="BackgroundColor">
             <color red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

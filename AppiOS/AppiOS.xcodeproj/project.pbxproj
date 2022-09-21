@@ -44,6 +44,7 @@
 		9D05CF7D28DABE6500AA7E76 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9D05CF7C28DABE6500AA7E76 /* FirebaseRemoteConfigSwift */; };
 		9D05CF7F28DABE6500AA7E76 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9D05CF7E28DABE6500AA7E76 /* FirebaseStorage */; };
 		9D05CF8128DABE6500AA7E76 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 9D05CF8028DABE6500AA7E76 /* FirebaseStorageCombine-Community */; };
+		9D05CF8328DB9C4100AA7E76 /* PasswordVisibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D05CF8228DB9C4100AA7E76 /* PasswordVisibility.swift */; };
 		9D5AA19928DA81C300AC068E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA19828DA81C300AC068E /* LoginViewController.swift */; };
 		9D5AA19B28DA877A00AC068E /* UnderlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA19A28DA877A00AC068E /* UnderlinedTextField.swift */; };
 /* End PBXBuildFile section */
@@ -80,6 +81,7 @@
 		90B39FEA28CEB0FC00326D19 /* AppiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppiOSUITests.swift; sourceTree = "<group>"; };
 		90B39FEC28CEB0FC00326D19 /* AppiOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppiOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9D05CF4928DABD7000AA7E76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9D05CF8228DB9C4100AA7E76 /* PasswordVisibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordVisibility.swift; sourceTree = "<group>"; };
 		9D5AA19828DA81C300AC068E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9D5AA19A28DA877A00AC068E /* UnderlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -210,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				9D5AA19A28DA877A00AC068E /* UnderlinedTextField.swift */,
+				9D05CF8228DB9C4100AA7E76 /* PasswordVisibility.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 			files = (
 				9D5AA19B28DA877A00AC068E /* UnderlinedTextField.swift in Sources */,
 				9D5AA19928DA81C300AC068E /* LoginViewController.swift in Sources */,
+				9D05CF8328DB9C4100AA7E76 /* PasswordVisibility.swift in Sources */,
 				90B39FCE28CEB0FC00326D19 /* ViewController.swift in Sources */,
 				90B39FCA28CEB0FC00326D19 /* AppDelegate.swift in Sources */,
 				90B39FCC28CEB0FC00326D19 /* SceneDelegate.swift in Sources */,
