@@ -16,6 +16,8 @@
 		90B39FE128CEB0FC00326D19 /* AppiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B39FE028CEB0FC00326D19 /* AppiOSTests.swift */; };
 		90B39FEB28CEB0FC00326D19 /* AppiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B39FEA28CEB0FC00326D19 /* AppiOSUITests.swift */; };
 		90B39FED28CEB0FC00326D19 /* AppiOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B39FEC28CEB0FC00326D19 /* AppiOSUITestsLaunchTests.swift */; };
+		9D5AA19928DA81C300AC068E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA19828DA81C300AC068E /* LoginViewController.swift */; };
+		9D5AA19B28DA877A00AC068E /* UnderlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA19A28DA877A00AC068E /* UnderlinedTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		90B39FE628CEB0FC00326D19 /* AppiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90B39FEA28CEB0FC00326D19 /* AppiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppiOSUITests.swift; sourceTree = "<group>"; };
 		90B39FEC28CEB0FC00326D19 /* AppiOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppiOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9D5AA19828DA81C300AC068E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9D5AA19A28DA877A00AC068E /* UnderlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +105,9 @@
 			children = (
 				90B39FC928CEB0FC00326D19 /* AppDelegate.swift */,
 				90B39FCB28CEB0FC00326D19 /* SceneDelegate.swift */,
-				90B39FCD28CEB0FC00326D19 /* ViewController.swift */,
-				90B39FCF28CEB0FC00326D19 /* Main.storyboard */,
+				9D78B65328DA7FD6007D64BD /* Models */,
+				9D78B65228DA7FCD007D64BD /* Views */,
+				9D78B65128DA7FC3007D64BD /* Controllers */,
 				90B39FD228CEB0FC00326D19 /* Assets.xcassets */,
 				90B39FD428CEB0FC00326D19 /* LaunchScreen.storyboard */,
 				90B39FD728CEB0FC00326D19 /* Info.plist */,
@@ -125,6 +130,31 @@
 				90B39FEC28CEB0FC00326D19 /* AppiOSUITestsLaunchTests.swift */,
 			);
 			path = AppiOSUITests;
+			sourceTree = "<group>";
+		};
+		9D78B65128DA7FC3007D64BD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				90B39FCD28CEB0FC00326D19 /* ViewController.swift */,
+				9D5AA19828DA81C300AC068E /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9D78B65228DA7FCD007D64BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				90B39FCF28CEB0FC00326D19 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9D78B65328DA7FD6007D64BD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9D5AA19A28DA877A00AC068E /* UnderlinedTextField.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D5AA19B28DA877A00AC068E /* UnderlinedTextField.swift in Sources */,
+				9D5AA19928DA81C300AC068E /* LoginViewController.swift in Sources */,
 				90B39FCE28CEB0FC00326D19 /* ViewController.swift in Sources */,
 				90B39FCA28CEB0FC00326D19 /* AppDelegate.swift in Sources */,
 				90B39FCC28CEB0FC00326D19 /* SceneDelegate.swift in Sources */,
