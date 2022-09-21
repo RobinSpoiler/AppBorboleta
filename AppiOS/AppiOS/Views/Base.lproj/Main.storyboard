@@ -38,7 +38,7 @@ REGRESO</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dsD-rm-RP2" userLabel="EmailInput" customClass="UnderlinedTextField" customModule="AppiOS" customModuleProvider="target">
-                                <rect key="frame" x="40" y="403.5" width="334" height="34"/>
+                                <rect key="frame" x="40" y="393.5" width="334" height="34"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dsD-rm-RP2" secondAttribute="height" multiplier="167:17" id="Od4-N0-Fpf"/>
@@ -53,7 +53,7 @@ REGRESO</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pKk-Zn-4oQ" userLabel="PasswordInput" customClass="UnderlinedTextField" customModule="AppiOS" customModuleProvider="target">
-                                <rect key="frame" x="40" y="488.5" width="334" height="34"/>
+                                <rect key="frame" x="40" y="483.5" width="334" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="pKk-Zn-4oQ" secondAttribute="height" multiplier="167:17" id="zGp-Bm-P82"/>
@@ -62,13 +62,13 @@ REGRESO</string>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhd-xC-98M">
-                                <rect key="frame" x="80" y="582.5" width="254" height="35"/>
+                                <rect key="frame" x="80" y="577.5" width="254" height="35"/>
                                 <color key="tintColor" name="Color1"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Inicia sesión"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSx-Rv-eAB" userLabel="EmailLabel">
-                                <rect key="frame" x="40" y="372.5" width="53" height="21"/>
+                                <rect key="frame" x="40" y="367.5" width="53" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="Color3"/>
                                 <nil key="highlightedColor"/>
@@ -79,9 +79,11 @@ REGRESO</string>
                         <constraints>
                             <constraint firstItem="pKk-Zn-4oQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="1Ky-SI-NMW"/>
                             <constraint firstItem="QXy-vn-5uC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1Q4-a8-Nee"/>
-                            <constraint firstItem="4Vc-7Y-LSA" firstAttribute="top" secondItem="dsD-rm-RP2" secondAttribute="bottom" constant="20" id="2s4-aC-2RS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4Vc-7Y-LSA" secondAttribute="trailing" symbolic="YES" id="2qc-FD-PsE"/>
+                            <constraint firstItem="4Vc-7Y-LSA" firstAttribute="top" secondItem="dsD-rm-RP2" secondAttribute="bottom" constant="30" id="2s4-aC-2RS"/>
                             <constraint firstItem="4Vc-7Y-LSA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="3eh-Pz-fpY"/>
                             <constraint firstItem="4Vc-7Y-LSA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="4ur-5H-MSR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MSx-Rv-eAB" secondAttribute="trailing" symbolic="YES" id="5Nx-ds-VNa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bhd-xC-98M" secondAttribute="trailing" constant="80" id="DdM-jS-Lea"/>
                             <constraint firstItem="Qbo-kZ-CEX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Lkk-jI-r9U"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xbt-a6-zI8" secondAttribute="bottom" constant="10" id="OTA-N2-8nR"/>
@@ -91,8 +93,8 @@ REGRESO</string>
                             <constraint firstItem="QXy-vn-5uC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="gbH-h7-PwC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pKk-Zn-4oQ" secondAttribute="trailing" constant="40" id="h99-O8-FgE"/>
                             <constraint firstItem="Qbo-kZ-CEX" firstAttribute="top" secondItem="QXy-vn-5uC" secondAttribute="bottom" constant="50" id="lnn-9r-uZw"/>
-                            <constraint firstItem="pKk-Zn-4oQ" firstAttribute="top" secondItem="4Vc-7Y-LSA" secondAttribute="bottom" constant="10" id="nWh-oA-04k"/>
-                            <constraint firstItem="dsD-rm-RP2" firstAttribute="top" secondItem="MSx-Rv-eAB" secondAttribute="bottom" constant="10" id="oft-fc-ZWT"/>
+                            <constraint firstItem="pKk-Zn-4oQ" firstAttribute="top" secondItem="4Vc-7Y-LSA" secondAttribute="bottom" constant="5" id="nWh-oA-04k"/>
+                            <constraint firstItem="dsD-rm-RP2" firstAttribute="top" secondItem="MSx-Rv-eAB" secondAttribute="bottom" constant="5" id="oft-fc-ZWT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QXy-vn-5uC" secondAttribute="trailing" constant="20" id="qGX-x3-1KR"/>
                             <constraint firstItem="bhd-xC-98M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="wDU-5z-bbZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dsD-rm-RP2" secondAttribute="trailing" constant="40" id="wPn-Ke-MLz"/>
@@ -102,6 +104,7 @@ REGRESO</string>
                     </view>
                     <connections>
                         <outlet property="EmailInput" destination="dsD-rm-RP2" id="WhL-dT-eo6"/>
+                        <outlet property="LoginButon" destination="bhd-xC-98M" id="xKf-xl-iA2"/>
                         <outlet property="PasswordInput" destination="pKk-Zn-4oQ" id="nV6-b8-3Up"/>
                     </connections>
                 </viewController>
