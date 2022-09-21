@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\Israo\\.gradle\\daemon\\7.4\\tec.a01423294.borboleta.app-mergeDebugResources-30:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\Israo\\.gradle\\daemon\\7.4\\tec.a01423294.borboleta.app-main-33:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "tec.a01423294.borboleta.app-mergeDebugResources-30:/layout/activity_login.xml",
+        "source": "tec.a01423294.borboleta.app-main-33:/layout/activity_login.xml"
+    },
+    {
+        "merged": "tec.a01423294.borboleta.app-mergeDebugResources-30:/layout/activity_registro.xml",
+        "source": "tec.a01423294.borboleta.app-main-33:/layout/activity_registro.xml"
+    },
+    {
+        "merged": "C:\\Users\\Israo\\.gradle\\daemon\\7.4\\tec.a01423294.borboleta.app-mergeDebugResources-30:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Israo\\.gradle\\daemon\\7.4\\tec.a01423294.borboleta.app-main-33:\\layout\\activity_main.xml"
+    }
+]

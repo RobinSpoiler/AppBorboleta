@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "tec.a01423294.borboleta.app-mergeDebugResources-30:/layout-w936dp-v13/activity_login.xml",
+        "source": "tec.a01423294.borboleta.app-main-33:/layout-w936dp/activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\Israo\\.gradle\\daemon\\7.4\\tec.a01423294.borboleta.app-mergeDebugResources-30:\\layout-w936dp-v13\\activity_login.xml",
+        "source": "C:\\Users\\Israo\\.gradle\\daemon\\7.4\\tec.a01423294.borboleta.app-main-33:\\layout-w936dp\\activity_login.xml"
+    }
+]
