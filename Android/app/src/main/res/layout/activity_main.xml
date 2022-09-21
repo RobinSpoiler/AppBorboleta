@@ -9,14 +9,15 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="329dp"
+        android:layout_height="340dp"
         android:contentDescription="@string/paginainicio"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498"
         app:srcCompat="@drawable/loginwhite"
-        tools:src="@drawable/loginwhite.png"
+        tools:src="@drawable/loginwhite"
         tools:srcCompat="@drawable/loginwhite" />
 </androidx.constraintlayout.widget.ConstraintLayout>
