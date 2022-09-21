@@ -11,10 +11,12 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="paginainicio"
+        android:contentDescription="@string/paginainicio"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/loginwhite" />
+        app:srcCompat="@drawable/loginwhite"
+        tools:src="@drawable/loginwhite.png"
+        tools:srcCompat="@drawable/loginwhite" />
 </androidx.constraintlayout.widget.ConstraintLayout>

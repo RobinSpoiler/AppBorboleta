@@ -1,11 +1,11 @@
 package borboleta.application
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import tec.a01423294.borboleta.R
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        actionBar?.hide()
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
