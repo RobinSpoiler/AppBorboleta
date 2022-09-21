@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
     
@@ -13,11 +14,34 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var PasswordInput: UnderlinedTextField!
     @IBOutlet weak var LoginButon: UIButton!
     
+    @IBOutlet weak var EmailErrorLabel: UILabel!
+    @IBOutlet weak var PasswordErrorLabel: UILabel!
+    
+    @IBOutlet weak var PasswordVisibility: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         LoginButon.tintColor = UIColor(named: "Color1")
-        // Do any additional setup after loading the view.
+        
     }
     
+    @IBAction func PasswordVisibilityButton(_ sender: UIButton) {
+        AppiOS.PasswordVisibility().Switch(VisibilityButton: PasswordVisibility, PasswordField: PasswordInput)
+        
+    }
+    
+    @IBAction func loginButtonPressed(_ sender: UIButton) {
+        if let email = EmailInput.text, let password = PasswordInput.text {
+            Auth.auth().signIn(withEmail: email, password: password) {
+                authResult, error in
+                if let e = error {
+                    self.PasswordErrorLabel.text = e.localizedDescription
+                }
+                else {
+                    // perform segue to home
+                }
+            }
+        }
+    }
 }

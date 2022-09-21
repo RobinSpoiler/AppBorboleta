@@ -30,7 +30,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="¿Aún no tienes cuenta? Registrate"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbo-kZ-CEX" userLabel="WelcomeMsg">
-                                <rect key="frame" x="40" y="253.5" width="344" height="84"/>
+                                <rect key="frame" x="40" y="248.5" width="344" height="84"/>
                                 <string key="text">BIENVENIDX DE
 REGRESO</string>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
@@ -38,7 +38,8 @@ REGRESO</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dsD-rm-RP2" userLabel="EmailInput" customClass="UnderlinedTextField" customModule="AppiOS" customModuleProvider="target">
-                                <rect key="frame" x="40" y="393.5" width="334" height="34"/>
+                                <rect key="frame" x="40" y="388.5" width="334" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dsD-rm-RP2" secondAttribute="height" multiplier="167:17" id="Od4-N0-Fpf"/>
@@ -62,17 +63,45 @@ REGRESO</string>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhd-xC-98M">
-                                <rect key="frame" x="80" y="577.5" width="254" height="35"/>
+                                <rect key="frame" x="80" y="582.5" width="254" height="35"/>
                                 <color key="tintColor" name="Color1"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Inicia sesión"/>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="odz-8z-BXh"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSx-Rv-eAB" userLabel="EmailLabel">
-                                <rect key="frame" x="40" y="367.5" width="53" height="21"/>
+                                <rect key="frame" x="40" y="362.5" width="53" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="Color3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5R0-Ai-hmf" userLabel="EmailErrorLabel">
+                                <rect key="frame" x="40" y="427.5" width="334" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.7783303802" green="0.17659440139999999" blue="0.13845421599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhv-L7-Opo" userLabel="PasswordErrorLabel">
+                                <rect key="frame" x="40" y="522.5" width="334" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.7783303802" green="0.17659440139999999" blue="0.13845421599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6y-1r-9eW">
+                                <rect key="frame" x="328" y="483.5" width="26" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="xmr-WT-qSQ"/>
+                                    <constraint firstAttribute="width" constant="26" id="yQg-Vo-m0g"/>
+                                </constraints>
+                                <color key="tintColor" name="Color3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="eye" catalog="system"/>
+                                <connections>
+                                    <action selector="PasswordVisibilityButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UZo-l0-mR9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
@@ -80,21 +109,31 @@ REGRESO</string>
                             <constraint firstItem="pKk-Zn-4oQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="1Ky-SI-NMW"/>
                             <constraint firstItem="QXy-vn-5uC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1Q4-a8-Nee"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4Vc-7Y-LSA" secondAttribute="trailing" symbolic="YES" id="2qc-FD-PsE"/>
-                            <constraint firstItem="4Vc-7Y-LSA" firstAttribute="top" secondItem="dsD-rm-RP2" secondAttribute="bottom" constant="30" id="2s4-aC-2RS"/>
+                            <constraint firstItem="4Vc-7Y-LSA" firstAttribute="top" secondItem="dsD-rm-RP2" secondAttribute="bottom" constant="35" id="2s4-aC-2RS"/>
                             <constraint firstItem="4Vc-7Y-LSA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="3eh-Pz-fpY"/>
                             <constraint firstItem="4Vc-7Y-LSA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="4ur-5H-MSR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MSx-Rv-eAB" secondAttribute="trailing" symbolic="YES" id="5Nx-ds-VNa"/>
+                            <constraint firstAttribute="trailing" secondItem="mhv-L7-Opo" secondAttribute="trailing" constant="40" id="BCP-sz-UpO"/>
+                            <constraint firstItem="mhv-L7-Opo" firstAttribute="top" secondItem="pKk-Zn-4oQ" secondAttribute="bottom" constant="5" id="ChT-Xg-rc7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bhd-xC-98M" secondAttribute="trailing" constant="80" id="DdM-jS-Lea"/>
+                            <constraint firstItem="M6y-1r-9eW" firstAttribute="top" secondItem="4Vc-7Y-LSA" secondAttribute="bottom" constant="5" id="Ee2-n6-tPM"/>
+                            <constraint firstItem="mhv-L7-Opo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Eqo-nU-he2"/>
+                            <constraint firstAttribute="trailing" secondItem="5R0-Ai-hmf" secondAttribute="trailing" constant="40" id="Fl4-jU-f0N"/>
+                            <constraint firstItem="5R0-Ai-hmf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="KPp-DA-gQc"/>
                             <constraint firstItem="Qbo-kZ-CEX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Lkk-jI-r9U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M6y-1r-9eW" secondAttribute="trailing" constant="60" id="Mcj-oA-8EA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xbt-a6-zI8" secondAttribute="bottom" constant="10" id="OTA-N2-8nR"/>
                             <constraint firstItem="xbt-a6-zI8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VBP-fW-ylO"/>
-                            <constraint firstItem="bhd-xC-98M" firstAttribute="top" secondItem="pKk-Zn-4oQ" secondAttribute="bottom" constant="60" id="WZR-IR-xfs"/>
+                            <constraint firstItem="bhd-xC-98M" firstAttribute="top" secondItem="pKk-Zn-4oQ" secondAttribute="bottom" constant="65" id="WZR-IR-xfs"/>
+                            <constraint firstItem="5R0-Ai-hmf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aKz-3f-4ad"/>
+                            <constraint firstItem="mhv-L7-Opo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="dWW-mD-Viz"/>
                             <constraint firstItem="dsD-rm-RP2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="f7h-sG-yM2"/>
                             <constraint firstItem="QXy-vn-5uC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="gbH-h7-PwC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pKk-Zn-4oQ" secondAttribute="trailing" constant="40" id="h99-O8-FgE"/>
                             <constraint firstItem="pKk-Zn-4oQ" firstAttribute="top" secondItem="4Vc-7Y-LSA" secondAttribute="bottom" constant="5" id="nWh-oA-04k"/>
                             <constraint firstItem="dsD-rm-RP2" firstAttribute="top" secondItem="MSx-Rv-eAB" secondAttribute="bottom" constant="5" id="oft-fc-ZWT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QXy-vn-5uC" secondAttribute="trailing" constant="20" id="qGX-x3-1KR"/>
+                            <constraint firstItem="5R0-Ai-hmf" firstAttribute="top" secondItem="dsD-rm-RP2" secondAttribute="bottom" constant="5" id="uUe-XS-yqd"/>
                             <constraint firstItem="bhd-xC-98M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="wDU-5z-bbZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dsD-rm-RP2" secondAttribute="trailing" constant="40" id="wPn-Ke-MLz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qbo-kZ-CEX" secondAttribute="trailing" constant="30" id="wU8-JB-u05"/>
@@ -103,9 +142,12 @@ REGRESO</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="EmailErrorLabel" destination="5R0-Ai-hmf" id="Omi-VB-Em6"/>
                         <outlet property="EmailInput" destination="dsD-rm-RP2" id="WhL-dT-eo6"/>
                         <outlet property="LoginButon" destination="bhd-xC-98M" id="xKf-xl-iA2"/>
+                        <outlet property="PasswordErrorLabel" destination="mhv-L7-Opo" id="fGk-7G-f4r"/>
                         <outlet property="PasswordInput" destination="pKk-Zn-4oQ" id="nV6-b8-3Up"/>
+                        <outlet property="PasswordVisibility" destination="M6y-1r-9eW" id="3lf-C0-nQu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -115,6 +157,7 @@ REGRESO</string>
     </scenes>
     <resources>
         <image name="FullLogo" width="2251" height="2251"/>
+        <image name="eye" catalog="system" width="128" height="79"/>
         <namedColor name="BackgroundColor">
             <color red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
