@@ -27,9 +27,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func PasswordVisibilityButton(_ sender: UIButton) {
-        let currentImg = PasswordVisibility.currentImage
-        let newImg = (currentImg == UIImage(systemName: "eye")) ? "eye.slash" : "eye"
-        PasswordVisibility.setImage(UIImage(systemName: newImg), for: .normal)
+        AppiOS.PasswordVisibility().Switch(VisibilityButton: PasswordVisibility, PasswordField: PasswordInput)
+        
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
