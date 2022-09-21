@@ -68,6 +68,9 @@ REGRESO</string>
                                 <color key="tintColor" name="Color1"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Inicia sesión"/>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="odz-8z-BXh"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSx-Rv-eAB" userLabel="EmailLabel">
                                 <rect key="frame" x="40" y="362.5" width="53" height="21"/>
@@ -75,15 +78,15 @@ REGRESO</string>
                                 <color key="textColor" name="Color3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5R0-Ai-hmf" userLabel="EmailErrorLabel">
-                                <rect key="frame" x="207" y="427.5" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5R0-Ai-hmf" userLabel="EmailErrorLabel">
+                                <rect key="frame" x="40" y="427.5" width="334" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.7783303802" green="0.17659440139999999" blue="0.13845421599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhv-L7-Opo" userLabel="PasswordErrorLabel">
-                                <rect key="frame" x="207" y="522.5" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhv-L7-Opo" userLabel="PasswordErrorLabel">
+                                <rect key="frame" x="40" y="522.5" width="334" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.7783303802" green="0.17659440139999999" blue="0.13845421599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -98,14 +101,18 @@ REGRESO</string>
                             <constraint firstItem="4Vc-7Y-LSA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="3eh-Pz-fpY"/>
                             <constraint firstItem="4Vc-7Y-LSA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="4ur-5H-MSR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MSx-Rv-eAB" secondAttribute="trailing" symbolic="YES" id="5Nx-ds-VNa"/>
+                            <constraint firstAttribute="trailing" secondItem="mhv-L7-Opo" secondAttribute="trailing" constant="40" id="BCP-sz-UpO"/>
                             <constraint firstItem="mhv-L7-Opo" firstAttribute="top" secondItem="pKk-Zn-4oQ" secondAttribute="bottom" constant="5" id="ChT-Xg-rc7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bhd-xC-98M" secondAttribute="trailing" constant="80" id="DdM-jS-Lea"/>
                             <constraint firstItem="mhv-L7-Opo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Eqo-nU-he2"/>
+                            <constraint firstAttribute="trailing" secondItem="5R0-Ai-hmf" secondAttribute="trailing" constant="40" id="Fl4-jU-f0N"/>
+                            <constraint firstItem="5R0-Ai-hmf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="KPp-DA-gQc"/>
                             <constraint firstItem="Qbo-kZ-CEX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Lkk-jI-r9U"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xbt-a6-zI8" secondAttribute="bottom" constant="10" id="OTA-N2-8nR"/>
                             <constraint firstItem="xbt-a6-zI8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VBP-fW-ylO"/>
                             <constraint firstItem="bhd-xC-98M" firstAttribute="top" secondItem="pKk-Zn-4oQ" secondAttribute="bottom" constant="65" id="WZR-IR-xfs"/>
                             <constraint firstItem="5R0-Ai-hmf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aKz-3f-4ad"/>
+                            <constraint firstItem="mhv-L7-Opo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="dWW-mD-Viz"/>
                             <constraint firstItem="dsD-rm-RP2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="f7h-sG-yM2"/>
                             <constraint firstItem="QXy-vn-5uC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="gbH-h7-PwC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pKk-Zn-4oQ" secondAttribute="trailing" constant="40" id="h99-O8-FgE"/>
@@ -121,8 +128,10 @@ REGRESO</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="EmailErrorLabel" destination="5R0-Ai-hmf" id="Omi-VB-Em6"/>
                         <outlet property="EmailInput" destination="dsD-rm-RP2" id="WhL-dT-eo6"/>
                         <outlet property="LoginButon" destination="bhd-xC-98M" id="xKf-xl-iA2"/>
+                        <outlet property="PasswordErrorLabel" destination="mhv-L7-Opo" id="fGk-7G-f4r"/>
                         <outlet property="PasswordInput" destination="pKk-Zn-4oQ" id="nV6-b8-3Up"/>
                     </connections>
                 </viewController>
