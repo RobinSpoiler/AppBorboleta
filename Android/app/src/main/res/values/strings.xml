@@ -3,6 +3,7 @@
     <string name="paginainicio">paginainicio</string>
     <string name="logomariposa">logomariposa</string>
     <string name="backbutton">backbutton</string>
+    <string name="nextbutton">nextbutton</string>
     <string name="nombre">Nombre</string>
     <string name="correo">Correo</string>
     <string name="contrase_a">Contraseña</string>
@@ -11,5 +12,15 @@
     <string name="hintcorreo">ejemplo@gmail.com</string>
     <string name="hintcontra">abc123</string>
     <string name="hintconfirma">*****</string>
-    <string name="nextbutton">nextbutton</string>
+    <string name="telefono">Número de teléfono</string>
+    <string name="pronombre">Pronombres</string>
+    <string name="hintpronombre">ella</string>
+    <string name="cumpleanios">Cumpleaños</string>
+    <string name="selecciona">Selecciona:</string>
+    <string-array name="arraypronombres">
+        <item>Ella</item>
+        <item>El</item>
+        <item>Elle</item>
+    </string-array>
+
 </resources>
