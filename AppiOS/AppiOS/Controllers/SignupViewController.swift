@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftUI
+import Firebase
 
 class SignupViewController: UIViewController {
     
@@ -28,5 +29,18 @@ class SignupViewController: UIViewController {
     
     @IBAction func ConfirmVisibilityButton(_ sender: UIButton) {
         AppiOS.PasswordVisibility().Switch(VisibilityButton: ConfirmVisibility, PasswordField: ConfirmField)
+    }
+    
+    @IBAction func NextButton(_ sender: UIButton) {
+        if let email = EmailField.text, let password = PasswordField.text {
+            Auth.auth().createUser(withEmail: email, password: password){
+                authResult, error in
+                if let e = error {
+                    
+                } else {
+                    
+                }
+            }
+        }
     }
 }

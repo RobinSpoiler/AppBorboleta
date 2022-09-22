@@ -235,7 +235,7 @@ REGRESO</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ux-31-Pqn" userLabel="NextButton">
-                                <rect key="frame" x="329" y="612.5" width="45" height="45"/>
+                                <rect key="frame" x="319" y="612.5" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="ICx-eG-dUE"/>
                                     <constraint firstAttribute="height" constant="45" id="eW3-cn-30C"/>
@@ -244,6 +244,9 @@ REGRESO</string>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <backgroundConfiguration key="background" image="arrow.right.circle.fill" catalog="system"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="NextButton:" destination="KoQ-Pl-UD6" eventType="touchUpInside" id="MMQ-tr-77q"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcV-vF-jla" userLabel="PasswordVisibility">
                                 <rect key="frame" x="328" y="463.5" width="26" height="26"/>
@@ -291,7 +294,7 @@ REGRESO</string>
                             <constraint firstItem="Kd9-Ma-Oab" firstAttribute="top" secondItem="fs5-ZD-hK7" secondAttribute="bottom" constant="35" id="ErK-5R-Ahw"/>
                             <constraint firstItem="des-xy-VC8" firstAttribute="trailing" secondItem="OOZ-e9-qS4" secondAttribute="trailing" constant="60" id="I82-ac-y8Z"/>
                             <constraint firstItem="8y7-jY-1Vv" firstAttribute="top" secondItem="Tp4-B3-44o" secondAttribute="bottom" constant="35" id="Ib9-RJ-lrt"/>
-                            <constraint firstItem="des-xy-VC8" firstAttribute="trailing" secondItem="4ux-31-Pqn" secondAttribute="trailing" constant="40" id="JPB-vF-gLL"/>
+                            <constraint firstItem="des-xy-VC8" firstAttribute="trailing" secondItem="4ux-31-Pqn" secondAttribute="trailing" constant="50" id="JPB-vF-gLL"/>
                             <constraint firstItem="X26-WO-JLF" firstAttribute="top" secondItem="rmV-5X-P3l" secondAttribute="bottom" constant="35" id="LtC-Lu-Gnm"/>
                             <constraint firstItem="WdX-gN-0RC" firstAttribute="leading" secondItem="des-xy-VC8" secondAttribute="leading" constant="40" id="XV5-cA-SNW"/>
                             <constraint firstItem="des-xy-VC8" firstAttribute="trailing" secondItem="ehm-dR-u2p" secondAttribute="trailing" constant="40" id="c5x-ka-rFx"/>
