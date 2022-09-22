@@ -194,7 +194,7 @@ REGRESO</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rmV-5X-P3l" customClass="UnderlinedTextField" customModule="AppiOS" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rmV-5X-P3l" userLabel="NameField" customClass="UnderlinedTextField" customModule="AppiOS" customModuleProvider="target">
                                 <rect key="frame" x="40" y="273.5" width="334" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="TG6-M8-Mhv"/>
@@ -202,7 +202,7 @@ REGRESO</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fs5-ZD-hK7" customClass="UnderlinedTextField" customModule="AppiOS" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fs5-ZD-hK7" userLabel="EmailField" customClass="UnderlinedTextField" customModule="AppiOS" customModuleProvider="target">
                                 <rect key="frame" x="40" y="368.5" width="334" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="fbJ-z7-eVG"/>
@@ -210,23 +210,23 @@ REGRESO</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tp4-B3-44o" customClass="UnderlinedTextField" customModule="AppiOS" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tp4-B3-44o" userLabel="PasswordField" customClass="UnderlinedTextField" customModule="AppiOS" customModuleProvider="target">
                                 <rect key="frame" x="40" y="463.5" width="334" height="34"/>
-                                <color key="backgroundColor" red="0.7783303802" green="0.17659440139999999" blue="0.13845421599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="s8O-V2-Cqx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ehm-dR-u2p" customClass="UnderlinedTextField" customModule="AppiOS" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ehm-dR-u2p" userLabel="ConfirmPassword" customClass="UnderlinedTextField" customModule="AppiOS" customModuleProvider="target">
                                 <rect key="frame" x="40" y="558.5" width="334" height="34"/>
-                                <color key="backgroundColor" red="0.7783303802" green="0.17659440139999999" blue="0.13845421599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="8C3-1g-mjB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WdX-gN-0RC" userLabel="NameLabel">
                                 <rect key="frame" x="40" y="247.5" width="334" height="21"/>
@@ -234,7 +234,7 @@ REGRESO</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ux-31-Pqn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ux-31-Pqn" userLabel="NextButton">
                                 <rect key="frame" x="329" y="612.5" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="ICx-eG-dUE"/>
@@ -245,21 +245,51 @@ REGRESO</string>
                                     <backgroundConfiguration key="background" image="arrow.right.circle.fill" catalog="system"/>
                                 </buttonConfiguration>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcV-vF-jla" userLabel="PasswordVisibility">
+                                <rect key="frame" x="328" y="463.5" width="26" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="26" id="OMb-yA-Gxh"/>
+                                    <constraint firstAttribute="height" constant="26" id="sqE-ee-exE"/>
+                                </constraints>
+                                <color key="tintColor" name="Color3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="eye" catalog="system"/>
+                                <connections>
+                                    <action selector="PasswordVisibilityButton:" destination="KoQ-Pl-UD6" eventType="touchUpInside" id="nal-Pi-TMX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOZ-e9-qS4">
+                                <rect key="frame" x="328" y="558.5" width="26" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="26" id="Zoi-13-5yb"/>
+                                    <constraint firstAttribute="height" constant="26" id="j8W-iM-vCe"/>
+                                </constraints>
+                                <color key="tintColor" name="Color3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="eye" catalog="system"/>
+                                <connections>
+                                    <action selector="ConfirmVisibilityButton:" destination="KoQ-Pl-UD6" eventType="touchUpInside" id="MqI-Jt-7h2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="des-xy-VC8"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <color key="tintColor" name="Color1"/>
                         <constraints>
                             <constraint firstItem="rmV-5X-P3l" firstAttribute="leading" secondItem="des-xy-VC8" secondAttribute="leading" constant="40" id="1lk-2D-LN0"/>
+                            <constraint firstItem="CcV-vF-jla" firstAttribute="top" secondItem="Kd9-Ma-Oab" secondAttribute="bottom" constant="5" id="2As-jD-Qlu"/>
                             <constraint firstItem="X26-WO-JLF" firstAttribute="leading" secondItem="des-xy-VC8" secondAttribute="leading" constant="40" id="2UO-WF-rH7"/>
                             <constraint firstItem="Kd9-Ma-Oab" firstAttribute="leading" secondItem="des-xy-VC8" secondAttribute="leading" constant="40" id="2ep-R0-tSG"/>
+                            <constraint firstItem="OOZ-e9-qS4" firstAttribute="top" secondItem="8y7-jY-1Vv" secondAttribute="bottom" constant="5" id="37H-gB-keW"/>
                             <constraint firstItem="4ux-31-Pqn" firstAttribute="top" secondItem="ehm-dR-u2p" secondAttribute="bottom" constant="20" id="5EO-qo-Cv6"/>
                             <constraint firstAttribute="trailing" secondItem="19R-aY-pAP" secondAttribute="trailing" constant="40" id="61J-wF-9yd"/>
                             <constraint firstItem="des-xy-VC8" firstAttribute="trailing" secondItem="rmV-5X-P3l" secondAttribute="trailing" constant="40" id="6aX-lj-p9D"/>
                             <constraint firstItem="Tp4-B3-44o" firstAttribute="leading" secondItem="des-xy-VC8" secondAttribute="leading" constant="40" id="8H8-D2-i2y"/>
+                            <constraint firstItem="des-xy-VC8" firstAttribute="trailing" secondItem="CcV-vF-jla" secondAttribute="trailing" constant="60" id="8lA-5I-AoI"/>
                             <constraint firstItem="8y7-jY-1Vv" firstAttribute="leading" secondItem="des-xy-VC8" secondAttribute="leading" constant="40" id="9ze-gD-JUD"/>
                             <constraint firstItem="19R-aY-pAP" firstAttribute="top" secondItem="des-xy-VC8" secondAttribute="top" constant="-40" id="BgJ-LS-hqv"/>
                             <constraint firstItem="Kd9-Ma-Oab" firstAttribute="top" secondItem="fs5-ZD-hK7" secondAttribute="bottom" constant="35" id="ErK-5R-Ahw"/>
+                            <constraint firstItem="des-xy-VC8" firstAttribute="trailing" secondItem="OOZ-e9-qS4" secondAttribute="trailing" constant="60" id="I82-ac-y8Z"/>
                             <constraint firstItem="8y7-jY-1Vv" firstAttribute="top" secondItem="Tp4-B3-44o" secondAttribute="bottom" constant="35" id="Ib9-RJ-lrt"/>
                             <constraint firstItem="des-xy-VC8" firstAttribute="trailing" secondItem="4ux-31-Pqn" secondAttribute="trailing" constant="40" id="JPB-vF-gLL"/>
                             <constraint firstItem="X26-WO-JLF" firstAttribute="top" secondItem="rmV-5X-P3l" secondAttribute="bottom" constant="35" id="LtC-Lu-Gnm"/>
@@ -278,6 +308,14 @@ REGRESO</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" style="editor" id="q3e-UR-4gN"/>
+                    <connections>
+                        <outlet property="ConfirmField" destination="ehm-dR-u2p" id="lJv-0u-g8n"/>
+                        <outlet property="ConfirmVisibility" destination="OOZ-e9-qS4" id="o3w-Ua-oBC"/>
+                        <outlet property="EmailField" destination="fs5-ZD-hK7" id="WdH-Br-hfY"/>
+                        <outlet property="NameField" destination="rmV-5X-P3l" id="ItE-ao-Xk4"/>
+                        <outlet property="PasswordField" destination="Tp4-B3-44o" id="43P-hh-PrM"/>
+                        <outlet property="PasswordVisibility" destination="CcV-vF-jla" id="FXm-3w-RIW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nNn-uP-Bpl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

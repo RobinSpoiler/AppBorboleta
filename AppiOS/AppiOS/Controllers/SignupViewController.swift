@@ -10,7 +10,23 @@ import SwiftUI
 
 class SignupViewController: UIViewController {
     
+    @IBOutlet weak var NameField: UnderlinedTextField!
+    @IBOutlet weak var EmailField: UnderlinedTextField!
+    @IBOutlet weak var PasswordField: UnderlinedTextField!
+    @IBOutlet weak var ConfirmField: UnderlinedTextField!
+    
+    @IBOutlet weak var PasswordVisibility: UIButton!
+    @IBOutlet weak var ConfirmVisibility: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func PasswordVisibilityButton(_ sender: UIButton) {
+        AppiOS.PasswordVisibility().Switch(VisibilityButton: PasswordVisibility, PasswordField: PasswordField)
+    }
+    
+    @IBAction func ConfirmVisibilityButton(_ sender: UIButton) {
+        AppiOS.PasswordVisibility().Switch(VisibilityButton: ConfirmVisibility, PasswordField: ConfirmField)
     }
 }
