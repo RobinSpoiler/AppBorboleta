@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		90B39FCA28CEB0FC00326D19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B39FC928CEB0FC00326D19 /* AppDelegate.swift */; };
 		90B39FCC28CEB0FC00326D19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B39FCB28CEB0FC00326D19 /* SceneDelegate.swift */; };
-		90B39FCE28CEB0FC00326D19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B39FCD28CEB0FC00326D19 /* ViewController.swift */; };
 		90B39FD128CEB0FC00326D19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90B39FCF28CEB0FC00326D19 /* Main.storyboard */; };
 		90B39FD328CEB0FC00326D19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90B39FD228CEB0FC00326D19 /* Assets.xcassets */; };
 		90B39FD628CEB0FC00326D19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90B39FD428CEB0FC00326D19 /* LaunchScreen.storyboard */; };
@@ -47,6 +46,8 @@
 		9D05CF8328DB9C4100AA7E76 /* PasswordVisibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D05CF8228DB9C4100AA7E76 /* PasswordVisibility.swift */; };
 		9D5AA19928DA81C300AC068E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA19828DA81C300AC068E /* LoginViewController.swift */; };
 		9D5AA19B28DA877A00AC068E /* UnderlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA19A28DA877A00AC068E /* UnderlinedTextField.swift */; };
+		9D5BCB4828DBDB4F00BC0B56 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BCB4728DBDB4F00BC0B56 /* SignupViewController.swift */; };
+		9D5BCB4D28DC202B00BC0B56 /* NextStepButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BCB4C28DC202B00BC0B56 /* NextStepButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +71,6 @@
 		90B39FC628CEB0FC00326D19 /* AppiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90B39FC928CEB0FC00326D19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90B39FCB28CEB0FC00326D19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		90B39FCD28CEB0FC00326D19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		90B39FD028CEB0FC00326D19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90B39FD228CEB0FC00326D19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90B39FD528CEB0FC00326D19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -84,6 +84,8 @@
 		9D05CF8228DB9C4100AA7E76 /* PasswordVisibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordVisibility.swift; sourceTree = "<group>"; };
 		9D5AA19828DA81C300AC068E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9D5AA19A28DA877A00AC068E /* UnderlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextField.swift; sourceTree = "<group>"; };
+		9D5BCB4728DBDB4F00BC0B56 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		9D5BCB4C28DC202B00BC0B56 /* NextStepButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextStepButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				9D78B65328DA7FD6007D64BD /* Models */,
 				9D78B65228DA7FCD007D64BD /* Views */,
 				9D78B65128DA7FC3007D64BD /* Controllers */,
+				9D5BCB4928DBDD7700BC0B56 /* CustomClasses */,
 				90B39FD228CEB0FC00326D19 /* Assets.xcassets */,
 				90B39FD428CEB0FC00326D19 /* LaunchScreen.storyboard */,
 				90B39FD728CEB0FC00326D19 /* Info.plist */,
@@ -191,11 +194,20 @@
 			path = AppiOSUITests;
 			sourceTree = "<group>";
 		};
+		9D5BCB4928DBDD7700BC0B56 /* CustomClasses */ = {
+			isa = PBXGroup;
+			children = (
+				9D5AA19A28DA877A00AC068E /* UnderlinedTextField.swift */,
+				9D5BCB4C28DC202B00BC0B56 /* NextStepButton.swift */,
+			);
+			path = CustomClasses;
+			sourceTree = "<group>";
+		};
 		9D78B65128DA7FC3007D64BD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				90B39FCD28CEB0FC00326D19 /* ViewController.swift */,
 				9D5AA19828DA81C300AC068E /* LoginViewController.swift */,
+				9D5BCB4728DBDB4F00BC0B56 /* SignupViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -211,7 +223,6 @@
 		9D78B65328DA7FD6007D64BD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9D5AA19A28DA877A00AC068E /* UnderlinedTextField.swift */,
 				9D05CF8228DB9C4100AA7E76 /* PasswordVisibility.swift */,
 			);
 			path = Models;
@@ -381,11 +392,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D5BCB4828DBDB4F00BC0B56 /* SignupViewController.swift in Sources */,
 				9D5AA19B28DA877A00AC068E /* UnderlinedTextField.swift in Sources */,
 				9D5AA19928DA81C300AC068E /* LoginViewController.swift in Sources */,
 				9D05CF8328DB9C4100AA7E76 /* PasswordVisibility.swift in Sources */,
-				90B39FCE28CEB0FC00326D19 /* ViewController.swift in Sources */,
 				90B39FCA28CEB0FC00326D19 /* AppDelegate.swift in Sources */,
+				9D5BCB4D28DC202B00BC0B56 /* NextStepButton.swift in Sources */,
 				90B39FCC28CEB0FC00326D19 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
