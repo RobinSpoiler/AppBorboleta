@@ -37,6 +37,14 @@ Mi ipsum faucibus vitae aliquet nec ullamcorper. Erat imperdiet sed euismod nisi
     </string>
     <string name="accepttext">Aceptar</string>
     <string name="rechazartext">Rechazar</string>
+    <string name="bienvenidx_de_regreso">BIENVENIDX DE REGRESO</string>
+    <string name="logoborboleta">logoborboleta</string>
+    <string name="CorreoLogin">Correo</string>
+    <string name="ContraseñaLogin">Contraseña</string>
+    <string name="Email">Email</string>
+    <string name="ContraseñaInsert">Contraseña</string>
+    <string name="inicia_sesi_n">INICIA SESIÓN</string>
+    <string name="aun_no_tienes_cuenta_registrate">¿Aun no tienes cuenta? Registrate</string>
 
 
 </resources>
