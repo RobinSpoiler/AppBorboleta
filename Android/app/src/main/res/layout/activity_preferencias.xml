@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Preferencias">
+
+    <ImageButton
+        android:id="@+id/backbutton"
+        android:layout_width="15dp"
+        android:layout_height="25dp"
+        android:background="#0000"
+        android:contentDescription="@string/backbutton"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.069"
+        app:srcCompat="@drawable/backbutton"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/logomariposa"
+        android:layout_width="58dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/logomariposa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.847"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.051"
+        app:srcCompat="@drawable/logomariposa" />
+
+    <ScrollView
+        android:layout_width="415dp"
+        android:layout_height="622dp"
+        android:contentDescription="@string/confirmarcontra"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.678">
+
+
+        <LinearLayout
+            android:id="@+id/preguntas"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_margin="40dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/primeraPregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/primeraPregunta" />
+
+            <LinearLayout
+                android:id="@+id/checkboxesuno"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="2dp"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/unouno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/opcuatro"
+                    tools:ignore="DuplicateSpeakableTextCheck">
+
+                </CheckBox>
+
+                <CheckBox
+                    android:id="@+id/unodos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/opcinco" />
+
+                <CheckBox
+                    android:id="@+id/unotres"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/opseis" />
+
+                <CheckBox
+                    android:id="@+id/unocuatro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/opsiete" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/segundaPregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/segundaPregunta" />
+
+            <LinearLayout
+                android:id="@+id/checkboxesdos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="2dp"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/dosuno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/opocho">
+
+                </CheckBox>
+
+                <CheckBox
+                    android:id="@+id/dosdos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/opnueve" />
+
+                <CheckBox
+                    android:id="@+id/dostres"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/opdiez" />
+
+                <CheckBox
+                    android:id="@+id/doscuatro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/opcuatro" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/terceraPregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/terceraPregunta" />
+
+            <LinearLayout
+                android:id="@+id/checkboxestres"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="2dp"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/tresuno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loremipsum">
+
+                </CheckBox>
+
+                <CheckBox
+                    android:id="@+id/tresdos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loremipsum" />
+
+                <CheckBox
+                    android:id="@+id/trestres"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loremipsum" />
+
+                <CheckBox
+                    android:id="@+id/trescuatro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loremipsum" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--
+<TextView
+android:id="@+id/segundaPregunta"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_margin="10dp"
+android:text="@string/segundaPregunta" />
+
+<LinearLayout
+android:id="@+id/checkboxesdos"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical">
+
+<CheckBox
+    android:id="@+id/dosuno"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/opcinco">
+
+</CheckBox>
+
+<CheckBox
+    android:id="@+id/dosdos"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/opseis" />
+
+<CheckBox
+    android:id="@+id/dostres"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/opsiete" />
+
+<CheckBox
+    android:id="@+id/doscuatro"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/opocho" />
+
+</LinearLayout>
+
+<TextView
+android:id="@+id/terceraPregunta"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_margin="10dp"
+android:text="@string/terceraPregunta" />
+
+<LinearLayout
+android:id="@+id/checkboxestres"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical">
+
+<CheckBox
+    android:id="@+id/tresuno"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/opdiez">
+
+</CheckBox>
+
+<CheckBox
+    android:id="@+id/tresdos"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/loremipsum"
+    tools:ignore="DuplicateSpeakableTextCheck" />
+
+<CheckBox
+    android:id="@+id/trestres"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/loremipsum" />
+
+<CheckBox
+    android:id="@+id/trescuatro"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/loremipsum" />
+
+</LinearLayout>
+-->
+

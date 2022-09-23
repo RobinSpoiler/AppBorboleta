@@ -12,4 +12,25 @@
     <string name="hintcontra">abc123</string>
     <string name="hintconfirma">*****</string>
     <string name="nextbutton">nextbutton</string>
+    <string name="cuestionario" />
+    <string name="primeraseleccion">Primera seleccion</string>
+    <string name="tituloCuestionario">Nos gustaría conocerte mejor</string>
+    <string name="subtitleCuestionario">Ayudanos respondiendo una breve encuesta.</string>
+    <string name="primeraPregunta">1.   ¿Qué tipo de terapia buscas?</string>
+    <string name="segundaPregunta">2.   ¿Con qué tipo de personalidad te identificas más?</string>
+    <string name="terceraPregunta">3.   ¿Cuáles son tus expectativas de ir a terapia?</string>
+    <string name="cuartaPregunta">4. Lorem ipsum</string>
+    <string name="opuno">Cognitivo conductual</string>
+    <string name="opdos">Psicoanálisis</string>
+    <string name="optres">Sistémica</string>
+    <string name="opcuatro">Humanista</string>
+    <string name="opcinco">Creativo</string>
+    <string name="opseis">Racional</string>
+    <string name="opsiete">Conocerme mejor</string>
+    <string name="opocho">Buscar soluciones a mis problemáticas</string>
+    <string name="opnueve">Aprender a manejar mis emociones</string>
+    <string name="opdiez">Entender la raíz de mis problemas</string>
+    <string name="loremipsum">Loremipsumd de prueba</string>
+    <string name="scrollview" />
+    <string name="scroll" />
 </resources>
