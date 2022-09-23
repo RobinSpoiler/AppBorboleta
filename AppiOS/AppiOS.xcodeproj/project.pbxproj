@@ -48,6 +48,7 @@
 		9D5AA19B28DA877A00AC068E /* UnderlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA19A28DA877A00AC068E /* UnderlinedTextField.swift */; };
 		9D5BCB4828DBDB4F00BC0B56 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BCB4728DBDB4F00BC0B56 /* SignupViewController.swift */; };
 		9D5BCB4D28DC202B00BC0B56 /* NextStepButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BCB4C28DC202B00BC0B56 /* NextStepButton.swift */; };
+		9DB653E628DE14B200C0E093 /* SignupUserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB653E528DE14B200C0E093 /* SignupUserDataViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		9D5AA19A28DA877A00AC068E /* UnderlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextField.swift; sourceTree = "<group>"; };
 		9D5BCB4728DBDB4F00BC0B56 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		9D5BCB4C28DC202B00BC0B56 /* NextStepButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextStepButton.swift; sourceTree = "<group>"; };
+		9DB653E528DE14B200C0E093 /* SignupUserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupUserDataViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 			children = (
 				9D5AA19828DA81C300AC068E /* LoginViewController.swift */,
 				9D5BCB4728DBDB4F00BC0B56 /* SignupViewController.swift */,
+				9DB653E528DE14B200C0E093 /* SignupUserDataViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				90B39FCA28CEB0FC00326D19 /* AppDelegate.swift in Sources */,
 				9D5BCB4D28DC202B00BC0B56 /* NextStepButton.swift in Sources */,
 				90B39FCC28CEB0FC00326D19 /* SceneDelegate.swift in Sources */,
+				9DB653E628DE14B200C0E093 /* SignupUserDataViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

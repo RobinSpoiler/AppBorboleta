@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -154,11 +155,12 @@ REGRESO</string>
                         <outlet property="PasswordErrorLabel" destination="mhv-L7-Opo" id="fGk-7G-f4r"/>
                         <outlet property="PasswordInput" destination="pKk-Zn-4oQ" id="nV6-b8-3Up"/>
                         <outlet property="PasswordVisibility" destination="M6y-1r-9eW" id="3lf-C0-nQu"/>
+                        <segue destination="wuA-v5-OmN" kind="presentation" identifier="toHome" modalPresentationStyle="fullScreen" id="EAO-3s-ayl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1039.1304347826087" y="-34.151785714285715"/>
+            <point key="canvasLocation" x="1057" y="-34"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="EeP-gE-gkJ">
@@ -280,19 +282,19 @@ REGRESO</string>
                                 <color key="textColor" red="0.7783303802" green="0.17659440139999999" blue="0.13845421599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDw-hF-Oo4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDw-hF-Oo4" userLabel="EmailError">
                                 <rect key="frame" x="40" y="407.5" width="334" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.7783303802" green="0.17659440139999999" blue="0.13845421599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XJ-Ea-w9b">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XJ-Ea-w9b" userLabel="PasswordError">
                                 <rect key="frame" x="40" y="502.5" width="334" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.7783303802" green="0.17659440139999999" blue="0.13845421599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QkD-XU-T5A">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QkD-XU-T5A" userLabel="ConfirmError">
                                 <rect key="frame" x="40" y="597.5" width="334" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.7783303802" green="0.17659440139999999" blue="0.13845421599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -348,17 +350,72 @@ REGRESO</string>
                     </view>
                     <navigationItem key="navigationItem" style="editor" id="q3e-UR-4gN"/>
                     <connections>
+                        <outlet property="ConfirmError" destination="QkD-XU-T5A" id="B3D-rN-d7g"/>
                         <outlet property="ConfirmField" destination="ehm-dR-u2p" id="lJv-0u-g8n"/>
                         <outlet property="ConfirmVisibility" destination="OOZ-e9-qS4" id="o3w-Ua-oBC"/>
+                        <outlet property="EmailError" destination="aDw-hF-Oo4" id="ajg-87-aUC"/>
                         <outlet property="EmailField" destination="fs5-ZD-hK7" id="WdH-Br-hfY"/>
+                        <outlet property="NameError" destination="gKA-J4-2yZ" id="m4k-NJ-EOk"/>
                         <outlet property="NameField" destination="rmV-5X-P3l" id="ItE-ao-Xk4"/>
+                        <outlet property="PasswordError" destination="8XJ-Ea-w9b" id="qQS-lQ-MJ4"/>
                         <outlet property="PasswordField" destination="Tp4-B3-44o" id="43P-hh-PrM"/>
                         <outlet property="PasswordVisibility" destination="CcV-vF-jla" id="FXm-3w-RIW"/>
+                        <segue destination="KOE-EI-XUn" kind="show" identifier="toUserData" id="heH-Q1-2oW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nNn-uP-Bpl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1979.7101449275365" y="-34.151785714285715"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CW3-ic-0op">
+            <objects>
+                <viewController id="wuA-v5-OmN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xBk-FC-wnY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="house" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6zv-uR-kVN">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0jC-uF-Ohf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B70-jI-kbt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1980" y="711"/>
+        </scene>
+        <!--Signup User Data View Controller-->
+        <scene sceneID="dtM-1U-xys">
+            <objects>
+                <viewController id="KOE-EI-XUn" customClass="SignupUserDataViewController" customModule="AppiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qsO-gI-gxN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ButterflyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="dMp-c0-ePZ">
+                                <rect key="frame" x="334" y="52" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="FIn-ft-Hne"/>
+                                    <constraint firstAttribute="height" constant="40" id="qSG-rc-B0f"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Mdh-2b-XuP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dMp-c0-ePZ" firstAttribute="top" secondItem="Mdh-2b-XuP" secondAttribute="top" constant="-40" id="mOc-aY-hdN"/>
+                            <constraint firstItem="Mdh-2b-XuP" firstAttribute="trailing" secondItem="dMp-c0-ePZ" secondAttribute="trailing" constant="40" id="tdb-QR-sUK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" style="editor" id="cUK-xc-8uI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HVc-da-pl0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2948" y="-34"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="l59-zC-VIG">
@@ -385,6 +442,7 @@ REGRESO</string>
         <image name="FullLogo" width="1665" height="378"/>
         <image name="arrow.right.circle.fill" catalog="system" width="128" height="123"/>
         <image name="eye" catalog="system" width="128" height="79"/>
+        <image name="house" catalog="system" width="128" height="104"/>
         <namedColor name="BackgroundColor">
             <color red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -394,5 +452,8 @@ REGRESO</string>
         <namedColor name="Color3">
             <color red="0.039215686274509803" green="0.0" blue="0.066666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

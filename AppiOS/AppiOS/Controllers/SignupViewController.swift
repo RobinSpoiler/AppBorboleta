@@ -19,6 +19,12 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var PasswordVisibility: UIButton!
     @IBOutlet weak var ConfirmVisibility: UIButton!
     
+    
+    @IBOutlet weak var NameError: UILabel!
+    @IBOutlet weak var EmailError: UILabel!
+    @IBOutlet weak var PasswordError: UILabel!
+    @IBOutlet weak var ConfirmError: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -36,9 +42,9 @@ class SignupViewController: UIViewController {
             Auth.auth().createUser(withEmail: email, password: password){
                 authResult, error in
                 if let e = error {
-                    
+                    self.ConfirmError.text = e.localizedDescription
                 } else {
-                    
+                    self.performSegue(withIdentifier: "toUserData", sender: self)
                 }
             }
         }

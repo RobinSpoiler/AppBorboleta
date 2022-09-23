@@ -39,7 +39,7 @@ class LoginViewController: UIViewController {
                     self.PasswordErrorLabel.text = e.localizedDescription
                 }
                 else {
-                    // perform segue to home
+                    self.performSegue(withIdentifier: "toHome", sender: self)
                 }
             }
         }
