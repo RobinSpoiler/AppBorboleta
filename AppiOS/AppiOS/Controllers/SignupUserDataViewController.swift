@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import DropDown
 
 class SignupUserDataViewController: UIViewController {
-
+    
+    let dropdown = DropDown()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        dropdown.anchorView = view
+        dropdown.dataSource = ["Car", "Motorcycle", "Truck"]
     }
 
 }
