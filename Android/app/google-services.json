@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "632000198269",
+    "project_id": "data-test-8a138",
+    "storage_bucket": "data-test-8a138.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:632000198269:android:270a5e4ee3fa08f8952314",
+        "android_client_info": {
+          "package_name": "borboleta.application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "632000198269-f2874rodpvs5070tp82rkcup6vfmeb88.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATAV1-P24xcWUngqAnrNJhTTR5fhSeiAw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "632000198269-f2874rodpvs5070tp82rkcup6vfmeb88.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "632000198269-28742kas1c00g8fj25grp3hqsunogeun.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "co.jorgeTest.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

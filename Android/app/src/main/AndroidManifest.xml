@@ -12,9 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Borboleta"
         tools:targetApi="31">
+        <!--Splash activity: creates a 2 second "animation" at the start of the app-->
         <activity
-            android:name=".avisoprivacidad"
-            android:exported="true">
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,14 +27,41 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <activity
-            android:name=".registro2"
+            android:name=".avisoprivacidad"
             android:exported="true">
-            <intent-filter>
+           <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Login"
+            android:exported="true">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".registro2"
+            android:exported="true">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
 
             <meta-data
                 android:name="android.app.lib_name"
@@ -40,11 +70,11 @@
         <activity
             android:name=".registro"
             android:exported="true">
-            <intent-filter>
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
 
             <meta-data
                 android:name="android.app.lib_name"
@@ -53,12 +83,12 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
+-->
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
