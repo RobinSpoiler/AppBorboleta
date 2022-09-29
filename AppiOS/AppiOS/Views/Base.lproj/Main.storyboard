@@ -403,8 +403,8 @@ REGRESO</string>
                                     <constraint firstAttribute="height" constant="40" id="qSG-rc-B0f"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbM-Uz-G0C" userLabel="PhoneLabel">
-                                <rect key="frame" x="40" y="152" width="62" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número de télefono" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbM-Uz-G0C" userLabel="PhoneLabel">
+                                <rect key="frame" x="40" y="152" width="151" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -420,29 +420,41 @@ REGRESO</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cumpleanos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCe-1M-0MN" userLabel="BirthdayLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cumpleaños" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCe-1M-0MN" userLabel="BirthdayLabel">
                                 <rect key="frame" x="40" y="338" width="96" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jgx-49-ee6" customClass="DropDown">
+                                <rect key="frame" x="40" y="273" width="334" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mdh-2b-XuP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vbM-Uz-G0C" firstAttribute="top" secondItem="Mdh-2b-XuP" secondAttribute="top" constant="60" id="3l1-jI-zP2"/>
                             <constraint firstItem="5s7-N1-ayw" firstAttribute="leading" secondItem="Mdh-2b-XuP" secondAttribute="leading" constant="40" id="6pR-mA-275"/>
+                            <constraint firstItem="Mdh-2b-XuP" firstAttribute="trailing" secondItem="Jgx-49-ee6" secondAttribute="trailing" constant="40" id="9kW-e0-7AA"/>
                             <constraint firstItem="5s7-N1-ayw" firstAttribute="top" secondItem="vbM-Uz-G0C" secondAttribute="bottom" constant="5" id="BJX-9i-dTT"/>
                             <constraint firstItem="1sa-0H-fq6" firstAttribute="top" secondItem="5s7-N1-ayw" secondAttribute="bottom" constant="35" id="Em9-aA-9pk"/>
                             <constraint firstItem="Mdh-2b-XuP" firstAttribute="trailing" secondItem="5s7-N1-ayw" secondAttribute="trailing" constant="40" id="IBI-3g-8mV"/>
+                            <constraint firstItem="Jgx-49-ee6" firstAttribute="top" secondItem="1sa-0H-fq6" secondAttribute="bottom" constant="5" id="RUi-V3-mTS"/>
                             <constraint firstItem="vbM-Uz-G0C" firstAttribute="leading" secondItem="Mdh-2b-XuP" secondAttribute="leading" constant="40" id="T1B-pv-kPU"/>
                             <constraint firstItem="1sa-0H-fq6" firstAttribute="leading" secondItem="Mdh-2b-XuP" secondAttribute="leading" constant="40" id="Wow-86-vTk"/>
                             <constraint firstItem="dMp-c0-ePZ" firstAttribute="top" secondItem="Mdh-2b-XuP" secondAttribute="top" constant="-40" id="mOc-aY-hdN"/>
+                            <constraint firstItem="Jgx-49-ee6" firstAttribute="leading" secondItem="Mdh-2b-XuP" secondAttribute="leading" constant="40" id="mn4-mz-UvH"/>
                             <constraint firstItem="Mdh-2b-XuP" firstAttribute="trailing" secondItem="dMp-c0-ePZ" secondAttribute="trailing" constant="40" id="tdb-QR-sUK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" style="editor" id="cUK-xc-8uI"/>
+                    <connections>
+                        <outlet property="PhoneField" destination="5s7-N1-ayw" id="e7P-6g-2ik"/>
+                        <outlet property="pronounsDropdown" destination="Jgx-49-ee6" id="aDD-IO-N7A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HVc-da-pl0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

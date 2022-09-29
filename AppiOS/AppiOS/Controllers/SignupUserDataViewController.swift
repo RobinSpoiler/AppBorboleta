@@ -6,16 +6,16 @@
 //
 
 import UIKit
-import DropDown
+import iOSDropDown
 
 class SignupUserDataViewController: UIViewController {
     
-    let dropdown = DropDown()
+    @IBOutlet weak var PhoneField: UITextField!
+    @IBOutlet weak var pronounsDropdown: DropDown!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dropdown.anchorView = view
-        dropdown.dataSource = ["Car", "Motorcycle", "Truck"]
+        PhoneField.keyboardType = UIKeyboardType.numberPad
     }
 
 }

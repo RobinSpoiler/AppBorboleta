@@ -49,7 +49,7 @@
 		9D5BCB4828DBDB4F00BC0B56 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BCB4728DBDB4F00BC0B56 /* SignupViewController.swift */; };
 		9D5BCB4D28DC202B00BC0B56 /* NextStepButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BCB4C28DC202B00BC0B56 /* NextStepButton.swift */; };
 		9DB653E628DE14B200C0E093 /* SignupUserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB653E528DE14B200C0E093 /* SignupUserDataViewController.swift */; };
-		9DE9FC2028E1FCA300531B46 /* DropDown in Frameworks */ = {isa = PBXBuildFile; productRef = 9DE9FC1F28E1FCA300531B46 /* DropDown */; };
+		9DE9FC2328E2011900531B46 /* iOSDropDown in Frameworks */ = {isa = PBXBuildFile; productRef = 9DE9FC2228E2011900531B46 /* iOSDropDown */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,10 +118,10 @@
 				9D05CF5B28DABE6500AA7E76 /* FirebaseAuthCombine-Community in Frameworks */,
 				9D05CF7928DABE6500AA7E76 /* FirebasePerformance in Frameworks */,
 				9D05CF7128DABE6500AA7E76 /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
+				9DE9FC2328E2011900531B46 /* iOSDropDown in Frameworks */,
 				9D05CF7F28DABE6500AA7E76 /* FirebaseStorage in Frameworks */,
 				9D05CF6328DABE6500AA7E76 /* FirebaseDynamicLinks in Frameworks */,
 				9D05CF6728DABE6500AA7E76 /* FirebaseFirestoreCombine-Community in Frameworks */,
-				9DE9FC2028E1FCA300531B46 /* DropDown in Frameworks */,
 				9D05CF7728DABE6500AA7E76 /* FirebaseMessaging in Frameworks */,
 				9D05CF7328DABE6500AA7E76 /* FirebaseInstallations in Frameworks */,
 			);
@@ -277,7 +277,7 @@
 				9D05CF7C28DABE6500AA7E76 /* FirebaseRemoteConfigSwift */,
 				9D05CF7E28DABE6500AA7E76 /* FirebaseStorage */,
 				9D05CF8028DABE6500AA7E76 /* FirebaseStorageCombine-Community */,
-				9DE9FC1F28E1FCA300531B46 /* DropDown */,
+				9DE9FC2228E2011900531B46 /* iOSDropDown */,
 			);
 			productName = AppiOS;
 			productReference = 90B39FC628CEB0FC00326D19 /* AppiOS.app */;
@@ -353,7 +353,7 @@
 			mainGroup = 90B39FBD28CEB0FC00326D19;
 			packageReferences = (
 				9D05CF4B28DABE6500AA7E76 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				9DE9FC1E28E1FCA300531B46 /* XCRemoteSwiftPackageReference "DropDown" */,
+				9DE9FC2128E2011900531B46 /* XCRemoteSwiftPackageReference "iOSDropDown" */,
 			);
 			productRefGroup = 90B39FC728CEB0FC00326D19 /* Products */;
 			projectDirPath = "";
@@ -752,9 +752,9 @@
 				minimumVersion = 9.0.0;
 			};
 		};
-		9DE9FC1E28E1FCA300531B46 /* XCRemoteSwiftPackageReference "DropDown" */ = {
+		9DE9FC2128E2011900531B46 /* XCRemoteSwiftPackageReference "iOSDropDown" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AssistoLab/DropDown";
+			repositoryURL = "https://github.com/jriosdev/iOSDropDown";
 			requirement = {
 				branch = master;
 				kind = branch;
@@ -898,10 +898,10 @@
 			package = 9D05CF4B28DABE6500AA7E76 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
 		};
-		9DE9FC1F28E1FCA300531B46 /* DropDown */ = {
+		9DE9FC2228E2011900531B46 /* iOSDropDown */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9DE9FC1E28E1FCA300531B46 /* XCRemoteSwiftPackageReference "DropDown" */;
-			productName = DropDown;
+			package = 9DE9FC2128E2011900531B46 /* XCRemoteSwiftPackageReference "iOSDropDown" */;
+			productName = iOSDropDown;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

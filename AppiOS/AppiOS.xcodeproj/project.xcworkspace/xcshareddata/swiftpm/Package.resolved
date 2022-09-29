@@ -19,15 +19,6 @@
       }
     },
     {
-      "identity" : "dropdown",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/AssistoLab/DropDown",
-      "state" : {
-        "branch" : "master",
-        "revision" : "2ab6f6ce19f0117d1a76ea043ef8f57722c65d16"
-      }
-    },
-    {
       "identity" : "firebase-ios-sdk",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/firebase-ios-sdk",
@@ -79,6 +70,15 @@
       "state" : {
         "revision" : "d4289da23e978f37c344ea6a386e5546e2466294",
         "version" : "2.1.0"
+      }
+    },
+    {
+      "identity" : "iosdropdown",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jriosdev/iOSDropDown",
+      "state" : {
+        "branch" : "master",
+        "revision" : "79970152b7873100308aba95ede0f18d313683b9"
       }
     },
     {
