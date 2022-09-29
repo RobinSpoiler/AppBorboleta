@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".registro">
 
+
     <ImageView
         android:id="@+id/logomariposa"
         android:layout_width="57dp"
@@ -16,7 +17,7 @@
         app:layout_constraintHorizontal_bias="0.847"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.051"
+        app:layout_constraintVertical_bias="0.118"
         app:srcCompat="@drawable/logomariposa" />
 
     <ImageButton
@@ -28,10 +29,10 @@
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintHorizontal_bias="0.106"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.069"
+        app:layout_constraintVertical_bias="0.148"
         app:srcCompat="@drawable/backbutton"
         tools:ignore="TouchTargetSizeCheck" />
 

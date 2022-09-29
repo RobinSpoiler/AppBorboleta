@@ -45,6 +45,7 @@ Mi ipsum faucibus vitae aliquet nec ullamcorper. Erat imperdiet sed euismod nisi
     <string name="ContraseñaInsert">Contraseña</string>
     <string name="inicia_sesi_n">INICIA SESIÓN</string>
     <string name="aun_no_tienes_cuenta_registrate">¿Aun no tienes cuenta? Registrate</string>
+    <string name="sign_up">Registro</string>
 
 
 </resources>

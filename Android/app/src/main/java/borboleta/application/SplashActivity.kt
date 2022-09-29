@@ -16,7 +16,7 @@ class SplashActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
         )
-
+        //This function makes the first activity screen desapear after 2 seconds
         Handler().postDelayed({
             startActivity(Intent(this, Login::class.java))
             finish()
