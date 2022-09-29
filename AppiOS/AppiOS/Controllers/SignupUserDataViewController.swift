@@ -16,6 +16,10 @@ class SignupUserDataViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         PhoneField.keyboardType = UIKeyboardType.numberPad
+        
+        let pronouns = ["ella", "el", "elle"]
+
+        pronounsDropdown.optionArray = pronouns
     }
 
 }
