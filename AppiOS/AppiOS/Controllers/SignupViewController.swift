@@ -11,10 +11,10 @@ import Firebase
 
 class SignupViewController: UIViewController {
     
-    @IBOutlet weak var NameField: UnderlinedTextField!
-    @IBOutlet weak var EmailField: UnderlinedTextField!
-    @IBOutlet weak var PasswordField: UnderlinedTextField!
-    @IBOutlet weak var ConfirmField: UnderlinedTextField!
+    @IBOutlet weak var NameField: UITextField!
+    @IBOutlet weak var EmailField: UITextField!
+    @IBOutlet weak var PasswordField: UITextField!
+    @IBOutlet weak var ConfirmField: UITextField!
     
     @IBOutlet weak var PasswordVisibility: UIButton!
     @IBOutlet weak var ConfirmVisibility: UIButton!

@@ -45,9 +45,7 @@
 		9D05CF8128DABE6500AA7E76 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 9D05CF8028DABE6500AA7E76 /* FirebaseStorageCombine-Community */; };
 		9D05CF8328DB9C4100AA7E76 /* PasswordVisibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D05CF8228DB9C4100AA7E76 /* PasswordVisibility.swift */; };
 		9D5AA19928DA81C300AC068E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA19828DA81C300AC068E /* LoginViewController.swift */; };
-		9D5AA19B28DA877A00AC068E /* UnderlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA19A28DA877A00AC068E /* UnderlinedTextField.swift */; };
 		9D5BCB4828DBDB4F00BC0B56 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BCB4728DBDB4F00BC0B56 /* SignupViewController.swift */; };
-		9D5BCB4D28DC202B00BC0B56 /* NextStepButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BCB4C28DC202B00BC0B56 /* NextStepButton.swift */; };
 		9DB653E628DE14B200C0E093 /* SignupUserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB653E528DE14B200C0E093 /* SignupUserDataViewController.swift */; };
 		9DE9FC2328E2011900531B46 /* iOSDropDown in Frameworks */ = {isa = PBXBuildFile; productRef = 9DE9FC2228E2011900531B46 /* iOSDropDown */; };
 /* End PBXBuildFile section */
@@ -85,9 +83,7 @@
 		9D05CF4928DABD7000AA7E76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9D05CF8228DB9C4100AA7E76 /* PasswordVisibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordVisibility.swift; sourceTree = "<group>"; };
 		9D5AA19828DA81C300AC068E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		9D5AA19A28DA877A00AC068E /* UnderlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextField.swift; sourceTree = "<group>"; };
 		9D5BCB4728DBDB4F00BC0B56 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
-		9D5BCB4C28DC202B00BC0B56 /* NextStepButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextStepButton.swift; sourceTree = "<group>"; };
 		9DB653E528DE14B200C0E093 /* SignupUserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupUserDataViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -201,8 +197,6 @@
 		9D5BCB4928DBDD7700BC0B56 /* CustomClasses */ = {
 			isa = PBXGroup;
 			children = (
-				9D5AA19A28DA877A00AC068E /* UnderlinedTextField.swift */,
-				9D5BCB4C28DC202B00BC0B56 /* NextStepButton.swift */,
 			);
 			path = CustomClasses;
 			sourceTree = "<group>";
@@ -400,11 +394,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D5BCB4828DBDB4F00BC0B56 /* SignupViewController.swift in Sources */,
-				9D5AA19B28DA877A00AC068E /* UnderlinedTextField.swift in Sources */,
 				9D5AA19928DA81C300AC068E /* LoginViewController.swift in Sources */,
 				9D05CF8328DB9C4100AA7E76 /* PasswordVisibility.swift in Sources */,
 				90B39FCA28CEB0FC00326D19 /* AppDelegate.swift in Sources */,
-				9D5BCB4D28DC202B00BC0B56 /* NextStepButton.swift in Sources */,
 				90B39FCC28CEB0FC00326D19 /* SceneDelegate.swift in Sources */,
 				9DB653E628DE14B200C0E093 /* SignupUserDataViewController.swift in Sources */,
 			);

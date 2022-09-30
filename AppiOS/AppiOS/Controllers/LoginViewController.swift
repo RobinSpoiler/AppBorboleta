@@ -10,9 +10,10 @@ import Firebase
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet weak var EmailInput: UnderlinedTextField!
-    @IBOutlet weak var PasswordInput: UnderlinedTextField!
-    @IBOutlet weak var LoginButon: UIButton!
+    
+    @IBOutlet weak var EmailInput: UITextField!
+    @IBOutlet weak var PasswordInput: UITextField!
+    @IBOutlet weak var LoginButton: UIButton!
     
     @IBOutlet weak var EmailErrorLabel: UILabel!
     @IBOutlet weak var PasswordErrorLabel: UILabel!
@@ -22,8 +23,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        LoginButon.tintColor = UIColor(named: "Color1")
-        
+        LoginButton.tintColor = UIColor(named: "Color1")
     }
     
     @IBAction func PasswordVisibilityButton(_ sender: UIButton) {

@@ -9,7 +9,7 @@ import UIKit
 import Foundation
 
 struct PasswordVisibility {
-    func Switch(VisibilityButton button : UIButton, PasswordField field : UnderlinedTextField) {
+    func Switch(VisibilityButton button : UIButton, PasswordField field : UITextField) {
         
         if button.currentImage == UIImage(systemName: "eye") {
             button.setImage(UIImage(systemName: "eye.slash"), for: .normal)
