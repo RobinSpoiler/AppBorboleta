@@ -1,6 +1,7 @@
 package borboleta.application
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -45,8 +46,16 @@ class registro2 : AppCompatActivity() {
             )
             spinner.adapter = adapter
         }
+
+
+        val btnRegister2Second = findViewById<ImageButton>(R.id.nextbutton2)
+        btnRegister2Second.setOnClickListener(){
+            startActivity(Intent(this, avisoprivacidad::class.java))
+        }
+
+        val btnRegister2Back = findViewById<ImageButton>(R.id.backbutton2)
+        btnRegister2Back.setOnClickListener(){
+            startActivity(Intent(this, registro::class.java))
+        }
     }
-
-
-
 }

@@ -1,5 +1,6 @@
 package borboleta.application
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -46,6 +47,11 @@ class Login : AppCompatActivity() {
                     /*updateUI(null)*/
                 }
             }
+        }
+
+        val btnRegister = findViewById<Button>(R.id.RegistroLogin)
+        btnRegister.setOnClickListener(){
+            startActivity(Intent(this, registro::class.java))
         }
 
         //Fullscreen
