@@ -3,6 +3,7 @@
     <string name="paginainicio">paginainicio</string>
     <string name="logomariposa">logomariposa</string>
     <string name="backbutton">backbutton</string>
+    <string name="nextbutton">nextbutton</string>
     <string name="nombre">Nombre</string>
     <string name="correo">Correo</string>
     <string name="contrase_a">Contraseña</string>
@@ -11,26 +12,38 @@
     <string name="hintcorreo">ejemplo@gmail.com</string>
     <string name="hintcontra">abc123</string>
     <string name="hintconfirma">*****</string>
-    <string name="nextbutton">nextbutton</string>
-    <string name="cuestionario" />
-    <string name="primeraseleccion">Primera seleccion</string>
-    <string name="tituloCuestionario">Nos gustaría conocerte mejor</string>
-    <string name="subtitleCuestionario">Ayudanos respondiendo una breve encuesta.</string>
-    <string name="primeraPregunta">1.   ¿Qué tipo de terapia buscas?</string>
-    <string name="segundaPregunta">2.   ¿Con qué tipo de personalidad te identificas más?</string>
-    <string name="terceraPregunta">3.   ¿Cuáles son tus expectativas de ir a terapia?</string>
-    <string name="cuartaPregunta">4. Lorem ipsum</string>
-    <string name="opuno">Cognitivo conductual</string>
-    <string name="opdos">Psicoanálisis</string>
-    <string name="optres">Sistémica</string>
-    <string name="opcuatro">Humanista</string>
-    <string name="opcinco">Creativo</string>
-    <string name="opseis">Racional</string>
-    <string name="opsiete">Conocerme mejor</string>
-    <string name="opocho">Buscar soluciones a mis problemáticas</string>
-    <string name="opnueve">Aprender a manejar mis emociones</string>
-    <string name="opdiez">Entender la raíz de mis problemas</string>
-    <string name="loremipsum">Loremipsumd de prueba</string>
-    <string name="scrollview" />
-    <string name="scroll" />
+    <string name="telefono">Número de teléfono</string>
+    <string name="pronombre">Pronombres</string>
+    <string name="hintpronombre">ella</string>
+    <string name="cumpleanios">Cumpleaños</string>
+    <string name="selecciona">Selecciona:</string>
+    <string name="linea">linea</string>
+    <string name="tituloterminos">TÉRMINOS DE USO</string>
+    <string-array name="arraypronombres">
+        <item>Ella</item>
+        <item>El</item>
+        <item>Elle</item>
+    </string-array>
+    <string name="aviso">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi cras fermentum odio eu. Nisl condimentum id venenatis a condimentum. Luctus accumsan tortor posuere ac ut consequat semper viverra nam. Quis enim lobortis scelerisque fermentum dui faucibus. Erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Urna duis convallis convallis tellus id interdum velit laoreet id. Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet. Amet tellus cras adipiscing enim. Commodo ullamcorper a lacus vestibulum sed arcu non odio euismod. Urna duis convallis convallis tellus id. Eget nunc lobortis mattis aliquam faucibus purus in massa tempor. Euismod nisi porta lorem mollis aliquam. Lacinia quis vel eros donec ac odio tempor orci. Mi eget mauris pharetra et ultrices. Eget nunc lobortis mattis aliquam faucibus purus in massa. Non arcu risus quis varius. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Tempor commodo ullamcorper a lacus vestibulum sed. Euismod lacinia at quis risus sed vulputate odio ut.
+
+Fermentum iaculis eu non diam phasellus vestibulum lorem. Euismod nisi porta lorem mollis aliquam ut. Eget arcu dictum varius duis at consectetur lorem. Facilisis gravida neque convallis a cras semper. Porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Amet facilisis magna etiam tempor. Diam in arcu cursus euismod quis viverra nibh. Nullam vehicula ipsum a arcu cursus vitae congue mauris. Posuere lorem ipsum dolor sit amet consectetur. Dolor sit amet consectetur adipiscing elit ut aliquam. Donec adipiscing tristique risus nec feugiat. Elit sed vulputate mi sit amet mauris commodo.
+
+Amet nulla facilisi morbi tempus iaculis urna. Sagittis eu volutpat odio facilisis mauris. Ac odio tempor orci dapibus ultrices. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Sodales neque sodales ut etiam sit. Facilisi cras fermentum odio eu feugiat pretium nibh ipsum. Aenean sed adipiscing diam donec adipiscing tristique risus nec. Lobortis mattis aliquam faucibus purus in massa tempor. Purus in mollis nunc sed id semper risus in. Enim diam vulputate ut pharetra. At erat pellentesque adipiscing commodo elit at. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Egestas diam in arcu cursus.
+
+Et ligula ullamcorper malesuada proin libero. Phasellus faucibus scelerisque eleifend donec. Est sit amet facilisis magna. Facilisis volutpat est velit egestas dui id ornare arcu. Sed lectus vestibulum mattis ullamcorper velit sed. At in tellus integer feugiat. Vehicula ipsum a arcu cursus. Porttitor eget dolor morbi non arcu. Morbi tristique senectus et netus et malesuada fames ac. Risus at ultrices mi tempus. Adipiscing elit duis tristique sollicitudin nibh. Malesuada fames ac turpis egestas maecenas. Pellentesque sit amet porttitor eget dolor. Cras sed felis eget velit aliquet sagittis id consectetur purus. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo. Turpis egestas integer eget aliquet nibh. Et odio pellentesque diam volutpat commodo sed egestas egestas fringilla. Vulputate enim nulla aliquet porttitor. Odio pellentesque diam volutpat commodo. Duis ut diam quam nulla.
+
+Mi ipsum faucibus vitae aliquet nec ullamcorper. Erat imperdiet sed euismod nisi porta lorem mollis aliquam. Facilisis sed odio morbi quis commodo. Amet facilisis magna etiam tempor orci eu lobortis elementum nibh. Eu sem integer vitae justo eget magna fermentum iaculis eu. In iaculis nunc sed augue. Condimentum id venenatis a condimentum. Odio tempor orci dapibus ultrices in iaculis nunc. Sed augue lacus viverra vitae. Sollicitudin ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Massa tempor nec feugiat nisl pretium fusce id velit ut. Cursus mattis molestie a iaculis. Ultrices neque ornare aenean euismod elementum nisi quis. Egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam. Volutpat commodo sed egestas egestas fringilla. Sodales ut eu sem integer vitae justo eget magna.
+    </string>
+    <string name="accepttext">Aceptar</string>
+    <string name="rechazartext">Rechazar</string>
+    <string name="bienvenidx_de_regreso">BIENVENIDX DE REGRESO</string>
+    <string name="logoborboleta">logoborboleta</string>
+    <string name="CorreoLogin">Correo</string>
+    <string name="ContraseñaLogin">Contraseña</string>
+    <string name="Email">Email</string>
+    <string name="ContraseñaInsert">Contraseña</string>
+    <string name="inicia_sesi_n">INICIA SESIÓN</string>
+    <string name="aun_no_tienes_cuenta_registrate">¿Aun no tienes cuenta? Registrate</string>
+
 </resources>
