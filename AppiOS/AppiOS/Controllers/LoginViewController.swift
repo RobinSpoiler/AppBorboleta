@@ -23,6 +23,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // verificar si el usuario ya ha iniciado sesion antes
+        // en caso de que si, realiza segue a home
         if Auth.auth().currentUser != nil {
             self.performSegue(withIdentifier: "toHome", sender: self)
         }
@@ -30,6 +32,7 @@ class LoginViewController: UIViewController {
         LoginButton.tintColor = UIColor(named: "Color1")
     }
     
+    // alternar la visibilidad del campo de la contrasena
     @IBAction func PasswordVisibilityButton(_ sender: UIButton) {
         AppiOS.PasswordVisibility().Switch(VisibilityButton: PasswordVisibility, PasswordField: PasswordInput)
     }
@@ -39,9 +42,13 @@ class LoginViewController: UIViewController {
             Auth.auth().signIn(withEmail: email, password: password) {
                 authResult, error in
                 if let e = error {
+                    // codigo en caso de que el login sea fallido
+                    // TODO
+                    //   * Asignar el error a su label correspondiente
                     self.PasswordErrorLabel.text = e.localizedDescription
                 }
                 else {
+                    // login exitoso, segue a home
                     self.performSegue(withIdentifier: "toHome", sender: self)
                 }
             }

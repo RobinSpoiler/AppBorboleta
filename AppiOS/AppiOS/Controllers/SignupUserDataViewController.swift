@@ -36,6 +36,11 @@ class SignupUserDataViewController: UIViewController {
         let collection = db.collection("users")
         let document = collection.document((Auth.auth().currentUser?.email)!)
         
+        // actualizar datos del usuario registrandose
+        // se agregan los campos 'birthday', 'phone', 'pronouns' bajo el campo 'data'
+        // IMPORTANTE
+        // es necesario usar data.{field} en vez de pasar el mapa entero, para evitar que se sobreescriba
+        // ya que esto hara que se borre el nombre que se guardo de la pagina anterior
         document.updateData([
             "data.birthday" : birthday,
             "data.phone" : phoneNumber!,

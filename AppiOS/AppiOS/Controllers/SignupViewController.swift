@@ -49,8 +49,11 @@ class SignupViewController: UIViewController {
                     let name = self.NameField.text
                     
                     let collection = self.db.collection("users")
+                    // el documento no debiese de existir en este punto, pero si si, se sobreescribe
                     let document = collection.document((Auth.auth().currentUser?.email)!)
                     
+                    // agregar informacion al documento
+                    // en esta pagina solo se agrega el nombre, bajo document(usermail)/data/name
                     document.setData([
                         "data" : [
                             "name" : name
