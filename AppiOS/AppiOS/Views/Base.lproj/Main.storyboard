@@ -575,11 +575,28 @@ REGRESO</string>
                         <outlet property="BirthdayPicker" destination="oSd-qZ-Tl8" id="lW1-aV-L92"/>
                         <outlet property="PhoneField" destination="5s7-N1-ayw" id="e7P-6g-2ik"/>
                         <outlet property="pronounsDropdown" destination="Jgx-49-ee6" id="aDD-IO-N7A"/>
+                        <segue destination="xLP-wC-Xvg" kind="show" identifier="toPreferences" id="iUA-0C-1ja"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HVc-da-pl0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2947.826086956522" y="-34.151785714285715"/>
+        </scene>
+        <!--Signup Preferences View Controller-->
+        <scene sceneID="bZE-Js-Swr">
+            <objects>
+                <viewController id="xLP-wC-Xvg" customClass="SignupPreferencesViewController" customModule="AppiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PJV-bl-YQv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="OHc-hP-b4C"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" style="editor" id="zD6-yr-G3U"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gpg-V0-RGh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3861" y="-34"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="l59-zC-VIG">

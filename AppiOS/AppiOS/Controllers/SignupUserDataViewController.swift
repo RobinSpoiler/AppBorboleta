@@ -46,5 +46,7 @@ class SignupUserDataViewController: UIViewController {
             "data.phone" : phoneNumber!,
             "data.pronouns" : pronouns!
         ])
+        
+        performSegue(withIdentifier: "toPreferences", sender: self)
     }
 }
