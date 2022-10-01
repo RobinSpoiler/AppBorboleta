@@ -11,6 +11,8 @@ import Firebase
 
 class SignupViewController: UIViewController {
     
+    let db = Firestore.firestore()
+    
     @IBOutlet weak var NameField: UITextField!
     @IBOutlet weak var EmailField: UITextField!
     @IBOutlet weak var PasswordField: UITextField!
@@ -44,11 +46,16 @@ class SignupViewController: UIViewController {
                 if let e = error {
                     self.ConfirmError.text = e.localizedDescription
                 } else {
-                    let db = Firestore.firestore()
                     let name = self.NameField.text
                     
-                    let collection = db.collection("users")
+                    let collection = self.db.collection("users")
                     let document = collection.document((Auth.auth().currentUser?.email)!)
+                    
+                    document.setData([
+                        "data" : [
+                            "name" : name
+                        ]
+                    ])
                     
                     self.performSegue(withIdentifier: "toUserData", sender: self)
                 }

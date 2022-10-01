@@ -23,6 +23,10 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if Auth.auth().currentUser != nil {
+            self.performSegue(withIdentifier: "toHome", sender: self)
+        }
+        
         LoginButton.tintColor = UIColor(named: "Color1")
     }
     

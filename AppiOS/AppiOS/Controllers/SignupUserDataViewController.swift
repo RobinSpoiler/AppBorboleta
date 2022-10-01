@@ -7,8 +7,11 @@
 
 import UIKit
 import iOSDropDown
+import Firebase
 
 class SignupUserDataViewController: UIViewController {
+    
+    let db = Firestore.firestore()
     
     @IBOutlet weak var PhoneField: UITextField!
     @IBOutlet weak var BirthdayPicker: UIDatePicker!
@@ -28,8 +31,15 @@ class SignupUserDataViewController: UIViewController {
         let pronouns = pronounsDropdown.text
         let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
-        let date = dateFormatter.string(from: BirthdayPicker.date)
+        let birthday = dateFormatter.string(from: BirthdayPicker.date)
         
+        let collection = db.collection("users")
+        let document = collection.document((Auth.auth().currentUser?.email)!)
         
+        document.updateData([
+            "data.birthday" : birthday,
+            "data.phone" : phoneNumber!,
+            "data.pronouns" : pronouns!
+        ])
     }
 }
