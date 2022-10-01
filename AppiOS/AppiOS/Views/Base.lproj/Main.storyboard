@@ -533,6 +533,9 @@ REGRESO</string>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <backgroundConfiguration key="background" image="arrow.right.circle.fill" catalog="system"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="NextButton:" destination="KOE-EI-XUn" eventType="touchUpInside" id="qYG-bX-ww6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mdh-2b-XuP"/>
@@ -569,6 +572,7 @@ REGRESO</string>
                     </view>
                     <navigationItem key="navigationItem" style="editor" id="cUK-xc-8uI"/>
                     <connections>
+                        <outlet property="BirthdayPicker" destination="oSd-qZ-Tl8" id="lW1-aV-L92"/>
                         <outlet property="PhoneField" destination="5s7-N1-ayw" id="e7P-6g-2ik"/>
                         <outlet property="pronounsDropdown" destination="Jgx-49-ee6" id="aDD-IO-N7A"/>
                     </connections>

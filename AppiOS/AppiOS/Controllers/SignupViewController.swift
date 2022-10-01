@@ -44,6 +44,12 @@ class SignupViewController: UIViewController {
                 if let e = error {
                     self.ConfirmError.text = e.localizedDescription
                 } else {
+                    let db = Firestore.firestore()
+                    let name = self.NameField.text
+                    
+                    let collection = db.collection("users")
+                    let document = collection.document((Auth.auth().currentUser?.email)!)
+                    
                     self.performSegue(withIdentifier: "toUserData", sender: self)
                 }
             }

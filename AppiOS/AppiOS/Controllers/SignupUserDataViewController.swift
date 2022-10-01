@@ -11,6 +11,7 @@ import iOSDropDown
 class SignupUserDataViewController: UIViewController {
     
     @IBOutlet weak var PhoneField: UITextField!
+    @IBOutlet weak var BirthdayPicker: UIDatePicker!
     @IBOutlet weak var pronounsDropdown: DropDown!
     
     override func viewDidLoad() {
@@ -22,4 +23,13 @@ class SignupUserDataViewController: UIViewController {
         pronounsDropdown.optionArray = pronouns
     }
 
+    @IBAction func NextButton(_ sender: UIButton) {
+        let phoneNumber = PhoneField.text
+        let pronouns = pronounsDropdown.text
+        let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+        let date = dateFormatter.string(from: BirthdayPicker.date)
+        
+        
+    }
 }
