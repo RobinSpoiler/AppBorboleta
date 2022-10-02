@@ -587,7 +587,7 @@ REGRESO</string>
             <objects>
                 <viewController id="xLP-wC-Xvg" customClass="SignupPreferencesViewController" customModule="AppiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PJV-bl-YQv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ButterflyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Z1a-WQ-3ge">
@@ -597,159 +597,285 @@ REGRESO</string>
                                     <constraint firstAttribute="width" constant="40" id="iWa-st-n6o"/>
                                 </constraints>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J6L-5H-l3P">
-                                <rect key="frame" x="40" y="112" width="334" height="700"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B8x-iG-HP5">
+                                <rect key="frame" x="40" y="107" width="334" height="1233"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AjS-7g-bUC">
-                                        <rect key="frame" x="20" y="50.5" width="25" height="124"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lyj-dW-CAG">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="1300"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gic-QP-FdK">
-                                                <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="si2-sk-Az4"/>
-                                                    <constraint firstAttribute="height" constant="25" id="vIH-MB-mp8"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title=""/>
-                                                <connections>
-                                                    <action selector="Q1OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="ipX-05-QB6"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoS-hn-SDN">
-                                                <rect key="frame" x="0.0" y="33" width="25" height="25"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="25" id="ESr-Cp-3YL"/>
-                                                    <constraint firstAttribute="width" constant="25" id="ogq-gc-4pY"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title=""/>
-                                                <connections>
-                                                    <action selector="Q1OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="xag-cZ-Tbr"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwi-UY-PZ5">
-                                                <rect key="frame" x="0.0" y="66" width="25" height="25"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="25" id="Enj-qx-jis"/>
-                                                    <constraint firstAttribute="width" constant="25" id="Jsz-er-HDJ"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title=""/>
-                                                <connections>
-                                                    <action selector="Q1OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="TWV-Au-6DT"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNw-hK-Xfo">
-                                                <rect key="frame" x="0.0" y="99" width="25" height="25"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="25" id="L4J-qD-Lv7"/>
-                                                    <constraint firstAttribute="width" constant="25" id="TO8-H6-yhd"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title=""/>
-                                                <connections>
-                                                    <action selector="Q1OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="vB8-rl-zAu"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="pWd-Uv-gqS">
+                                                <rect key="frame" x="0.0" y="0.0" width="344" height="1315.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="4sN-GY-tiW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="237" height="158.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaV-cI-EnG">
+                                                                <rect key="frame" x="0.0" y="0.0" width="237" height="20.5"/>
+                                                                <string key="text">1. ¿Qué tipo de terapia buscas?
+</string>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbq-Ot-ZLU">
+                                                                <rect key="frame" x="0.0" y="20.5" width="210.5" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Cognitivo conductual"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nU-GZ-WPW">
+                                                                <rect key="frame" x="0.0" y="55" width="146" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Psicoanálisis"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xt-Gg-T6y">
+                                                                <rect key="frame" x="0.0" y="89.5" width="123" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Sistémica"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9l-KJ-hgb">
+                                                                <rect key="frame" x="0.0" y="124" width="130.5" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Humanista"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Fcs-ED-DT6">
+                                                        <rect key="frame" x="0.0" y="176.5" width="274" height="110"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9w-ET-FHv">
+                                                                <rect key="frame" x="0.0" y="0.0" width="274" height="41"/>
+                                                                <string key="text">2. ¿Con qué tipo de personalidad te 
+     identificas más?
+</string>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7th-bT-XvS">
+                                                                <rect key="frame" x="0.0" y="41" width="210.5" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Cognitivo conductual"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0i-tm-Fd3">
+                                                                <rect key="frame" x="0.0" y="75.5" width="146" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Psicoanálisis"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="pxR-4d-jS1">
+                                                        <rect key="frame" x="0.0" y="304.5" width="344" height="213.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FID-HI-Ucl">
+                                                                <rect key="frame" x="0.0" y="0.0" width="294.5" height="41"/>
+                                                                <string key="text">3. ¿Cuáles son tus expectativas de ir a 
+    terapia?
+</string>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yub-kt-XpX">
+                                                                <rect key="frame" x="0.0" y="41" width="185.5" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Conocerme mejor"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3o-WG-iki">
+                                                                <rect key="frame" x="0.0" y="75.5" width="344" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Buscar soluciones a mis problemáticas"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ps0-02-lj7">
+                                                                <rect key="frame" x="0.0" y="110" width="317" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Aprender a manejar mis emociones"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8LL-gd-g1T">
+                                                                <rect key="frame" x="0.0" y="144.5" width="306.5" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Entender la raíz de mis problemas"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ok6-xA-BRq">
+                                                                <rect key="frame" x="0.0" y="179" width="275.5" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Definir qué hacer en mi futuro"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ndW-UL-YYR">
+                                                        <rect key="frame" x="0.0" y="536" width="296.5" height="213.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8q-yR-24H">
+                                                                <rect key="frame" x="0.0" y="0.0" width="296.5" height="41"/>
+                                                                <string key="text">4. ¿Cuál es tu presupuesto esperado a 
+     pagar por sesión?</string>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wl-R1-gXb">
+                                                                <rect key="frame" x="0.0" y="41" width="160" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="$300 o menos"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZ3-zH-5fj">
+                                                                <rect key="frame" x="0.0" y="75.5" width="138.5" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="$300 a 500"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LD-bB-VTN">
+                                                                <rect key="frame" x="0.0" y="110" width="137.5" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="$500 a 700"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o54-RQ-urk">
+                                                                <rect key="frame" x="0.0" y="144.5" width="148.5" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="$700 a 1,000"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HwO-3x-k9b">
+                                                                <rect key="frame" x="0.0" y="179" width="161" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="$1,000 a 1,300"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Xbl-Sh-jSY">
+                                                        <rect key="frame" x="0.0" y="767.5" width="331.5" height="337"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0BZ-W1-y66">
+                                                                <rect key="frame" x="0.0" y="0.0" width="331.5" height="61"/>
+                                                                <string key="text">5. ¿Cuáles son los principales temas que te 
+    gustaría tratar en terapia? (selecciona 
+    todas las opciones que aplican)
+
+</string>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVi-iD-I6I">
+                                                                <rect key="frame" x="0.0" y="61" width="96.5" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Estrés"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Yx-W3-BE8">
+                                                                <rect key="frame" x="0.0" y="95.5" width="120" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Ansiedad"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARs-pL-aeL">
+                                                                <rect key="frame" x="0.0" y="130" width="127" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Depresión"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Og-8i-4JR">
+                                                                <rect key="frame" x="0.0" y="164.5" width="207" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Problemas familiares"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qx5-LI-bKf">
+                                                                <rect key="frame" x="0.0" y="199" width="206" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Relaciones de pareja"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FpZ-dK-CVw">
+                                                                <rect key="frame" x="0.0" y="233.5" width="242.5" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Relaciones empresariales"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWv-4p-X4n">
+                                                                <rect key="frame" x="0.0" y="268" width="318" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Trastornos de conducta alimentaria"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1Q-BK-5DL">
+                                                                <rect key="frame" x="0.0" y="302.5" width="324" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Orientación profesional y vocacional"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Lms-s2-YDo">
+                                                        <rect key="frame" x="0.0" y="1122.5" width="242.5" height="193"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laQ-cz-C8j">
+                                                                <rect key="frame" x="0.0" y="0.0" width="210" height="20.5"/>
+                                                                <string key="text">6. ¿Cómo te definirías más?
+</string>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8z-La-Tcf">
+                                                                <rect key="frame" x="0.0" y="20.5" width="129.5" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Estudiante"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5iA-zb-1Xr">
+                                                                <rect key="frame" x="0.0" y="55" width="94.5" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Godín"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hm-nA-3bk">
+                                                                <rect key="frame" x="0.0" y="89.5" width="153" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Emprendedor"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eU-BU-hrR">
+                                                                <rect key="frame" x="0.0" y="124" width="186.5" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Intraemprendedor"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oul-bf-azK">
+                                                                <rect key="frame" x="0.0" y="158.5" width="242.5" height="34.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Emprendedor de impacto"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                    </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. ¿Que tipo de terapía buscas?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIh-Of-bjR">
-                                        <rect key="frame" x="20" y="20" width="237" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="Bmq-aj-xxu">
-                                        <rect key="frame" x="50" y="52.5" width="152" height="120"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Cognitivo conductal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="za7-rB-Hou">
-                                                <rect key="frame" x="0.0" y="0.0" width="152" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Psicoanálisis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cP0-rg-0yd">
-                                                <rect key="frame" x="0.0" y="33.5" width="152" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Sistémica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHo-j4-sVn">
-                                                <rect key="frame" x="0.0" y="67" width="152" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Humanista" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7EO-YY-FE2">
-                                                <rect key="frame" x="0.0" y="100.5" width="152" height="19.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zed-wP-RlE">
-                                        <rect key="frame" x="0.0" y="212.5" width="240" height="128"/>
-                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <color key="backgroundColor" name="BackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="128" id="8PN-T5-frX"/>
-                                            <constraint firstAttribute="width" constant="240" id="ckd-SD-l70"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Obe-CQ-HYA">
-                                        <rect key="frame" x="0.0" y="440.5" width="240" height="128"/>
-                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="128" id="4gr-WK-kh6"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dl1-Hr-bKn">
-                                        <rect key="frame" x="0.0" y="668.5" width="240" height="128"/>
-                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="128" id="PaY-Fr-Xc4"/>
+                                            <constraint firstAttribute="height" constant="1300" id="VFe-tb-ntw"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Dl1-Hr-bKn" firstAttribute="top" secondItem="Obe-CQ-HYA" secondAttribute="bottom" constant="100" id="0Wz-62-g1w"/>
-                                    <constraint firstItem="zed-wP-RlE" firstAttribute="leading" secondItem="J6L-5H-l3P" secondAttribute="leading" id="7d7-th-LeX"/>
-                                    <constraint firstItem="Obe-CQ-HYA" firstAttribute="leading" secondItem="J6L-5H-l3P" secondAttribute="leading" id="BEq-BN-bVt"/>
-                                    <constraint firstItem="Bmq-aj-xxu" firstAttribute="leading" secondItem="AjS-7g-bUC" secondAttribute="trailing" constant="5" id="FNH-fs-vao"/>
-                                    <constraint firstItem="Bmq-aj-xxu" firstAttribute="top" secondItem="tIh-Of-bjR" secondAttribute="bottom" constant="12" id="Gp7-2Q-IAz"/>
-                                    <constraint firstAttribute="trailing" secondItem="Dl1-Hr-bKn" secondAttribute="trailing" id="H2P-sr-kju"/>
-                                    <constraint firstAttribute="trailing" secondItem="zed-wP-RlE" secondAttribute="trailing" id="Okl-Ui-cXm"/>
-                                    <constraint firstItem="AjS-7g-bUC" firstAttribute="leading" secondItem="tIh-Of-bjR" secondAttribute="leading" id="Pqf-ex-E11"/>
-                                    <constraint firstAttribute="trailing" secondItem="Obe-CQ-HYA" secondAttribute="trailing" id="asB-Bj-e4s"/>
-                                    <constraint firstItem="AjS-7g-bUC" firstAttribute="top" secondItem="J6L-5H-l3P" secondAttribute="top" constant="50.5" id="byx-Uy-NLd"/>
-                                    <constraint firstItem="AjS-7g-bUC" firstAttribute="top" secondItem="tIh-Of-bjR" secondAttribute="bottom" constant="10" id="dma-u4-GWA"/>
-                                    <constraint firstItem="Dl1-Hr-bKn" firstAttribute="leading" secondItem="J6L-5H-l3P" secondAttribute="leading" id="e8K-YY-4Mz"/>
-                                    <constraint firstItem="AjS-7g-bUC" firstAttribute="centerY" secondItem="Bmq-aj-xxu" secondAttribute="centerY" id="edx-Y0-kj7"/>
-                                    <constraint firstAttribute="bottom" secondItem="Dl1-Hr-bKn" secondAttribute="bottom" constant="20" id="ial-UE-dd5"/>
-                                    <constraint firstItem="zed-wP-RlE" firstAttribute="top" secondItem="Bmq-aj-xxu" secondAttribute="bottom" constant="40" id="m6H-da-Qs6"/>
-                                    <constraint firstItem="Obe-CQ-HYA" firstAttribute="top" secondItem="zed-wP-RlE" secondAttribute="bottom" constant="100" id="tJI-5U-IMm"/>
-                                    <constraint firstItem="AjS-7g-bUC" firstAttribute="leading" secondItem="J6L-5H-l3P" secondAttribute="leading" constant="20" id="vU4-Zs-q1o"/>
+                                    <constraint firstItem="lyj-dW-CAG" firstAttribute="leading" secondItem="B8x-iG-HP5" secondAttribute="leading" id="2J6-6b-DU9"/>
+                                    <constraint firstAttribute="bottom" secondItem="lyj-dW-CAG" secondAttribute="bottom" id="EeM-wk-f8x"/>
+                                    <constraint firstAttribute="trailing" secondItem="lyj-dW-CAG" secondAttribute="trailing" id="GyA-qI-yZx"/>
+                                    <constraint firstItem="lyj-dW-CAG" firstAttribute="top" secondItem="B8x-iG-HP5" secondAttribute="top" id="NMF-lM-Qtj"/>
                                 </constraints>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIn-Q3-vzQ">
+                                <rect key="frame" x="329" y="1345" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="A73-OR-EoD"/>
+                                    <constraint firstAttribute="height" constant="45" id="TTM-CF-yT6"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.right.circle.fill" catalog="system"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OHc-hP-b4C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="OHc-hP-b4C" firstAttribute="trailing" secondItem="J6L-5H-l3P" secondAttribute="trailing" constant="40" id="J9v-Go-x4L"/>
-                            <constraint firstItem="J6L-5H-l3P" firstAttribute="top" secondItem="Z1a-WQ-3ge" secondAttribute="bottom" constant="20" id="JDY-ok-4yf"/>
+                            <constraint firstItem="OHc-hP-b4C" firstAttribute="trailing" secondItem="zIn-Q3-vzQ" secondAttribute="trailing" constant="40" id="67A-iN-gTW"/>
+                            <constraint firstAttribute="bottom" secondItem="B8x-iG-HP5" secondAttribute="bottom" constant="60" id="C1h-iE-5io"/>
+                            <constraint firstAttribute="trailing" secondItem="B8x-iG-HP5" secondAttribute="trailing" constant="40" id="J69-Ri-aUh"/>
                             <constraint firstItem="OHc-hP-b4C" firstAttribute="trailing" secondItem="Z1a-WQ-3ge" secondAttribute="trailing" constant="40" id="JQd-aJ-PQX"/>
                             <constraint firstItem="Z1a-WQ-3ge" firstAttribute="top" secondItem="OHc-hP-b4C" secondAttribute="top" constant="-40" id="LdX-Hg-jX8"/>
-                            <constraint firstItem="OHc-hP-b4C" firstAttribute="bottom" secondItem="J6L-5H-l3P" secondAttribute="bottom" constant="50" id="Qci-Xr-lRz"/>
-                            <constraint firstItem="J6L-5H-l3P" firstAttribute="leading" secondItem="OHc-hP-b4C" secondAttribute="leading" constant="40" id="hMN-EI-i6i"/>
+                            <constraint firstItem="B8x-iG-HP5" firstAttribute="top" secondItem="Z1a-WQ-3ge" secondAttribute="bottom" constant="15" id="TdL-bD-hbP"/>
+                            <constraint firstItem="lyj-dW-CAG" firstAttribute="width" secondItem="PJV-bl-YQv" secondAttribute="width" multiplier="0.57971" constant="94" id="fhq-pe-VVd"/>
+                            <constraint firstAttribute="bottom" secondItem="zIn-Q3-vzQ" secondAttribute="bottom" constant="10" id="giV-A0-A9u"/>
+                            <constraint firstItem="B8x-iG-HP5" firstAttribute="leading" secondItem="OHc-hP-b4C" secondAttribute="leading" constant="40" id="iGh-fy-yaX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" style="editor" id="zD6-yr-G3U"/>
-                    <connections>
-                        <outletCollection property="Q1Options" destination="rwi-UY-PZ5" collectionClass="NSMutableArray" id="U5r-IV-5WB"/>
-                        <outletCollection property="Q1Options" destination="aoS-hn-SDN" collectionClass="NSMutableArray" id="aQZ-KW-fUF"/>
-                        <outletCollection property="Q1Options" destination="gic-QP-FdK" collectionClass="NSMutableArray" id="yiY-Zj-HA3"/>
-                        <outletCollection property="Q1Options" destination="jNw-hK-Xfo" collectionClass="NSMutableArray" id="CPR-ym-Zzg"/>
-                    </connections>
+                    <size key="freeformSize" width="414" height="1400"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gpg-V0-RGh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -796,15 +922,6 @@ REGRESO</string>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
