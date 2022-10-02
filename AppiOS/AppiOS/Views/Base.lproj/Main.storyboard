@@ -621,21 +621,33 @@ REGRESO</string>
                                                                 <rect key="frame" x="0.0" y="20.5" width="210.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Cognitivo conductual"/>
+                                                                <connections>
+                                                                    <action selector="Q1OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="AT7-ZE-h30"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nU-GZ-WPW">
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nU-GZ-WPW">
                                                                 <rect key="frame" x="0.0" y="55" width="146" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Psicoanálisis"/>
+                                                                <connections>
+                                                                    <action selector="Q1OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="o2o-MC-4aN"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xt-Gg-T6y">
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xt-Gg-T6y">
                                                                 <rect key="frame" x="0.0" y="89.5" width="123" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Sistémica"/>
+                                                                <connections>
+                                                                    <action selector="Q1OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="RRW-gG-2O3"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9l-KJ-hgb">
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9l-KJ-hgb">
                                                                 <rect key="frame" x="0.0" y="124" width="130.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Humanista"/>
+                                                                <connections>
+                                                                    <action selector="Q1OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="wLo-rF-wf0"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -655,11 +667,17 @@ REGRESO</string>
                                                                 <rect key="frame" x="0.0" y="41" width="210.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Cognitivo conductual"/>
+                                                                <connections>
+                                                                    <action selector="Q2OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="EuP-v1-N6T"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0i-tm-Fd3">
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0i-tm-Fd3">
                                                                 <rect key="frame" x="0.0" y="75.5" width="146" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Psicoanálisis"/>
+                                                                <connections>
+                                                                    <action selector="Q2OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="yBx-aX-0MF"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -679,26 +697,41 @@ REGRESO</string>
                                                                 <rect key="frame" x="0.0" y="41" width="185.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Conocerme mejor"/>
+                                                                <connections>
+                                                                    <action selector="Q3OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="bzU-cT-00D"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3o-WG-iki">
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3o-WG-iki">
                                                                 <rect key="frame" x="0.0" y="75.5" width="344" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Buscar soluciones a mis problemáticas"/>
+                                                                <connections>
+                                                                    <action selector="Q3OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="cPK-9X-1G1"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ps0-02-lj7">
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ps0-02-lj7">
                                                                 <rect key="frame" x="0.0" y="110" width="317" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Aprender a manejar mis emociones"/>
+                                                                <connections>
+                                                                    <action selector="Q3OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="88G-79-p3C"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8LL-gd-g1T">
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8LL-gd-g1T">
                                                                 <rect key="frame" x="0.0" y="144.5" width="306.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Entender la raíz de mis problemas"/>
+                                                                <connections>
+                                                                    <action selector="Q3OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="6dd-Xw-Vl8"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ok6-xA-BRq">
+                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ok6-xA-BRq">
                                                                 <rect key="frame" x="0.0" y="179" width="275.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Definir qué hacer en mi futuro"/>
+                                                                <connections>
+                                                                    <action selector="Q3OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="3BP-bP-EWL"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -717,26 +750,41 @@ REGRESO</string>
                                                                 <rect key="frame" x="0.0" y="41" width="160" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="$300 o menos"/>
+                                                                <connections>
+                                                                    <action selector="Q4OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="yZR-aj-X9j"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZ3-zH-5fj">
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZ3-zH-5fj">
                                                                 <rect key="frame" x="0.0" y="75.5" width="138.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="$300 a 500"/>
+                                                                <connections>
+                                                                    <action selector="Q4OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="rBb-XE-tgd"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LD-bB-VTN">
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LD-bB-VTN">
                                                                 <rect key="frame" x="0.0" y="110" width="137.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="$500 a 700"/>
+                                                                <connections>
+                                                                    <action selector="Q4OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="Oud-2J-25d"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o54-RQ-urk">
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o54-RQ-urk">
                                                                 <rect key="frame" x="0.0" y="144.5" width="148.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="$700 a 1,000"/>
+                                                                <connections>
+                                                                    <action selector="Q4OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="CXg-xk-1Mv"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HwO-3x-k9b">
+                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HwO-3x-k9b">
                                                                 <rect key="frame" x="0.0" y="179" width="161" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="$1,000 a 1,300"/>
+                                                                <connections>
+                                                                    <action selector="Q4OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="Sc9-2e-0lG"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -811,26 +859,41 @@ REGRESO</string>
                                                                 <rect key="frame" x="0.0" y="20.5" width="129.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Estudiante"/>
+                                                                <connections>
+                                                                    <action selector="Q6OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="5pF-9W-cAd"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5iA-zb-1Xr">
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5iA-zb-1Xr">
                                                                 <rect key="frame" x="0.0" y="55" width="94.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Godín"/>
+                                                                <connections>
+                                                                    <action selector="Q6OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="Gzm-9c-UIs"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hm-nA-3bk">
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hm-nA-3bk">
                                                                 <rect key="frame" x="0.0" y="89.5" width="153" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Emprendedor"/>
+                                                                <connections>
+                                                                    <action selector="Q6OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="dXi-Ug-RCh"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eU-BU-hrR">
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eU-BU-hrR">
                                                                 <rect key="frame" x="0.0" y="124" width="186.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Intraemprendedor"/>
+                                                                <connections>
+                                                                    <action selector="Q6OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="tkc-bk-Per"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oul-bf-azK">
+                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oul-bf-azK">
                                                                 <rect key="frame" x="0.0" y="158.5" width="242.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Emprendedor de impacto"/>
+                                                                <connections>
+                                                                    <action selector="Q6OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="cdL-WS-EWF"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -876,6 +939,37 @@ REGRESO</string>
                     </view>
                     <navigationItem key="navigationItem" style="editor" id="zD6-yr-G3U"/>
                     <size key="freeformSize" width="414" height="1400"/>
+                    <connections>
+                        <outletCollection property="Q1Options" destination="nbq-Ot-ZLU" collectionClass="NSMutableArray" id="X7g-cf-74k"/>
+                        <outletCollection property="Q1Options" destination="3nU-GZ-WPW" collectionClass="NSMutableArray" id="Jo3-Q6-ecP"/>
+                        <outletCollection property="Q1Options" destination="6xt-Gg-T6y" collectionClass="NSMutableArray" id="4et-tc-2j7"/>
+                        <outletCollection property="Q1Options" destination="F9l-KJ-hgb" collectionClass="NSMutableArray" id="Woo-aF-ynT"/>
+                        <outletCollection property="Q2Options" destination="7th-bT-XvS" collectionClass="NSMutableArray" id="P3P-kc-Rlw"/>
+                        <outletCollection property="Q2Options" destination="k0i-tm-Fd3" collectionClass="NSMutableArray" id="dwu-bX-dDn"/>
+                        <outletCollection property="Q3Options" destination="yub-kt-XpX" collectionClass="NSMutableArray" id="XfE-G1-Xr1"/>
+                        <outletCollection property="Q3Options" destination="V3o-WG-iki" collectionClass="NSMutableArray" id="ex2-nw-skh"/>
+                        <outletCollection property="Q3Options" destination="ps0-02-lj7" collectionClass="NSMutableArray" id="mKL-qF-EQ8"/>
+                        <outletCollection property="Q3Options" destination="8LL-gd-g1T" collectionClass="NSMutableArray" id="ghc-oY-DCm"/>
+                        <outletCollection property="Q3Options" destination="ok6-xA-BRq" collectionClass="NSMutableArray" id="VKa-oO-U93"/>
+                        <outletCollection property="Q4Options" destination="5Wl-R1-gXb" collectionClass="NSMutableArray" id="NnD-As-wz8"/>
+                        <outletCollection property="Q4Options" destination="BZ3-zH-5fj" collectionClass="NSMutableArray" id="g4w-zm-Ext"/>
+                        <outletCollection property="Q4Options" destination="6LD-bB-VTN" collectionClass="NSMutableArray" id="LGP-yu-Fk8"/>
+                        <outletCollection property="Q4Options" destination="o54-RQ-urk" collectionClass="NSMutableArray" id="9M6-DR-BJ0"/>
+                        <outletCollection property="Q4Options" destination="HwO-3x-k9b" collectionClass="NSMutableArray" id="jt2-tN-IlS"/>
+                        <outletCollection property="Q5Options" destination="NVi-iD-I6I" collectionClass="NSMutableArray" id="I5M-0Z-vJn"/>
+                        <outletCollection property="Q5Options" destination="6Yx-W3-BE8" collectionClass="NSMutableArray" id="5Zg-ez-7fP"/>
+                        <outletCollection property="Q5Options" destination="ARs-pL-aeL" collectionClass="NSMutableArray" id="9M9-m7-MRQ"/>
+                        <outletCollection property="Q5Options" destination="8Og-8i-4JR" collectionClass="NSMutableArray" id="Hv2-Rs-ArE"/>
+                        <outletCollection property="Q5Options" destination="Qx5-LI-bKf" collectionClass="NSMutableArray" id="IeO-Hj-drV"/>
+                        <outletCollection property="Q5Options" destination="FpZ-dK-CVw" collectionClass="NSMutableArray" id="MD1-NY-tXt"/>
+                        <outletCollection property="Q5Options" destination="LWv-4p-X4n" collectionClass="NSMutableArray" id="0Lu-vG-zd1"/>
+                        <outletCollection property="Q5Options" destination="i1Q-BK-5DL" collectionClass="NSMutableArray" id="05G-Wf-Rd1"/>
+                        <outletCollection property="Q6Options" destination="F8z-La-Tcf" collectionClass="NSMutableArray" id="gBe-Vc-Gs2"/>
+                        <outletCollection property="Q6Options" destination="5iA-zb-1Xr" collectionClass="NSMutableArray" id="GAp-hV-pVh"/>
+                        <outletCollection property="Q6Options" destination="0hm-nA-3bk" collectionClass="NSMutableArray" id="ZbG-Xv-WYY"/>
+                        <outletCollection property="Q6Options" destination="1eU-BU-hrR" collectionClass="NSMutableArray" id="kON-Jk-SUb"/>
+                        <outletCollection property="Q6Options" destination="oul-bf-azK" collectionClass="NSMutableArray" id="Qcm-YE-SQH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gpg-V0-RGh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
