@@ -4,21 +4,31 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import android.util.Log
 import android.widget.*
+import com.google.android.material.textfield.TextInputEditText
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import java.util.*
+
 
 
 @Suppress("NAME_SHADOWING")
 class registro2 : AppCompatActivity() {
 
     @SuppressLint("MissingInflatedId")
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        // Access a Cloud Firestore instance from your Activity
+        val db = Firebase.firestore
+
         supportActionBar?.hide()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro2)
 
         val datePicker = findViewById<DatePicker>(R.id.fecha)
+        val telefono = findViewById<TextInputEditText>(R.id.inputtelefono)
+        val pronombre = findViewById<TextView>(R.id.selector)
         val today = Calendar.getInstance()
         datePicker.init(
             today.get(Calendar.YEAR), today.get(Calendar.MONTH),
@@ -48,8 +58,22 @@ class registro2 : AppCompatActivity() {
         }
 
 
+
         val btnRegister2Second = findViewById<ImageButton>(R.id.nextbutton2)
         btnRegister2Second.setOnClickListener(){
+            /*Completar registro en la BD*/
+            val docData = hashMapOf(
+                "birthday" to "12-09-2002",
+                "phone" to telefono.text.toString(),
+                "pronouns" to pronombre.text.toString(),
+            )
+
+            db.collection("users").document("israez@tec.mx")
+                .set(docData)
+                .addOnSuccessListener { Log.d("Success", "DocumentSnapshot successfully written!") }
+                .addOnFailureListener { e -> Log.w("Fail", "Error writing document", e) }
+
+
             startActivity(Intent(this, avisoprivacidad::class.java))
         }
 
