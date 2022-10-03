@@ -47,7 +47,6 @@ struct OptionSelected {
             }
         }
         
-        
         return selectedOptions
     }
     

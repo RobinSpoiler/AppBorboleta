@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import Firebase
 
 class SignupPreferencesViewController: UIViewController {
 
+    let db = Firestore.firestore()
+    
     var Q1Selected: Int? = nil
     var Q2Selected: Int? = nil
     var Q3Selected: Int? = nil
@@ -22,6 +25,8 @@ class SignupPreferencesViewController: UIViewController {
     @IBOutlet var Q4Options: [UIButton]!
     @IBOutlet var Q5Options: [UIButton]!
     @IBOutlet var Q6Options: [UIButton]!
+    
+    @IBOutlet weak var SelectionError: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,5 +54,38 @@ class SignupPreferencesViewController: UIViewController {
     
     @IBAction func Q6OptionSelected(_ sender: UIButton) {
         Q6Selected = AppiOS.OptionSelected().Single(sender, Q6Options)
+    }
+    
+    @IBAction func NextButton(_ sender: UIButton) {
+        let allOptions = [
+            Q1Options,
+            Q2Options,
+            Q3Options,
+            Q4Options,
+            Q5Options,
+            Q6Options
+        ]
+        if AppiOS.Checkboxes().checked(allOptions) {
+            
+            let collection = db.collection("users")
+            let document = collection.document((Auth.auth().currentUser?.email)!)
+            
+            document.updateData([
+                "preferences" : [
+                    "q1" : Q1Selected,
+                    "q2" : Q2Selected,
+                    "q3" : Q3Selected,
+                    "q4" : Q4Selected,
+                    "q6" : Q1Selected
+                ]
+            ])
+            
+            document.updateData([
+                "preferences.q5" : Array(Q5Selected!).sorted()
+            ])
+        }
+        else {
+            SelectionError.text = "Porfavor, llena todos los campos"
+        }
     }
 }

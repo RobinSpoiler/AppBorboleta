@@ -50,6 +50,7 @@
 		9DB653E628DE14B200C0E093 /* SignupUserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB653E528DE14B200C0E093 /* SignupUserDataViewController.swift */; };
 		9DCDB37428EA14C700FC4091 /* OptionSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCDB37228EA108C00FC4091 /* OptionSelected.swift */; };
 		9DE9FC2328E2011900531B46 /* iOSDropDown in Frameworks */ = {isa = PBXBuildFile; productRef = 9DE9FC2228E2011900531B46 /* iOSDropDown */; };
+		9DF4483528EB7A2C0051ED92 /* Checkboxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF4483428EB7A2C0051ED92 /* Checkboxes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		9D5BCB4728DBDB4F00BC0B56 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		9DB653E528DE14B200C0E093 /* SignupUserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupUserDataViewController.swift; sourceTree = "<group>"; };
 		9DCDB37228EA108C00FC4091 /* OptionSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSelected.swift; sourceTree = "<group>"; };
+		9DF4483428EB7A2C0051ED92 /* Checkboxes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkboxes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +231,7 @@
 			children = (
 				9D05CF8228DB9C4100AA7E76 /* PasswordVisibility.swift */,
 				9DCDB37228EA108C00FC4091 /* OptionSelected.swift */,
+				9DF4483428EB7A2C0051ED92 /* Checkboxes.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DF4483528EB7A2C0051ED92 /* Checkboxes.swift in Sources */,
 				9D5BCB4828DBDB4F00BC0B56 /* SignupViewController.swift in Sources */,
 				9DCDB37428EA14C700FC4091 /* OptionSelected.swift in Sources */,
 				9D5AA19928DA81C300AC068E /* LoginViewController.swift in Sources */,

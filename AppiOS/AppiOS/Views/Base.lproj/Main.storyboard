@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xLP-wC-Xvg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AcT-yR-Vbc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -945,13 +945,27 @@ REGRESO</string>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="arrow.right.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="NextButton:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="8WK-4z-oHr"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8y7-AX-CEf">
+                                <rect key="frame" x="207" y="1354.5" width="0.0" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.5" id="7lR-Ah-uFv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OHc-hP-b4C"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="8y7-AX-CEf" firstAttribute="centerX" secondItem="PJV-bl-YQv" secondAttribute="centerX" id="2pP-Sr-ooG"/>
                             <constraint firstItem="OHc-hP-b4C" firstAttribute="trailing" secondItem="zIn-Q3-vzQ" secondAttribute="trailing" constant="40" id="67A-iN-gTW"/>
                             <constraint firstAttribute="bottom" secondItem="B8x-iG-HP5" secondAttribute="bottom" constant="60" id="C1h-iE-5io"/>
+                            <constraint firstAttribute="bottom" secondItem="8y7-AX-CEf" secondAttribute="bottom" constant="25" id="G7D-la-BNE"/>
                             <constraint firstAttribute="trailing" secondItem="B8x-iG-HP5" secondAttribute="trailing" constant="40" id="J69-Ri-aUh"/>
                             <constraint firstItem="OHc-hP-b4C" firstAttribute="trailing" secondItem="Z1a-WQ-3ge" secondAttribute="trailing" constant="40" id="JQd-aJ-PQX"/>
                             <constraint firstItem="Z1a-WQ-3ge" firstAttribute="top" secondItem="OHc-hP-b4C" secondAttribute="top" constant="-40" id="LdX-Hg-jX8"/>
@@ -964,6 +978,7 @@ REGRESO</string>
                     <navigationItem key="navigationItem" style="editor" id="zD6-yr-G3U"/>
                     <size key="freeformSize" width="414" height="1400"/>
                     <connections>
+                        <outlet property="SelectionError" destination="8y7-AX-CEf" id="Glq-xi-JQV"/>
                         <outletCollection property="Q1Options" destination="nbq-Ot-ZLU" collectionClass="NSMutableArray" id="X7g-cf-74k"/>
                         <outletCollection property="Q1Options" destination="3nU-GZ-WPW" collectionClass="NSMutableArray" id="Jo3-Q6-ecP"/>
                         <outletCollection property="Q1Options" destination="6xt-Gg-T6y" collectionClass="NSMutableArray" id="4et-tc-2j7"/>
