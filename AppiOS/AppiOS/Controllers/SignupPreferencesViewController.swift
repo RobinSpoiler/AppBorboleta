@@ -65,11 +65,13 @@ class SignupPreferencesViewController: UIViewController {
             Q5Options,
             Q6Options
         ]
+        // verificar que todos los campos hayan sido seleccionados
         if AppiOS.Checkboxes().checked(allOptions) {
             
             let collection = db.collection("users")
             let document = collection.document((Auth.auth().currentUser?.email)!)
             
+            // primero se agregan los atributos que son de valor int, ya que los mapas en Swift solo permiten un tipo de dato como valor en mapas
             document.updateData([
                 "preferences" : [
                     "q1" : Q1Selected,
@@ -80,6 +82,7 @@ class SignupPreferencesViewController: UIViewController {
                 ]
             ])
             
+            // posteriormente se agrega el array de forma ordenada ascendiente
             document.updateData([
                 "preferences.q5" : Array(Q5Selected!).sorted()
             ])

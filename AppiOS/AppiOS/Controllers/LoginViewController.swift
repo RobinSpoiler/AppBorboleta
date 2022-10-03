@@ -25,9 +25,9 @@ class LoginViewController: UIViewController {
         
         // verificar si el usuario ya ha iniciado sesion antes
         // en caso de que si, realiza segue a home
-//        if Auth.auth().currentUser != nil {
-//            self.performSegue(withIdentifier: "toHome", sender: self)
-//        }
+        if Auth.auth().currentUser != nil {
+            self.performSegue(withIdentifier: "toHome", sender: self)
+        }
         
         LoginButton.tintColor = UIColor(named: "Color1")
     }
