@@ -9,6 +9,7 @@ import android.widget.*
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 
@@ -29,6 +30,7 @@ class registro2 : AppCompatActivity() {
         val datePicker = findViewById<DatePicker>(R.id.fecha)
         val telefono = findViewById<TextInputEditText>(R.id.inputtelefono)
         val pronombre = findViewById<TextView>(R.id.selector)
+        val nombre = findViewById<TextInputEditText>(R.id.inputnombre)
         val today = Calendar.getInstance()
         datePicker.init(
             today.get(Calendar.YEAR), today.get(Calendar.MONTH),
@@ -36,7 +38,7 @@ class registro2 : AppCompatActivity() {
         )
         { view, year, month, day ->
             val month = month + 1
-            val msg = "You Selected: $day/$month/$year"
+            val msg = "$day/$month/$year"
         }
 
 /*
@@ -61,9 +63,25 @@ class registro2 : AppCompatActivity() {
 
         val btnRegister2Second = findViewById<ImageButton>(R.id.nextbutton2)
         btnRegister2Second.setOnClickListener(){
+            var month = datePicker.month + 1
+            var monthstr = month.toString()
+            if(month < 10){
+                monthstr = "0" + month
+            }
+
+            var day = datePicker.dayOfMonth
+            var daystr = datePicker.dayOfMonth.toString()
+            if(day < 10){
+                daystr = "0" + day
+            }
+
+            var year = datePicker.year.toString()
+            var date = year + "-" + monthstr + "-" + daystr
+
             /*Completar registro en la BD*/
-            val docData = hashMapOf(
-                "birthday" to "12-09-2002",
+            var docData = hashMapOf(
+                /*"name" to nombre.text.toString(),*/
+                "birthday" to date,
                 "phone" to telefono.text.toString(),
                 "pronouns" to pronombre.text.toString(),
             )
