@@ -806,41 +806,65 @@ REGRESO</string>
                                                                 <rect key="frame" x="0.0" y="61" width="96.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Estrés"/>
+                                                                <connections>
+                                                                    <action selector="Q5OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="fN1-5F-Mrn"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Yx-W3-BE8">
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Yx-W3-BE8">
                                                                 <rect key="frame" x="0.0" y="95.5" width="120" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Ansiedad"/>
+                                                                <connections>
+                                                                    <action selector="Q5OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="efP-sE-UBB"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARs-pL-aeL">
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARs-pL-aeL">
                                                                 <rect key="frame" x="0.0" y="130" width="127" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Depresión"/>
+                                                                <connections>
+                                                                    <action selector="Q5OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="WFr-ZK-L1X"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Og-8i-4JR">
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Og-8i-4JR">
                                                                 <rect key="frame" x="0.0" y="164.5" width="207" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Problemas familiares"/>
+                                                                <connections>
+                                                                    <action selector="Q5OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="UHx-1E-e6V"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qx5-LI-bKf">
+                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qx5-LI-bKf">
                                                                 <rect key="frame" x="0.0" y="199" width="206" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Relaciones de pareja"/>
+                                                                <connections>
+                                                                    <action selector="Q5OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="wJG-vp-ygL"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FpZ-dK-CVw">
+                                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FpZ-dK-CVw">
                                                                 <rect key="frame" x="0.0" y="233.5" width="242.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Relaciones empresariales"/>
+                                                                <connections>
+                                                                    <action selector="Q5OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="z07-17-aaw"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWv-4p-X4n">
+                                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWv-4p-X4n">
                                                                 <rect key="frame" x="0.0" y="268" width="318" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Trastornos de conducta alimentaria"/>
+                                                                <connections>
+                                                                    <action selector="Q5OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="sLf-6p-eQ4"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1Q-BK-5DL">
+                                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1Q-BK-5DL">
                                                                 <rect key="frame" x="0.0" y="302.5" width="324" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Orientación profesional y vocacional"/>
+                                                                <connections>
+                                                                    <action selector="Q5OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="EEi-FO-bLO"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -900,7 +924,7 @@ REGRESO</string>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" name="BackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1300" id="VFe-tb-ntw"/>
                                         </constraints>
@@ -924,7 +948,7 @@ REGRESO</string>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OHc-hP-b4C"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="OHc-hP-b4C" firstAttribute="trailing" secondItem="zIn-Q3-vzQ" secondAttribute="trailing" constant="40" id="67A-iN-gTW"/>
                             <constraint firstAttribute="bottom" secondItem="B8x-iG-HP5" secondAttribute="bottom" constant="60" id="C1h-iE-5io"/>

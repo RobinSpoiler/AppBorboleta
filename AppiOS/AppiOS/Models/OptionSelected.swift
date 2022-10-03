@@ -9,9 +9,11 @@ import UIKit
 import Foundation
 
 struct OptionSelected {
+    
+    let selectedImg = UIImage(systemName: "checkmark.square.fill")
+    let unselectedImg = UIImage(systemName: "square")
+    
     func Single(_ sender: UIButton, _ Options: [UIButton]!) -> Int{
-        let selectedImg = UIImage(systemName: "checkmark.square.fill")
-        let unselectedImg = UIImage(systemName: "square")
         var selected: Int? = nil
         
         for option in Options {
@@ -23,8 +25,30 @@ struct OptionSelected {
                 option.setImage(unselectedImg, for: .normal)
             }
         }
-        print(selected!)
+        
         return selected!
+    }
+    
+    func Switch(_ Button: UIButton) {
+        Button.setImage(
+            Button.currentImage == selectedImg ?
+            unselectedImg : selectedImg,
+            for: .normal)
+    }
+    
+    func Multiple(_ sender: UIButton, _ Options: [UIButton]!) -> Set<Int>{
+        self.Switch(sender)
+        
+        var selectedOptions = Set<Int>()
+        
+        for option in Options {
+            if option.currentImage == selectedImg {
+                selectedOptions.insert(option.tag)
+            }
+        }
+        
+        
+        return selectedOptions
     }
     
 }

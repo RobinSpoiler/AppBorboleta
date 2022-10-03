@@ -13,7 +13,7 @@ class SignupPreferencesViewController: UIViewController {
     var Q2Selected: Int? = nil
     var Q3Selected: Int? = nil
     var Q4Selected: Int? = nil
-    var Q5Selected: Int? = nil
+    var Q5Selected: Set<Int>? = nil
     var Q6Selected: Int? = nil
     
     @IBOutlet var Q1Options: [UIButton]!
@@ -41,6 +41,10 @@ class SignupPreferencesViewController: UIViewController {
     
     @IBAction func Q4OptionSelected(_ sender: UIButton) {
         Q4Selected = AppiOS.OptionSelected().Single(sender, Q4Options)
+    }
+    
+    @IBAction func Q5OptionSelected(_ sender: UIButton) {
+        Q5Selected = AppiOS.OptionSelected().Multiple(sender, Q5Options)
     }
     
     @IBAction func Q6OptionSelected(_ sender: UIButton) {
