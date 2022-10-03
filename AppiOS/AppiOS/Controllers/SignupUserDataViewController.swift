@@ -30,7 +30,7 @@ class SignupUserDataViewController: UIViewController {
         let phoneNumber = PhoneField.text
         let pronouns = pronounsDropdown.text
         let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd"
+            dateFormatter.dateFormat = "dd-MM-yyyy"
         let birthday = dateFormatter.string(from: BirthdayPicker.date)
         
         let collection = db.collection("users")
