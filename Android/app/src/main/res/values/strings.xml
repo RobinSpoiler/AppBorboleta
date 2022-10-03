@@ -47,4 +47,23 @@ Mi ipsum faucibus vitae aliquet nec ullamcorper. Erat imperdiet sed euismod nisi
     <string name="aun_no_tienes_cuenta_registrate">¿Aun no tienes cuenta? Registrate</string>
 
 
+    <!--Resources preferences-->
+    <string name="primeraPregunta">primeraPregunta</string>
+    <string name="segundaPregunta">segundaPregunta</string>
+    <string name="terceraPregunta">terceraPregunta</string>
+    <string name="cuartaPregunta">quintaPregunta</string>
+    <string name="opuno">lorem</string>
+    <string name="opdos">primeraPregunta</string>
+    <string name="optres">primeraPregunta</string>
+    <string name="opcuatro">primeraPregunta</string>
+    <string name="opcinco">primeraPregunta</string>
+    <string name="opseis">primeraPregunta</string>
+    <string name="opsiete">primeraPregunta</string>
+    <string name="opocho">primeraPregunta</string>
+    <string name="opnueve">primeraPregunta</string>
+    <string name="opdiez">primeraPregunta</string>
+    <string name="oponce">primeraPregunta</string>
+    <string name="loremipsum">lorem</string>
+
+
 </resources>
