@@ -37,6 +37,9 @@ Mi ipsum faucibus vitae aliquet nec ullamcorper. Erat imperdiet sed euismod nisi
     </string>
     <string name="accepttext">Aceptar</string>
     <string name="rechazartext">Rechazar</string>
+    <string name="perfil_creado_de_manera_exitosa">PERFIL CREADO DE MANERA EXITOSA</string>
+    <string name="todo">TODO</string>
+    <string name="ir_al_men">Ir al menú</string>
 
 
 </resources>
