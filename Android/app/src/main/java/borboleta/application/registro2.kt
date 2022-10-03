@@ -7,22 +7,30 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.*
 import com.google.android.material.textfield.TextInputEditText
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import java.time.format.DateTimeFormatter
 import java.util.*
 
 
 
 @Suppress("NAME_SHADOWING")
-class registro2 : AppCompatActivity() {
+class registro2 : registro() {
 
     @SuppressLint("MissingInflatedId")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         // Access a Cloud Firestore instance from your Activity
+
         val db = Firebase.firestore
 
+        val user = Firebase.auth.currentUser
+        user?.let {
+            val name = user.displayName
+            val email = user.email
+            val verify = user.isEmailVerified
+            val uid = user.uid
+        }
         supportActionBar?.hide()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro2)
@@ -80,7 +88,7 @@ class registro2 : AppCompatActivity() {
 
             /*Completar registro en la BD*/
             var docData = hashMapOf(
-                /*"name" to nombre.text.toString(),*/
+                "name" to user?.displayName,
                 "birthday" to date,
                 "phone" to telefono.text.toString(),
                 "pronouns" to pronombre.text.toString(),
