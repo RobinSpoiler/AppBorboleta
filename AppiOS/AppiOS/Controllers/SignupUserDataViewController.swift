@@ -42,6 +42,7 @@ class SignupUserDataViewController: UIViewController {
         // es necesario usar data.{field} en vez de pasar el mapa entero, para evitar que se sobreescriba
         // ya que esto hara que se borre el nombre que se guardo de la pagina anterior
         document.updateData([
+            "data.accountType" : "entrepreneur",
             "data.birthday" : birthday,
             "data.phone" : phoneNumber!,
             "data.pronouns" : pronouns!

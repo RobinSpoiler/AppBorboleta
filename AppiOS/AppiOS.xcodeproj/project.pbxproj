@@ -47,10 +47,12 @@
 		9D521C4128E8E23C00C70591 /* SignupPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D521C4028E8E23C00C70591 /* SignupPreferencesViewController.swift */; };
 		9D5AA19928DA81C300AC068E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA19828DA81C300AC068E /* LoginViewController.swift */; };
 		9D5BCB4828DBDB4F00BC0B56 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BCB4728DBDB4F00BC0B56 /* SignupViewController.swift */; };
+		9D5F6E0028ECB92500EAB7B7 /* SignupSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5F6DFF28ECB92500EAB7B7 /* SignupSuccessViewController.swift */; };
 		9DB653E628DE14B200C0E093 /* SignupUserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB653E528DE14B200C0E093 /* SignupUserDataViewController.swift */; };
 		9DCDB37428EA14C700FC4091 /* OptionSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCDB37228EA108C00FC4091 /* OptionSelected.swift */; };
 		9DE9FC2328E2011900531B46 /* iOSDropDown in Frameworks */ = {isa = PBXBuildFile; productRef = 9DE9FC2228E2011900531B46 /* iOSDropDown */; };
 		9DF4483528EB7A2C0051ED92 /* Checkboxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF4483428EB7A2C0051ED92 /* Checkboxes.swift */; };
+		9DF4483728EBD96C0051ED92 /* TOSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF4483628EBD96C0051ED92 /* TOSViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,9 +90,11 @@
 		9D521C4028E8E23C00C70591 /* SignupPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPreferencesViewController.swift; sourceTree = "<group>"; };
 		9D5AA19828DA81C300AC068E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9D5BCB4728DBDB4F00BC0B56 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		9D5F6DFF28ECB92500EAB7B7 /* SignupSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupSuccessViewController.swift; sourceTree = "<group>"; };
 		9DB653E528DE14B200C0E093 /* SignupUserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupUserDataViewController.swift; sourceTree = "<group>"; };
 		9DCDB37228EA108C00FC4091 /* OptionSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSelected.swift; sourceTree = "<group>"; };
 		9DF4483428EB7A2C0051ED92 /* Checkboxes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkboxes.swift; sourceTree = "<group>"; };
+		9DF4483628EBD96C0051ED92 /* TOSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOSViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,7 +178,6 @@
 				9D78B65328DA7FD6007D64BD /* Models */,
 				9D78B65228DA7FCD007D64BD /* Views */,
 				9D78B65128DA7FC3007D64BD /* Controllers */,
-				9D5BCB4928DBDD7700BC0B56 /* CustomClasses */,
 				90B39FD228CEB0FC00326D19 /* Assets.xcassets */,
 				90B39FD428CEB0FC00326D19 /* LaunchScreen.storyboard */,
 				90B39FD728CEB0FC00326D19 /* Info.plist */,
@@ -200,13 +203,6 @@
 			path = AppiOSUITests;
 			sourceTree = "<group>";
 		};
-		9D5BCB4928DBDD7700BC0B56 /* CustomClasses */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CustomClasses;
-			sourceTree = "<group>";
-		};
 		9D78B65128DA7FC3007D64BD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +210,8 @@
 				9D5BCB4728DBDB4F00BC0B56 /* SignupViewController.swift */,
 				9DB653E528DE14B200C0E093 /* SignupUserDataViewController.swift */,
 				9D521C4028E8E23C00C70591 /* SignupPreferencesViewController.swift */,
+				9DF4483628EBD96C0051ED92 /* TOSViewController.swift */,
+				9D5F6DFF28ECB92500EAB7B7 /* SignupSuccessViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -403,11 +401,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DF4483528EB7A2C0051ED92 /* Checkboxes.swift in Sources */,
+				9DF4483728EBD96C0051ED92 /* TOSViewController.swift in Sources */,
 				9D5BCB4828DBDB4F00BC0B56 /* SignupViewController.swift in Sources */,
 				9DCDB37428EA14C700FC4091 /* OptionSelected.swift in Sources */,
 				9D5AA19928DA81C300AC068E /* LoginViewController.swift in Sources */,
 				9D05CF8328DB9C4100AA7E76 /* PasswordVisibility.swift in Sources */,
 				90B39FCA28CEB0FC00326D19 /* AppDelegate.swift in Sources */,
+				9D5F6E0028ECB92500EAB7B7 /* SignupSuccessViewController.swift in Sources */,
 				90B39FCC28CEB0FC00326D19 /* SceneDelegate.swift in Sources */,
 				9D521C4128E8E23C00C70591 /* SignupPreferencesViewController.swift in Sources */,
 				9DB653E628DE14B200C0E093 /* SignupUserDataViewController.swift in Sources */,

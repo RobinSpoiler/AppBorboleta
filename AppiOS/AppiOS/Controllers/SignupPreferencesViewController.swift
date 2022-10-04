@@ -86,6 +86,8 @@ class SignupPreferencesViewController: UIViewController {
             document.updateData([
                 "preferences.q5" : Array(Q5Selected!).sorted()
             ])
+            
+            performSegue(withIdentifier: "toTOS", sender: self)
         }
         else {
             SelectionError.text = "Porfavor, llena todos los campos"
