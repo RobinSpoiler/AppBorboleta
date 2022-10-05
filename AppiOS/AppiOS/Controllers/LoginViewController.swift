@@ -28,9 +28,9 @@ class LoginViewController: UIViewController {
         
         // DESCOMENTAR PARA FINAL
         
-//        if Auth.auth().currentUser != nil {
-//            self.performSegue(withIdentifier: "toHome", sender: self)
-//        }
+        if Auth.auth().currentUser != nil {
+            self.performSegue(withIdentifier: "toHome", sender: self)
+        }
         
         LoginButton.tintColor = UIColor(named: "Color1")
     }
