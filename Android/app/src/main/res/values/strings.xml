@@ -48,21 +48,42 @@ Mi ipsum faucibus vitae aliquet nec ullamcorper. Erat imperdiet sed euismod nisi
 
 
     <!--Resources preferences-->
-    <string name="primeraPregunta">primeraPregunta</string>
-    <string name="segundaPregunta">segundaPregunta</string>
-    <string name="terceraPregunta">terceraPregunta</string>
-    <string name="cuartaPregunta">quintaPregunta</string>
-    <string name="opuno">lorem</string>
-    <string name="opdos">primeraPregunta</string>
-    <string name="optres">primeraPregunta</string>
-    <string name="opcuatro">primeraPregunta</string>
-    <string name="opcinco">primeraPregunta</string>
-    <string name="opseis">primeraPregunta</string>
-    <string name="opsiete">primeraPregunta</string>
-    <string name="opocho">primeraPregunta</string>
-    <string name="opnueve">primeraPregunta</string>
-    <string name="opdiez">primeraPregunta</string>
-    <string name="oponce">primeraPregunta</string>
+    <string name="primeraPregunta">¿Qué tipo de terapia buscas?</string>
+    <string name="segundaPregunta">¿Con qué tipo de personalidad te identificas más?</string>
+    <string name="terceraPregunta">¿Cuáles son tus expectativas de ir a terapia?</string>
+    <string name="cuartaPregunta">¿Cuál es tu presupuesto esperado a pagar por sesión?</string>
+    <string name="quintaPregunta">¿Cuáles son los principales temas que te gustaría tratar en terapia? (selecciona todas las opciones que aplican)</string>
+    <string name="sextaPregunta">¿Cómo te definirías más?</string>
+    <string name="opuno">Cognitivo conductual</string>
+    <string name="opdos">Psicoanálisis</string>
+    <string name="optres">Sistémica</string>
+    <string name="opcuatro">Humanista</string>
+    <string name="opcinco">Creativo</string>
+    <string name="opseis">Racional</string>
+    <string name="opsiete">Conocerme mejor</string>
+    <string name="opocho">Buscar soluciones a mis problemática</string>
+    <string name="opnueve">Aprender a manejar mis emociones</string>
+    <string name="opdiez">Entender la raíz de mis problemas</string>
+    <string name="oponce">Definir qué hacer en mi futuro</string>
+    <string name="opdoce">300 pesos</string>
+    <string name="optrece">de 300 a 500 pesos</string>
+    <string name="opcatorce">de 500 a 700 pesos.</string>
+    <string name="opquince">De 700 a 1000 pesos</string>
+    <string name="opdieseis">De 1000 a 1300 pesos</string>
+    <string name="opdiesiete">Más de 1300 pesos</string>
+    <string name="op18">Estrés</string>
+    <string name="op19">Ansiedad</string>
+    <string name="op20">Depresión</string>
+    <string name="op21">Problemas familiares</string>
+    <string name="op22">Relaciones de pareja</string>
+    <string name="op23">Relaciones empresariales</string>
+    <string name="op24">Trastornos de conducta alimentaria</string>
+    <string name="op25">Orientación profesional y vocacional</string>
+    <string name="op26">Estudiante</string>
+    <string name="op27">Godín</string>
+    <string name="op28">Emprendedor</string>
+    <string name="op29">Intraemprendedor</string>
+    <string name="op30">Emprendedor de impacto</string>
     <string name="loremipsum">lorem</string>
 
 
