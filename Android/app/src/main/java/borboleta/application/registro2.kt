@@ -93,10 +93,11 @@ class registro2 : AppCompatActivity() {
                 .set(docData, SetOptions.merge())
                 .addOnSuccessListener { Log.d("Success", "DocumentSnapshot successfully written!") }
                 .addOnFailureListener { e -> Log.w("Fail", "Error writing document", e) }
-
-            startActivity(Intent(this, avisoprivacidad::class.java))
+            //IR A AVISO DE Preferencias
+            startActivity(Intent(this, Preferencias::class.java))
         }
 
+        //REGRESO A REGISTRO 1
         val btnRegister2Back = findViewById<ImageButton>(R.id.backbutton2)
         btnRegister2Back.setOnClickListener(){
             startActivity(Intent(this, registro::class.java))

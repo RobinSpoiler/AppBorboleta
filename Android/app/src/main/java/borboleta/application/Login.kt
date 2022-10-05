@@ -46,9 +46,12 @@ class Login : AppCompatActivity() {
                     Log.w("fail", "signInWithEmail:failure", task.exception)
                     /*updateUI(null)*/
                 }
+                //Esta lleva a home
+                startActivity(Intent(this, avisoprivacidad::class.java))
             }
         }
 
+        //
         val btnRegister = findViewById<Button>(R.id.RegistroLogin)
         btnRegister.setOnClickListener(){
             startActivity(Intent(this, registro::class.java))
