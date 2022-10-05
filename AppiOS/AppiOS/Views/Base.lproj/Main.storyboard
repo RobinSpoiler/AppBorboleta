@@ -448,7 +448,7 @@ REGRESO</string>
             </objects>
             <point key="canvasLocation" x="1057" y="1057"/>
         </scene>
-        <!--Item-->
+        <!--Home View Controller-->
         <scene sceneID="Qed-p1-ysq">
             <objects>
                 <viewController id="7fh-eu-usI" customClass="HomeViewController" customModule="AppiOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -456,15 +456,15 @@ REGRESO</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Dew-IW-E48"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="house" catalog="system" id="S2v-lB-o5V"/>
+                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="S2v-lB-o5V"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oX5-EP-dS3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-316" y="1867"/>
         </scene>
-        <!--Item-->
+        <!--Matches View Controller-->
         <scene sceneID="pSz-OR-xeE">
             <objects>
                 <viewController id="4BS-2X-qoX" customClass="MatchesViewController" customModule="AppiOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -472,15 +472,15 @@ REGRESO</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="5SZ-6A-amw"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="heart" catalog="system" id="1SS-gT-XkM"/>
+                    <tabBarItem key="tabBarItem" title="" image="heart" catalog="system" id="1SS-gT-XkM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A9b-Rt-TgU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="639" y="1867"/>
         </scene>
-        <!--Item-->
+        <!--Chats View Controller-->
         <scene sceneID="H5V-cB-E3y">
             <objects>
                 <viewController id="Iui-AR-ecx" customClass="ChatsViewController" customModule="AppiOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -488,9 +488,9 @@ REGRESO</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="dmc-z2-9cf"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="bubble.right" catalog="system" id="GDv-fZ-O6A"/>
+                    <tabBarItem key="tabBarItem" title="" image="bubble.right" catalog="system" id="GDv-fZ-O6A"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lEx-4u-TMJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -504,9 +504,9 @@ REGRESO</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="5vu-DT-noi"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="BYN-1T-TnA"/>
+                    <tabBarItem key="tabBarItem" image="person" catalog="system" id="BYN-1T-TnA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gRJ-zw-Org" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1260,6 +1260,7 @@ REGRESO</string>
         <image name="eye" catalog="system" width="128" height="79"/>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="house" catalog="system" width="128" height="104"/>
+        <image name="person" catalog="system" width="128" height="121"/>
         <image name="square" catalog="system" width="128" height="114"/>
         <namedColor name="BackgroundColor">
             <color red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
