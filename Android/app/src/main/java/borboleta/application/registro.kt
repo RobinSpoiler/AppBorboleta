@@ -3,33 +3,32 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageButton
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import com.google.rpc.context.AttributeContext
 
-open class registro : AppCompatActivity() {
-        //Trayendo Firebase
-        private lateinit var auth: FirebaseAuth
+class registro : AppCompatActivity() {
+    //Trayendo Firebase
+    private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         supportActionBar?.hide()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro)
         //Firebase Authentication
         auth = Firebase.auth
-        val db = Firebase.firestore
-
-
+        var db = Firebase.firestore
 
         //Variables
         val getusername = findViewById<TextInputEditText>(R.id.inputnombre)
         val getemail = findViewById<TextInputEditText>(R.id.inputcorreo)
         val getpassword = findViewById<TextInputEditText>(R.id.inputcontra)
         val getconfirmation = findViewById<TextInputEditText>(R.id.inputconfirma)
-
 
         //Screen movement
         val btnRegisterSecond = findViewById<ImageButton>(R.id.nextbutton)
@@ -42,10 +41,15 @@ open class registro : AppCompatActivity() {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("success", "createUserWithEmail:success")
                             val user = auth.currentUser
-                            var collection = db.collection("users")
-                            // el documento no debiese de existir en este punto, pero si si, se sobreescribe
-                            var document = collection.document(user.email)
+                            var docData = hashMapOf(
+                                "name" to getusername.text.toString()
+                            )
+                            db.collection("users").document(user?.email.toString())
+                                .set(docData)
+
+
                             /*updateUI(user)*/
+
                             startActivity(Intent(this, registro2::class.java))
                         } else {
                             // If sign in fails, display a message to the user.
@@ -65,4 +69,13 @@ open class registro : AppCompatActivity() {
         btnRegisterBack.setOnClickListener(){
             startActivity(Intent(this, Login::class.java))
         }
+
+
     }
+
+
+}
+
+private fun CollectionReference.document(toString: String, function: () -> Unit) {
+
+}

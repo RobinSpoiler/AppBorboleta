@@ -7,30 +7,25 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.*
 import com.google.android.material.textfield.TextInputEditText
-import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import java.time.format.DateTimeFormatter
 import java.util.*
-
-
+import borboleta.application.registro.*
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.SetOptions
 
 @Suppress("NAME_SHADOWING")
-class registro2 : registro() {
+class registro2 : AppCompatActivity() {
 
     @SuppressLint("MissingInflatedId")
-
+    private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         // Access a Cloud Firestore instance from your Activity
-
         val db = Firebase.firestore
+        auth = Firebase.auth
 
-        val user = Firebase.auth.currentUser
-        user?.let {
-            val name = user.displayName
-            val email = user.email
-            val verify = user.isEmailVerified
-            val uid = user.uid
-        }
         supportActionBar?.hide()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro2)
@@ -38,7 +33,6 @@ class registro2 : registro() {
         val datePicker = findViewById<DatePicker>(R.id.fecha)
         val telefono = findViewById<TextInputEditText>(R.id.inputtelefono)
         val pronombre = findViewById<TextView>(R.id.selector)
-        val nombre = findViewById<TextInputEditText>(R.id.inputnombre)
         val today = Calendar.getInstance()
         datePicker.init(
             today.get(Calendar.YEAR), today.get(Calendar.MONTH),
@@ -53,7 +47,6 @@ class registro2 : registro() {
         Toast.makeText(this@registro2, msg, Toast.LENGTH_SHORT).show()
 */
 
-
         // access the items of the list
         val value = resources.getStringArray(R.array.arraypronombres)
 
@@ -67,7 +60,8 @@ class registro2 : registro() {
             spinner.adapter = adapter
         }
 
-
+        val user = Firebase.auth.currentUser
+            println(user?.email)
 
         val btnRegister2Second = findViewById<ImageButton>(R.id.nextbutton2)
         btnRegister2Second.setOnClickListener(){
@@ -86,19 +80,19 @@ class registro2 : registro() {
             var year = datePicker.year.toString()
             var date = year + "-" + monthstr + "-" + daystr
 
-            /*Completar registro en la BD*/
+/*
+            Completar registro en la BD
+*/
             var docData = hashMapOf(
-                "name" to user?.displayName,
                 "birthday" to date,
                 "phone" to telefono.text.toString(),
                 "pronouns" to pronombre.text.toString(),
             )
 
-            db.collection("users").document("israez@tec.mx")
-                .set(docData)
+            db.collection("users").document(user?.email.toString())
+                .set(docData, SetOptions.merge())
                 .addOnSuccessListener { Log.d("Success", "DocumentSnapshot successfully written!") }
                 .addOnFailureListener { e -> Log.w("Fail", "Error writing document", e) }
-
 
             startActivity(Intent(this, avisoprivacidad::class.java))
         }
@@ -109,3 +103,4 @@ class registro2 : registro() {
         }
     }
 }
+
