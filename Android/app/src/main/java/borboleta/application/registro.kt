@@ -75,7 +75,3 @@ class registro : AppCompatActivity() {
 
 
 }
-
-private fun CollectionReference.document(toString: String, function: () -> Unit) {
-
-}
