@@ -473,30 +473,35 @@ REGRESO</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFm-yk-s1P">
-                                <rect key="frame" x="20" y="448" width="374" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="91Q-4w-dOW">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ko0-BX-6pI">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1Ld-1K-ZgU">
+                                <rect key="frame" x="0.0" y="108" width="414" height="645"/>
+                                <collectionViewLayout key="collectionViewLayout" id="WuG-yA-Psm" customClass="CenteredCollectionViewFlowLayout" customModule="CenteredCollectionView"/>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="qt3-Ed-SUe">
-                                        <rect key="frame" x="56" y="0.0" width="128" height="128"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="KmT-rm-cSE" customClass="UserCollectionViewCell" customModule="AppiOS" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="0.0" width="374" height="479"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bmF-Ni-jVO">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="H1k-dP-jhg">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="479"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nN-lP-0Ao">
+                                                    <rect key="frame" x="10" y="20" width="354" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0nN-lP-0Ao" firstAttribute="leading" secondItem="H1k-dP-jhg" secondAttribute="leading" constant="10" id="SYH-di-TvR"/>
+                                                <constraint firstItem="0nN-lP-0Ao" firstAttribute="top" secondItem="H1k-dP-jhg" secondAttribute="top" constant="20" id="meq-YE-kTB"/>
+                                                <constraint firstAttribute="trailing" secondItem="0nN-lP-0Ao" secondAttribute="trailing" constant="10" id="vOk-ew-HRY"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
+                                        <color key="backgroundColor" name="Color2"/>
+                                        <size key="customSize" width="374" height="479"/>
+                                        <connections>
+                                            <outlet property="testLabel" destination="0nN-lP-0Ao" id="xZY-f9-rtK"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -504,19 +509,20 @@ REGRESO</string>
                         <viewLayoutGuide key="safeArea" id="5SZ-6A-amw"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ZFm-yk-s1P" firstAttribute="leading" secondItem="5SZ-6A-amw" secondAttribute="leading" constant="20" id="KcU-QJ-pu3"/>
-                            <constraint firstItem="5SZ-6A-amw" firstAttribute="trailing" secondItem="ZFm-yk-s1P" secondAttribute="trailing" constant="20" id="Nkk-E4-kt8"/>
-                            <constraint firstItem="ZFm-yk-s1P" firstAttribute="centerY" secondItem="fEp-lW-oCD" secondAttribute="centerY" id="TCW-mQ-6QB"/>
+                            <constraint firstItem="1Ld-1K-ZgU" firstAttribute="leading" secondItem="5SZ-6A-amw" secondAttribute="leading" id="Azl-eJ-ttv"/>
+                            <constraint firstItem="1Ld-1K-ZgU" firstAttribute="top" secondItem="5SZ-6A-amw" secondAttribute="top" constant="60" id="KXU-fE-CVe"/>
+                            <constraint firstItem="5SZ-6A-amw" firstAttribute="bottom" secondItem="1Ld-1K-ZgU" secondAttribute="bottom" constant="60" id="YTy-7n-hfn"/>
+                            <constraint firstItem="5SZ-6A-amw" firstAttribute="trailing" secondItem="1Ld-1K-ZgU" secondAttribute="trailing" id="mXn-9P-ZVB"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="heart" catalog="system" id="1SS-gT-XkM"/>
                     <connections>
-                        <outlet property="tstlabel" destination="ZFm-yk-s1P" id="thZ-Ea-A6c"/>
+                        <outlet property="collectionView" destination="1Ld-1K-ZgU" id="qn7-bK-XQO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A9b-Rt-TgU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="639" y="1867"/>
+            <point key="canvasLocation" x="637.68115942028987" y="1866.9642857142856"/>
         </scene>
         <!--Chats View Controller-->
         <scene sceneID="H5V-cB-E3y">
@@ -1305,6 +1311,9 @@ REGRESO</string>
         </namedColor>
         <namedColor name="Color1">
             <color red="0.0" green="0.16862745098039217" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color2">
+            <color red="0.38039215686274508" green="0.43137254901960786" blue="0.62352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Color3">
             <color red="0.039215686274509803" green="0.0" blue="0.066666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -54,6 +54,7 @@
 		9D5F6E0028ECB92500EAB7B7 /* SignupSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5F6DFF28ECB92500EAB7B7 /* SignupSuccessViewController.swift */; };
 		9DB653E628DE14B200C0E093 /* SignupUserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB653E528DE14B200C0E093 /* SignupUserDataViewController.swift */; };
 		9DCDB37428EA14C700FC4091 /* OptionSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCDB37228EA108C00FC4091 /* OptionSelected.swift */; };
+		9DDD41BF28EE819E006F7C65 /* CenteredCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = 9DDD41BE28EE819E006F7C65 /* CenteredCollectionView */; };
 		9DE9FC2328E2011900531B46 /* iOSDropDown in Frameworks */ = {isa = PBXBuildFile; productRef = 9DE9FC2228E2011900531B46 /* iOSDropDown */; };
 		9DF4483528EB7A2C0051ED92 /* Checkboxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF4483428EB7A2C0051ED92 /* Checkboxes.swift */; };
 		9DF4483728EBD96C0051ED92 /* TOSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF4483628EBD96C0051ED92 /* TOSViewController.swift */; };
@@ -115,6 +116,7 @@
 				9D05CF6528DABE6500AA7E76 /* FirebaseFirestore in Frameworks */,
 				9D05CF5128DABE6500AA7E76 /* FirebaseAnalyticsSwift in Frameworks */,
 				9D05CF4D28DABE6500AA7E76 /* FirebaseAnalytics in Frameworks */,
+				9DDD41BF28EE819E006F7C65 /* CenteredCollectionView in Frameworks */,
 				9D05CF4F28DABE6500AA7E76 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				9D05CF7528DABE6500AA7E76 /* FirebaseMLModelDownloader in Frameworks */,
 				9D05CF6928DABE6500AA7E76 /* FirebaseFirestoreSwift in Frameworks */,
@@ -291,6 +293,7 @@
 				9D05CF7E28DABE6500AA7E76 /* FirebaseStorage */,
 				9D05CF8028DABE6500AA7E76 /* FirebaseStorageCombine-Community */,
 				9DE9FC2228E2011900531B46 /* iOSDropDown */,
+				9DDD41BE28EE819E006F7C65 /* CenteredCollectionView */,
 			);
 			productName = AppiOS;
 			productReference = 90B39FC628CEB0FC00326D19 /* AppiOS.app */;
@@ -367,6 +370,7 @@
 			packageReferences = (
 				9D05CF4B28DABE6500AA7E76 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				9DE9FC2128E2011900531B46 /* XCRemoteSwiftPackageReference "iOSDropDown" */,
+				9DDD41BD28EE819E006F7C65 /* XCRemoteSwiftPackageReference "CenteredCollectionView" */,
 			);
 			productRefGroup = 90B39FC728CEB0FC00326D19 /* Products */;
 			projectDirPath = "";
@@ -772,6 +776,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		9DDD41BD28EE819E006F7C65 /* XCRemoteSwiftPackageReference "CenteredCollectionView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/BenEmdon/CenteredCollectionView";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		9DE9FC2128E2011900531B46 /* XCRemoteSwiftPackageReference "iOSDropDown" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jriosdev/iOSDropDown";
@@ -917,6 +929,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9D05CF4B28DABE6500AA7E76 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		9DDD41BE28EE819E006F7C65 /* CenteredCollectionView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DDD41BD28EE819E006F7C65 /* XCRemoteSwiftPackageReference "CenteredCollectionView" */;
+			productName = CenteredCollectionView;
 		};
 		9DE9FC2228E2011900531B46 /* iOSDropDown */ = {
 			isa = XCSwiftPackageProductDependency;
