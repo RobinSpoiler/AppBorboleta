@@ -7,6 +7,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -453,7 +454,7 @@ REGRESO</string>
             <objects>
                 <viewController id="7fh-eu-usI" customClass="HomeViewController" customModule="AppiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LnT-Ag-Arv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Dew-IW-E48"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
@@ -469,12 +470,49 @@ REGRESO</string>
             <objects>
                 <viewController id="4BS-2X-qoX" customClass="MatchesViewController" customModule="AppiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fEp-lW-oCD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFm-yk-s1P">
+                                <rect key="frame" x="20" y="448" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="91Q-4w-dOW">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ko0-BX-6pI">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="qt3-Ed-SUe">
+                                        <rect key="frame" x="56" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bmF-Ni-jVO">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="5SZ-6A-amw"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZFm-yk-s1P" firstAttribute="leading" secondItem="5SZ-6A-amw" secondAttribute="leading" constant="20" id="KcU-QJ-pu3"/>
+                            <constraint firstItem="5SZ-6A-amw" firstAttribute="trailing" secondItem="ZFm-yk-s1P" secondAttribute="trailing" constant="20" id="Nkk-E4-kt8"/>
+                            <constraint firstItem="ZFm-yk-s1P" firstAttribute="centerY" secondItem="fEp-lW-oCD" secondAttribute="centerY" id="TCW-mQ-6QB"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="heart" catalog="system" id="1SS-gT-XkM"/>
+                    <connections>
+                        <outlet property="tstlabel" destination="ZFm-yk-s1P" id="thZ-Ea-A6c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A9b-Rt-TgU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -485,7 +523,7 @@ REGRESO</string>
             <objects>
                 <viewController id="Iui-AR-ecx" customClass="ChatsViewController" customModule="AppiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="52V-AV-dP5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="dmc-z2-9cf"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
@@ -501,7 +539,7 @@ REGRESO</string>
             <objects>
                 <viewController id="nSr-DC-nk0" customClass="ProfileViewController" customModule="AppiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KJm-s9-B3T">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="5vu-DT-noi"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
@@ -1247,7 +1285,7 @@ REGRESO</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Zop-Id-2dG"/>
+        <segue reference="bpa-Dc-RBh"/>
         <segue reference="0ef-rI-NKT"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="Color1"/>
