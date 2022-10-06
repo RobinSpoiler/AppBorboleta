@@ -40,6 +40,11 @@ Mi ipsum faucibus vitae aliquet nec ullamcorper. Erat imperdiet sed euismod nisi
     <string name="perfil_creado_de_manera_exitosa">PERFIL CREADO DE MANERA EXITOSA</string>
     <string name="todo">TODO</string>
     <string name="ir_al_men">Ir al menú</string>
+    <string name="home">HOME</string>
+    <string name="borboleta_podcast">Borboleta podcast</string>
+    <string name="podcast_salud_mental">Bienvenido, bienvenida, bienvenide a Borboleta Podcast: el primer espacio para emprendedores que tiene como base la salud emocional. \n \nAquí vamos a aprender y desaprender sobre todo lo relacionado con el emprendimiento y la salud emocional.</string>
+    <string name="logo_spotify">Logo_Spotify</string>
+    <string name="contenido_reciente">Contenido reciente</string>
 
 
 </resources>
