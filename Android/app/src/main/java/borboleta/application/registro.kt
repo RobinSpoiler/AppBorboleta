@@ -10,6 +10,7 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.CollectionReference
+import com.google.firebase.firestore.SetOptions
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
@@ -41,9 +42,13 @@ class registro : AppCompatActivity() {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("success", "createUserWithEmail:success")
                             val user = auth.currentUser
-                            var docData = hashMapOf(
-                                "name" to getusername.text.toString()
-                            )
+
+                            var docData = object{
+                                var data = object{
+                                    var name : String = getusername.text.toString()
+                                }
+                            }
+
                             db.collection("users").document(user?.email.toString())
                                 .set(docData)
                             /*updateUI(user)*/
