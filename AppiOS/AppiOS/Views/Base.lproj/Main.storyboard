@@ -436,7 +436,7 @@ REGRESO</string>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XU6-dR-eSB">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="7fh-eu-usI" kind="relationship" relationship="viewControllers" id="UO2-Ph-BH6"/>
@@ -474,7 +474,8 @@ REGRESO</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1Ld-1K-ZgU">
-                                <rect key="frame" x="0.0" y="108" width="414" height="645"/>
+                                <rect key="frame" x="0.0" y="108" width="414" height="695"/>
+                                <color key="backgroundColor" name="BackgroundColor"/>
                                 <collectionViewLayout key="collectionViewLayout" id="WuG-yA-Psm" customClass="CenteredCollectionViewFlowLayout" customModule="CenteredCollectionView"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="KmT-rm-cSE" customClass="UserCollectionViewCell" customModule="AppiOS" customModuleProvider="target">
@@ -511,7 +512,7 @@ REGRESO</string>
                         <constraints>
                             <constraint firstItem="1Ld-1K-ZgU" firstAttribute="leading" secondItem="5SZ-6A-amw" secondAttribute="leading" id="Azl-eJ-ttv"/>
                             <constraint firstItem="1Ld-1K-ZgU" firstAttribute="top" secondItem="5SZ-6A-amw" secondAttribute="top" constant="60" id="KXU-fE-CVe"/>
-                            <constraint firstItem="5SZ-6A-amw" firstAttribute="bottom" secondItem="1Ld-1K-ZgU" secondAttribute="bottom" constant="60" id="YTy-7n-hfn"/>
+                            <constraint firstItem="5SZ-6A-amw" firstAttribute="bottom" secondItem="1Ld-1K-ZgU" secondAttribute="bottom" constant="10" id="YTy-7n-hfn"/>
                             <constraint firstItem="5SZ-6A-amw" firstAttribute="trailing" secondItem="1Ld-1K-ZgU" secondAttribute="trailing" id="mXn-9P-ZVB"/>
                         </constraints>
                     </view>
