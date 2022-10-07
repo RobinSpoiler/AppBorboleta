@@ -486,23 +486,23 @@ REGRESO</string>
                                             <rect key="frame" x="0.0" y="0.0" width="274" height="546"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nN-lP-0Ao">
-                                                    <rect key="frame" x="10" y="20" width="254" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBG-Dj-mCp" userLabel="Test Label">
+                                                    <rect key="frame" x="10" y="10" width="254" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="0nN-lP-0Ao" firstAttribute="leading" secondItem="H1k-dP-jhg" secondAttribute="leading" constant="10" id="SYH-di-TvR"/>
-                                                <constraint firstItem="0nN-lP-0Ao" firstAttribute="top" secondItem="H1k-dP-jhg" secondAttribute="top" constant="20" id="meq-YE-kTB"/>
-                                                <constraint firstAttribute="trailing" secondItem="0nN-lP-0Ao" secondAttribute="trailing" constant="10" id="vOk-ew-HRY"/>
+                                                <constraint firstItem="fBG-Dj-mCp" firstAttribute="leading" secondItem="H1k-dP-jhg" secondAttribute="leading" constant="10" id="3Yo-Ww-GGy"/>
+                                                <constraint firstAttribute="trailing" secondItem="fBG-Dj-mCp" secondAttribute="trailing" constant="10" id="BxC-Ld-dtM"/>
+                                                <constraint firstItem="fBG-Dj-mCp" firstAttribute="top" secondItem="H1k-dP-jhg" secondAttribute="top" constant="10" id="Ojx-D1-gdW"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" name="Color2"/>
                                         <size key="customSize" width="274" height="546"/>
                                         <connections>
-                                            <outlet property="testLabel" destination="0nN-lP-0Ao" id="xZY-f9-rtK"/>
+                                            <outlet property="testLabel" destination="fBG-Dj-mCp" id="n5Y-ki-1gA"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -533,10 +533,24 @@ REGRESO</string>
                     <view key="view" contentMode="scaleToFill" id="52V-AV-dP5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3sS-n6-5MG">
+                                <rect key="frame" x="20" y="108" width="374" height="645"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dmc-z2-9cf"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dmc-z2-9cf" firstAttribute="bottom" secondItem="3sS-n6-5MG" secondAttribute="bottom" constant="60" id="8vg-NL-o92"/>
+                            <constraint firstItem="3sS-n6-5MG" firstAttribute="leading" secondItem="dmc-z2-9cf" secondAttribute="leading" constant="20" id="LYs-Sc-5s1"/>
+                            <constraint firstItem="3sS-n6-5MG" firstAttribute="top" secondItem="dmc-z2-9cf" secondAttribute="top" constant="60" id="Lme-HG-VRg"/>
+                            <constraint firstItem="dmc-z2-9cf" firstAttribute="trailing" secondItem="3sS-n6-5MG" secondAttribute="trailing" constant="20" id="Tng-ds-27Y"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="bubble.right" catalog="system" id="GDv-fZ-O6A"/>
+                    <connections>
+                        <outlet property="img" destination="3sS-n6-5MG" id="eTf-7L-5GI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lEx-4u-TMJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -549,10 +563,29 @@ REGRESO</string>
                     <view key="view" contentMode="scaleToFill" id="KJm-s9-B3T">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37G-xG-PO3">
+                                <rect key="frame" x="20" y="428" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="zXz-8J-c4A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="5vu-DT-noi"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="37G-xG-PO3" firstAttribute="centerY" secondItem="KJm-s9-B3T" secondAttribute="centerY" id="DK0-bu-KfN"/>
+                            <constraint firstItem="37G-xG-PO3" firstAttribute="leading" secondItem="5vu-DT-noi" secondAttribute="leading" constant="20" id="dKG-jt-JiM"/>
+                            <constraint firstItem="5vu-DT-noi" firstAttribute="trailing" secondItem="37G-xG-PO3" secondAttribute="trailing" constant="20" id="dhk-CS-JHF"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" image="person" catalog="system" id="BYN-1T-TnA"/>
+                    <connections>
+                        <outlet property="userLabel" destination="37G-xG-PO3" id="ePY-V7-ck9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gRJ-zw-Org" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

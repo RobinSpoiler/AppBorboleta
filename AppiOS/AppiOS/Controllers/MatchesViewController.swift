@@ -11,6 +11,8 @@ import CenteredCollectionView
 import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
+import FirebaseStorage
+import SDWebImage
 
 class UserCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var testLabel: UILabel!
@@ -28,6 +30,8 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     var users: [User] = []
     var current = 0
+    
+    let storage = Storage.storage()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return users.count
@@ -59,14 +63,27 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
         let db = Firestore.firestore()
         let usersCollection = db.collection("users")
         let query = usersCollection.whereField("data.accountType", isEqualTo: "psychologist")
-        
+        let storageRef = Storage.storage().reference()
+        let pfpRef = storageRef.child("profilePics/puser1@gmail.com.png")
+
+        // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
+        pfpRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+          if let _ = error {
+            // Uh-oh, an error occurred!
+          } else {
+            // Data for "images/island.jpg" is returned
+            let image = UIImage(data: data!)
+          }
+        }
+
+
         query.getDocuments(){ snapshot, err in
             if let e = err {
                 print(e)
             }
             else {
+                
                 for document in snapshot!.documents {
-                    print(document.documentID)
                     self.users.append(User(document.documentID))
                 }
                 self.displayCards()

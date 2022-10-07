@@ -48,6 +48,16 @@
 		9D2D130528ED332E00042121 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2D130428ED332E00042121 /* MatchesViewController.swift */; };
 		9D2D130728ED335400042121 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2D130628ED335400042121 /* ChatsViewController.swift */; };
 		9D2D130928ED337500042121 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2D130828ED337500042121 /* ProfileViewController.swift */; };
+		9D4FBFAD28EFDCC90019CF5C /* FirebaseAnonymousAuthUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9D4FBFAC28EFDCC90019CF5C /* FirebaseAnonymousAuthUI */; };
+		9D4FBFAF28EFDCC90019CF5C /* FirebaseAuthUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9D4FBFAE28EFDCC90019CF5C /* FirebaseAuthUI */; };
+		9D4FBFB128EFDCC90019CF5C /* FirebaseDatabaseUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9D4FBFB028EFDCC90019CF5C /* FirebaseDatabaseUI */; };
+		9D4FBFB328EFDCC90019CF5C /* FirebaseEmailAuthUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9D4FBFB228EFDCC90019CF5C /* FirebaseEmailAuthUI */; };
+		9D4FBFB528EFDCC90019CF5C /* FirebaseFacebookAuthUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9D4FBFB428EFDCC90019CF5C /* FirebaseFacebookAuthUI */; };
+		9D4FBFB728EFDCC90019CF5C /* FirebaseFirestoreUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9D4FBFB628EFDCC90019CF5C /* FirebaseFirestoreUI */; };
+		9D4FBFB928EFDCC90019CF5C /* FirebaseGoogleAuthUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9D4FBFB828EFDCC90019CF5C /* FirebaseGoogleAuthUI */; };
+		9D4FBFBB28EFDCC90019CF5C /* FirebaseOAuthUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9D4FBFBA28EFDCC90019CF5C /* FirebaseOAuthUI */; };
+		9D4FBFBD28EFDCC90019CF5C /* FirebasePhoneAuthUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9D4FBFBC28EFDCC90019CF5C /* FirebasePhoneAuthUI */; };
+		9D4FBFBF28EFDCC90019CF5C /* FirebaseStorageUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9D4FBFBE28EFDCC90019CF5C /* FirebaseStorageUI */; };
 		9D521C4128E8E23C00C70591 /* SignupPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D521C4028E8E23C00C70591 /* SignupPreferencesViewController.swift */; };
 		9D5AA19928DA81C300AC068E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA19828DA81C300AC068E /* LoginViewController.swift */; };
 		9D5BCB4828DBDB4F00BC0B56 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BCB4728DBDB4F00BC0B56 /* SignupViewController.swift */; };
@@ -113,28 +123,38 @@
 			files = (
 				9D05CF5F28DABE6500AA7E76 /* FirebaseDatabase in Frameworks */,
 				9D05CF6D28DABE6500AA7E76 /* FirebaseFunctionsCombine-Community in Frameworks */,
+				9D4FBFBF28EFDCC90019CF5C /* FirebaseStorageUI in Frameworks */,
+				9D4FBFB928EFDCC90019CF5C /* FirebaseGoogleAuthUI in Frameworks */,
 				9D05CF6528DABE6500AA7E76 /* FirebaseFirestore in Frameworks */,
+				9D4FBFBD28EFDCC90019CF5C /* FirebasePhoneAuthUI in Frameworks */,
 				9D05CF5128DABE6500AA7E76 /* FirebaseAnalyticsSwift in Frameworks */,
 				9D05CF4D28DABE6500AA7E76 /* FirebaseAnalytics in Frameworks */,
 				9DDD41BF28EE819E006F7C65 /* CenteredCollectionView in Frameworks */,
+				9D4FBFB128EFDCC90019CF5C /* FirebaseDatabaseUI in Frameworks */,
 				9D05CF4F28DABE6500AA7E76 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				9D05CF7528DABE6500AA7E76 /* FirebaseMLModelDownloader in Frameworks */,
 				9D05CF6928DABE6500AA7E76 /* FirebaseFirestoreSwift in Frameworks */,
 				9D05CF5528DABE6500AA7E76 /* FirebaseAppCheck in Frameworks */,
+				9D4FBFB528EFDCC90019CF5C /* FirebaseFacebookAuthUI in Frameworks */,
 				9D05CF5328DABE6500AA7E76 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				9D05CF5928DABE6500AA7E76 /* FirebaseAuth in Frameworks */,
 				9D05CF5D28DABE6500AA7E76 /* FirebaseCrashlytics in Frameworks */,
 				9D05CF7D28DABE6500AA7E76 /* FirebaseRemoteConfigSwift in Frameworks */,
 				9D05CF6F28DABE6500AA7E76 /* FirebaseInAppMessaging-Beta in Frameworks */,
+				9D4FBFB728EFDCC90019CF5C /* FirebaseFirestoreUI in Frameworks */,
 				9D05CF6128DABE6500AA7E76 /* FirebaseDatabaseSwift in Frameworks */,
 				9D05CF6B28DABE6500AA7E76 /* FirebaseFunctions in Frameworks */,
 				9D05CF8128DABE6500AA7E76 /* FirebaseStorageCombine-Community in Frameworks */,
 				9D05CF7B28DABE6500AA7E76 /* FirebaseRemoteConfig in Frameworks */,
 				9D05CF5728DABE6500AA7E76 /* FirebaseAppDistribution-Beta in Frameworks */,
 				9D05CF5B28DABE6500AA7E76 /* FirebaseAuthCombine-Community in Frameworks */,
+				9D4FBFAD28EFDCC90019CF5C /* FirebaseAnonymousAuthUI in Frameworks */,
+				9D4FBFBB28EFDCC90019CF5C /* FirebaseOAuthUI in Frameworks */,
+				9D4FBFAF28EFDCC90019CF5C /* FirebaseAuthUI in Frameworks */,
 				9D05CF7928DABE6500AA7E76 /* FirebasePerformance in Frameworks */,
 				9D05CF7128DABE6500AA7E76 /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
 				9DE9FC2328E2011900531B46 /* iOSDropDown in Frameworks */,
+				9D4FBFB328EFDCC90019CF5C /* FirebaseEmailAuthUI in Frameworks */,
 				9D05CF7F28DABE6500AA7E76 /* FirebaseStorage in Frameworks */,
 				9D05CF6328DABE6500AA7E76 /* FirebaseDynamicLinks in Frameworks */,
 				9D05CF6728DABE6500AA7E76 /* FirebaseFirestoreCombine-Community in Frameworks */,
@@ -294,6 +314,16 @@
 				9D05CF8028DABE6500AA7E76 /* FirebaseStorageCombine-Community */,
 				9DE9FC2228E2011900531B46 /* iOSDropDown */,
 				9DDD41BE28EE819E006F7C65 /* CenteredCollectionView */,
+				9D4FBFAC28EFDCC90019CF5C /* FirebaseAnonymousAuthUI */,
+				9D4FBFAE28EFDCC90019CF5C /* FirebaseAuthUI */,
+				9D4FBFB028EFDCC90019CF5C /* FirebaseDatabaseUI */,
+				9D4FBFB228EFDCC90019CF5C /* FirebaseEmailAuthUI */,
+				9D4FBFB428EFDCC90019CF5C /* FirebaseFacebookAuthUI */,
+				9D4FBFB628EFDCC90019CF5C /* FirebaseFirestoreUI */,
+				9D4FBFB828EFDCC90019CF5C /* FirebaseGoogleAuthUI */,
+				9D4FBFBA28EFDCC90019CF5C /* FirebaseOAuthUI */,
+				9D4FBFBC28EFDCC90019CF5C /* FirebasePhoneAuthUI */,
+				9D4FBFBE28EFDCC90019CF5C /* FirebaseStorageUI */,
 			);
 			productName = AppiOS;
 			productReference = 90B39FC628CEB0FC00326D19 /* AppiOS.app */;
@@ -371,6 +401,7 @@
 				9D05CF4B28DABE6500AA7E76 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				9DE9FC2128E2011900531B46 /* XCRemoteSwiftPackageReference "iOSDropDown" */,
 				9DDD41BD28EE819E006F7C65 /* XCRemoteSwiftPackageReference "CenteredCollectionView" */,
+				9D4FBFAB28EFDCC90019CF5C /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */,
 			);
 			productRefGroup = 90B39FC728CEB0FC00326D19 /* Products */;
 			projectDirPath = "";
@@ -776,6 +807,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		9D4FBFAB28EFDCC90019CF5C /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/FirebaseUI-iOS";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		9DDD41BD28EE819E006F7C65 /* XCRemoteSwiftPackageReference "CenteredCollectionView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/BenEmdon/CenteredCollectionView";
@@ -929,6 +968,56 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9D05CF4B28DABE6500AA7E76 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		9D4FBFAC28EFDCC90019CF5C /* FirebaseAnonymousAuthUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D4FBFAB28EFDCC90019CF5C /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */;
+			productName = FirebaseAnonymousAuthUI;
+		};
+		9D4FBFAE28EFDCC90019CF5C /* FirebaseAuthUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D4FBFAB28EFDCC90019CF5C /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */;
+			productName = FirebaseAuthUI;
+		};
+		9D4FBFB028EFDCC90019CF5C /* FirebaseDatabaseUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D4FBFAB28EFDCC90019CF5C /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */;
+			productName = FirebaseDatabaseUI;
+		};
+		9D4FBFB228EFDCC90019CF5C /* FirebaseEmailAuthUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D4FBFAB28EFDCC90019CF5C /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */;
+			productName = FirebaseEmailAuthUI;
+		};
+		9D4FBFB428EFDCC90019CF5C /* FirebaseFacebookAuthUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D4FBFAB28EFDCC90019CF5C /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */;
+			productName = FirebaseFacebookAuthUI;
+		};
+		9D4FBFB628EFDCC90019CF5C /* FirebaseFirestoreUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D4FBFAB28EFDCC90019CF5C /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */;
+			productName = FirebaseFirestoreUI;
+		};
+		9D4FBFB828EFDCC90019CF5C /* FirebaseGoogleAuthUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D4FBFAB28EFDCC90019CF5C /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */;
+			productName = FirebaseGoogleAuthUI;
+		};
+		9D4FBFBA28EFDCC90019CF5C /* FirebaseOAuthUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D4FBFAB28EFDCC90019CF5C /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */;
+			productName = FirebaseOAuthUI;
+		};
+		9D4FBFBC28EFDCC90019CF5C /* FirebasePhoneAuthUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D4FBFAB28EFDCC90019CF5C /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */;
+			productName = FirebasePhoneAuthUI;
+		};
+		9D4FBFBE28EFDCC90019CF5C /* FirebaseStorageUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D4FBFAB28EFDCC90019CF5C /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */;
+			productName = FirebaseStorageUI;
 		};
 		9DDD41BE28EE819E006F7C65 /* CenteredCollectionView */ = {
 			isa = XCSwiftPackageProductDependency;
