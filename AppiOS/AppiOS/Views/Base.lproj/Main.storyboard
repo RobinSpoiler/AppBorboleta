@@ -573,6 +573,11 @@ REGRESO</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="atx-vz-33g">
+                                <rect key="frame" x="43" y="121" width="329" height="282"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5vu-DT-noi"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
@@ -584,12 +589,13 @@ REGRESO</string>
                     </view>
                     <tabBarItem key="tabBarItem" image="person" catalog="system" id="BYN-1T-TnA"/>
                     <connections>
+                        <outlet property="tview" destination="atx-vz-33g" id="kI6-j5-ju9"/>
                         <outlet property="userLabel" destination="37G-xG-PO3" id="ePY-V7-ck9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gRJ-zw-Org" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2555" y="1867"/>
+            <point key="canvasLocation" x="2553.6231884057975" y="1866.9642857142856"/>
         </scene>
         <!--Signup User Data View Controller-->
         <scene sceneID="dtM-1U-xys">
