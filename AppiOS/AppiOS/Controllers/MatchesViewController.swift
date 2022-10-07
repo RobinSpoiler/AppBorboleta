@@ -8,6 +8,9 @@
 import UIKit
 import Firebase
 import CenteredCollectionView
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseAuth
 
 class UserCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var testLabel: UILabel!
@@ -52,57 +55,46 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-
-        let group = DispatchGroup()
-        group.enter()
         
-        DispatchQueue.global(qos: .default).async {
-            let db = Firestore.firestore()
-            let usersCollection = db.collection("users")
-            let query = usersCollection.whereField("data.accountType", isEqualTo: "psychologist")
-            
-            let documents = query.getDocuments(){ snapshot, err in
-                if let e = err {
-                    print(e)
-                }
-                else {
-                    for document in snapshot!.documents {
-                        print(document.documentID)
-                        self.users.append(User(document.documentID))
-                    }
-                    self.centeredCollectionViewFlowLayout = self.collectionView.collectionViewLayout as? CenteredCollectionViewFlowLayout
-                    
-                    // Modify the collectionView's decelerationRate (REQUIRED STEP)
-                    self.collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
-                    
-                    // Assign delegate and data source
-                    self.collectionView.delegate = self
-                    self.collectionView.dataSource = self
-                    
-                    // Configure the required item size (REQUIRED STEP)
-                    self.centeredCollectionViewFlowLayout.itemSize = CGSize(
-                        width: self.view.bounds.width * self.cellPercentWidth,
-                        height: self.view.bounds.height * self.cellPercentWidth * self.cellPercentWidth
-                    )
-                    
-                    // Configure the optional inter item spacing (OPTIONAL STEP)
-                    self.centeredCollectionViewFlowLayout.minimumLineSpacing = 20
-                    
-                    // Get rid of scrolling indicators
-                    self.collectionView.showsVerticalScrollIndicator = false
-                    self.collectionView.showsHorizontalScrollIndicator = true
-                }
+        let db = Firestore.firestore()
+        let usersCollection = db.collection("users")
+        let query = usersCollection.whereField("data.accountType", isEqualTo: "psychologist")
+        
+        query.getDocuments(){ snapshot, err in
+            if let e = err {
+                print(e)
             }
-            
-            group.leave()
+            else {
+                for document in snapshot!.documents {
+                    print(document.documentID)
+                    self.users.append(User(document.documentID))
+                }
+                self.displayCards()
+            }
         }
-        
-        print("called async")
-        
-        group.wait()
-        
-        print(123)
     }
     
+    func displayCards() {
+        self.centeredCollectionViewFlowLayout = self.collectionView.collectionViewLayout as? CenteredCollectionViewFlowLayout
+        
+        // Modify the collectionView's decelerationRate (REQUIRED STEP)
+        self.collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
+        
+        // Assign delegate and data source
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
+        
+        // Configure the required item size (REQUIRED STEP)
+        self.centeredCollectionViewFlowLayout.itemSize = CGSize(
+            width: self.view.bounds.width * self.cellPercentWidth,
+            height: self.view.bounds.height * self.cellPercentWidth * self.cellPercentWidth
+        )
+        
+        // Configure the optional inter item spacing (OPTIONAL STEP)
+        self.centeredCollectionViewFlowLayout.minimumLineSpacing = 20
+        
+        // Get rid of scrolling indicators
+        self.collectionView.showsVerticalScrollIndicator = false
+        self.collectionView.showsHorizontalScrollIndicator = false
+    }
 }
