@@ -20,9 +20,11 @@ class UserCollectionViewCell: UICollectionViewCell {
 
 struct User {
     var name: String
+    var pfp: UIImage
     
-    init(_ name: String) {
+    init(_ name: String, _ pfp: UIImage) {
         self.name = name
+        self.pfp = pfp
     }
 }
 
@@ -48,6 +50,8 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         // Give the current cell the corresponding data it needs from our model
         userCell.testLabel.text = users[indexPath.row].name
+        userCell.backgroundColor = UIColor(patternImage: users[indexPath.row].pfp)
+        userCell.contentMode = UIView.ContentMode.scaleToFill
         return userCell
     }
     
@@ -63,19 +67,6 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
         let db = Firestore.firestore()
         let usersCollection = db.collection("users")
         let query = usersCollection.whereField("data.accountType", isEqualTo: "psychologist")
-        let storageRef = Storage.storage().reference()
-        let pfpRef = storageRef.child("profilePics/puser1@gmail.com.png")
-
-        // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
-        pfpRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
-          if let _ = error {
-            // Uh-oh, an error occurred!
-          } else {
-            // Data for "images/island.jpg" is returned
-            let image = UIImage(data: data!)
-          }
-        }
-
 
         query.getDocuments(){ snapshot, err in
             if let e = err {
@@ -84,11 +75,41 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
             else {
                 
                 for document in snapshot!.documents {
-                    self.users.append(User(document.documentID))
+                    let userEmail = document.documentID
+                    
+                    let storageRef = Storage.storage().reference()
+                    
+                    let pfpRef = storageRef.child("profilePics/\(userEmail).png")
+                    pfpRef.getData(maxSize: 1 * 1024 * 1024) {
+                        data, e in
+                        if let err = e {
+                            print(err)
+                        }
+                        else {
+                            self.users.append(User(userEmail, UIImage(data: data!)!))
+                            self.displayCards()
+                        }
+                    }
                 }
-                self.displayCards()
             }
         }
+    }
+    
+    func getUserPFP(userEmail mail: String) -> UIImage? {
+        let storageRef = Storage.storage().reference()
+        let pfpRef = storageRef.child("profilePics/\(mail).png")
+        
+        var pfpImg: UIImage? = nil
+        // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
+        pfpRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+            if let e = error {
+                print(e)
+            } else {
+                pfpImg = UIImage(data: data!)
+            }
+        }
+        
+        return pfpImg
     }
     
     func displayCards() {
