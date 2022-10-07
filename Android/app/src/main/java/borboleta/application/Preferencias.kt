@@ -70,6 +70,8 @@ class Preferencias : AppCompatActivity() {
         val cinco_d = findViewById<CheckBox>(R.id.cincod)
         val cinco_e = findViewById<CheckBox>(R.id.cincoe)
         val cinco_f = findViewById<CheckBox>(R.id.cincof)
+        val cinco_g = findViewById<CheckBox>(R.id.cincog)
+        val cinco_h = findViewById<CheckBox>(R.id.cincoh)
 
         val seis_a = findViewById<CheckBox>(R.id.seisa)
         val seis_b = findViewById<CheckBox>(R.id.seisb)
@@ -83,7 +85,7 @@ class Preferencias : AppCompatActivity() {
         var thirdQuestion : Array<CheckBox> = arrayOf<CheckBox>(tres_a, tres_b,tres_c, tres_d, tres_e)
         var fourthQuestion : Array<CheckBox> = arrayOf<CheckBox>(cuatro_a, cuatro_b,cuatro_c, cuatro_d, cuatro_e, cuatro_f)
         var sixthQuestion : Array<CheckBox> = arrayOf<CheckBox>(seis_a, seis_b,seis_c, seis_d, seis_e)
-        var fifthQuestion : Array<CheckBox> = arrayOf<CheckBox>(cinco_a, cinco_b,cinco_c, cinco_d, cinco_e)
+        var fifthQuestion : Array<CheckBox> = arrayOf<CheckBox>(cinco_a, cinco_b,cinco_c, cinco_d, cinco_e, cinco_f, cinco_g, cinco_h)
         var results = IntArray(5)
         val resultsFifth: MutableList<Int> = ArrayList()
 
@@ -100,6 +102,7 @@ class Preferencias : AppCompatActivity() {
         tres_b.setOnClickListener{check(thirdQuestion, tres_b, results, 2, 1) }
         tres_c.setOnClickListener{check(thirdQuestion, tres_c, results, 2, 2) }
         tres_d.setOnClickListener{check(thirdQuestion, tres_d, results, 2, 3)}
+        tres_e.setOnClickListener{check(thirdQuestion, tres_e, results, 2, 3)}
 
         cuatro_a.setOnClickListener{check(fourthQuestion, cuatro_a, results, 3, 0) }
         cuatro_b.setOnClickListener{check(fourthQuestion, cuatro_b, results, 3, 1) }
