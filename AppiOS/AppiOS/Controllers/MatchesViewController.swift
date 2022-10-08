@@ -84,7 +84,6 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
                     let storageRef = self.storage.reference()
                     let pfpRef = storageRef.child("profilePics/\(userID).png")
                     
-                    self.users.append(User(userID))
                     group.enter()
                     pfpRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
                         if let e = error {
