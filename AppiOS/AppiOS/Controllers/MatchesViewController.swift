@@ -57,6 +57,7 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
         // Give the current cell the corresponding data it needs from our model
         userCell.testLabel.text = users[indexPath.row].name
         userCell.backgroundColor = UIColor(patternImage: users[indexPath.row].pfp)
+        userCell.contentMode = UIView.ContentMode.scaleAspectFill
         return userCell
     }
     
@@ -69,10 +70,9 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let group = DispatchGroup()
         let query = db.collection("users").whereField("data.accountType", isEqualTo: "psychologist")
+        let group = DispatchGroup()
         
-        group.enter()
         query.getDocuments(completion: { QuerySnapshot, err in
             if let e = err {
                 print(e)
@@ -80,56 +80,44 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
             else {
                 for document in QuerySnapshot!.documents {
                     let userID = document.documentID
-                    self.users.append(User(
-                        userID
-                    ))
+                    
+                    let storageRef = self.storage.reference()
+                    let pfpRef = storageRef.child("profilePics/\(userID).png")
+                    
+                    self.users.append(User(userID))
+                    group.enter()
+                    pfpRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+                        if let e = error {
+                            print(e)
+                        } else {
+                            let userpfp = UIImage(data: data!)
+                            self.users.append(User(userID, userpfp!))
+                        }
+                        group.leave()
+                    }
                 }
-                group.leave()
+            }
+            group.notify(queue: .main) {
+                self.displayCards()
             }
         })
-        group.notify(queue: .main) {
-            self.displayCards()
-        }
-    }
-    
-    func getPFP(userID: String) -> UIImage {
-        let storageRef = storage.reference()
-        let pfpReference = storageRef.child("profilePics/\(userID).png")
-        
-        var returnImg = UIImage(named: "defaultPFP")!
-        
-        pfpReference.getData(maxSize: 1 * 1024 * 1024) { data, err in
-            if let e = err {
-                print(e)
-            }
-            else {
-                returnImg = UIImage(data: data!)!
-            }
-        }
-        
-        return returnImg
     }
     
     func displayCards() {
         self.centeredCollectionViewFlowLayout = self.collectionView.collectionViewLayout as? CenteredCollectionViewFlowLayout
         
-        // Modify the collectionView's decelerationRate (REQUIRED STEP)
         self.collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
         
-        // Assign delegate and data source
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         
-        // Configure the required item size (REQUIRED STEP)
         self.centeredCollectionViewFlowLayout.itemSize = CGSize(
             width: self.view.bounds.width * self.cellPercentWidth,
             height: self.view.bounds.height * self.cellPercentWidth * self.cellPercentWidth
         )
         
-        // Configure the optional inter item spacing (OPTIONAL STEP)
         self.centeredCollectionViewFlowLayout.minimumLineSpacing = 20
         
-        // Get rid of scrolling indicators
         self.collectionView.showsVerticalScrollIndicator = false
         self.collectionView.showsHorizontalScrollIndicator = false
     }
