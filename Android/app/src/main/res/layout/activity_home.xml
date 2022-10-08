@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+    <TextView
+        android:id="@+id/titulo_home"
+        android:layout_width="267dp"
+        android:layout_height="42dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/home"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#002B69"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_home_dinamico"
+        android:layout_width="321dp"
+        android:layout_height="117dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_home" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_borboleta_podcast_home"
+        android:layout_width="321dp"
+        android:layout_height="177dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView_home_dinamico">
+
+        <TextView
+            android:id="@+id/Titulo_podcast_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="94dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/borboleta_podcast"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+
+        <ImageButton
+            android:id="@+id/logo_spotify_borboleta_home"
+            android:layout_width="57dp"
+            android:layout_height="57dp"
+            android:layout_marginLeft="252dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginRight="12dp"
+            android:background="#FEFEFE"
+            android:contentDescription="@string/logo_spotify"
+            app:srcCompat="@drawable/spotify" />
+
+        <TextView
+            android:id="@+id/texto_borboleta_podcast_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginRight="78dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/podcast_salud_mental"
+            android:textColor="#000000"
+            android:textSize="8sp"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_borboleta_contenido_home"
+        android:layout_width="321dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView_borboleta_podcast_home">
+
+        <TextView
+            android:id="@+id/Titulo_contenido_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="126dp"
+            android:text="@string/contenido_reciente"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/texto_borboleta_contenido_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="47dp"
+            android:layout_marginRight="23dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Aprende sobre salud mental dentro del emprendimiento."
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_conocermas_home"
+            android:layout_width="155dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="105dp"
+            android:layout_marginRight="174dp"
+            android:layout_marginBottom="22dp"
+            android:backgroundTint="#616E9E"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Conocer más"
+            android:textSize="14sp"
+            app:iconPadding="4dp" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
