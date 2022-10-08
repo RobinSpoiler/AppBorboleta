@@ -56,6 +56,7 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         // Give the current cell the corresponding data it needs from our model
         userCell.testLabel.text = users[indexPath.row].name
+        userCell.backgroundColor = UIColor(patternImage: users[indexPath.row].pfp)
         return userCell
     }
     
@@ -68,7 +69,6 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
     override func viewDidLoad() {
         super.viewDidLoad()
         let query = db.collection("users").whereField("data.accountType", isEqualTo: "psychologist")
-        let storageRef = storage.reference()
         
         query.getDocuments() { qSnapshot, err in
             if let e = err {
@@ -77,7 +77,10 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
             else {
                 if let documents = qSnapshot?.documents {
                     for document in documents {
-                        self.users.append(User(document.documentID))
+                        
+                        let userID = document.documentID
+                        
+                        self.users.append(User(userID, self.getPFP(userID: userID)))
                         
                         DispatchQueue.main.async {
                             self.displayCards()
@@ -86,6 +89,24 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
                 }
             }
         }
+    }
+    
+    func getPFP(userID: String) -> UIImage {
+        let storageRef = storage.reference()
+        let pfpReference = storageRef.child("profilePics/\(userID).png")
+        
+        var returnImg = UIImage(named: "defaultPFP")!
+        
+        pfpReference.getData(maxSize: 1 * 1024 * 1024) { data, err in
+            if let e = err {
+                print(e)
+            }
+            else {
+                returnImg = UIImage(data: data!)!
+            }
+        }
+        
+        return returnImg
     }
     
     func displayCards() {

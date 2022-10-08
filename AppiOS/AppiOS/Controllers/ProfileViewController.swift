@@ -84,6 +84,28 @@ class ProfileViewController: UIViewController {
      //        }
      
 
+     
+     override func viewDidLoad() {
+         super.viewDidLoad()
+
+         let myGroup = DispatchGroup()
+
+         for i in 0 ..< 5 {
+             myGroup.enter()
+
+             Alamofire.request("https://httpbin.org/get", parameters: ["foo": "bar"]).responseJSON { response in
+                 print("Finished request \(i)")
+                 myGroup.leave()
+             }
+         }
+
+         myGroup.notify(queue: .main) {
+             print("Finished all requests.")
+         }
+     }
+     
+     
+     
     */
 
 }
