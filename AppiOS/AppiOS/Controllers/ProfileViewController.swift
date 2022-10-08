@@ -54,6 +54,36 @@ class ProfileViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
+     
+     //        let query = db.collection("users").whereField("data.accountType", isEqualTo: "psychologist")
+     //        query.getDocuments() {
+     //            snap, e in
+     //            if let err = e {
+     //                print(err)
+     //            }
+     //            else {
+     //                for document in snap!.documents {
+     //                    let userID = document.documentID
+     //                    //self.users.append(User(userID))
+     //                    let storageRef = self.storage.reference()
+     //                    let pfpRef = storageRef.child("profilePics/\(userID).png")
+     //
+     //                    pfpRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+     //                        if let e = error {
+     //                            print(e)
+     //                        } else {
+     //                            let userpfp = UIImage(data: data!)
+     //                            self.users.append(User(userID, userpfp!))
+     //                        }
+     //                    }
+     //                    DispatchQueue.main.async {
+     //                        self.displayCards()
+     //                    }
+     //                }
+     //            }
+     //        }
+     
+
     */
 
 }

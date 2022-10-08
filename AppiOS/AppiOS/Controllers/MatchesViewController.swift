@@ -26,14 +26,20 @@ struct User {
         self.name = name
         self.pfp = pfp
     }
+    
+    init(_ name: String) {
+        self.name = name
+        self.pfp = UIImage(named: "defaultPFP")!
+    }
 }
 
 class MatchesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    let db = Firestore.firestore()
+    let storage = Storage.storage()
+    
     var users: [User] = []
     var current = 0
-    
-    let storage = Storage.storage()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return users.count
@@ -50,8 +56,6 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         // Give the current cell the corresponding data it needs from our model
         userCell.testLabel.text = users[indexPath.row].name
-        userCell.backgroundColor = UIColor(patternImage: users[indexPath.row].pfp)
-        userCell.contentMode = UIView.ContentMode.scaleToFill
         return userCell
     }
     
@@ -63,53 +67,25 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let query = db.collection("users").whereField("data.accountType", isEqualTo: "psychologist")
+        let storageRef = storage.reference()
         
-        let db = Firestore.firestore()
-        let usersCollection = db.collection("users")
-        let query = usersCollection.whereField("data.accountType", isEqualTo: "psychologist")
-
-        query.getDocuments(){ snapshot, err in
+        query.getDocuments() { qSnapshot, err in
             if let e = err {
                 print(e)
             }
             else {
-                
-                for document in snapshot!.documents {
-                    let userEmail = document.documentID
-                    
-                    let storageRef = Storage.storage().reference()
-                    
-                    let pfpRef = storageRef.child("profilePics/\(userEmail).png")
-                    pfpRef.getData(maxSize: 1 * 1024 * 1024) {
-                        data, e in
-                        if let err = e {
-                            print(err)
-                        }
-                        else {
-                            self.users.append(User(userEmail, UIImage(data: data!)!))
+                if let documents = qSnapshot?.documents {
+                    for document in documents {
+                        self.users.append(User(document.documentID))
+                        
+                        DispatchQueue.main.async {
                             self.displayCards()
                         }
                     }
                 }
             }
         }
-    }
-    
-    func getUserPFP(userEmail mail: String) -> UIImage? {
-        let storageRef = Storage.storage().reference()
-        let pfpRef = storageRef.child("profilePics/\(mail).png")
-        
-        var pfpImg: UIImage? = nil
-        // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
-        pfpRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
-            if let e = error {
-                print(e)
-            } else {
-                pfpImg = UIImage(data: data!)
-            }
-        }
-        
-        return pfpImg
     }
     
     func displayCards() {
