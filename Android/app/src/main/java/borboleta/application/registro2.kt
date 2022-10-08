@@ -32,7 +32,7 @@ class registro2 : AppCompatActivity() {
 
         val datePicker = findViewById<DatePicker>(R.id.fecha)
         val telefono = findViewById<TextInputEditText>(R.id.inputtelefono)
-        val pronombre = findViewById<TextView>(R.id.selector)
+        val pronombre = findViewById<Spinner>(R.id.list)
         val today = Calendar.getInstance()
         datePicker.init(
             today.get(Calendar.YEAR), today.get(Calendar.MONTH),
@@ -61,7 +61,6 @@ class registro2 : AppCompatActivity() {
         }
 
         val user = Firebase.auth.currentUser
-            println(user?.email)
 
         val btnRegister2Second = findViewById<ImageButton>(R.id.nextbutton2)
         btnRegister2Second.setOnClickListener(){
@@ -83,20 +82,23 @@ class registro2 : AppCompatActivity() {
 /*
             Completar registro en la BD
 */
-            var docData = hashMapOf(
-                "birthday" to date,
-                "phone" to telefono.text.toString(),
-                "pronouns" to pronombre.text.toString(),
-            )
+            var docData = object{
+                var data = object{
+                    var birthday: String = date
+                    var phone: String = telefono.text.toString()
+                    var pronouns :String = pronombre.selectedItem.toString()
+                }
+            }
 
             db.collection("users").document(user?.email.toString())
                 .set(docData, SetOptions.merge())
                 .addOnSuccessListener { Log.d("Success", "DocumentSnapshot successfully written!") }
                 .addOnFailureListener { e -> Log.w("Fail", "Error writing document", e) }
-
-            startActivity(Intent(this, avisoprivacidad::class.java))
+            //IR A AVISO DE Preferencias
+            startActivity(Intent(this, Preferencias::class.java))
         }
 
+        //REGRESO A REGISTRO 1
         val btnRegister2Back = findViewById<ImageButton>(R.id.backbutton2)
         btnRegister2Back.setOnClickListener(){
             startActivity(Intent(this, registro::class.java))

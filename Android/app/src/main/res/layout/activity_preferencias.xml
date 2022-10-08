@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,7 +8,7 @@
     tools:context=".Preferencias">
 
     <ImageButton
-        android:id="@+id/backbutton"
+        android:id="@+id/backbutton5"
         android:layout_width="15dp"
         android:layout_height="25dp"
         android:background="#0000"
@@ -33,7 +34,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.051"
-        app:srcCompat="@drawable/logomariposa" />
+        app:srcCompat="@drawable/logomariposa"
+        tools:ignore="ImageContrastCheck" />
 
     <ScrollView
         android:layout_width="415dp"
@@ -71,31 +73,31 @@
                 android:orientation="vertical">
 
                 <CheckBox
-                    android:id="@+id/unouno"
+                    android:id="@+id/unoa"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/opcuatro"
+                    android:text="@string/unoa"
                     tools:ignore="DuplicateSpeakableTextCheck">
 
                 </CheckBox>
 
                 <CheckBox
-                    android:id="@+id/unodos"
+                    android:id="@+id/unob"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/opcinco" />
+                    android:text="@string/unob" />
 
                 <CheckBox
-                    android:id="@+id/unotres"
+                    android:id="@+id/unoc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/opseis" />
+                    android:text="@string/unoc" />
 
                 <CheckBox
-                    android:id="@+id/unocuatro"
+                    android:id="@+id/unod"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/opsiete" />
+                    android:text="@string/unod" />
 
             </LinearLayout>
 
@@ -117,30 +119,18 @@
                 android:orientation="vertical">
 
                 <CheckBox
-                    android:id="@+id/dosuno"
+                    android:id="@+id/dosa"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/opocho">
+                    android:text="@string/dosa">
 
                 </CheckBox>
 
                 <CheckBox
-                    android:id="@+id/dosdos"
+                    android:id="@+id/dosb"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/opnueve" />
-
-                <CheckBox
-                    android:id="@+id/dostres"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/opdiez" />
-
-                <CheckBox
-                    android:id="@+id/doscuatro"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/opcuatro" />
+                    android:text="@string/dosb" />
 
             </LinearLayout>
 
@@ -162,122 +152,228 @@
                 android:orientation="vertical">
 
                 <CheckBox
-                    android:id="@+id/tresuno"
+                    android:id="@+id/tresa"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/loremipsum">
+                    android:text="@string/tresa">
 
                 </CheckBox>
 
                 <CheckBox
-                    android:id="@+id/tresdos"
+                    android:id="@+id/tresb"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/loremipsum" />
+                    android:text="@string/tresb" />
 
                 <CheckBox
-                    android:id="@+id/trestres"
+                    android:id="@+id/tresc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/loremipsum" />
+                    android:text="@string/tresc" />
 
                 <CheckBox
-                    android:id="@+id/trescuatro"
+                    android:id="@+id/tresd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/loremipsum" />
+                    android:text="@string/tresd" />
+                <CheckBox
+                    android:id="@+id/trese"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/trese" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/cuartaPregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/cuartaPregunta" />
+
+            <LinearLayout
+                android:id="@+id/checkboxcuatro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="2dp"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/cuatroa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cuatroa">
+
+                </CheckBox>
+
+                <CheckBox
+                    android:id="@+id/cuatrob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cuatrob" />
+
+                <CheckBox
+                    android:id="@+id/cuatroc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cuatroc" />
+
+                <CheckBox
+                    android:id="@+id/cuatrod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cuatrod" />
+                <CheckBox
+                    android:id="@+id/cuatroe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cuatroe" />
+                <CheckBox
+                    android:id="@+id/cuatrof"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cuatrof" />
+
 
             </LinearLayout>
 
+            <TextView
+                android:id="@+id/quintaPregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/quintaPregunta" />
+
+            <LinearLayout
+                android:id="@+id/checkboxcinco"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="2dp"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/cincoa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cincoa">
+
+                </CheckBox>
+
+                <CheckBox
+                    android:id="@+id/cincob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cincob" />
+
+                <CheckBox
+                    android:id="@+id/cincoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cincoc" />
+
+                <CheckBox
+                    android:id="@+id/cincod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cincod" />
+                <CheckBox
+                    android:id="@+id/cincoe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cincoe" />
+                <CheckBox
+                    android:id="@+id/cincof"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cincof" />
+                <CheckBox
+                    android:id="@+id/cincog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cincog" />
+                <CheckBox
+                    android:id="@+id/cincoh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cincoh" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/sextaPregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/sextaPregunta" />
+
+            <LinearLayout
+                android:id="@+id/c"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="2dp"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/seisa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/seisa">
+
+                </CheckBox>
+
+                <CheckBox
+                    android:id="@+id/seisb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/seisb" />
+
+                <CheckBox
+                    android:id="@+id/seisc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/seisc" />
+
+                <CheckBox
+                    android:id="@+id/seisd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/seisd" />
+                <CheckBox
+                    android:id="@+id/seise"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/seise" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/nextbutton5"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="#0000"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@string/nextbutton"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/nextbutton"
+                tools:ignore="TouchTargetSizeCheck" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+            </TextView>
 
         </LinearLayout>
+
     </ScrollView>
 
 
+
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-<!--
-<TextView
-android:id="@+id/segundaPregunta"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:layout_margin="10dp"
-android:text="@string/segundaPregunta" />
-
-<LinearLayout
-android:id="@+id/checkboxesdos"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical">
-
-<CheckBox
-    android:id="@+id/dosuno"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/opcinco">
-
-</CheckBox>
-
-<CheckBox
-    android:id="@+id/dosdos"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/opseis" />
-
-<CheckBox
-    android:id="@+id/dostres"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/opsiete" />
-
-<CheckBox
-    android:id="@+id/doscuatro"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/opocho" />
-
-</LinearLayout>
-
-<TextView
-android:id="@+id/terceraPregunta"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:layout_margin="10dp"
-android:text="@string/terceraPregunta" />
-
-<LinearLayout
-android:id="@+id/checkboxestres"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical">
-
-<CheckBox
-    android:id="@+id/tresuno"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/opdiez">
-
-</CheckBox>
-
-<CheckBox
-    android:id="@+id/tresdos"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/loremipsum"
-    tools:ignore="DuplicateSpeakableTextCheck" />
-
-<CheckBox
-    android:id="@+id/trestres"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/loremipsum" />
-
-<CheckBox
-    android:id="@+id/trescuatro"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/loremipsum" />
-
-</LinearLayout>
--->
-
