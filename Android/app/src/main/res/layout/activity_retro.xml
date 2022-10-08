@@ -11,7 +11,7 @@
         android:layout_width="213dp"
         android:layout_height="192dp"
         android:contentDescription="@string/todo"
-        android:foregroundTint="#002B69"
+        android:foregroundTint="#000000"
         app:layout_constraintBottom_toTopOf="@+id/text_success_retro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
