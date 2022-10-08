@@ -68,26 +68,27 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let group = DispatchGroup()
         let query = db.collection("users").whereField("data.accountType", isEqualTo: "psychologist")
         
-        query.getDocuments() { qSnapshot, err in
+        group.enter()
+        query.getDocuments(completion: { QuerySnapshot, err in
             if let e = err {
                 print(e)
             }
             else {
-                if let documents = qSnapshot?.documents {
-                    for document in documents {
-                        
-                        let userID = document.documentID
-                        
-                        self.users.append(User(userID, self.getPFP(userID: userID)))
-                        
-                        DispatchQueue.main.async {
-                            self.displayCards()
-                        }
-                    }
+                for document in QuerySnapshot!.documents {
+                    let userID = document.documentID
+                    self.users.append(User(
+                        userID
+                    ))
                 }
+                group.leave()
             }
+        })
+        group.notify(queue: .main) {
+            self.displayCards()
         }
     }
     

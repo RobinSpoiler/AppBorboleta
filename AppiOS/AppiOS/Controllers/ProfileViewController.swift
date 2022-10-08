@@ -104,7 +104,27 @@ class ProfileViewController: UIViewController {
          }
      }
      
+     let query = db.collection("users").whereField("data.accountType", isEqualTo: "psychologist")
      
+     query.getDocuments() { qSnapshot, err in
+         if let e = err {
+             print(e)
+         }
+         else {
+             if let documents = qSnapshot?.documents {
+                 for document in documents {
+                     
+                     let userID = document.documentID
+                     
+                     self.users.append(User(userID, self.getPFP(userID: userID)))
+                     
+                     DispatchQueue.main.async {
+                         self.displayCards()
+                     }
+                 }
+             }
+         }
+     }
      
     */
 
