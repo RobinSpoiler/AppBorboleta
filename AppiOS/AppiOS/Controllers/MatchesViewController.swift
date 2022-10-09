@@ -16,6 +16,10 @@ import SDWebImage
 
 class UserCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var testLabel: UILabel!
+    
+    @IBAction func ChatButton(_ sender: UIButton) {
+        print("Starting chat with: \(testLabel!.text)")
+    }
 }
 
 struct User {
