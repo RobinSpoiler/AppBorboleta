@@ -47,11 +47,11 @@ class Login : AppCompatActivity() {
                     /*updateUI(null)*/
                 }
                 //Esta lleva a home
-                startActivity(Intent(this, avisoprivacidad::class.java))
+                startActivity(Intent(this, Home::class.java))
             }
         }
 
-        //
+        //GO TO REGISTRATION
         val btnRegister = findViewById<Button>(R.id.RegistroLogin)
         btnRegister.setOnClickListener(){
             startActivity(Intent(this, registro::class.java))

@@ -135,10 +135,10 @@ class Preferencias : AppCompatActivity() {
                 .set(docData, SetOptions.merge())
                 .addOnSuccessListener { Log.d("Success", "DocumentSnapshot successfully written!") }
                 .addOnFailureListener { e -> Log.w("Fail", "Error writing document", e) }
-            //IR A AVISO DE Preferencias
+            //GO TO TERMS AND CONDITIONS
             startActivity(Intent(this, avisoprivacidad::class.java))
         }
-        //Go to Aviso de priv
+        //RETURN TO REGISTRO 2
         var backPreferencias = findViewById<ImageButton>(R.id.backbutton5)
         backPreferencias.setOnClickListener(){
             startActivity(Intent(this, registro2::class.java))

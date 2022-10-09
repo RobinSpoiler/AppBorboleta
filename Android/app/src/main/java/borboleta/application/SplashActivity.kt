@@ -9,6 +9,9 @@ import android.view.WindowManager
 @Suppress("DEPRECATION")
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        //HIDE ACTION BAR
+        supportActionBar?.hide()
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
@@ -17,6 +20,7 @@ class SplashActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
         )
 
+        //Start Login activity
         Handler().postDelayed({
             startActivity(Intent(this, Login::class.java))
             finish()

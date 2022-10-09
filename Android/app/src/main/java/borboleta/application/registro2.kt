@@ -94,7 +94,8 @@ class registro2 : AppCompatActivity() {
                 .set(docData, SetOptions.merge())
                 .addOnSuccessListener { Log.d("Success", "DocumentSnapshot successfully written!") }
                 .addOnFailureListener { e -> Log.w("Fail", "Error writing document", e) }
-            //IR A AVISO DE Preferencias
+
+            //IR A PREFERENCIAS
             startActivity(Intent(this, Preferencias::class.java))
         }
 

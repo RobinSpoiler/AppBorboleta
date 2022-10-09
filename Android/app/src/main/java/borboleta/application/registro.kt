@@ -52,6 +52,7 @@ class registro : AppCompatActivity() {
                             db.collection("users").document(user?.email.toString())
                                 .set(docData)
                             /*updateUI(user)*/
+
                             //AQUI PASAMOS A REGISTRO 2
                             startActivity(Intent(this, registro2::class.java))
                         } else {
