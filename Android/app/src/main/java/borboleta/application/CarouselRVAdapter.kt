@@ -13,7 +13,7 @@ class CarouselRVAdapter(private val carouselDataList: ArrayList<String>) :
     class CarouselItemViewHolder(view: View) : RecyclerView.ViewHolder(view)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarouselItemViewHolder {
-        val viewHolder = LayoutInflater.from(parent.context).inflate(R.layout.itesm_carousel, parent, false)
+        val viewHolder = LayoutInflater.from(parent.context).inflate(R.layout.items_carousel, parent, false)
         return CarouselItemViewHolder(viewHolder)
     }
 

@@ -71,7 +71,7 @@
         android:id="@+id/titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tituloterminos"
+        android:text="@string/elementoCarrousel"
         android:textSize="23sp"
         android:textColor="#31446D"
         app:layout_constraintBottom_toBottomOf="parent"

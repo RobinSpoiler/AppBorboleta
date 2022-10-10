@@ -18,7 +18,7 @@
     <string name="cumpleanios">Cumpleaños</string>
     <string name="selecciona">Selecciona:</string>
     <string name="linea">linea</string>
-    <string name="tituloterminos">TÉRMINOS DE USO</string>
+    <string name="elementoCarrousel">TÉRMINOS DE USO</string>
     <string-array name="arraypronombres">
         <item>Ella</item>
         <item>El</item>

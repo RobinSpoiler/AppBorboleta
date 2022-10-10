@@ -12,7 +12,7 @@
         android:layout_height="0dp"
         android:gravity="center"
         android:padding="20dp"
-        android:text="@string/tituloterminos"
+        android:text="@string/elementoCarrousel"
         android:textAlignment="center"
         android:textColor="#A1887F"
         android:textSize="20sp"
