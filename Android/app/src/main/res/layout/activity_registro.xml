@@ -6,132 +6,188 @@
     android:layout_height="match_parent"
     tools:context=".registro">
 
+    <TextView
+        android:id="@+id/asterisco7"
+        android:layout_width="29dp"
+        android:layout_height="32dp"
+        android:text="@string/asterisco"
+        android:textColor="#E50000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.61" />
+
+    <TextView
+        android:id="@+id/asterisco6"
+        android:layout_width="29dp"
+        android:layout_height="32dp"
+        android:text="@string/asterisco"
+        android:textColor="#E50000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.324"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.446" />
+
+    <TextView
+        android:id="@+id/asterisco5"
+        android:layout_width="29dp"
+        android:layout_height="32dp"
+        android:text="@string/asterisco"
+        android:textColor="#E50000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.28" />
+
+    <TextView
+        android:id="@+id/asterisco4"
+        android:layout_width="29dp"
+        android:layout_height="32dp"
+        android:text="@string/asterisco"
+        android:textColor="#E50000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.248"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.138" />
+
     <ImageView
         android:id="@+id/logomariposa"
         android:layout_width="57dp"
         android:layout_height="50dp"
+        android:layout_marginEnd="4dp"
         android:contentDescription="@string/logomariposa"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.847"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.962"
+        app:layout_constraintStart_toEndOf="@+id/backbutton"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.051"
+        app:layout_constraintVertical_bias="0.044"
         app:srcCompat="@drawable/logomariposa" />
 
     <ImageButton
         android:id="@+id/backbutton"
         android:layout_width="15dp"
         android:layout_height="25dp"
+        android:layout_marginStart="16dp"
         android:background="#0000"
         android:contentDescription="@string/backbutton"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.105"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.069"
+        app:layout_constraintVertical_bias="0.065"
         app:srcCompat="@drawable/backbutton"
         tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/nombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="161dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="100dp"
         android:text="@string/nombre"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="#1F2327"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.158"
+        app:layout_constraintHorizontal_bias="0.16"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.266" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="153dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
         android:text="@string/contrase_a"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="#1F2327"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.168"
+        app:layout_constraintHorizontal_bias="0.158"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.492" />
+        app:layout_constraintTop_toBottomOf="@+id/inputcorreo" />
 
     <TextView
         android:id="@+id/confirmacion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="155dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
         android:text="@string/confirmarcontra"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="#1F2327"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.207"
+        app:layout_constraintHorizontal_bias="0.149"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.603" />
+        app:layout_constraintTop_toBottomOf="@+id/inputcontra" />
 
     <TextView
         android:id="@+id/correo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="153dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:textColor="#1F2327"
         android:text="@string/correo"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.154"
+        app:layout_constraintHorizontal_bias="0.158"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.375" />
+        app:layout_constraintTop_toBottomOf="@+id/inputnombre" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/inputnombre"
-        android:layout_width="300dp"
+        android:layout_width="332dp"
         android:layout_height="48dp"
+        android:layout_marginTop="12dp"
         android:hint="@string/hintnombre"
         android:textColorHint="#757575"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.312" />
+        app:layout_constraintTop_toBottomOf="@+id/nombre" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/inputcorreo"
-        android:layout_width="300dp"
+        android:layout_width="332dp"
         android:layout_height="48dp"
+        android:layout_marginTop="12dp"
         android:hint="@string/hintcorreo"
         android:textColorHint="#757575"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.429" />
+        app:layout_constraintTop_toBottomOf="@+id/correo" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/inputconfirma"
-        android:layout_width="300dp"
+        android:layout_width="332dp"
         android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+
         android:hint="@string/hintconfirma"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.667" />
+        app:layout_constraintTop_toBottomOf="@+id/confirmacion"
+        tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/inputcontra"
-        android:layout_width="300dp"
+        android:layout_width="332dp"
         android:layout_height="48dp"
-        android:hint="@string/hintcontra"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="12dp"
+        android:hint="@string/hintconfirma"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.544" />
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <ImageButton
         android:id="@+id/nextbutton"
@@ -142,9 +198,10 @@
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.853"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.844"
+        app:layout_constraintTop_toBottomOf="@+id/inputconfirma"
+        app:layout_constraintVertical_bias="0.471"
         app:srcCompat="@drawable/nextbutton"
         tools:ignore="TouchTargetSizeCheck" />
 

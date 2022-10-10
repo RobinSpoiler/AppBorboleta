@@ -1,120 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F4F4F4"
     tools:context=".Login">
+
 
     <ImageView
         android:id="@+id/LogoView"
-        android:layout_width="301dp"
-        android:layout_height="127dp"
+        android:layout_width="304dp"
+        android:layout_height="145dp"
         android:layout_marginTop="16dp"
         android:contentDescription="@string/logoborboleta"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.336"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/logo" />
 
     <TextView
         android:id="@+id/BienvenidxLogin"
+
         android:layout_width="310dp"
         android:layout_height="85dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif"
         android:text="@string/bienvenidx_de_regreso"
         android:textColor="#002B69"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.277"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LogoView" />
 
     <TextView
         android:id="@+id/CorreoLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="325dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
         android:text="@string/correo"
         android:textColor="#1F2327"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintHorizontal_bias="0.586"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BienvenidxLogin" />
 
     <EditText
         android:id="@+id/EmailLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="331dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
-        android:hint="@string/Email"
+        android:hint="@string/hintcorreo"
         android:importantForAutofill="no"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
+        android:textColorHint="#546E7A"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintHorizontal_bias="0.637"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/CorreoLogin" />
 
     <TextView
         android:id="@+id/ContraseñaLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_width="325dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="12dp"
         android:text="@string/ContraseñaLogin"
         android:textColor="#1F2327"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintHorizontal_bias="0.586"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EmailLogin" />
 
-    <EditText
-        android:id="@+id/PasswordLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/ContraseñaInsert"
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputcontra"
+        android:layout_width="331dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="20dp"
+        android:hint="@string/hintconfirma"
         android:inputType="textPassword"
-        android:minHeight="48dp"
-        android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintHorizontal_bias="0.637"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ContraseñaLogin"
-        tools:ignore="DuplicateSpeakableTextCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/ContraseñaLogin" />
 
     <Button
         android:id="@+id/ButtonLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#002B69"
         android:text="@string/inicia_sesi_n"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PasswordLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/inputcontra" />
 
-    <Button
-        android:id="@+id/RegistroLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:textColor="#003B69"
-        android:backgroundTint="@color/white"
-        android:text="@string/aun_no_tienes_cuenta_registrate"
+    <TextView
+        android:id="@+id/Registro"
+        android:layout_width="200dp"
+        android:layout_height="55dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:minHeight="48dp"
+        android:text="@string/a_n_no_tienes_una_cuenta_registrate"
+        android:textColor="#002B69"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ButtonLogin"
-        app:layout_constraintVertical_bias="0.185" />
+        app:layout_constraintVertical_bias="0.489" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,88 +6,108 @@
     android:layout_height="match_parent"
     tools:context=".registro2">
 
+    <TextView
+        android:id="@+id/asterisco2"
+        android:layout_width="29dp"
+        android:layout_height="32dp"
+        android:text="@string/asterisco"
+        android:textColor="#E50000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.342"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.294" />
+
+    <TextView
+        android:id="@+id/asterisco3"
+        android:layout_width="29dp"
+        android:layout_height="32dp"
+        android:text="@string/asterisco"
+        android:textColor="#E50000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.342"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.462" />
+
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/inputtelefono"
-        android:layout_width="300dp"
+        android:layout_width="332dp"
         android:layout_height="48dp"
+        android:layout_marginTop="20dp"
         android:inputType="phone"
         android:textColorHint="#757575"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintHorizontal_bias="0.607"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.203"
+        app:layout_constraintTop_toBottomOf="@+id/telefono"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
-    <RelativeLayout
-        android:id="@+id/relative_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical"
+    <ImageView
+        android:id="@+id/logomariposa2"
+        android:layout_width="57dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/logomariposa"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.911"
+        app:layout_constraintStart_toEndOf="@+id/backbutton2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.894">
+        app:layout_constraintVertical_bias="0.048"
+        app:srcCompat="@drawable/logomariposa" />
 
-        <Spinner
-            android:id="@+id/list"
-            android:layout_width="328dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="46dp"
-            android:layout_marginTop="228dp"
-            android:layout_marginEnd="37dp"
-            android:layout_marginBottom="465dp"
-            android:minHeight="48dp"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+    <Spinner
+        android:id="@+id/list"
+        android:layout_width="332dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.607"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selector"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
-        <TextView
-            android:id="@+id/selector"
-            android:layout_width="109dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="53dp"
-            android:layout_marginTop="208dp"
-            android:layout_marginEnd="249dp"
-            android:layout_marginBottom="504dp"
-            android:text="@string/selecciona" />
-
-    </RelativeLayout>
+    <TextView
+        android:id="@+id/selector"
+        android:layout_width="169dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/pronombre"
+        android:textColor="#1F2327"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputtelefono" />
 
     <DatePicker
         android:id="@+id/fecha"
         android:layout_width="242dp"
         android:layout_height="189dp"
+        android:layout_marginTop="24dp"
         android:calendarViewShown="false"
         android:datePickerMode="spinner"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.566" />
+        app:layout_constraintTop_toBottomOf="@+id/cumpleanios" />
 
     <TextView
         android:id="@+id/cumpleanios"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="161dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="20dp"
         android:text="@string/cumpleanios"
-        app:layout_constraintBottom_toBottomOf="parent"
+
+        android:textColor="#1F2327"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.171"
+        app:layout_constraintHorizontal_bias="0.192"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.404" />
+        app:layout_constraintTop_toBottomOf="@+id/list" />
 
     <ImageButton
         android:id="@+id/nextbutton2"
@@ -98,51 +118,65 @@
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.896"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.731"
+        app:layout_constraintTop_toBottomOf="@+id/fecha"
+        app:layout_constraintVertical_bias="0.296"
         app:srcCompat="@drawable/nextbutton"
         tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/telefono"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="161dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="88dp"
         android:text="@string/telefono"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="#1F2327"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.199"
+        app:layout_constraintHorizontal_bias="0.192"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.169" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/backbutton2"
         android:layout_width="15dp"
         android:layout_height="25dp"
+        android:layout_marginStart="16dp"
         android:background="#0000"
         android:contentDescription="@string/backbutton"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.105"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.069"
+        app:layout_constraintVertical_bias="0.047"
         app:srcCompat="@drawable/backbutton"
         tools:ignore="TouchTargetSizeCheck" />
 
-    <ImageView
-        android:id="@+id/logomariposa2"
-        android:layout_width="57dp"
-        android:layout_height="50dp"
-        android:contentDescription="@string/logomariposa"
+    <TextView
+        android:id="@+id/asterisco"
+        android:layout_width="29dp"
+        android:layout_height="32dp"
+        android:text="@string/asterisco"
+        android:textColor="#E50000"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.847"
+        app:layout_constraintHorizontal_bias="0.471"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.051"
-        app:srcCompat="@drawable/logomariposa" />
+        app:layout_constraintVertical_bias="0.118" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="332dp"
+        android:layout_height="27dp"
+        android:text="@string/guiones"
+        android:textColor="#1F2327"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/list"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/list"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.409" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
