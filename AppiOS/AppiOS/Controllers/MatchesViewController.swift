@@ -39,7 +39,9 @@ struct User {
 
 class MatchesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    @IBOutlet weak var ActInd: UIActivityIndicatorView!
     let db = Firestore.firestore()
+    
     let storage = Storage.storage()
     
     var users: [User] = []
@@ -77,6 +79,8 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
         let query = db.collection("users").whereField("data.accountType", isEqualTo: "psychologist")
         let group = DispatchGroup()
         
+        self.ActInd.startAnimating()
+        
         query.getDocuments(completion: { QuerySnapshot, err in
             if let e = err {
                 print(e)
@@ -101,6 +105,7 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
                 }
             }
             group.notify(queue: .main) {
+                self.ActInd.isHidden = true
                 self.displayCards()
             }
         })
