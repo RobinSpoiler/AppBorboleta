@@ -1,5 +1,6 @@
 package borboleta.application
 
+import android.content.Intent
 import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.ktx.storage
@@ -15,6 +17,27 @@ class Psicologos : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_psicologos)
+
+        var navbar = findViewById<BottomNavigationView>(R.id.bottomNavigationView_navbar)
+        navbar.menu.findItem(R.id.heart_icon).isChecked = true;
+        navbar.setOnItemSelectedListener{ item ->
+            when(item.itemId) {
+                R.id.home_icon -> {
+                    // Respond to navigation item 1 click
+                    startActivity(Intent(this, Home::class.java))
+                    true
+                }
+                R.id.heart_icon -> {
+                    // Respond to navigation item 2 click
+                    startActivity(Intent(this, Psicologos::class.java))
+                    true
+                }
+                else -> false
+            }
+        }
+
+
+
         //Create storage reference
         var storage = Firebase.storage
         var storageRef = storage.reference

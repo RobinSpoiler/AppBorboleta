@@ -97,4 +97,9 @@ Mi ipsum faucibus vitae aliquet nec ullamcorper. Erat imperdiet sed euismod nisi
     <string name="contenido_reciente">Contenido reciente</string>
     <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_phasellus_sit_amet_lectus_a_mi_lobortis_iaculis_mauris_odio_tortor_accumsan_vel_gravida_sit_amet_malesuada_a_tortor_cras_mattis_augue_eget_dolor_vestibulum_id_euismod_diam_rutrum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet lectus a mi lobortis iaculis. Mauris odio tortor, accumsan vel gravida sit amet, malesuada a tortor. Cras mattis augue eget dolor vestibulum, id euismod diam rutrum.</string>
 
-</resources>
+    <string name="hearticon"></string>
+    <string name="messageicon"></string>
+    <string name="profileicon"></string>
+    <string name="homeicon"></string>
+
+    </resources>

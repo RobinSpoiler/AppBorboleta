@@ -6,12 +6,32 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class Home : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         supportActionBar?.hide()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
+        var navbar = findViewById<BottomNavigationView>(R.id.bottomNavigationView_navbar)
+        navbar.menu.findItem(R.id.home_icon).isChecked = true;
+        navbar.setOnItemSelectedListener{ item ->
+            when(item.itemId) {
+                R.id.home_icon -> {
+                    // Respond to navigation item 1 click
+                    startActivity(Intent(this, Home::class.java))
+                    true
+                }
+                R.id.heart_icon -> {
+                    // Respond to navigation item 2 click
+                    startActivity(Intent(this, Psicologos::class.java))
+                    true
+                }
+                else -> false
+            }
+        }
+
 
         val btnLogoSpotify = findViewById<ImageButton>(R.id.logo_spotify_borboleta_home)
         // set on-click listener

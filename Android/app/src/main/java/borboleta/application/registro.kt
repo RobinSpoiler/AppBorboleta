@@ -45,6 +45,7 @@ class registro : AppCompatActivity() {
 
                             var docData = object{
                                 var data = object{
+                                    var accountType = "entrepeneur"
                                     var name : String = getusername.text.toString()
                                 }
                             }
