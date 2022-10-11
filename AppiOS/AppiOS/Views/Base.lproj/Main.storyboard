@@ -486,14 +486,13 @@ REGRESO</string>
                                             <rect key="frame" x="0.0" y="0.0" width="274" height="546"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBG-Dj-mCp" userLabel="Test Label">
-                                                    <rect key="frame" x="10" y="10" width="254" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B37-Xv-1vP">
-                                                    <rect key="frame" x="212" y="502" width="52" height="34"/>
+                                                    <rect key="frame" x="229" y="501" width="35" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="OaM-EP-bb8"/>
+                                                        <constraint firstAttribute="height" constant="35" id="RGz-Kp-bkm"/>
+                                                        <constraint firstAttribute="width" secondItem="B37-Xv-1vP" secondAttribute="height" multiplier="1:1" id="tfd-zB-1um"/>
+                                                    </constraints>
                                                     <color key="tintColor" name="BackgroundColor"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="bubble.right.fill" catalog="system"/>
@@ -501,20 +500,29 @@ REGRESO</string>
                                                         <action selector="ChatButton:" destination="KmT-rm-cSE" eventType="touchUpInside" id="QBg-JQ-kH6"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YjF-Xu-Rpf">
+                                                    <rect key="frame" x="10" y="436" width="214" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="sY9-wG-WTU"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" name="BackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="fBG-Dj-mCp" firstAttribute="leading" secondItem="H1k-dP-jhg" secondAttribute="leading" constant="10" id="3Yo-Ww-GGy"/>
                                                 <constraint firstItem="B37-Xv-1vP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H1k-dP-jhg" secondAttribute="leading" constant="20" symbolic="YES" id="4gJ-4t-gNp"/>
+                                                <constraint firstAttribute="bottom" secondItem="YjF-Xu-Rpf" secondAttribute="bottom" constant="10" id="72Y-HX-eGb"/>
                                                 <constraint firstAttribute="trailing" secondItem="B37-Xv-1vP" secondAttribute="trailing" constant="10" id="8Wk-H8-hhh"/>
                                                 <constraint firstAttribute="bottom" secondItem="B37-Xv-1vP" secondAttribute="bottom" constant="10" id="Bj4-oX-Ixn"/>
-                                                <constraint firstAttribute="trailing" secondItem="fBG-Dj-mCp" secondAttribute="trailing" constant="10" id="BxC-Ld-dtM"/>
-                                                <constraint firstItem="fBG-Dj-mCp" firstAttribute="top" secondItem="H1k-dP-jhg" secondAttribute="top" constant="10" id="Ojx-D1-gdW"/>
+                                                <constraint firstItem="YjF-Xu-Rpf" firstAttribute="leading" secondItem="H1k-dP-jhg" secondAttribute="leading" constant="10" id="DhQ-Mm-hbz"/>
+                                                <constraint firstItem="B37-Xv-1vP" firstAttribute="leading" secondItem="YjF-Xu-Rpf" secondAttribute="trailing" constant="5" id="Iwg-Qw-z3b"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" name="Color2"/>
                                         <size key="customSize" width="274" height="546"/>
                                         <connections>
-                                            <outlet property="testLabel" destination="fBG-Dj-mCp" id="n5Y-ki-1gA"/>
+                                            <outlet property="nameLabel" destination="YjF-Xu-Rpf" id="rPU-Ah-zbB"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

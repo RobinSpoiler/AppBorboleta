@@ -37,7 +37,7 @@ class ProfileViewController: UIViewController {
                 let gradient = CAGradientLayer()
                 gradient.frame = self.tview.bounds
                 let startColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0).cgColor
-                let endColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.7).cgColor
+                let endColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.6).cgColor
                 gradient.colors = [startColor, endColor]
                 self.tview.layer.insertSublayer(gradient, at: 1)
             }

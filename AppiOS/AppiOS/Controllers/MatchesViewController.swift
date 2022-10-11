@@ -15,11 +15,13 @@ import FirebaseStorage
 import SDWebImage
 
 class UserCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var testLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     
     @IBAction func ChatButton(_ sender: UIButton) {
-        print("Starting chat with: \(testLabel!.text)")
+        print("Starting chat with: \(nameLabel!.text)")
     }
+    
+    var hasGradient = false
 }
 
 struct User {
@@ -61,9 +63,29 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
         }
         
         // Give the current cell the corresponding data it needs from our model
-        userCell.testLabel.text = users[indexPath.row].name
-        userCell.backgroundColor = UIColor(patternImage: users[indexPath.row].pfp)
-        userCell.contentMode = UIView.ContentMode.scaleAspectFill
+        userCell.nameLabel.text = users[indexPath.row].name
+        
+        
+        UIGraphicsBeginImageContext(userCell.frame.size)
+        users[indexPath.row].pfp.draw(in: userCell.bounds)
+
+        if let image = UIGraphicsGetImageFromCurrentImageContext(){
+            UIGraphicsEndImageContext()
+            userCell.backgroundColor = UIColor(patternImage: image)
+        }else{
+            UIGraphicsEndImageContext()
+            debugPrint("Image not available")
+         }
+        
+        let gradient = CAGradientLayer()
+        gradient.frame = userCell.bounds
+        let startColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0).cgColor
+        let endColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.7).cgColor
+        gradient.colors = [startColor, endColor]
+        if(!userCell.hasGradient) {
+            userCell.layer.insertSublayer(gradient, at: 0)
+            userCell.hasGradient = true
+        }
         return userCell
     }
     
@@ -93,7 +115,7 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
                     let pfpRef = storageRef.child("profilePics/\(userID).png")
                     
                     group.enter()
-                    pfpRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+                    pfpRef.getData(maxSize: 2 * 1024 * 1024) { data, error in
                         if let e = error {
                             print(e)
                         } else {
