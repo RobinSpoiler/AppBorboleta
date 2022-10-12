@@ -114,19 +114,35 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
                     let storageRef = self.storage.reference()
                     let pfpRef = storageRef.child("profilePics/\(userID).png")
                     
+                    let data = document["data"] as? [String: Any]
+                    let name = data!["name"] as! String
+                    let birthday = data!["birthday"] as! String
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "dd-MM-yyyy"
+                    let birthdayDate = dateFormatter.date(from: birthday)
+                    let age = Int(birthdayDate!.timeIntervalSinceNow / (365 * 24 * 60 * 60) * -1)
+                    
+                    // let preferences = document["preferences"] as? [String: Any]
+                    
                     group.enter()
                     pfpRef.getData(maxSize: 2 * 1024 * 1024) { data, error in
                         if let e = error {
                             print(e)
                         } else {
                             let userpfp = UIImage(data: data!)
-                            self.users.append(User(userID, userpfp!))
+                            self.users.append(User(
+                                "\(name), \(age)",
+                                userpfp ?? UIImage(named: "defaultPFP")!
+                            ))
                         }
                         group.leave()
                     }
                 }
             }
             group.notify(queue: .main) {
+                self.users.sort {
+                    $0.name < $1.name
+                }
                 self.ActInd.isHidden = true
                 self.displayCards()
             }
