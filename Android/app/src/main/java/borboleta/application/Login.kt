@@ -1,12 +1,12 @@
 package borboleta.application
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -47,7 +47,7 @@ class Login : AppCompatActivity() {
                     /*updateUI(null)*/
                 }
                 //Esta lleva a home
-                startActivity(Intent(this, Home::class.java))
+                startActivity(Intent(this, Psicologos::class.java))
             }
         }
 

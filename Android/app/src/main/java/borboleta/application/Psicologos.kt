@@ -1,66 +1,45 @@
 package borboleta.application
 
-import android.app.ProgressDialog
 import android.content.Intent
 import android.content.res.Resources
-import android.graphics.BitmapFactory
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
+import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
-import borboleta.application.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
-import com.google.firebase.storage.StorageReference
-import com.google.firebase.storage.ktx.storage
-import java.io.File
 
 class Psicologos : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
-    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val storagas = Firebase.storage
-        val storageRef = storagas.reference
-        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_psicologos)
         // Access a Cloud Firestore instance from your Activity
         val db = Firebase.firestore
         val users = db.collection("users")
         auth = Firebase.auth
 
+        val storage = FirebaseStorage.getInstance()
+        var img = findViewById<ImageView>(R.id.fuck)
 
-        /*val imageName = binding.etimageId.text.toString()*/
-        val progressDialog = ProgressDialog(this)
-        progressDialog.setMessage("Ahi vamos, jalale")
-        progressDialog.setCancelable(false)
-        progressDialog.show()
 
-        var ref = FirebaseStorage.getInstance().reference.child("profilePics/puser1@gmail.com.png")
-
-        val localfile = File.createTempFile("tempimage", "png")
-        ref.getFile(localfile).addOnSuccessListener {
-            if(progressDialog.isShowing){
-                progressDialog.dismiss()
-            }
-            val bitmap = BitmapFactory.decodeFile(localfile.absolutePath)
-            binding.imageView.setImageBitmap(bitmap)
-
-        }.addOnFailureListener{
-            if(progressDialog.isShowing){
-                progressDialog.dismiss()
-            }
-            Toast.makeText(this, "Fuck, failed NO IMAGE AAA", Toast.LENGTH_SHORT)
+        storage.reference.child("profilePics/puser1@gmail.com.png").downloadUrl.addOnSuccessListener { uri ->
+            val imgUrl = uri.toString()
+            GlideApp.with(this)
+                .load(imgUrl)
+                .into(img)
         }
+
+
 
 
 
@@ -84,11 +63,7 @@ class Psicologos : AppCompatActivity() {
 
 
 
-        //Create storage reference
-        var storage = Firebase.storage
-        /*var storageRef = storage.reference*/
-        var imagesRef: StorageReference? = storageRef.child("images")
-///
+
 
         val viewPager = findViewById<ViewPager2>(R.id.view_pager)
 
