@@ -17,25 +17,26 @@ import SDWebImage
 class UserCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     
+    var userID: String? = nil
+    
     @IBAction func ChatButton(_ sender: UIButton) {
-        print("Starting chat with: \(nameLabel!.text)")
+        print("Starting chat with: \(userID!)")
     }
     
     var hasGradient = false
 }
 
 struct User {
+    var id: String
     var name: String
+    var age: Int
     var pfp: UIImage
     
-    init(_ name: String, _ pfp: UIImage) {
+    init(_ id: String, _ name: String, _ age: Int, _ pfp: UIImage) {
+        self.id = id
         self.name = name
+        self.age = age
         self.pfp = pfp
-    }
-    
-    init(_ name: String) {
-        self.name = name
-        self.pfp = UIImage(named: "defaultPFP")!
     }
 }
 
@@ -63,8 +64,8 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
         }
         
         // Give the current cell the corresponding data it needs from our model
-        userCell.nameLabel.text = users[indexPath.row].name
-        
+        userCell.nameLabel.text = "\(users[indexPath.row].name), \(users[indexPath.row].age)"
+        userCell.userID = users[indexPath.row].id
         
         UIGraphicsBeginImageContext(userCell.frame.size)
         users[indexPath.row].pfp.draw(in: userCell.bounds)
@@ -131,7 +132,9 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
                         } else {
                             let userpfp = UIImage(data: data!)
                             self.users.append(User(
-                                "\(name), \(age)",
+                                document.documentID,
+                                name,
+                                age,
                                 userpfp ?? UIImage(named: "defaultPFP")!
                             ))
                         }
@@ -141,7 +144,7 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
             }
             group.notify(queue: .main) {
                 self.users.sort {
-                    $0.name < $1.name
+                    $0.age < $1.age
                 }
                 self.ActInd.isHidden = true
                 self.displayCards()
