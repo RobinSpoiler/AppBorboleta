@@ -59,6 +59,7 @@
 		9D4FBFBD28EFDCC90019CF5C /* FirebasePhoneAuthUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9D4FBFBC28EFDCC90019CF5C /* FirebasePhoneAuthUI */; };
 		9D4FBFBF28EFDCC90019CF5C /* FirebaseStorageUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9D4FBFBE28EFDCC90019CF5C /* FirebaseStorageUI */; };
 		9D521C4128E8E23C00C70591 /* SignupPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D521C4028E8E23C00C70591 /* SignupPreferencesViewController.swift */; };
+		9D53396F28F7D4FD000EA7DB /* Calculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53396D28F771C4000EA7DB /* Calculate.swift */; };
 		9D5AA19928DA81C300AC068E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA19828DA81C300AC068E /* LoginViewController.swift */; };
 		9D5BCB4828DBDB4F00BC0B56 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BCB4728DBDB4F00BC0B56 /* SignupViewController.swift */; };
 		9D5F6E0028ECB92500EAB7B7 /* SignupSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5F6DFF28ECB92500EAB7B7 /* SignupSuccessViewController.swift */; };
@@ -107,6 +108,7 @@
 		9D2D130628ED335400042121 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
 		9D2D130828ED337500042121 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9D521C4028E8E23C00C70591 /* SignupPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPreferencesViewController.swift; sourceTree = "<group>"; };
+		9D53396D28F771C4000EA7DB /* Calculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculate.swift; sourceTree = "<group>"; };
 		9D5AA19828DA81C300AC068E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9D5BCB4728DBDB4F00BC0B56 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		9D5F6DFF28ECB92500EAB7B7 /* SignupSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupSuccessViewController.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 				9D05CF8228DB9C4100AA7E76 /* PasswordVisibility.swift */,
 				9DCDB37228EA108C00FC4091 /* OptionSelected.swift */,
 				9DF4483428EB7A2C0051ED92 /* Checkboxes.swift */,
+				9D53396D28F771C4000EA7DB /* Calculate.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				9D5AA19928DA81C300AC068E /* LoginViewController.swift in Sources */,
 				9D2D130528ED332E00042121 /* MatchesViewController.swift in Sources */,
 				9D05CF8328DB9C4100AA7E76 /* PasswordVisibility.swift in Sources */,
+				9D53396F28F7D4FD000EA7DB /* Calculate.swift in Sources */,
 				90B39FCA28CEB0FC00326D19 /* AppDelegate.swift in Sources */,
 				9D5F6E0028ECB92500EAB7B7 /* SignupSuccessViewController.swift in Sources */,
 				90B39FCC28CEB0FC00326D19 /* SceneDelegate.swift in Sources */,

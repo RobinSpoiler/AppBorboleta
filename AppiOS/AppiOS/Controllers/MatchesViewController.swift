@@ -30,12 +30,14 @@ struct User {
     var id: String
     var name: String
     var age: Int
+    var matchRate: Int
     var pfp: UIImage
     
-    init(_ id: String, _ name: String, _ age: Int, _ pfp: UIImage) {
+    init(_ id: String, _ name: String, _ age: Int, _ matchRate: Int, _ pfp: UIImage) {
         self.id = id
         self.name = name
         self.age = age
+        self.matchRate = matchRate
         self.pfp = pfp
     }
 }
@@ -64,7 +66,7 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
         }
         
         // Give the current cell the corresponding data it needs from our model
-        userCell.nameLabel.text = "\(users[indexPath.row].name), \(users[indexPath.row].age)"
+        userCell.nameLabel.text = "\(users[indexPath.row].name), \(users[indexPath.row].age), \(users[indexPath.row].matchRate)"
         userCell.userID = users[indexPath.row].id
         
         UIGraphicsBeginImageContext(userCell.frame.size)
@@ -104,52 +106,61 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         self.ActInd.startAnimating()
         
-        query.getDocuments(completion: { QuerySnapshot, err in
-            if let e = err {
-                print(e)
-            }
-            else {
-                for document in QuerySnapshot!.documents {
-                    let userID = document.documentID
-                    
-                    let storageRef = self.storage.reference()
-                    let pfpRef = storageRef.child("profilePics/\(userID).png")
-                    
-                    let data = document["data"] as? [String: Any]
-                    let name = data!["name"] as! String
-                    let birthday = data!["birthday"] as! String
-                    let dateFormatter = DateFormatter()
-                    dateFormatter.dateFormat = "dd-MM-yyyy"
-                    let birthdayDate = dateFormatter.date(from: birthday)
-                    let age = Int(birthdayDate!.timeIntervalSinceNow / (365 * 24 * 60 * 60) * -1)
-                    
-                    // let preferences = document["preferences"] as? [String: Any]
-                    
-                    group.enter()
-                    pfpRef.getData(maxSize: 2 * 1024 * 1024) { data, error in
-                        if let e = error {
-                            print(e)
-                        } else {
-                            let userpfp = UIImage(data: data!)
-                            self.users.append(User(
-                                document.documentID,
-                                name,
-                                age,
-                                userpfp ?? UIImage(named: "defaultPFP")!
-                            ))
-                        }
-                        group.leave()
+        let userDocRef = db.collection("users").document((Auth.auth().currentUser?.email!)!)
+        
+        userDocRef.getDocument { document, error in
+            if let document = document, document.exists {
+                let userPreferences = document["preferences"] as! [String: Any]
+//                print(userPreferences?.count)
+                query.getDocuments(completion: { QuerySnapshot, err in
+                    if let e = err {
+                        print(e)
                     }
-                }
+                    else {
+                        for document in QuerySnapshot!.documents {
+                            let userID = document.documentID
+                            
+                            let storageRef = self.storage.reference()
+                            let pfpRef = storageRef.child("profilePics/\(userID).png")
+                            
+                            let data = document["data"] as! [String: Any]
+                            let name: String = data["name"] as! String
+                            let birthday: String = data["birthday"] as! String
+                            let age: Int = AppiOS.Calculate().Age(birthday)
+                            
+                            let preferences = document["preferences"] as? [String: Any]
+                            let matchRate: Int = AppiOS.Calculate().MatchRate(userPreferences, preferences!)
+                            
+                            group.enter()
+                            pfpRef.getData(maxSize: 2 * 1024 * 1024) { data, error in
+                                if let e = error {
+                                    print(e)
+                                } else {
+                                    let userpfp = UIImage(data: data!)
+                                    self.users.append(User(
+                                        document.documentID,
+                                        name,
+                                        age,
+                                        matchRate,
+                                        userpfp ?? UIImage(named: "defaultPFP")!
+                                    ))
+                                }
+                                group.leave()
+                            }
+                        }
+                    }
+                    group.notify(queue: .main) {
+                        self.users.sort {
+                            $0.matchRate > $1.matchRate
+                        }
+                        self.ActInd.isHidden = true
+                        self.displayCards()
+                    }
+                })
+            } else {
+                print("Document does not exist")
             }
-            group.notify(queue: .main) {
-                self.users.sort {
-                    $0.age < $1.age
-                }
-                self.ActInd.isHidden = true
-                self.displayCards()
-            }
-        })
+        }
     }
     
     func displayCards() {
