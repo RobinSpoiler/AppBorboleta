@@ -516,9 +516,30 @@ REGRESO</string>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vaR-Z7-0Vl" customClass="CircularProgressView" customModule="AppiOS" customModuleProvider="target">
                                                     <rect key="frame" x="209" y="15" width="50" height="50"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wbE-6n-Ibr">
+                                                            <rect key="frame" x="9" y="11" width="32" height="28"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="55%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bta-aW-Ztf">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="32" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="match" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4l0-Cx-Fh5">
+                                                                    <rect key="frame" x="0.0" y="18" width="32" height="10"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                                    <color key="textColor" name="BackgroundColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="5ng-zI-OeP"/>
+                                                        <constraint firstItem="wbE-6n-Ibr" firstAttribute="centerY" secondItem="vaR-Z7-0Vl" secondAttribute="centerY" id="bHU-8Z-pV3"/>
+                                                        <constraint firstItem="wbE-6n-Ibr" firstAttribute="centerX" secondItem="vaR-Z7-0Vl" secondAttribute="centerX" id="cU2-e6-k7x"/>
                                                         <constraint firstAttribute="height" constant="50" id="wfU-AD-XCi"/>
                                                     </constraints>
                                                 </view>
@@ -546,6 +567,7 @@ REGRESO</string>
                                             <outlet property="Img" destination="cb0-iG-P48" id="LZU-dg-iy4"/>
                                             <outlet property="MatchRateRing" destination="vaR-Z7-0Vl" id="9KM-vG-C0U"/>
                                             <outlet property="nameLabel" destination="YjF-Xu-Rpf" id="rPU-Ah-zbB"/>
+                                            <outlet property="percentage" destination="bta-aW-Ztf" id="rIW-Oa-t5t"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

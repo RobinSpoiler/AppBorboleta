@@ -19,6 +19,7 @@ class UserCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var Img: UIImageView!
     
+    @IBOutlet weak var percentage: UILabel!
     var userID: String? = nil
     
     @IBAction func ChatButton(_ sender: UIButton) {
@@ -74,12 +75,12 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
         // Give the current cell the corresponding data it needs from our model
         userCell.nameLabel.text = "\(users[indexPath.row].name) (\(users[indexPath.row].pronouns)), \(users[indexPath.row].age)"
         userCell.userID = users[indexPath.row].id
-        userCell.MatchRateRing.trackColor = UIColor.clear
+        userCell.MatchRateRing.trackColor = UIColor.lightGray
         userCell.MatchRateRing.progressColor = UIColor.white
         userCell.MatchRateRing.setProgressWithAnimation(
             duration: 0,
             value: Float(users[indexPath.row].matchRate) / 100.0)
-        
+        userCell.percentage.text = "\(users[indexPath.row].matchRate)%"
         userCell.layer.cornerRadius = 16
 
         userCell.Img.image = users[indexPath.row].pfp
