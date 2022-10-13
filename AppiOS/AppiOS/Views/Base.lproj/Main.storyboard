@@ -495,7 +495,9 @@ REGRESO</string>
                                                     </constraints>
                                                     <color key="tintColor" name="BackgroundColor"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="bubble.right.fill" catalog="system"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="bubble.right" catalog="system">
+                                                        <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </buttonConfiguration>
                                                     <connections>
                                                         <action selector="ChatButton:" destination="KmT-rm-cSE" eventType="touchUpInside" id="QBg-JQ-kH6"/>
                                                     </connections>
@@ -506,40 +508,43 @@ REGRESO</string>
                                                         <constraint firstAttribute="height" constant="35" id="sY9-wG-WTU"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                                    <color key="textColor" name="BackgroundColor"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ICa-Zj-csr">
-                                                    <rect key="frame" x="10" y="10" width="254" height="4"/>
-                                                    <color key="tintColor" name="BackgroundColor"/>
-                                                </progressView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pj8-sq-aXG">
-                                                    <rect key="frame" x="0.0" y="0.0" width="274" height="496"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cb0-iG-P48">
+                                                    <rect key="frame" x="0.0" y="0.0" width="274" height="491"/>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vaR-Z7-0Vl" customClass="CircularProgressView" customModule="AppiOS" customModuleProvider="target">
+                                                    <rect key="frame" x="209" y="15" width="50" height="50"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="5ng-zI-OeP"/>
+                                                        <constraint firstAttribute="height" constant="50" id="wfU-AD-XCi"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
-                                            <color key="backgroundColor" name="Color1"/>
+                                            <color key="backgroundColor" name="Color-13"/>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="vaR-Z7-0Vl" secondAttribute="trailing" constant="15" id="2GG-j3-QwI"/>
                                                 <constraint firstItem="B37-Xv-1vP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H1k-dP-jhg" secondAttribute="leading" constant="20" symbolic="YES" id="4gJ-4t-gNp"/>
                                                 <constraint firstAttribute="bottom" secondItem="YjF-Xu-Rpf" secondAttribute="bottom" constant="10" id="72Y-HX-eGb"/>
                                                 <constraint firstAttribute="trailing" secondItem="B37-Xv-1vP" secondAttribute="trailing" constant="10" id="8Wk-H8-hhh"/>
                                                 <constraint firstAttribute="bottom" secondItem="B37-Xv-1vP" secondAttribute="bottom" constant="10" id="Bj4-oX-Ixn"/>
-                                                <constraint firstItem="Pj8-sq-aXG" firstAttribute="leading" secondItem="H1k-dP-jhg" secondAttribute="leading" id="DB4-sl-wm5"/>
                                                 <constraint firstItem="YjF-Xu-Rpf" firstAttribute="leading" secondItem="H1k-dP-jhg" secondAttribute="leading" constant="10" id="DhQ-Mm-hbz"/>
                                                 <constraint firstItem="B37-Xv-1vP" firstAttribute="leading" secondItem="YjF-Xu-Rpf" secondAttribute="trailing" constant="5" id="Iwg-Qw-z3b"/>
-                                                <constraint firstAttribute="trailing" secondItem="ICa-Zj-csr" secondAttribute="trailing" constant="10" id="TqH-Xv-8rE"/>
-                                                <constraint firstItem="Pj8-sq-aXG" firstAttribute="top" secondItem="H1k-dP-jhg" secondAttribute="top" id="W2P-SS-6jK"/>
-                                                <constraint firstItem="ICa-Zj-csr" firstAttribute="top" secondItem="H1k-dP-jhg" secondAttribute="top" constant="10" id="ZiO-Et-PoP"/>
-                                                <constraint firstItem="ICa-Zj-csr" firstAttribute="leading" secondItem="H1k-dP-jhg" secondAttribute="leading" constant="10" id="h1U-S6-FnO"/>
-                                                <constraint firstAttribute="trailing" secondItem="Pj8-sq-aXG" secondAttribute="trailing" id="jEf-tw-b3H"/>
-                                                <constraint firstItem="B37-Xv-1vP" firstAttribute="top" secondItem="Pj8-sq-aXG" secondAttribute="bottom" constant="5" id="ysk-QX-tDH"/>
+                                                <constraint firstItem="cb0-iG-P48" firstAttribute="top" secondItem="H1k-dP-jhg" secondAttribute="top" id="Xwi-5x-TiM"/>
+                                                <constraint firstItem="vaR-Z7-0Vl" firstAttribute="top" secondItem="H1k-dP-jhg" secondAttribute="top" constant="15" id="ZsI-ej-4E6"/>
+                                                <constraint firstItem="B37-Xv-1vP" firstAttribute="top" secondItem="cb0-iG-P48" secondAttribute="bottom" constant="10" id="nQM-Jh-VE0"/>
+                                                <constraint firstAttribute="trailing" secondItem="cb0-iG-P48" secondAttribute="trailing" id="q7u-1f-kxf"/>
+                                                <constraint firstItem="cb0-iG-P48" firstAttribute="leading" secondItem="H1k-dP-jhg" secondAttribute="leading" id="swr-Cz-JLL"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="customSize" width="274" height="546"/>
                                         <connections>
                                             <outlet property="ContentView" destination="H1k-dP-jhg" id="ebw-tA-n9S"/>
-                                            <outlet property="Img" destination="Pj8-sq-aXG" id="ZA1-g1-WN1"/>
-                                            <outlet property="MatchRate" destination="ICa-Zj-csr" id="M6o-mT-IMr"/>
+                                            <outlet property="Img" destination="cb0-iG-P48" id="LZU-dg-iy4"/>
+                                            <outlet property="MatchRateRing" destination="vaR-Z7-0Vl" id="9KM-vG-C0U"/>
                                             <outlet property="nameLabel" destination="YjF-Xu-Rpf" id="rPU-Ah-zbB"/>
                                         </connections>
                                     </collectionViewCell>
@@ -1399,7 +1404,6 @@ REGRESO</string>
         <image name="SuccessIcon" width="141" height="140"/>
         <image name="arrow.right.circle.fill" catalog="system" width="128" height="123"/>
         <image name="bubble.right" catalog="system" width="128" height="110"/>
-        <image name="bubble.right.fill" catalog="system" width="128" height="112"/>
         <image name="eye" catalog="system" width="128" height="79"/>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="house" catalog="system" width="128" height="104"/>
@@ -1407,6 +1411,9 @@ REGRESO</string>
         <image name="square" catalog="system" width="128" height="114"/>
         <namedColor name="BackgroundColor">
             <color red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color-13">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Color1">
             <color red="0.0" green="0.16862745098039217" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

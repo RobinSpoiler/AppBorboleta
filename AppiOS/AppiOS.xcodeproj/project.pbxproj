@@ -63,6 +63,7 @@
 		9D5AA19928DA81C300AC068E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AA19828DA81C300AC068E /* LoginViewController.swift */; };
 		9D5BCB4828DBDB4F00BC0B56 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BCB4728DBDB4F00BC0B56 /* SignupViewController.swift */; };
 		9D5F6E0028ECB92500EAB7B7 /* SignupSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5F6DFF28ECB92500EAB7B7 /* SignupSuccessViewController.swift */; };
+		9D84B0FD28F8C53600A04F98 /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D84B0FC28F8C53600A04F98 /* CircularProgressBar.swift */; };
 		9DB653E628DE14B200C0E093 /* SignupUserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB653E528DE14B200C0E093 /* SignupUserDataViewController.swift */; };
 		9DCDB37428EA14C700FC4091 /* OptionSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCDB37228EA108C00FC4091 /* OptionSelected.swift */; };
 		9DDD41BF28EE819E006F7C65 /* CenteredCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = 9DDD41BE28EE819E006F7C65 /* CenteredCollectionView */; };
@@ -112,6 +113,7 @@
 		9D5AA19828DA81C300AC068E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9D5BCB4728DBDB4F00BC0B56 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		9D5F6DFF28ECB92500EAB7B7 /* SignupSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupSuccessViewController.swift; sourceTree = "<group>"; };
+		9D84B0FC28F8C53600A04F98 /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 		9DB653E528DE14B200C0E093 /* SignupUserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupUserDataViewController.swift; sourceTree = "<group>"; };
 		9DCDB37228EA108C00FC4091 /* OptionSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSelected.swift; sourceTree = "<group>"; };
 		9DF4483428EB7A2C0051ED92 /* Checkboxes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkboxes.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				9D78B65328DA7FD6007D64BD /* Models */,
 				9D78B65228DA7FCD007D64BD /* Views */,
 				9D78B65128DA7FC3007D64BD /* Controllers */,
+				9D84B0FB28F8C51500A04F98 /* CustomClasses */,
 				90B39FD228CEB0FC00326D19 /* Assets.xcassets */,
 				90B39FD428CEB0FC00326D19 /* LaunchScreen.storyboard */,
 				90B39FD728CEB0FC00326D19 /* Info.plist */,
@@ -269,6 +272,14 @@
 				9D53396D28F771C4000EA7DB /* Calculate.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		9D84B0FB28F8C51500A04F98 /* CustomClasses */ = {
+			isa = PBXGroup;
+			children = (
+				9D84B0FC28F8C53600A04F98 /* CircularProgressBar.swift */,
+			);
+			path = CustomClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -462,6 +473,7 @@
 				90B39FCA28CEB0FC00326D19 /* AppDelegate.swift in Sources */,
 				9D5F6E0028ECB92500EAB7B7 /* SignupSuccessViewController.swift in Sources */,
 				90B39FCC28CEB0FC00326D19 /* SceneDelegate.swift in Sources */,
+				9D84B0FD28F8C53600A04F98 /* CircularProgressBar.swift in Sources */,
 				9D521C4128E8E23C00C70591 /* SignupPreferencesViewController.swift in Sources */,
 				9D2D130928ED337500042121 /* ProfileViewController.swift in Sources */,
 				9DB653E628DE14B200C0E093 /* SignupUserDataViewController.swift in Sources */,

@@ -25,7 +25,7 @@ class UserCollectionViewCell: UICollectionViewCell {
         print("Starting chat with: \(userID!)")
     }
     
-    @IBOutlet weak var MatchRate: UIProgressView!
+    @IBOutlet weak var MatchRateRing: CircularProgressView!
     
     var hasGradient = false
 }
@@ -74,23 +74,17 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
         // Give the current cell the corresponding data it needs from our model
         userCell.nameLabel.text = "\(users[indexPath.row].name) (\(users[indexPath.row].pronouns)), \(users[indexPath.row].age)"
         userCell.userID = users[indexPath.row].id
-        userCell.MatchRate.progress = Float(users[indexPath.row].matchRate) / Float(100)
+        userCell.MatchRateRing.trackColor = UIColor.clear
+        userCell.MatchRateRing.progressColor = UIColor.white
+        userCell.MatchRateRing.setProgressWithAnimation(
+            duration: 0,
+            value: Float(users[indexPath.row].matchRate) / 100.0)
         
         userCell.layer.cornerRadius = 16
 
         userCell.Img.image = users[indexPath.row].pfp
         userCell.Img.layer.cornerRadius = 16
         
-        
-//        let gradient = CAGradientLayer()
-//        gradient.frame = userCell.bounds
-//        let startColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0).cgColor
-//        let endColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.7).cgColor
-//        gradient.colors = [startColor, endColor]
-//        if(!userCell.hasGradient) {
-//            userCell.layer.insertSublayer(gradient, at: 0)
-//            userCell.hasGradient = true
-//        }
         return userCell
     }
     
