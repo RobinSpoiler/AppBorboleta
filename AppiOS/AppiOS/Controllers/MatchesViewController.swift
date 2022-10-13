@@ -32,12 +32,14 @@ struct User {
     var id: String
     var name: String
     var age: Int
+    var pronouns: String
     var matchRate: Int
     var pfp: UIImage
     
-    init(_ id: String, _ name: String, _ age: Int, _ matchRate: Int, _ pfp: UIImage) {
+    init(_ id: String, _ name: String, _ pronouns: String, _ age: Int, _ matchRate: Int, _ pfp: UIImage) {
         self.id = id
         self.name = name
+        self.pronouns = pronouns
         self.age = age
         self.matchRate = matchRate
         self.pfp = pfp
@@ -68,7 +70,7 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
         }
         
         // Give the current cell the corresponding data it needs from our model
-        userCell.nameLabel.text = "\(users[indexPath.row].name), \(users[indexPath.row].age), \(users[indexPath.row].matchRate)"
+        userCell.nameLabel.text = "\(users[indexPath.row].name) (\(users[indexPath.row].pronouns)), \(users[indexPath.row].age)"
         userCell.userID = users[indexPath.row].id
         userCell.MatchRate.progress = Float(users[indexPath.row].matchRate) / Float(100)
         
@@ -128,6 +130,7 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
                             
                             let data = document["data"] as! [String: Any]
                             let name: String = data["name"] as! String
+                            let pronouns: String = data["pronouns"] as! String
                             let birthday: String = data["birthday"] as! String
                             let age: Int = AppiOS.Calculate().Age(birthday)
                             
@@ -143,6 +146,7 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
                                     self.users.append(User(
                                         document.documentID,
                                         name,
+                                        pronouns,
                                         age,
                                         matchRate,
                                         userpfp ?? UIImage(named: "defaultPFP")!
