@@ -8,15 +8,23 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.ListAdapter
-import com.bumptech.glide.Glide
+import com.google.firebase.storage.FirebaseStorage
 
 class SliderAdapter : ListAdapter<Int,RecyclerView.ViewHolder>(DiffCallback()) {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        val ivWallpaper: ImageView = itemView.findViewById(R.id.ivWallpaper)
-        fun onBind(wallpaper: Int){
-            Glide.with(ivWallpaper)
-                .load(wallpaper)
+        /*val ivWallpaper: ImageView = itemView.findViewById(R.id.ivWallpaper)
+        fun onBind(wallpaper: Int){ //iterador
+            GlideApp.with(ivWallpaper) //visible
+                .load("com.google.android.gms.tasks.zzw@ccdf6ae") //que
+                .into(ivWallpaper) // en donde
+        }*/
+        var storage = FirebaseStorage.getInstance()
+
+        val ref = storage.reference.child("profilePics/puser1@gmail.com.png").downloadUrl.addOnSuccessListener { Url ->
+            val ivWallpaper: ImageView = itemView.findViewById(R.id.ivWallpaper)
+            GlideApp.with(ivWallpaper)
+                .load(Url.toString())
                 .into(ivWallpaper)
         }
     }
@@ -33,7 +41,7 @@ class SliderAdapter : ListAdapter<Int,RecyclerView.ViewHolder>(DiffCallback()) {
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val item =getItem(position)
         val hold = holder as ViewHolder
-        hold.onBind(item)
+        hold.ref
     }
 
 

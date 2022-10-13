@@ -25,7 +25,23 @@ class Psicologos : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_psicologos)
         initView()
+        getProfileImg()
     }
+
+    private fun getProfileImg() : String{
+        val storage = FirebaseStorage.getInstance()
+
+        val url = storage.reference.child("profilePics/puser1@gmail.com.png").downloadUrl.addOnSuccessListener { Url ->
+            val img = findViewById<ImageView>(R.id.ivWallpaper)
+            GlideApp.with(this)
+                .load(Url.toString())
+                .into(img)
+        }
+        println(url.toString())
+        return url.toString()
+    }
+
+
 
     private fun initView(){
         vpSlider = findViewById(R.id.vpSlider)
