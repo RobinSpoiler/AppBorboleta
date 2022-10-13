@@ -1,8 +1,10 @@
 package borboleta.application
 
-
 import android.content.Intent
+import android.content.res.Resources
 import android.os.Bundle
+import android.util.Log
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
@@ -10,6 +12,11 @@ import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import java.lang.Math.abs
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.FirebaseStorage
 
 class Psicologos : AppCompatActivity() {
     private lateinit var vpSlider: ViewPager2
@@ -17,27 +24,7 @@ class Psicologos : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_psicologos)
-
         initView()
-
-        var navbar = findViewById<BottomNavigationView>(R.id.bottomNavigationView_navbar)
-        navbar.menu.findItem(R.id.home_icon).isChecked = true;
-        navbar.setOnItemSelectedListener{ item ->
-            when(item.itemId) {
-                R.id.home_icon -> {
-                    // Respond to navigation item 1 click
-                    startActivity(Intent(this, Home::class.java))
-                    true
-                }
-                R.id.heart_icon -> {
-                    // Respond to navigation item 2 click
-                    startActivity(Intent(this, Psicologos::class.java))
-                    true
-                }
-                else -> false
-            }
-        }
-
     }
 
     private fun initView(){

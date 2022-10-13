@@ -2,18 +2,27 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Borboleta"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
-
+        <activity
+            android:name=".GlideApp"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <!-- Splash activity: creates a 2 second "animation" at the start of the app -->
         <activity
             android:name=".SplashActivity"
@@ -24,87 +33,67 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-        </activity>
-
-        <!-- Log in: input email and password or go to SignUp-->
+        </activity> <!-- Log in: input email and password or go to SignUp -->
         <activity
             android:name=".Login"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-        </activity>
-
-        <!-- Registro: first half of registration process, name, email and password -->
+        </activity> <!-- Registro: first half of registration process, name, email and password -->
         <activity
             android:name=".registro"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-        </activity>
-
-        <!-- Registro2: second half of registration process, phone num, birthdate and pronouns-->
+        </activity> <!-- Registro2: second half of registration process, phone num, birthdate and pronouns -->
         <activity
             android:name=".registro2"
             android:exported="false">
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-        </activity>
-
-        <!-- Preferences:questionaire about type of therapy-->
+        </activity> <!-- Preferences:questionaire about type of therapy -->
         <activity
             android:name=".Preferencias"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-        </activity>
-
-        <!--Terms and conditions-->
+        </activity> <!-- Terms and conditions -->
         <activity
             android:name=".avisoprivacidad"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-        </activity>
-
-        <!--Retro screen leads to home: animation-->
+        </activity> <!-- Retro screen leads to home: animation -->
         <activity
             android:name=".Retro"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-        </activity>
-
-        <!--Home page-->
+        </activity> <!-- Home page -->
         <activity
             android:name=".Home"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-        </activity>
-
-        <!-- Tinder Psicologos: slides with psycologist photos-->
+        </activity> <!-- Tinder Psicologos: slides with psycologist photos -->
         <activity
             android:name=".Psicologos"
             android:exported="true">
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-        </activity>
-
-
-        <!-- Main Activity-->
+        </activity> <!-- Main Activity -->
         <activity
             android:name=".MainActivity"
             android:exported="false">
