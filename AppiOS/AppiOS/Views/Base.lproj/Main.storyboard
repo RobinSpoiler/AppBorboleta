@@ -529,6 +529,7 @@ REGRESO</string>
                                         <color key="backgroundColor" name="Color2"/>
                                         <size key="customSize" width="274" height="546"/>
                                         <connections>
+                                            <outlet property="MatchRate" destination="ICa-Zj-csr" id="M6o-mT-IMr"/>
                                             <outlet property="nameLabel" destination="YjF-Xu-Rpf" id="rPU-Ah-zbB"/>
                                         </connections>
                                     </collectionViewCell>

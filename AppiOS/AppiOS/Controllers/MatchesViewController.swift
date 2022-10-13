@@ -23,6 +23,8 @@ class UserCollectionViewCell: UICollectionViewCell {
         print("Starting chat with: \(userID!)")
     }
     
+    @IBOutlet weak var MatchRate: UIProgressView!
+    
     var hasGradient = false
 }
 
@@ -68,6 +70,7 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
         // Give the current cell the corresponding data it needs from our model
         userCell.nameLabel.text = "\(users[indexPath.row].name), \(users[indexPath.row].age), \(users[indexPath.row].matchRate)"
         userCell.userID = users[indexPath.row].id
+        userCell.MatchRate.progress = Float(users[indexPath.row].matchRate) / Float(100)
         
         UIGraphicsBeginImageContext(userCell.frame.size)
         users[indexPath.row].pfp.draw(in: userCell.bounds)
