@@ -17,6 +17,8 @@ import SDWebImage
 class UserCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var Img: UIImageView!
+    
     var userID: String? = nil
     
     @IBAction func ChatButton(_ sender: UIButton) {
@@ -74,26 +76,21 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
         userCell.userID = users[indexPath.row].id
         userCell.MatchRate.progress = Float(users[indexPath.row].matchRate) / Float(100)
         
-        UIGraphicsBeginImageContext(userCell.frame.size)
-        users[indexPath.row].pfp.draw(in: userCell.bounds)
+        userCell.layer.cornerRadius = 16
 
-        if let image = UIGraphicsGetImageFromCurrentImageContext(){
-            UIGraphicsEndImageContext()
-            userCell.backgroundColor = UIColor(patternImage: image)
-        }else{
-            UIGraphicsEndImageContext()
-            debugPrint("Image not available")
-         }
+        userCell.Img.image = users[indexPath.row].pfp
+        userCell.Img.layer.cornerRadius = 16
         
-        let gradient = CAGradientLayer()
-        gradient.frame = userCell.bounds
-        let startColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0).cgColor
-        let endColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.7).cgColor
-        gradient.colors = [startColor, endColor]
-        if(!userCell.hasGradient) {
-            userCell.layer.insertSublayer(gradient, at: 0)
-            userCell.hasGradient = true
-        }
+        
+//        let gradient = CAGradientLayer()
+//        gradient.frame = userCell.bounds
+//        let startColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0).cgColor
+//        let endColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.7).cgColor
+//        gradient.colors = [startColor, endColor]
+//        if(!userCell.hasGradient) {
+//            userCell.layer.insertSublayer(gradient, at: 0)
+//            userCell.hasGradient = true
+//        }
         return userCell
     }
     
