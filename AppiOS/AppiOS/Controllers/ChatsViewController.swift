@@ -17,23 +17,9 @@ import SDWebImage
 
 class ChatsViewController: UIViewController {
     
-    @IBOutlet weak var img: UIImageView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let storageRef = Storage.storage().reference()
-        let pfpRef = storageRef.child("profilePics/puser1@gmail.com.png")
-        
-        // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
-        pfpRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
-            if let e = error {
-                print(e)
-            } else {
-                // Data for "images/island.jpg" is returned
-                self.img.image = UIImage(data: data!)
-            }
-        }
+
         
     }
     

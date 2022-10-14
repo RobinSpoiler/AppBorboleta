@@ -617,24 +617,10 @@ REGRESO</string>
                     <view key="view" contentMode="scaleToFill" id="52V-AV-dP5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3sS-n6-5MG">
-                                <rect key="frame" x="20" y="108" width="374" height="645"/>
-                            </imageView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dmc-z2-9cf"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="dmc-z2-9cf" firstAttribute="bottom" secondItem="3sS-n6-5MG" secondAttribute="bottom" constant="60" id="8vg-NL-o92"/>
-                            <constraint firstItem="3sS-n6-5MG" firstAttribute="leading" secondItem="dmc-z2-9cf" secondAttribute="leading" constant="20" id="LYs-Sc-5s1"/>
-                            <constraint firstItem="3sS-n6-5MG" firstAttribute="top" secondItem="dmc-z2-9cf" secondAttribute="top" constant="60" id="Lme-HG-VRg"/>
-                            <constraint firstItem="dmc-z2-9cf" firstAttribute="trailing" secondItem="3sS-n6-5MG" secondAttribute="trailing" constant="20" id="Tng-ds-27Y"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="bubble.right" catalog="system" id="GDv-fZ-O6A"/>
-                    <connections>
-                        <outlet property="img" destination="3sS-n6-5MG" id="eTf-7L-5GI"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lEx-4u-TMJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
