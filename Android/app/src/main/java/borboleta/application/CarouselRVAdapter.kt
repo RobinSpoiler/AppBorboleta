@@ -1,6 +1,7 @@
 package borboleta.application
 
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +9,9 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.ListAdapter
+import com.bumptech.glide.Glide
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 
 class SliderAdapter : ListAdapter<Int,RecyclerView.ViewHolder>(DiffCallback()) {
@@ -19,14 +23,27 @@ class SliderAdapter : ListAdapter<Int,RecyclerView.ViewHolder>(DiffCallback()) {
                 .load("com.google.android.gms.tasks.zzw@ccdf6ae") //que
                 .into(ivWallpaper) // en donde
         }*/
+        val db = Firebase.firestore
         var storage = FirebaseStorage.getInstance()
+        var query = db.collection("users").whereEqualTo("data.accountType", "psychologist")
+            .get()
+            .addOnSuccessListener { documents ->
+                for (document in documents) {
 
-        val ref = storage.reference.child("profilePics/puser1@gmail.com.png").downloadUrl.addOnSuccessListener { Url ->
-            val ivWallpaper: ImageView = itemView.findViewById(R.id.ivWallpaper)
-            GlideApp.with(ivWallpaper)
-                .load(Url.toString())
-                .into(ivWallpaper)
-        }
+                    Log.d("yai", "${document.id} => ${document.data}")
+                    val ref = storage.reference.child("profilePics/${document.id}.png").downloadUrl.addOnSuccessListener { Url ->
+                        val ivWallpaper: ImageView = itemView.findViewById(R.id.ivWallpaper)
+                        GlideApp.with(ivWallpaper)
+                            .load(Url.toString())
+                            .into(ivWallpaper)
+                    }
+                }
+            }
+
+            .addOnFailureListener { exception ->
+                Log.w("fail", "Error getting documents: ", exception)
+            }
+
     }
     private class DiffCallback : DiffUtil.ItemCallback<Int>() {
         override fun areItemsTheSame(oldItem: Int, newItem: Int) = oldItem == newItem
@@ -41,7 +58,7 @@ class SliderAdapter : ListAdapter<Int,RecyclerView.ViewHolder>(DiffCallback()) {
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val item =getItem(position)
         val hold = holder as ViewHolder
-        hold.ref
+        hold.query
     }
 
 

@@ -25,22 +25,8 @@ class Psicologos : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_psicologos)
         initView()
-        getProfileImg()
+
     }
-
-    private fun getProfileImg() : String{
-        val storage = FirebaseStorage.getInstance()
-
-        val url = storage.reference.child("profilePics/puser1@gmail.com.png").downloadUrl.addOnSuccessListener { Url ->
-            val img = findViewById<ImageView>(R.id.ivWallpaper)
-            GlideApp.with(this)
-                .load(Url.toString())
-                .into(img)
-        }
-        println(url.toString())
-        return url.toString()
-    }
-
 
 
     private fun initView(){
@@ -64,9 +50,25 @@ class Psicologos : AppCompatActivity() {
 
     //Este es el arreglo donde van las imágenes
     private fun getWallpapers(): List<Int>{
+        val db = Firebase.firestore
         val data = arrayListOf<Int>()
-        data.add(R.drawable.spotify)
-        data.add(R.drawable.success)
+
+        var counter = 0
+        var storage = FirebaseStorage.getInstance()
+        var query = db.collection("users").whereEqualTo("data.accountType", "psychologist")
+            .get()
+            .addOnSuccessListener { documents ->
+                val ref = storage.reference.child("profilePics/${document.id}.png").downloadUrl.addOnSuccessListener { Url ->
+                    val ivWallpaper: ImageView = itemView.findViewById(R.id.ivWallpaper)
+                    GlideApp.with(ivWallpaper)
+                        .load(Url.toString())
+                        .into(ivWallpaper)
+                }
+            }
+        println("UGHHHHH")
+        for(i in data){
+            println(i)
+        }
         return data
     }
 
