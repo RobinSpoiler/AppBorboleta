@@ -110,6 +110,7 @@ extension ChatsViewController: UITableViewDataSource {
             cell.message.text = ""
         }
         
+        cell.pfp.image = chats[i].pfp
         cell.message.text! += chats[i].message.message
         cell.date.text = chats[i].message.timestamp
         return cell
