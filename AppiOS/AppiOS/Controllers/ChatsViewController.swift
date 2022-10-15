@@ -87,8 +87,16 @@ extension ChatsViewController: UITableViewDataSource {
         let i = indexPath.row
         
         cell.sender.text = chats[i].with
-        cell.message.text = chats[i].message.message
         
+        if chats[i].message.sender == Auth.auth().currentUser?.email {
+            cell.message.text = "Tu"
+        }
+        else {
+            cell.message.text = chats[i].message.sender
+        }
+        
+        cell.message.text! += ": \(chats[i].message.message)"
+        cell.date.text = chats[i].message.timestamp
         return cell
     }
 }
