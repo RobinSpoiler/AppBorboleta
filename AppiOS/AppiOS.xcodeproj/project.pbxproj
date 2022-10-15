@@ -67,6 +67,7 @@
 		9D84B10028F9CF9500A04F98 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D84B0FE28F9CF9500A04F98 /* ChatCell.swift */; };
 		9D84B10128F9CF9500A04F98 /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D84B0FF28F9CF9500A04F98 /* ChatCell.xib */; };
 		9D95D20B28FA716900DC0E3F /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95D20A28FA716900DC0E3F /* Chat.swift */; };
+		9D95D20D28FA76EC00DC0E3F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95D20C28FA76EC00DC0E3F /* Message.swift */; };
 		9DB653E628DE14B200C0E093 /* SignupUserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB653E528DE14B200C0E093 /* SignupUserDataViewController.swift */; };
 		9DCDB37428EA14C700FC4091 /* OptionSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCDB37228EA108C00FC4091 /* OptionSelected.swift */; };
 		9DDD41BF28EE819E006F7C65 /* CenteredCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = 9DDD41BE28EE819E006F7C65 /* CenteredCollectionView */; };
@@ -120,6 +121,7 @@
 		9D84B0FE28F9CF9500A04F98 /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		9D84B0FF28F9CF9500A04F98 /* ChatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatCell.xib; sourceTree = "<group>"; };
 		9D95D20A28FA716900DC0E3F /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		9D95D20C28FA76EC00DC0E3F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		9DB653E528DE14B200C0E093 /* SignupUserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupUserDataViewController.swift; sourceTree = "<group>"; };
 		9DCDB37228EA108C00FC4091 /* OptionSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSelected.swift; sourceTree = "<group>"; };
 		9DF4483428EB7A2C0051ED92 /* Checkboxes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkboxes.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 				9DF4483428EB7A2C0051ED92 /* Checkboxes.swift */,
 				9D53396D28F771C4000EA7DB /* Calculate.swift */,
 				9D95D20A28FA716900DC0E3F /* Chat.swift */,
+				9D95D20C28FA76EC00DC0E3F /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				9D95D20B28FA716900DC0E3F /* Chat.swift in Sources */,
 				9D5BCB4828DBDB4F00BC0B56 /* SignupViewController.swift in Sources */,
 				9DCDB37428EA14C700FC4091 /* OptionSelected.swift in Sources */,
+				9D95D20D28FA76EC00DC0E3F /* Message.swift in Sources */,
 				9D2D130728ED335400042121 /* ChatsViewController.swift in Sources */,
 				9D5AA19928DA81C300AC068E /* LoginViewController.swift in Sources */,
 				9D2D130528ED332E00042121 /* MatchesViewController.swift in Sources */,

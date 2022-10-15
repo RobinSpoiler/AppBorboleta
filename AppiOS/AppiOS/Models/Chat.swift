@@ -9,15 +9,17 @@ import Foundation
 import UIKit
 
 struct Chat {
+    var chatID: String
     var pfp: UIImage
-    var sender: String
-    var message: String
-    var time: String
+    var with: String
+    var message: Message
     
-    init(pfp: UIImage, sender: String, message: String, time: String) {
+    init(chatID: String, pfp: UIImage, with: String, message: Message) {
+        self.chatID = chatID
         self.pfp = pfp
-        self.sender = sender
+        self.with = with
         self.message = message
-        self.time = time
     }
+    
+    // note to future self, restructure database and classes to have message class in chat
 }

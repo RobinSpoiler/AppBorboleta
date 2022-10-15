@@ -15,13 +15,12 @@ import FirebaseStorage
 
 class ChatsViewController: UIViewController {
     
+    let db = Firestore.firestore()
+    let currentUser = Auth.auth().currentUser!
+    
     @IBOutlet weak var tableView: UITableView!
     
-    var chats: [String] = [
-        "Samuel",
-        "McLovin",
-        "Kim"
-    ]
+    var chats: [Chat] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +31,45 @@ class ChatsViewController: UIViewController {
             forCellReuseIdentifier: "ReusableChatCell"
         )
         
+        loadChats()
+    }
+    
+    func loadChats() {
+        chats = []
+        let userDocRef = db.collection("users").document(currentUser.email!)
         
+        userDocRef.getDocument { document, error in
+            if let document = document, document.exists {
+                let activeChats = document["activeChats"] as! [ [String : Any] ]
+                
+                for activeChat in activeChats {
+                    let chatID = activeChat["chatID"] as! String
+                    let with = activeChat["with"] as! String
+                    let lastMessage = activeChat["lastMessage"] as! [String : String]
+                    
+                    let message = lastMessage["message"]!
+                    let sender = lastMessage["sender"]!
+                    let timestamp = lastMessage["time"]!
+                    
+                    let lastMsg = Message(
+                        message: message,
+                        sender: sender,
+                        timestamp: timestamp
+                    )
+                    
+                    let currentChat = Chat(
+                        chatID: chatID,
+                        pfp: UIImage(named: "defaultPFP")!,
+                        with: with,
+                        message: lastMsg
+                    )
+                    
+                    self.chats.append(currentChat)
+                    
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
 }
 
@@ -49,10 +86,9 @@ extension ChatsViewController: UITableViewDataSource {
         
         let i = indexPath.row
         
-        cell.sender.text = chats[i]
+        cell.sender.text = chats[i].with
+        cell.message.text = chats[i].message.message
         
         return cell
     }
-    
-    
 }
