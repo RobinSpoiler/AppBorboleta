@@ -12,14 +12,14 @@ struct Chat {
     var chatID: String
     var pfp: UIImage
     var with: String
+    var name: String
     var message: Message
     
-    init(chatID: String, pfp: UIImage, with: String, message: Message) {
+    init(chatID: String, pfp: UIImage, with: String, name: String, message: Message) {
         self.chatID = chatID
         self.pfp = pfp
         self.with = with
+        self.name = name
         self.message = message
     }
-    
-    // note to future self, restructure database and classes to have message class in chat
 }

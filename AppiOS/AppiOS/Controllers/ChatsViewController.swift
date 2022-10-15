@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 import Firebase
 import CenteredCollectionView
 import FirebaseCore
@@ -45,6 +46,7 @@ class ChatsViewController: UIViewController {
                 for activeChat in activeChats {
                     let chatID = activeChat["chatID"] as! String
                     let with = activeChat["with"] as! String
+                    let name = activeChat["chatName"] as! String
                     let lastMessage = activeChat["lastMessage"] as! [String : String]
                     
                     let message = lastMessage["message"]!
@@ -61,10 +63,23 @@ class ChatsViewController: UIViewController {
                         chatID: chatID,
                         pfp: UIImage(named: "defaultPFP")!,
                         with: with,
+                        name: name,
                         message: lastMsg
                     )
                     
                     self.chats.append(currentChat)
+                    
+                    self.chats.sort {
+                        let t1 = $0.message.timestamp
+                        let t2 = $1.message.timestamp
+                        let dateFormatter = DateFormatter()
+                        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm:ss"
+                        
+                        let d1 = dateFormatter.date(from: t1)!
+                        let d2 = dateFormatter.date(from: t2)!
+                        
+                        return d1 > d2
+                    }
                     
                     self.tableView.reloadData()
                 }
@@ -86,16 +101,16 @@ extension ChatsViewController: UITableViewDataSource {
         
         let i = indexPath.row
         
-        cell.sender.text = chats[i].with
+        cell.sender.text = chats[i].name
         
         if chats[i].message.sender == Auth.auth().currentUser?.email {
-            cell.message.text = "Tu"
+            cell.message.text = "Tu: "
         }
         else {
-            cell.message.text = chats[i].message.sender
+            cell.message.text = ""
         }
         
-        cell.message.text! += ": \(chats[i].message.message)"
+        cell.message.text! += chats[i].message.message
         cell.date.text = chats[i].message.timestamp
         return cell
     }
