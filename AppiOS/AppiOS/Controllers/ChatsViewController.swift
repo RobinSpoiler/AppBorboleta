@@ -10,28 +10,49 @@ import Firebase
 import CenteredCollectionView
 import FirebaseCore
 import FirebaseFirestore
-import FirebaseAuth
 import FirebaseStorage
-import SDWebImage
 
 
 class ChatsViewController: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    var chats: [String] = [
+        "Samuel",
+        "McLovin",
+        "Kim"
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.dataSource = self
+        tableView.register(
+            UINib(nibName: "ChatCell", bundle: nil),
+            forCellReuseIdentifier: "ReusableChatCell"
+        )
+        
         
     }
+}
+
+extension ChatsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return chats.count
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: "ReusableChatCell",
+            for: indexPath
+        ) as! ChatCell
+        
+        let i = indexPath.row
+        
+        cell.sender.text = chats[i]
+        
+        return cell
+    }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
