@@ -111,6 +111,7 @@ extension ChatsViewController: UITableViewDataSource {
         }
         
         cell.pfp.image = chats[i].pfp
+        cell.pfp.layer.cornerRadius = cell.pfp.frame.height / 2
         cell.message.text! += chats[i].message.message
         cell.date.text = chats[i].message.timestamp
         return cell
