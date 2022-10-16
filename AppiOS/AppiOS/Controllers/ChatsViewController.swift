@@ -122,7 +122,7 @@ extension ChatsViewController: UITableViewDataSource {
         
         // Preview text
         if chats[i].message.sender == Auth.auth().currentUser?.email {
-            cell.message.text = "Tu: \(chats[i].message.message)"
+            cell.message.text = "Tú: \(chats[i].message.message)"
         }
         else {
             cell.message.text = chats[i].message.message
