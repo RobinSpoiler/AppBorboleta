@@ -25,9 +25,7 @@ class Psicologos : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_psicologos)
         initView()
-
     }
-
 
     private fun initView(){
         vpSlider = findViewById(R.id.vpSlider)
@@ -50,25 +48,12 @@ class Psicologos : AppCompatActivity() {
 
     //Este es el arreglo donde van las imágenes
     private fun getWallpapers(): List<Int>{
-        val db = Firebase.firestore
-        val data = arrayListOf<Int>()
 
-        var counter = 0
-        var storage = FirebaseStorage.getInstance()
-        var query = db.collection("users").whereEqualTo("data.accountType", "psychologist")
-            .get()
-            .addOnSuccessListener { documents ->
-                val ref = storage.reference.child("profilePics/${document.id}.png").downloadUrl.addOnSuccessListener { Url ->
-                    val ivWallpaper: ImageView = itemView.findViewById(R.id.ivWallpaper)
-                    GlideApp.with(ivWallpaper)
-                        .load(Url.toString())
-                        .into(ivWallpaper)
-                }
-            }
-        println("UGHHHHH")
-        for(i in data){
-            println(i)
-        }
+        val data = arrayListOf<Int>()
+        data.add(R.drawable.puser1)
+        data.add(R.drawable.puser2)
+        data.add(R.drawable.puser4)
+        data.add(R.drawable.success)
         return data
     }
 

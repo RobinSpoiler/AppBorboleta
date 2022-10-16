@@ -4,17 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:background="#04127D"
+    android:background="@color/white"
     android:clipChildren="false"
     android:clipToPadding="false"
     tools:context=".Psicologos">
-    
+
+    <TextView
+        android:id="@+id/titulo_matches"
+        android:layout_width="329dp"
+        android:layout_height="145dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="VAMOS A
+            ENCONTRARTE UN MATCH"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="#002B69"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/vpSlider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.646"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.763" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.1"/>
+        app:layout_constraintGuide_percent="0.25"/>
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -22,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9"/>
+        app:layout_constraintGuide_percent=".77"/>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/vpSlider"
@@ -37,14 +55,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline6"/>
 
+
     <ImageView
         android:id="@+id/fuck"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="480dp"
+        android:layout_height="384dp"
         app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView_navbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView_navbar"
