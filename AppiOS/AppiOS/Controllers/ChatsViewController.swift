@@ -117,19 +117,38 @@ extension ChatsViewController: UITableViewDataSource {
         
         let i = indexPath.row
         
+        // Chat name
         cell.sender.text = chats[i].name
         
+        // Preview text
         if chats[i].message.sender == Auth.auth().currentUser?.email {
-            cell.message.text = "Tu: "
+            cell.message.text = "Tu: \(chats[i].message.message)"
         }
         else {
-            cell.message.text = ""
+            cell.message.text = chats[i].message.message
         }
         
+        // Profile picture
         cell.pfp.image = chats[i].pfp
         cell.pfp.layer.cornerRadius = cell.pfp.frame.height / 2
-        cell.message.text! += chats[i].message.message
-        cell.date.text = chats[i].message.timestamp
+        
+        // Date
+        let dateString = chats[i].message.timestamp
+        let format = "dd-MM-yyyy HH:mm:ss"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+
+        let date = dateFormatter.date(from: dateString)
+
+        if Date().formatted(.dateTime.day().month().year()) == date!.formatted(.dateTime.day().month().year()) {
+            let separatedDate = dateString.components(separatedBy: " ")[1].components(separatedBy: ":")
+            cell.date.text = "\(separatedDate[0]):\(separatedDate[1])"
+        }
+        
+        else {
+            cell.date.text = dateString.components(separatedBy: " ")[0]
+        }
+        
         return cell
     }
 }
