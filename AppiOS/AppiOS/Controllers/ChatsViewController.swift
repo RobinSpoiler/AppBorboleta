@@ -20,6 +20,8 @@ class ChatsViewController: UIViewController {
     let storage = Storage.storage()
     let currentUser = Auth.auth().currentUser!
     
+    var selectedRow = 0
+    
     @IBOutlet weak var tableView: UITableView!
     
     var chats: [Chat] = []
@@ -28,6 +30,7 @@ class ChatsViewController: UIViewController {
         super.viewDidLoad()
 
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.register(
             UINib(nibName: "ChatCell", bundle: nil),
             forCellReuseIdentifier: "ReusableChatCell"
@@ -102,9 +105,14 @@ class ChatsViewController: UIViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var destination = segue.destination as! ChatViewController
+        destination.chat = self.chats[self.selectedRow]
+    }
 }
 
-extension ChatsViewController: UITableViewDataSource {
+extension ChatsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return chats.count
     }
@@ -150,5 +158,12 @@ extension ChatsViewController: UITableViewDataSource {
         }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let i = indexPath.row
+        self.selectedRow = i
+        
+        performSegue(withIdentifier: "toChat", sender: self)
     }
 }
