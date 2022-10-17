@@ -96,7 +96,8 @@ class registro2 : AppCompatActivity() {
                 .addOnFailureListener { e -> Log.w("Fail", "Error writing document", e) }
 
             //IR A PREFERENCIAS
-            startActivity(Intent(this, Preferencias::class.java))
+            val intent= Intent(this, Preferencias::class.java)
+            startActivity(intent)
         }
 
         //REGRESO A REGISTRO 1

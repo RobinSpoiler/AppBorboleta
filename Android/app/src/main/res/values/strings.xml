@@ -101,5 +101,7 @@ Mi ipsum faucibus vitae aliquet nec ullamcorper. Erat imperdiet sed euismod nisi
     <string name="messageicon"></string>
     <string name="profileicon"></string>
     <string name="homeicon"></string>
+    <string name="leonardo">Leonardo</string>
+    <string name="textview">TextView</string>
 
-    </resources>
+</resources>
