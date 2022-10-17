@@ -14,10 +14,11 @@ class ChatViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "bubbleCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BubbleCellID", for: indexPath) as! BubbleCell
+        
         let i = indexPath.row
         
-        cell.textLabel?.text = messages[i].message
+        cell.message.text = messages[i].message
         
         return cell
     }
@@ -37,22 +38,16 @@ class ChatViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // barra superior
         chatImage.image = chat?.pfp
         chatImage.layer.cornerRadius = chatImage.frame.height / 2
         chatName.text = chat?.name
         
         tableView.dataSource = self
+        tableView.register(
+            UINib(nibName: "BubbleCell", bundle: nil),
+            forCellReuseIdentifier: "BubbleCellID"
+        )
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

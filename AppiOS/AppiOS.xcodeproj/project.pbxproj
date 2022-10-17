@@ -67,6 +67,8 @@
 		9D84B0FD28F8C53600A04F98 /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D84B0FC28F8C53600A04F98 /* CircularProgressBar.swift */; };
 		9D84B10028F9CF9500A04F98 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D84B0FE28F9CF9500A04F98 /* ChatCell.swift */; };
 		9D84B10128F9CF9500A04F98 /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D84B0FF28F9CF9500A04F98 /* ChatCell.xib */; };
+		9D84CDD628FCF0EE00233662 /* BubbleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D84CDD428FCF0EE00233662 /* BubbleCell.swift */; };
+		9D84CDD728FCF0EE00233662 /* BubbleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D84CDD528FCF0EE00233662 /* BubbleCell.xib */; };
 		9D95D20B28FA716900DC0E3F /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95D20A28FA716900DC0E3F /* Chat.swift */; };
 		9D95D20D28FA76EC00DC0E3F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95D20C28FA76EC00DC0E3F /* Message.swift */; };
 		9DB653E628DE14B200C0E093 /* SignupUserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB653E528DE14B200C0E093 /* SignupUserDataViewController.swift */; };
@@ -122,6 +124,8 @@
 		9D84B0FC28F8C53600A04F98 /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 		9D84B0FE28F9CF9500A04F98 /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		9D84B0FF28F9CF9500A04F98 /* ChatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatCell.xib; sourceTree = "<group>"; };
+		9D84CDD428FCF0EE00233662 /* BubbleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleCell.swift; sourceTree = "<group>"; };
+		9D84CDD528FCF0EE00233662 /* BubbleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BubbleCell.xib; sourceTree = "<group>"; };
 		9D95D20A28FA716900DC0E3F /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		9D95D20C28FA76EC00DC0E3F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		9DB653E528DE14B200C0E093 /* SignupUserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupUserDataViewController.swift; sourceTree = "<group>"; };
@@ -271,6 +275,8 @@
 				90B39FCF28CEB0FC00326D19 /* Main.storyboard */,
 				9D84B0FE28F9CF9500A04F98 /* ChatCell.swift */,
 				9D84B0FF28F9CF9500A04F98 /* ChatCell.xib */,
+				9D84CDD428FCF0EE00233662 /* BubbleCell.swift */,
+				9D84CDD528FCF0EE00233662 /* BubbleCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -445,6 +451,7 @@
 				9D84B10128F9CF9500A04F98 /* ChatCell.xib in Resources */,
 				90B39FD328CEB0FC00326D19 /* Assets.xcassets in Resources */,
 				90B39FD128CEB0FC00326D19 /* Main.storyboard in Resources */,
+				9D84CDD728FCF0EE00233662 /* BubbleCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +491,7 @@
 				90B39FCA28CEB0FC00326D19 /* AppDelegate.swift in Sources */,
 				9D5F6E0028ECB92500EAB7B7 /* SignupSuccessViewController.swift in Sources */,
 				9D84B10028F9CF9500A04F98 /* ChatCell.swift in Sources */,
+				9D84CDD628FCF0EE00233662 /* BubbleCell.swift in Sources */,
 				90B39FCC28CEB0FC00326D19 /* SceneDelegate.swift in Sources */,
 				9D84B0FD28F8C53600A04F98 /* CircularProgressBar.swift in Sources */,
 				9D521C4128E8E23C00C70591 /* SignupPreferencesViewController.swift in Sources */,
