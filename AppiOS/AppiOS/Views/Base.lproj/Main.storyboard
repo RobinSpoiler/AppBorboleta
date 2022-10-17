@@ -613,7 +613,7 @@ REGRESO</string>
         <!--Chats View Controller-->
         <scene sceneID="H5V-cB-E3y">
             <objects>
-                <viewController id="Iui-AR-ecx" customClass="ChatsViewController" customModule="AppiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Iui-AR-ecx" customClass="ChatsViewController" customModule="AppiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="52V-AV-dP5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -637,7 +637,7 @@ REGRESO</string>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CQS-y9-oWM">
-                                <rect key="frame" x="0.0" y="120" width="414" height="693"/>
+                                <rect key="frame" x="0.0" y="120" width="414" height="742"/>
                                 <color key="backgroundColor" name="BackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -654,6 +654,7 @@ REGRESO</string>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="bubble.right" catalog="system" id="GDv-fZ-O6A"/>
+                    <navigationItem key="navigationItem" id="Asy-6X-08R"/>
                     <connections>
                         <outlet property="tableView" destination="CQS-y9-oWM" id="AHk-VT-q26"/>
                         <segue destination="iNY-ds-zpP" kind="show" identifier="toChat" id="q54-qk-tza"/>
@@ -683,6 +684,9 @@ REGRESO</string>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system"/>
+                                        <connections>
+                                            <segue destination="Iui-AR-ecx" kind="show" id="Eln-T5-aBA"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MrH-rb-Swa">
                                         <rect key="frame" x="60" y="50" width="50" height="50"/>
@@ -1525,6 +1529,8 @@ REGRESO</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="q54-qk-tza"/>
+        <segue reference="Eln-T5-aBA"/>
         <segue reference="bpa-Dc-RBh"/>
         <segue reference="0ef-rI-NKT"/>
     </inferredMetricsTieBreakers>
