@@ -17,9 +17,20 @@ class ChatViewController: UIViewController, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BubbleCellID", for: indexPath) as! BubbleCell
         
         let i = indexPath.row
+        let message = messages[i]
         
-        cell.message.text = messages[i].message
+        cell.message.text = message.message
         
+        // mensaje de la otra persona
+        if message.sender != currentUser!.email! {
+            cell.leftPicture.image = self.chat!.pfp
+            cell.leftPicture.layer.cornerRadius = cell.leftPicture.frame.height / 2
+            cell.bubble.backgroundColor = UIColor(named: "Color2")!
+        }
+        // mensaje del usuario
+        else {
+            cell.bubble.backgroundColor = UIColor(named: "Color4")
+        }
         return cell
     }
     
@@ -32,6 +43,7 @@ class ChatViewController: UIViewController, UITableViewDataSource {
     
     var messages: [Message] = []
     var chat: Chat? = nil
+    var currentUser = Auth.auth().currentUser
     
     override func viewDidLoad() {
         super.viewDidLoad()

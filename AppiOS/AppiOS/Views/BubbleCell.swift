@@ -12,6 +12,7 @@ class BubbleCell: UITableViewCell {
     @IBOutlet weak var bubble: UIView!
     @IBOutlet weak var message: UILabel!
     @IBOutlet weak var rightPicture: UIImageView!
+    @IBOutlet weak var leftPicture: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
