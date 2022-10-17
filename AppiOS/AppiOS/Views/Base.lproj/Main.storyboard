@@ -657,7 +657,7 @@ REGRESO</string>
                     <navigationItem key="navigationItem" id="Asy-6X-08R"/>
                     <connections>
                         <outlet property="tableView" destination="CQS-y9-oWM" id="AHk-VT-q26"/>
-                        <segue destination="iNY-ds-zpP" kind="show" identifier="toChat" id="q54-qk-tza"/>
+                        <segue destination="iNY-ds-zpP" kind="show" identifier="toChat" customClass="SlideSegueR" customModule="AppiOS" customModuleProvider="target" id="q54-qk-tza"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lEx-4u-TMJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -667,7 +667,7 @@ REGRESO</string>
         <!--Chat View Controller-->
         <scene sceneID="YdC-ys-mwL">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="iNY-ds-zpP" customClass="ChatViewController" customModule="AppiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="iNY-ds-zpP" customClass="ChatViewController" customModule="AppiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cPu-N3-5EM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -685,7 +685,7 @@ REGRESO</string>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system"/>
                                         <connections>
-                                            <segue destination="Iui-AR-ecx" kind="show" id="Eln-T5-aBA"/>
+                                            <segue destination="Iui-AR-ecx" kind="show" customClass="SlideSegueL" customModule="AppiOS" customModuleProvider="target" id="Eln-T5-aBA"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MrH-rb-Swa">

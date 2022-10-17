@@ -13,6 +13,7 @@ class BubbleCell: UITableViewCell {
     @IBOutlet weak var message: UILabel!
     @IBOutlet weak var rightPicture: UIImageView!
     @IBOutlet weak var leftPicture: UIImageView!
+    @IBOutlet weak var timestamp: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,8 +23,6 @@ class BubbleCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }

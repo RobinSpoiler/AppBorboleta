@@ -31,6 +31,24 @@ class ChatViewController: UIViewController, UITableViewDataSource {
         else {
             cell.bubble.backgroundColor = UIColor(named: "Color4")
         }
+        
+        let timestamp = message.timestamp
+        
+        let format = "dd-MM-yyyy HH:mm:ss"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+
+        let date = dateFormatter.date(from: timestamp)
+
+        if Date().formatted(.dateTime.day().month().year()) == date!.formatted(.dateTime.day().month().year()) {
+            let separatedDate = timestamp.components(separatedBy: " ")[1].components(separatedBy: ":")
+            cell.timestamp.text = "\(separatedDate[0]):\(separatedDate[1])"
+        }
+        
+        else {
+            cell.timestamp.text = timestamp.components(separatedBy: " ")[0]
+        }
+        
         return cell
     }
     

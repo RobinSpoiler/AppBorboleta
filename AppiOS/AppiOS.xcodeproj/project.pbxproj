@@ -45,6 +45,8 @@
 		9D05CF8128DABE6500AA7E76 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 9D05CF8028DABE6500AA7E76 /* FirebaseStorageCombine-Community */; };
 		9D05CF8328DB9C4100AA7E76 /* PasswordVisibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D05CF8228DB9C4100AA7E76 /* PasswordVisibility.swift */; };
 		9D10BCCB28FBC9E900A0F2CC /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D10BCCA28FBC9E900A0F2CC /* ChatViewController.swift */; };
+		9D20830E28FD352200F1C07F /* SlideSegueR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D20830D28FD352200F1C07F /* SlideSegueR.swift */; };
+		9D20831028FD360700F1C07F /* SlideSegueL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D20830F28FD360700F1C07F /* SlideSegueL.swift */; };
 		9D2D130328ED32FF00042121 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2D130228ED32FF00042121 /* HomeViewController.swift */; };
 		9D2D130528ED332E00042121 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2D130428ED332E00042121 /* MatchesViewController.swift */; };
 		9D2D130728ED335400042121 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2D130628ED335400042121 /* ChatsViewController.swift */; };
@@ -112,6 +114,8 @@
 		9D05CF4928DABD7000AA7E76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9D05CF8228DB9C4100AA7E76 /* PasswordVisibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordVisibility.swift; sourceTree = "<group>"; };
 		9D10BCCA28FBC9E900A0F2CC /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		9D20830D28FD352200F1C07F /* SlideSegueR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideSegueR.swift; sourceTree = "<group>"; };
+		9D20830F28FD360700F1C07F /* SlideSegueL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideSegueL.swift; sourceTree = "<group>"; };
 		9D2D130228ED32FF00042121 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9D2D130428ED332E00042121 /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		9D2D130628ED335400042121 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
@@ -291,6 +295,8 @@
 				9D53396D28F771C4000EA7DB /* Calculate.swift */,
 				9D95D20A28FA716900DC0E3F /* Chat.swift */,
 				9D95D20C28FA76EC00DC0E3F /* Message.swift */,
+				9D20830D28FD352200F1C07F /* SlideSegueR.swift */,
+				9D20830F28FD360700F1C07F /* SlideSegueL.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -482,6 +488,7 @@
 				9D5BCB4828DBDB4F00BC0B56 /* SignupViewController.swift in Sources */,
 				9DCDB37428EA14C700FC4091 /* OptionSelected.swift in Sources */,
 				9D95D20D28FA76EC00DC0E3F /* Message.swift in Sources */,
+				9D20830E28FD352200F1C07F /* SlideSegueR.swift in Sources */,
 				9D2D130728ED335400042121 /* ChatsViewController.swift in Sources */,
 				9D5AA19928DA81C300AC068E /* LoginViewController.swift in Sources */,
 				9D2D130528ED332E00042121 /* MatchesViewController.swift in Sources */,
@@ -493,6 +500,7 @@
 				9D84B10028F9CF9500A04F98 /* ChatCell.swift in Sources */,
 				9D84CDD628FCF0EE00233662 /* BubbleCell.swift in Sources */,
 				90B39FCC28CEB0FC00326D19 /* SceneDelegate.swift in Sources */,
+				9D20831028FD360700F1C07F /* SlideSegueL.swift in Sources */,
 				9D84B0FD28F8C53600A04F98 /* CircularProgressBar.swift in Sources */,
 				9D521C4128E8E23C00C70591 /* SignupPreferencesViewController.swift in Sources */,
 				9D2D130928ED337500042121 /* ProfileViewController.swift in Sources */,
