@@ -101,5 +101,6 @@ Mi ipsum faucibus vitae aliquet nec ullamcorper. Erat imperdiet sed euismod nisi
     <string name="messageicon"></string>
     <string name="profileicon"></string>
     <string name="homeicon"></string>
+    <string name="chats">Chats</string>
 
 </resources>

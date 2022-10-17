@@ -22,6 +22,13 @@ class Login : AppCompatActivity() {
         //Firebase Authentication
         auth = Firebase.auth
 
+        val user = Firebase.auth.currentUser
+
+        if(user!= null){
+            println(user.email)
+            startActivity(Intent(this, Home::class.java))
+        }
+
         //Variables
         val btnLogIn = findViewById<Button>(R.id.ButtonLogin)
         val username = findViewById<EditText>(R.id.EmailLogin)
