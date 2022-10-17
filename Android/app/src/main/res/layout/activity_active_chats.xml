@@ -9,37 +9,12 @@
     <LinearLayout
         android:id="@+id/mainlayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="632dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/segudno"
-                android:layout_width="101dp"
-                android:layout_height="117dp"
-                android:layout_gravity="left"
-                app:srcCompat="@drawable/logomariposa" />
-
-            <TextView
-                android:id="@+id/primero"
-                android:layout_width="424dp"
-                android:layout_height="146dp"
-                android:gravity="center"
-                android:text="AADFASDFAFDAD"
-                 />
-
-        </androidx.cardview.widget.CardView>
-
-
-
-    </LinearLayout>
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
