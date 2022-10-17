@@ -39,7 +39,9 @@ class Login : AppCompatActivity() {
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d("success", "signInWithEmail:success")
-                   /* val user = auth.currentUser*/
+                    startActivity(Intent(this, Home::class.java))
+
+                    /* val user = auth.currentUser*/
                     /*updateUI(user)*/
                 } else {
                     // If sign in fails, display a message to the user.
@@ -47,7 +49,6 @@ class Login : AppCompatActivity() {
                     /*updateUI(null)*/
                 }
                 //Esta lleva a home
-                startActivity(Intent(this, Psicologos::class.java))
             }
         }
 

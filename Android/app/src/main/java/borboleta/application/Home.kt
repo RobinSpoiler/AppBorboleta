@@ -2,10 +2,10 @@ package borboleta.application
 
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class Home : AppCompatActivity() {
@@ -26,6 +26,11 @@ class Home : AppCompatActivity() {
                 R.id.heart_icon -> {
                     // Respond to navigation item 2 click
                     startActivity(Intent(this, Psicologos::class.java))
+                    true
+                }
+                R.id.message_icon -> {
+                    // Respond to navigation item 2 click
+                    startActivity(Intent(this, ActiveChats::class.java))
                     true
                 }
                 else -> false
