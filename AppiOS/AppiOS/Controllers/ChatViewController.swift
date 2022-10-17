@@ -23,16 +23,14 @@ class ChatViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     
+    let db = Firestore.firestore()
 
     @IBOutlet weak var chatImage: UIImageView!
     @IBOutlet weak var chatName: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
     
-    var messages: [Message] = [
-        Message(message: "howdy", sender: "u1", timestamp: "123"),
-        Message(message: "hello", sender: "u1", timestamp: "123"),
-    ]
+    var messages: [Message] = []
     var chat: Chat? = nil
     
     override func viewDidLoad() {
@@ -48,6 +46,36 @@ class ChatViewController: UIViewController, UITableViewDataSource {
             UINib(nibName: "BubbleCell", bundle: nil),
             forCellReuseIdentifier: "BubbleCellID"
         )
+        
+        loadMessages()
     }
 
+    func loadMessages() {
+        messages = []
+        
+        let chatDocument = db.collection("chats").document(chat!.chatID)
+        
+        chatDocument.getDocument { document, error in
+            if let e = error {
+                print (e)
+            }
+            else {
+                if let document = document, document.exists {
+                    let messagesArray = document["messages"] as! [ [String: String] ]
+                    
+                    for message in messagesArray {
+                        self.messages.append(
+                            Message(
+                                message: message["message"]!,
+                                sender: message["sender"]!,
+                                timestamp: message["timestamp"]!
+                            )
+                        )
+                        
+                        self.tableView.reloadData()
+                    }
+                }
+            }
+        }
+    }
 }
