@@ -106,16 +106,16 @@ class ChatViewController: UIViewController, UITableViewDataSource {
                 "messages": FieldValue.arrayUnion([message])
             ])
             
-            var senderDocRef = db.collection("users").document(currentUser!.email!)
-            var receiverDocRef = db.collection("users").document(chat!.with)
-
-            senderDocRef.updateData([
-                "lastMessage": message
-            ])
-            
-            receiverDocRef.updateData([
-                "lastMessage": message
-            ])
+//            var senderDocRef = db.collection("users").document(currentUser!.email!)
+//            var receiverDocRef = db.collection("users").document(chat!.with)
+//
+//            senderDocRef.updateData([
+//                "lastMessage": message
+//            ])
+//
+//            receiverDocRef.updateData([
+//                "lastMessage": message
+//            ])
             
             messageField.text = ""
         }
@@ -148,6 +148,9 @@ class ChatViewController: UIViewController, UITableViewDataSource {
                         
                         DispatchQueue.main.async {
                             self.tableView.reloadData()
+                            
+                            let iPath = IndexPath(row: self.messages.count - 1, section: 0)
+                            self.tableView.scrollToRow(at: iPath, at: .top, animated: false)
                         }
                     }
                 }
