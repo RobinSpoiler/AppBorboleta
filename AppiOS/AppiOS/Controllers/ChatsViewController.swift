@@ -47,62 +47,66 @@ class ChatsViewController: UIViewController {
         userDocRef.addSnapshotListener { document, error in
             self.chats = []
             if let document = document, document.exists {
-                let activeChats = document["activeChats"] as! [ [String : Any] ]
-                
-                for activeChat in activeChats {
-                    let chatID = activeChat["chatID"] as! String
-                    let with = activeChat["with"] as! String
-                    let name = activeChat["chatName"] as! String
-                    let lastMessage = activeChat["lastMessage"] as! [String : String]
-                    
-                    let message = lastMessage["message"]!
-                    let sender = lastMessage["sender"]!
-                    let timestamp = lastMessage["time"]!
-                    
-                    let lastMsg = Message(
-                        message: message,
-                        sender: sender,
-                        timestamp: timestamp
-                    )
-                    
-                    let storageRef = self.storage.reference()
-                    let pfpRef = storageRef.child("profilePics/\(with).png")
-                    
-                    pfpRef.getData(maxSize: 2 * 1024 * 1024) { data, error in
+                if let activeChats = document["activeChats"] as? [ [String : Any] ] {
+                    for activeChat in activeChats {
+                        let chatID = activeChat["chatID"] as! String
+                        let with = activeChat["with"] as! String
+                        let name = activeChat["chatName"] as! String
+                        let lastMessage = activeChat["lastMessage"] as! [String : String]
                         
-                        var pfp = UIImage(named: "defaultPFP")!
+                        let message = lastMessage["message"]!
+                        let sender = lastMessage["sender"]!
+                        let timestamp = lastMessage["time"]!
                         
-                        if let e = error {
-                            print(e)
-                        }
-                        else {
-                            pfp = UIImage(data: data!)!
-                        }
-                        
-                        let currentChat = Chat(
-                            chatID: chatID,
-                            pfp: pfp,
-                            with: with,
-                            name: name,
-                            message: lastMsg
+                        let lastMsg = Message(
+                            message: message,
+                            sender: sender,
+                            timestamp: timestamp
                         )
                         
-                        self.chats.append(currentChat)
+                        let storageRef = self.storage.reference()
+                        let pfpRef = storageRef.child("profilePics/\(with).png")
                         
-                        self.chats.sort {
-                            let t1 = $0.message.timestamp
-                            let t2 = $1.message.timestamp
-                            let dateFormatter = DateFormatter()
-                            dateFormatter.dateFormat = "dd-MM-yyyy HH:mm:ss"
+                        pfpRef.getData(maxSize: 2 * 1024 * 1024) { data, error in
                             
-                            let d1 = dateFormatter.date(from: t1)!
-                            let d2 = dateFormatter.date(from: t2)!
+                            var pfp = UIImage(named: "defaultPFP")!
                             
-                            return d1 > d2
+                            if let e = error {
+                                print(e)
+                            }
+                            else {
+                                pfp = UIImage(data: data!)!
+                            }
+                            
+                            let currentChat = Chat(
+                                chatID: chatID,
+                                pfp: pfp,
+                                with: with,
+                                name: name,
+                                message: lastMsg
+                            )
+                            
+                            self.chats.append(currentChat)
+                            
+                            self.chats.sort {
+                                let t1 = $0.message.timestamp
+                                let t2 = $1.message.timestamp
+                                let dateFormatter = DateFormatter()
+                                dateFormatter.dateFormat = "dd-MM-yyyy HH:mm:ss"
+                                
+                                let d1 = dateFormatter.date(from: t1)!
+                                let d2 = dateFormatter.date(from: t2)!
+                                
+                                return d1 > d2
+                            }
+                            
+                            self.tableView.reloadData()
                         }
-                        
-                        self.tableView.reloadData()
                     }
+                }
+                else {
+                    let docRef = self.db.collection("users").document(self.currentUser.email!)
+                    docRef.updateData(["activeChats": []])
                 }
             }
         }
