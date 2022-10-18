@@ -31,6 +31,7 @@ class ChatViewController: UIViewController, UITableViewDataSource {
         // mensaje del usuario
         else {
             cell.leftPicture.image = nil
+            cell.message.textColor = UIColor(named: "Color3")
             cell.bubble.backgroundColor = UIColor(named: "Color4")
         }
         
@@ -86,6 +87,27 @@ class ChatViewController: UIViewController, UITableViewDataSource {
     }
     
     @IBAction func sendMessage(_ sender: UIButton) {
+        if let messageToSend = messageField.text {
+            let sender = currentUser!.email!
+            let timestamp = Date()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd-MM-yyyy hh:mm:ss"
+            let strTimestamp = dateFormatter.string(from: timestamp)
+            
+            let message = [
+                "message": messageToSend,
+                "sender": sender,
+                "timestamp": strTimestamp
+            ]
+            
+            let chatRef = db.collection("chats").document(self.chat!.chatID)
+            
+            chatRef.updateData([
+                "messages": FieldValue.arrayUnion([message])
+            ])
+            
+            messageField.text = ""
+        }
     }
     
     
