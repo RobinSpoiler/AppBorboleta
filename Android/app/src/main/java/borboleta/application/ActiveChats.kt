@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Typeface
 import android.os.Bundle
+import android.util.TypedValue
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -11,6 +12,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import com.bumptech.glide.request.RequestOptions
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -85,8 +87,9 @@ class ActiveChats : AppCompatActivity() {
                 val ref = storage.reference.child("profilePics/$with.png").downloadUrl.addOnSuccessListener { url ->
                     GlideApp.with(this)
                         .load(url.toString())
-                        .circleCrop()
-                        .override(100,100)
+                        .apply(RequestOptions()
+                            .circleCrop()
+                        )
                         .into(dynamicPhoto)
                 }
 
@@ -98,6 +101,7 @@ class ActiveChats : AppCompatActivity() {
                 dynamicName.text = chatName
                 dynamicName.x = 260F
                 dynamicName.setTypeface(null, Typeface.BOLD)
+                dynamicName.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16F)
 
                 if(sender == user?.email.toString()){
                     dynamicMessage.text = "Tú: $message"
@@ -112,6 +116,8 @@ class ActiveChats : AppCompatActivity() {
                 dynamicTime.text = time
                 dynamicTime.textAlignment = View.TEXT_ALIGNMENT_VIEW_END
                 dynamicTime.x = -30F
+                dynamicTime.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12F)
+
 
                 dynamicCardview.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 200)
                 dynamicCardview.addView(dynamicPhoto)
