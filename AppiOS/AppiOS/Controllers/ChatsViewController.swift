@@ -42,10 +42,10 @@ class ChatsViewController: UIViewController {
     }
     
     func loadChats() {
-        chats = []
         let userDocRef = db.collection("users").document(currentUser.email!)
         
-        userDocRef.getDocument { document, error in
+        userDocRef.addSnapshotListener { document, error in
+            self.chats = []
             if let document = document, document.exists {
                 let activeChats = document["activeChats"] as! [ [String : Any] ]
                 

@@ -106,10 +106,20 @@ class ChatViewController: UIViewController, UITableViewDataSource {
                 "messages": FieldValue.arrayUnion([message])
             ])
             
+            var senderDocRef = db.collection("users").document(currentUser!.email!)
+            var receiverDocRef = db.collection("users").document(chat!.with)
+
+            senderDocRef.updateData([
+                "lastMessage": message
+            ])
+            
+            receiverDocRef.updateData([
+                "lastMessage": message
+            ])
+            
             messageField.text = ""
         }
     }
-    
     
     
     func loadMessages() {
