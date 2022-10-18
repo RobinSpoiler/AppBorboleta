@@ -44,6 +44,10 @@
 		9D05CF7F28DABE6500AA7E76 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9D05CF7E28DABE6500AA7E76 /* FirebaseStorage */; };
 		9D05CF8128DABE6500AA7E76 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 9D05CF8028DABE6500AA7E76 /* FirebaseStorageCombine-Community */; };
 		9D05CF8328DB9C4100AA7E76 /* PasswordVisibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D05CF8228DB9C4100AA7E76 /* PasswordVisibility.swift */; };
+		9D091D8B28FF1787006CA4EB /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9D091D8A28FF1787006CA4EB /* IQKeyboardManagerSwift */; };
+		9D10BCCB28FBC9E900A0F2CC /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D10BCCA28FBC9E900A0F2CC /* ChatViewController.swift */; };
+		9D20830E28FD352200F1C07F /* SlideSegueR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D20830D28FD352200F1C07F /* SlideSegueR.swift */; };
+		9D20831028FD360700F1C07F /* SlideSegueL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D20830F28FD360700F1C07F /* SlideSegueL.swift */; };
 		9D2D130328ED32FF00042121 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2D130228ED32FF00042121 /* HomeViewController.swift */; };
 		9D2D130528ED332E00042121 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2D130428ED332E00042121 /* MatchesViewController.swift */; };
 		9D2D130728ED335400042121 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2D130628ED335400042121 /* ChatsViewController.swift */; };
@@ -64,6 +68,12 @@
 		9D5BCB4828DBDB4F00BC0B56 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BCB4728DBDB4F00BC0B56 /* SignupViewController.swift */; };
 		9D5F6E0028ECB92500EAB7B7 /* SignupSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5F6DFF28ECB92500EAB7B7 /* SignupSuccessViewController.swift */; };
 		9D84B0FD28F8C53600A04F98 /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D84B0FC28F8C53600A04F98 /* CircularProgressBar.swift */; };
+		9D84B10028F9CF9500A04F98 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D84B0FE28F9CF9500A04F98 /* ChatCell.swift */; };
+		9D84B10128F9CF9500A04F98 /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D84B0FF28F9CF9500A04F98 /* ChatCell.xib */; };
+		9D84CDD628FCF0EE00233662 /* BubbleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D84CDD428FCF0EE00233662 /* BubbleCell.swift */; };
+		9D84CDD728FCF0EE00233662 /* BubbleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D84CDD528FCF0EE00233662 /* BubbleCell.xib */; };
+		9D95D20B28FA716900DC0E3F /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95D20A28FA716900DC0E3F /* Chat.swift */; };
+		9D95D20D28FA76EC00DC0E3F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95D20C28FA76EC00DC0E3F /* Message.swift */; };
 		9DB653E628DE14B200C0E093 /* SignupUserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB653E528DE14B200C0E093 /* SignupUserDataViewController.swift */; };
 		9DCDB37428EA14C700FC4091 /* OptionSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCDB37228EA108C00FC4091 /* OptionSelected.swift */; };
 		9DDD41BF28EE819E006F7C65 /* CenteredCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = 9DDD41BE28EE819E006F7C65 /* CenteredCollectionView */; };
@@ -104,6 +114,9 @@
 		90B39FEC28CEB0FC00326D19 /* AppiOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppiOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9D05CF4928DABD7000AA7E76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9D05CF8228DB9C4100AA7E76 /* PasswordVisibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordVisibility.swift; sourceTree = "<group>"; };
+		9D10BCCA28FBC9E900A0F2CC /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		9D20830D28FD352200F1C07F /* SlideSegueR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideSegueR.swift; sourceTree = "<group>"; };
+		9D20830F28FD360700F1C07F /* SlideSegueL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideSegueL.swift; sourceTree = "<group>"; };
 		9D2D130228ED32FF00042121 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9D2D130428ED332E00042121 /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		9D2D130628ED335400042121 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +127,12 @@
 		9D5BCB4728DBDB4F00BC0B56 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		9D5F6DFF28ECB92500EAB7B7 /* SignupSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupSuccessViewController.swift; sourceTree = "<group>"; };
 		9D84B0FC28F8C53600A04F98 /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
+		9D84B0FE28F9CF9500A04F98 /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		9D84B0FF28F9CF9500A04F98 /* ChatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatCell.xib; sourceTree = "<group>"; };
+		9D84CDD428FCF0EE00233662 /* BubbleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleCell.swift; sourceTree = "<group>"; };
+		9D84CDD528FCF0EE00233662 /* BubbleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BubbleCell.xib; sourceTree = "<group>"; };
+		9D95D20A28FA716900DC0E3F /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		9D95D20C28FA76EC00DC0E3F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		9DB653E528DE14B200C0E093 /* SignupUserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupUserDataViewController.swift; sourceTree = "<group>"; };
 		9DCDB37228EA108C00FC4091 /* OptionSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSelected.swift; sourceTree = "<group>"; };
 		9DF4483428EB7A2C0051ED92 /* Checkboxes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkboxes.swift; sourceTree = "<group>"; };
@@ -150,6 +169,7 @@
 				9D05CF6B28DABE6500AA7E76 /* FirebaseFunctions in Frameworks */,
 				9D05CF8128DABE6500AA7E76 /* FirebaseStorageCombine-Community in Frameworks */,
 				9D05CF7B28DABE6500AA7E76 /* FirebaseRemoteConfig in Frameworks */,
+				9D091D8B28FF1787006CA4EB /* IQKeyboardManagerSwift in Frameworks */,
 				9D05CF5728DABE6500AA7E76 /* FirebaseAppDistribution-Beta in Frameworks */,
 				9D05CF5B28DABE6500AA7E76 /* FirebaseAuthCombine-Community in Frameworks */,
 				9D4FBFAD28EFDCC90019CF5C /* FirebaseAnonymousAuthUI in Frameworks */,
@@ -212,7 +232,6 @@
 				9D78B65328DA7FD6007D64BD /* Models */,
 				9D78B65228DA7FCD007D64BD /* Views */,
 				9D78B65128DA7FC3007D64BD /* Controllers */,
-				9D84B0FB28F8C51500A04F98 /* CustomClasses */,
 				90B39FD228CEB0FC00326D19 /* Assets.xcassets */,
 				90B39FD428CEB0FC00326D19 /* LaunchScreen.storyboard */,
 				90B39FD728CEB0FC00326D19 /* Info.plist */,
@@ -251,6 +270,7 @@
 				9D2D130428ED332E00042121 /* MatchesViewController.swift */,
 				9D2D130628ED335400042121 /* ChatsViewController.swift */,
 				9D2D130828ED337500042121 /* ProfileViewController.swift */,
+				9D10BCCA28FBC9E900A0F2CC /* ChatViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -259,6 +279,10 @@
 			isa = PBXGroup;
 			children = (
 				90B39FCF28CEB0FC00326D19 /* Main.storyboard */,
+				9D84B0FE28F9CF9500A04F98 /* ChatCell.swift */,
+				9D84B0FF28F9CF9500A04F98 /* ChatCell.xib */,
+				9D84CDD428FCF0EE00233662 /* BubbleCell.swift */,
+				9D84CDD528FCF0EE00233662 /* BubbleCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -266,20 +290,17 @@
 		9D78B65328DA7FD6007D64BD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9D84B0FC28F8C53600A04F98 /* CircularProgressBar.swift */,
 				9D05CF8228DB9C4100AA7E76 /* PasswordVisibility.swift */,
 				9DCDB37228EA108C00FC4091 /* OptionSelected.swift */,
 				9DF4483428EB7A2C0051ED92 /* Checkboxes.swift */,
 				9D53396D28F771C4000EA7DB /* Calculate.swift */,
+				9D95D20A28FA716900DC0E3F /* Chat.swift */,
+				9D95D20C28FA76EC00DC0E3F /* Message.swift */,
+				9D20830D28FD352200F1C07F /* SlideSegueR.swift */,
+				9D20830F28FD360700F1C07F /* SlideSegueL.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		9D84B0FB28F8C51500A04F98 /* CustomClasses */ = {
-			isa = PBXGroup;
-			children = (
-				9D84B0FC28F8C53600A04F98 /* CircularProgressBar.swift */,
-			);
-			path = CustomClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +359,7 @@
 				9D4FBFBA28EFDCC90019CF5C /* FirebaseOAuthUI */,
 				9D4FBFBC28EFDCC90019CF5C /* FirebasePhoneAuthUI */,
 				9D4FBFBE28EFDCC90019CF5C /* FirebaseStorageUI */,
+				9D091D8A28FF1787006CA4EB /* IQKeyboardManagerSwift */,
 			);
 			productName = AppiOS;
 			productReference = 90B39FC628CEB0FC00326D19 /* AppiOS.app */;
@@ -416,6 +438,7 @@
 				9DE9FC2128E2011900531B46 /* XCRemoteSwiftPackageReference "iOSDropDown" */,
 				9DDD41BD28EE819E006F7C65 /* XCRemoteSwiftPackageReference "CenteredCollectionView" */,
 				9D4FBFAB28EFDCC90019CF5C /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */,
+				9D091D8928FF1787006CA4EB /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 90B39FC728CEB0FC00326D19 /* Products */;
 			projectDirPath = "";
@@ -435,8 +458,10 @@
 			files = (
 				90B39FD628CEB0FC00326D19 /* LaunchScreen.storyboard in Resources */,
 				9D05CF4A28DABD7000AA7E76 /* GoogleService-Info.plist in Resources */,
+				9D84B10128F9CF9500A04F98 /* ChatCell.xib in Resources */,
 				90B39FD328CEB0FC00326D19 /* Assets.xcassets in Resources */,
 				90B39FD128CEB0FC00326D19 /* Main.storyboard in Resources */,
+				9D84CDD728FCF0EE00233662 /* BubbleCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,16 +488,23 @@
 			files = (
 				9DF4483528EB7A2C0051ED92 /* Checkboxes.swift in Sources */,
 				9DF4483728EBD96C0051ED92 /* TOSViewController.swift in Sources */,
+				9D95D20B28FA716900DC0E3F /* Chat.swift in Sources */,
 				9D5BCB4828DBDB4F00BC0B56 /* SignupViewController.swift in Sources */,
 				9DCDB37428EA14C700FC4091 /* OptionSelected.swift in Sources */,
+				9D95D20D28FA76EC00DC0E3F /* Message.swift in Sources */,
+				9D20830E28FD352200F1C07F /* SlideSegueR.swift in Sources */,
 				9D2D130728ED335400042121 /* ChatsViewController.swift in Sources */,
 				9D5AA19928DA81C300AC068E /* LoginViewController.swift in Sources */,
 				9D2D130528ED332E00042121 /* MatchesViewController.swift in Sources */,
 				9D05CF8328DB9C4100AA7E76 /* PasswordVisibility.swift in Sources */,
+				9D10BCCB28FBC9E900A0F2CC /* ChatViewController.swift in Sources */,
 				9D53396F28F7D4FD000EA7DB /* Calculate.swift in Sources */,
 				90B39FCA28CEB0FC00326D19 /* AppDelegate.swift in Sources */,
 				9D5F6E0028ECB92500EAB7B7 /* SignupSuccessViewController.swift in Sources */,
+				9D84B10028F9CF9500A04F98 /* ChatCell.swift in Sources */,
+				9D84CDD628FCF0EE00233662 /* BubbleCell.swift in Sources */,
 				90B39FCC28CEB0FC00326D19 /* SceneDelegate.swift in Sources */,
+				9D20831028FD360700F1C07F /* SlideSegueL.swift in Sources */,
 				9D84B0FD28F8C53600A04F98 /* CircularProgressBar.swift in Sources */,
 				9D521C4128E8E23C00C70591 /* SignupPreferencesViewController.swift in Sources */,
 				9D2D130928ED337500042121 /* ProfileViewController.swift in Sources */,
@@ -823,6 +855,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		9D091D8928FF1787006CA4EB /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		9D4FBFAB28EFDCC90019CF5C /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/FirebaseUI-iOS";
@@ -984,6 +1024,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9D05CF4B28DABE6500AA7E76 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		9D091D8A28FF1787006CA4EB /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D091D8928FF1787006CA4EB /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 		9D4FBFAC28EFDCC90019CF5C /* FirebaseAnonymousAuthUI */ = {
 			isa = XCSwiftPackageProductDependency;
