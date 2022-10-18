@@ -23,12 +23,14 @@ class ChatViewController: UIViewController, UITableViewDataSource {
         
         // mensaje de la otra persona
         if message.sender != currentUser!.email! {
+            cell.message.textColor = UIColor(named: "BackgroundColor")
             cell.leftPicture.image = self.chat!.pfp
             cell.leftPicture.layer.cornerRadius = cell.leftPicture.frame.height / 2
             cell.bubble.backgroundColor = UIColor(named: "Color2")!
         }
         // mensaje del usuario
         else {
+            cell.leftPicture.image = nil
             cell.bubble.backgroundColor = UIColor(named: "Color4")
         }
         
@@ -56,7 +58,7 @@ class ChatViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var chatImage: UIImageView!
     @IBOutlet weak var chatName: UILabel!
-    
+    @IBOutlet weak var messageField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
     var messages: [Message] = []
@@ -65,7 +67,6 @@ class ChatViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // barra superior
         chatImage.image = chat?.pfp
         chatImage.layer.cornerRadius = chatImage.frame.height / 2
@@ -80,12 +81,23 @@ class ChatViewController: UIViewController, UITableViewDataSource {
         loadMessages()
     }
 
+    @IBAction func returnChats(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func sendMessage(_ sender: UIButton) {
+    }
+    
+    
+    
     func loadMessages() {
-        messages = []
         
         let chatDocument = db.collection("chats").document(chat!.chatID)
         
-        chatDocument.getDocument { document, error in
+        chatDocument.addSnapshotListener { document, error in
+            
+            self.messages = []
+            
             if let e = error {
                 print (e)
             }
@@ -102,7 +114,9 @@ class ChatViewController: UIViewController, UITableViewDataSource {
                             )
                         )
                         
-                        self.tableView.reloadData()
+                        DispatchQueue.main.async {
+                            self.tableView.reloadData()
+                        }
                     }
                 }
             }

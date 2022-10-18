@@ -104,7 +104,7 @@ REGRESO</string>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FullLogo" translatesAutoresizingMaskIntoConstraints="NO" id="WvP-Sb-xoD">
-                                <rect key="frame" x="60" y="92" width="294" height="78.5"/>
+                                <rect key="frame" x="60" y="48" width="294" height="78.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="WvP-Sb-xoD" secondAttribute="height" multiplier="15:4" id="nZQ-VR-e4F"/>
                                 </constraints>
@@ -192,7 +192,7 @@ REGRESO</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ButterflyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="19R-aY-pAP">
-                                <rect key="frame" x="334" y="52" width="40" height="40"/>
+                                <rect key="frame" x="334" y="8" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="4cd-P4-e33"/>
                                     <constraint firstAttribute="width" constant="40" id="OVj-U6-0pi"/>
@@ -637,7 +637,7 @@ REGRESO</string>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CQS-y9-oWM">
-                                <rect key="frame" x="0.0" y="120" width="414" height="742"/>
+                                <rect key="frame" x="0.0" y="120" width="414" height="693"/>
                                 <color key="backgroundColor" name="BackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -667,7 +667,7 @@ REGRESO</string>
         <!--Chat View Controller-->
         <scene sceneID="YdC-ys-mwL">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="iNY-ds-zpP" customClass="ChatViewController" customModule="AppiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="iNY-ds-zpP" customClass="ChatViewController" customModule="AppiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cPu-N3-5EM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -685,7 +685,7 @@ REGRESO</string>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system"/>
                                         <connections>
-                                            <segue destination="Iui-AR-ecx" kind="show" customClass="SlideSegueL" customModule="AppiOS" customModuleProvider="target" id="Eln-T5-aBA"/>
+                                            <action selector="returnChats:" destination="iNY-ds-zpP" eventType="touchUpInside" id="FLv-uR-b9i"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MrH-rb-Swa">
@@ -715,7 +715,7 @@ REGRESO</string>
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="og8-y5-0Ls">
-                                <rect key="frame" x="30" y="787" width="354" height="45"/>
+                                <rect key="frame" x="30" y="792" width="304" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="x1G-Ff-h5k"/>
                                 </constraints>
@@ -726,19 +726,33 @@ REGRESO</string>
                                 <rect key="frame" x="0.0" y="125" width="414" height="657"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5Z-en-Dox">
+                                <rect key="frame" x="344" y="794" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="pwD-92-86i"/>
+                                    <constraint firstAttribute="height" constant="40" id="tpP-Lk-Oeg"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="SendIcon"/>
+                                <connections>
+                                    <action selector="sendMessage:" destination="iNY-ds-zpP" eventType="touchUpInside" id="3mi-bx-zmc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BRM-eU-Uhb"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="NhZ-ew-lgh" firstAttribute="leading" secondItem="BRM-eU-Uhb" secondAttribute="leading" id="1cP-Lk-H2F"/>
+                            <constraint firstItem="BRM-eU-Uhb" firstAttribute="trailing" secondItem="A5Z-en-Dox" secondAttribute="trailing" constant="30" id="2vO-0Q-Rm3"/>
                             <constraint firstItem="BRM-eU-Uhb" firstAttribute="trailing" secondItem="NhZ-ew-lgh" secondAttribute="trailing" id="FJF-tJ-XnW"/>
                             <constraint firstItem="evZ-eB-cU7" firstAttribute="top" secondItem="NhZ-ew-lgh" secondAttribute="bottom" constant="5" id="L2n-td-QEc"/>
+                            <constraint firstItem="A5Z-en-Dox" firstAttribute="leading" secondItem="og8-y5-0Ls" secondAttribute="trailing" constant="10" id="Yg9-NB-KbF"/>
                             <constraint firstItem="og8-y5-0Ls" firstAttribute="leading" secondItem="BRM-eU-Uhb" secondAttribute="leading" constant="30" id="ajJ-Rt-9SW"/>
-                            <constraint firstItem="og8-y5-0Ls" firstAttribute="top" secondItem="evZ-eB-cU7" secondAttribute="bottom" constant="5" id="dNh-37-o9p"/>
-                            <constraint firstItem="BRM-eU-Uhb" firstAttribute="trailing" secondItem="og8-y5-0Ls" secondAttribute="trailing" constant="30" id="eA8-j0-C5F"/>
+                            <constraint firstItem="A5Z-en-Dox" firstAttribute="top" secondItem="evZ-eB-cU7" secondAttribute="bottom" constant="12" id="ciK-aV-HsT"/>
+                            <constraint firstItem="og8-y5-0Ls" firstAttribute="top" secondItem="evZ-eB-cU7" secondAttribute="bottom" constant="10" id="dNh-37-o9p"/>
                             <constraint firstItem="NhZ-ew-lgh" firstAttribute="top" secondItem="cPu-N3-5EM" secondAttribute="top" id="fGk-eN-kfx"/>
                             <constraint firstItem="BRM-eU-Uhb" firstAttribute="trailing" secondItem="evZ-eB-cU7" secondAttribute="trailing" id="hfv-qv-75s"/>
-                            <constraint firstItem="BRM-eU-Uhb" firstAttribute="bottom" secondItem="og8-y5-0Ls" secondAttribute="bottom" constant="30" id="lH1-Kp-42Y"/>
+                            <constraint firstItem="BRM-eU-Uhb" firstAttribute="bottom" secondItem="og8-y5-0Ls" secondAttribute="bottom" constant="25" id="lH1-Kp-42Y"/>
                             <constraint firstItem="evZ-eB-cU7" firstAttribute="leading" secondItem="BRM-eU-Uhb" secondAttribute="leading" id="nFp-BZ-BpS"/>
                         </constraints>
                     </view>
@@ -746,12 +760,13 @@ REGRESO</string>
                     <connections>
                         <outlet property="chatImage" destination="MrH-rb-Swa" id="j9x-hi-PIi"/>
                         <outlet property="chatName" destination="zQT-hb-w8r" id="2Md-6h-tlz"/>
+                        <outlet property="messageField" destination="og8-y5-0Ls" id="PG8-ce-LL2"/>
                         <outlet property="tableView" destination="evZ-eB-cU7" id="Ygr-iv-pFg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ecn-la-qH4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1589.8550724637682" y="2638.3928571428569"/>
+            <point key="canvasLocation" x="1589.8550724637682" y="2596.875"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="ryo-xc-Sgz">
@@ -803,26 +818,26 @@ REGRESO</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ButterflyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="dMp-c0-ePZ">
-                                <rect key="frame" x="334" y="52" width="40" height="40"/>
+                                <rect key="frame" x="334" y="8" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="FIn-ft-Hne"/>
                                     <constraint firstAttribute="height" constant="40" id="qSG-rc-B0f"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número de télefono" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbM-Uz-G0C" userLabel="PhoneLabel">
-                                <rect key="frame" x="40" y="152" width="151" height="21"/>
+                                <rect key="frame" x="40" y="108" width="151" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pronombres" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sa-0H-fq6" userLabel="PronounsLabel">
-                                <rect key="frame" x="40" y="247" width="93" height="21"/>
+                                <rect key="frame" x="40" y="203" width="93" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5s7-N1-ayw">
-                                <rect key="frame" x="40" y="178" width="334" height="34"/>
+                                <rect key="frame" x="40" y="134" width="334" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="2U6-pT-wH7"/>
                                 </constraints>
@@ -830,13 +845,13 @@ REGRESO</string>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cumpleaños" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCe-1M-0MN" userLabel="BirthdayLabel">
-                                <rect key="frame" x="40" y="343" width="96" height="21"/>
+                                <rect key="frame" x="40" y="299" width="96" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jgx-49-ee6" customClass="DropDown" customModule="iOSDropDown">
-                                <rect key="frame" x="40" y="273" width="334" height="34"/>
+                                <rect key="frame" x="40" y="229" width="334" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="N4O-lA-9MY"/>
                                 </constraints>
@@ -850,27 +865,27 @@ REGRESO</string>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nh7-NT-Z19">
-                                <rect key="frame" x="40" y="307" width="334" height="1"/>
+                                <rect key="frame" x="40" y="263" width="334" height="1"/>
                                 <color key="backgroundColor" name="Color3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="ywa-71-pnm"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yKm-0m-55h">
-                                <rect key="frame" x="40" y="212" width="334" height="1"/>
+                                <rect key="frame" x="40" y="168" width="334" height="1"/>
                                 <color key="backgroundColor" name="Color3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="q4Z-7g-9rV"/>
                                 </constraints>
                             </view>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="oSd-qZ-Tl8">
-                                <rect key="frame" x="40" y="374" width="334" height="180"/>
+                                <rect key="frame" x="40" y="330" width="334" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="oCt-OZ-IKN"/>
                                 </constraints>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qyr-Fb-qGT">
-                                <rect key="frame" x="329" y="594" width="45" height="45"/>
+                                <rect key="frame" x="329" y="550" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="6rF-yh-OqH"/>
                                     <constraint firstAttribute="height" constant="45" id="T35-mT-e3p"/>
@@ -937,14 +952,14 @@ REGRESO</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ButterflyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Z1a-WQ-3ge">
-                                <rect key="frame" x="334" y="52" width="40" height="40"/>
+                                <rect key="frame" x="334" y="8" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="TCB-E6-Umq"/>
                                     <constraint firstAttribute="width" constant="40" id="iWa-st-n6o"/>
                                 </constraints>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B8x-iG-HP5">
-                                <rect key="frame" x="40" y="107" width="334" height="1233"/>
+                                <rect key="frame" x="40" y="63" width="334" height="1277"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lyj-dW-CAG">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="1300"/>
@@ -1370,7 +1385,7 @@ REGRESO</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ButterflyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="bqx-mf-J49">
-                                <rect key="frame" x="334" y="52" width="40" height="40"/>
+                                <rect key="frame" x="334" y="8" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="BJZ-CP-hXo"/>
                                     <constraint firstAttribute="height" constant="40" id="I2J-uQ-582"/>
@@ -1378,7 +1393,7 @@ REGRESO</string>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tRd-db-pud">
-                                <rect key="frame" x="40" y="137" width="334" height="2"/>
+                                <rect key="frame" x="40" y="93" width="334" height="2"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TERMINOS DE USO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yP-0H-cj2">
                                         <rect key="frame" x="57" y="-14" width="220" height="30"/>
@@ -1397,7 +1412,7 @@ REGRESO</string>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aXi-d4-xPj">
-                                <rect key="frame" x="40" y="169" width="334" height="633"/>
+                                <rect key="frame" x="40" y="125" width="334" height="677"/>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f5R-Vn-95j">
                                 <rect key="frame" x="199.5" y="807" width="15" height="55"/>
@@ -1529,14 +1544,14 @@ REGRESO</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Eln-T5-aBA"/>
         <segue reference="bpa-Dc-RBh"/>
-        <segue reference="0ef-rI-NKT"/>
+        <segue reference="XBE-ga-1gF"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="Color1"/>
     <resources>
         <image name="ButterflyLogo" width="238" height="238"/>
         <image name="FullLogo" width="1665" height="378"/>
+        <image name="SendIcon" width="40" height="40"/>
         <image name="SuccessIcon" width="141" height="140"/>
         <image name="arrow.left" catalog="system" width="128" height="95"/>
         <image name="arrow.right.circle.fill" catalog="system" width="128" height="123"/>

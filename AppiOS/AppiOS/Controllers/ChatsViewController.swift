@@ -29,6 +29,8 @@ class ChatsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.tabBarController?.tabBar.isTranslucent = false
+        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(
