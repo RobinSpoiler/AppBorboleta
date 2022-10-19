@@ -131,6 +131,17 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
             ])
             
             dest.chat = chat
+            
+            self.activeChats?.append([
+                "chatID": "\(currentUser)&&\(selectedUser)",
+                "chatName": cellUser.name,
+                "with": cellUser.id,
+                "lastMessage": [
+                    "message": "Hola",
+                    "sender": currentUser,
+                    "time": "20-10-2022 14:12:32"
+                ]
+            ])
         }
     }
     
