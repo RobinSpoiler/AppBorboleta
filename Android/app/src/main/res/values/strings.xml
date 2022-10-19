@@ -102,5 +102,7 @@ Mi ipsum faucibus vitae aliquet nec ullamcorper. Erat imperdiet sed euismod nisi
     <string name="profileicon"></string>
     <string name="homeicon"></string>
     <string name="chats">Chats</string>
+    <string name="profile">PROFILE</string>
+    <string name="logout">logoutbutton</string>
 
 </resources>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile">
+
+    <TextView
+        android:id="@+id/titulo_profile"
+        android:layout_width="267dp"
+        android:layout_height="42dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/profile"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#002B69"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <ImageButton
+        android:id="@+id/logout_button_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FEFEFE"
+        android:contentDescription="@string/logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.945"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.052"
+        app:srcCompat="@drawable/exit_icon" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_profile_info"
+        android:layout_width="326dp"
+        android:layout_height="540dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/info_divider"
+            android:layout_width="244dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="50dp"
+            app:dividerInsetEnd="1dp"
+            app:dividerInsetStart="1dp"
+            app:dividerColor="@color/black"/> <!--TODO:define-->
+
+        <ImageView
+            android:id="@+id/profile_picture"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="150dp"
+            android:hint="@string/app_name"
+            android:scaleType="centerCrop"
+            />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="26dp"
+            android:minHeight="48dp"
+            android:text="Nombre"
+            android:enabled="false"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/profile_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:minHeight="48dp"
+            android:text="+5223423424234"
+            android:enabled="false"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/profile_account_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:minHeight="48dp"
+            android:text="Psychologist"
+            android:enabled="false"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/profile_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:text="34"
+            android:enabled="false"/>
+
+        <Button
+            android:id="@+id/edit_button_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:backgroundTint="@color/borboleta"
+            android:contentDescription="edit_profile"
+            android:text="Editamesta"
+            android:layout_gravity="center"
+            android:layout_marginTop="300dp"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView_navbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:itemIconTint="@drawable/bottom_nav_colors"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+</androidx.constraintlayout.widget.ConstraintLayout>

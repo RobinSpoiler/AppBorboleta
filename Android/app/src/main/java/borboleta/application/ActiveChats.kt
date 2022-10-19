@@ -46,6 +46,11 @@ class ActiveChats : AppCompatActivity() {
                     startActivity(Intent(this, ActiveChats::class.java))
                     true
                 }
+                R.id.profile_icon -> {
+                    // Respond to navigation item 2 click
+                    startActivity(Intent(this, Profile::class.java))
+                    true
+                }
                 else -> false
             }
         }

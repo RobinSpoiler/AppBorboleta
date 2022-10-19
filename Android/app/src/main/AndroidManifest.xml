@@ -16,11 +16,17 @@
         android:theme="@style/Theme.Borboleta"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".Profile"
+            android:exported="false">
 
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".ActiveChats"
             android:exported="false">
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
