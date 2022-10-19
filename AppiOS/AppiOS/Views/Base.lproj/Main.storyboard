@@ -457,8 +457,53 @@ REGRESO</string>
                     <view key="view" contentMode="scaleToFill" id="LnT-Ag-Arv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INICIO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="711-8k-ddI">
+                                <rect key="frame" x="40" y="88" width="334" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <color key="textColor" name="Color1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCF-HS-bAL">
+                                <rect key="frame" x="40" y="154" width="334" height="221"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aCF-HS-bAL" secondAttribute="height" multiplier="1.51:1" id="KBe-Ii-kZM"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" cornerRadius="20" image="website"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToWebsite:" destination="7fh-eu-usI" eventType="touchUpInside" id="uK1-a9-sOb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJr-65-QGr">
+                                <rect key="frame" x="40" y="405" width="334" height="221.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yJr-65-QGr" secondAttribute="height" multiplier="1.51:1" id="rGU-cD-J7u"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" cornerRadius="20" image="podcast"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goTopPodcast:" destination="7fh-eu-usI" eventType="touchUpInside" id="P1h-Gf-rW3"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Dew-IW-E48"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aCF-HS-bAL" firstAttribute="top" secondItem="711-8k-ddI" secondAttribute="bottom" constant="30" id="0Hr-G0-rM1"/>
+                            <constraint firstItem="Dew-IW-E48" firstAttribute="trailing" secondItem="711-8k-ddI" secondAttribute="trailing" constant="40" id="4Xx-Q6-JD1"/>
+                            <constraint firstItem="yJr-65-QGr" firstAttribute="leading" secondItem="Dew-IW-E48" secondAttribute="leading" constant="40" id="BVm-MP-MsF"/>
+                            <constraint firstItem="yJr-65-QGr" firstAttribute="top" secondItem="aCF-HS-bAL" secondAttribute="bottom" constant="30" id="Doc-IW-XcR"/>
+                            <constraint firstItem="aCF-HS-bAL" firstAttribute="leading" secondItem="Dew-IW-E48" secondAttribute="leading" constant="40" id="Mkt-3n-KTt"/>
+                            <constraint firstItem="Dew-IW-E48" firstAttribute="trailing" secondItem="aCF-HS-bAL" secondAttribute="trailing" constant="40" id="OxC-cO-Jmm"/>
+                            <constraint firstItem="Dew-IW-E48" firstAttribute="trailing" secondItem="yJr-65-QGr" secondAttribute="trailing" constant="40" id="PgJ-XV-kIc"/>
+                            <constraint firstItem="711-8k-ddI" firstAttribute="top" secondItem="Dew-IW-E48" secondAttribute="top" constant="40" id="hSA-Es-0F1"/>
+                            <constraint firstItem="711-8k-ddI" firstAttribute="leading" secondItem="Dew-IW-E48" secondAttribute="leading" constant="40" id="rhm-nR-SDL"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="S2v-lB-o5V"/>
                 </viewController>
@@ -573,7 +618,7 @@ REGRESO</string>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VAMOS A ENCONTRARTE UN MATCH" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WI7-hm-7O9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VAMOS A ENCONTRARTE UN MATCH" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WI7-hm-7O9">
                                 <rect key="frame" x="40" y="88" width="334" height="107.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                 <color key="textColor" name="Color1"/>
@@ -1562,7 +1607,9 @@ REGRESO</string>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="person" catalog="system" width="128" height="121"/>
+        <image name="podcast" width="1741" height="1152"/>
         <image name="square" catalog="system" width="128" height="114"/>
+        <image name="website" width="872" height="578"/>
         <namedColor name="BackgroundColor">
             <color red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
