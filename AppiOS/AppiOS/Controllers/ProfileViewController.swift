@@ -17,7 +17,7 @@ import SDWebImage
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var userLabel: UILabel!
-    @IBOutlet weak var tview: UIView!
+    @IBOutlet weak var pfp: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,26 +26,49 @@ class ProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         let storageRef = Storage.storage().reference()
-        let pfpRef = storageRef.child("profilePics/puser1@gmail.com.png")
+        let pfpRef = storageRef.child("profilePics/\(Auth.auth().currentUser!.email!).png")
         
         // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
         pfpRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
             if let e = error {
+                self.pfp.image = UIImage(named: "defaultPFP")!
                 print(e)
             } else {
-                self.tview.backgroundColor = UIColor(patternImage: UIImage(data: data!)!)
-                let gradient = CAGradientLayer()
-                gradient.frame = self.tview.bounds
-                let startColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0).cgColor
-                let endColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.6).cgColor
-                gradient.colors = [startColor, endColor]
-                self.tview.layer.insertSublayer(gradient, at: 1)
+                self.pfp.image = UIImage(data: data!)
             }
         }
         
+        pfp.layer.cornerRadius = pfp.frame.height / 2
+        
     }
     
-
+    @IBAction func logOut(_ sender: UIButton) {
+        try! Auth.auth().signOut()
+        performSegue(withIdentifier: "toLogin", sender: self)
+    }
+    
+    @IBAction func deleteAccount(_ sender: UIButton) {
+        let alert = UIAlertController(
+            title: "Deseas eliminar tu cuenta?",
+            message: "Esta accion no puede ser revertida",
+            preferredStyle: .alert
+        )
+        
+        let cancel = UIAlertAction(title: "Cancelar", style: .destructive)
+        let delete = UIAlertAction(title: "Continuar", style: .default) { _ in
+            let db = Firestore.firestore()
+            let collection = db.collection("users")
+            let document = collection.document((Auth.auth().currentUser?.email)!)
+            document.delete()
+            (Auth.auth().currentUser!).delete()
+            try! Auth.auth().signOut()
+            self.performSegue(withIdentifier: "toLogin", sender: self)
+        }
+        alert.addAction(cancel)
+        alert.addAction(delete)
+        
+        present(alert, animated: true)
+    }
     /*
     // MARK: - Navigation
 

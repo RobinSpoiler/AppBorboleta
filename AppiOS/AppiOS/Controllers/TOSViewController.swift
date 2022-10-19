@@ -27,14 +27,12 @@ class TOSViewController: UIViewController {
 
     @IBAction func DeclineButton(_ sender: UIButton) {
         // Elimina cuenta del usuario
-        (Auth.auth().currentUser!).delete()
         
         let db = Firestore.firestore()
         let collection = db.collection("users")
         let document = collection.document((Auth.auth().currentUser?.email)!)
-        
-        // Elimina los registros (documento) del usuario
         document.delete()
+        (Auth.auth().currentUser!).delete()
         
         performSegue(withIdentifier: "toLogin", sender: self)
     }
