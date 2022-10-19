@@ -349,6 +349,12 @@ REGRESO</string>
                                     <constraint firstAttribute="height" constant="1" id="HU7-GR-nvu"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREA UNA CUENTA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ay-Gd-LgP">
+                                <rect key="frame" x="40" y="181.5" width="283" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <color key="textColor" name="Color1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="des-xy-VC8"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
@@ -385,6 +391,7 @@ REGRESO</string>
                             <constraint firstItem="eAb-AA-TkQ" firstAttribute="top" secondItem="QkD-XU-T5A" secondAttribute="bottom" id="aYU-7I-Fyx"/>
                             <constraint firstItem="QkD-XU-T5A" firstAttribute="leading" secondItem="des-xy-VC8" secondAttribute="leading" constant="40" id="b1y-21-CRJ"/>
                             <constraint firstItem="des-xy-VC8" firstAttribute="trailing" secondItem="ehm-dR-u2p" secondAttribute="trailing" constant="40" id="c5x-ka-rFx"/>
+                            <constraint firstItem="WdX-gN-0RC" firstAttribute="top" secondItem="5ay-Gd-LgP" secondAttribute="bottom" constant="30" id="cv3-g4-dD8"/>
                             <constraint firstItem="Kd9-Ma-Oab" firstAttribute="centerY" secondItem="Fc8-gr-cIy" secondAttribute="centerY" id="d0s-KN-1Qh"/>
                             <constraint firstItem="des-xy-VC8" firstAttribute="trailing" secondItem="QkD-XU-T5A" secondAttribute="trailing" constant="40" id="eW5-KA-sLg"/>
                             <constraint firstItem="nhd-r3-2Cv" firstAttribute="top" secondItem="8XJ-Ea-w9b" secondAttribute="bottom" id="ehx-xd-bIy"/>
@@ -407,6 +414,7 @@ REGRESO</string>
                             <constraint firstItem="fs5-ZD-hK7" firstAttribute="leading" secondItem="des-xy-VC8" secondAttribute="leading" constant="40" id="vw0-5K-1zn"/>
                             <constraint firstItem="des-xy-VC8" firstAttribute="trailing" secondItem="fs5-ZD-hK7" secondAttribute="trailing" constant="40" id="yW4-GD-i2t"/>
                             <constraint firstItem="65G-cq-2ms" firstAttribute="top" secondItem="gKA-J4-2yZ" secondAttribute="bottom" id="yhm-sJ-fH0"/>
+                            <constraint firstItem="5ay-Gd-LgP" firstAttribute="leading" secondItem="des-xy-VC8" secondAttribute="leading" constant="40" id="yy5-xb-x6u"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" style="editor" id="q3e-UR-4gN"/>
@@ -1670,6 +1678,7 @@ REGRESO</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="heH-Q1-2oW"/>
         <segue reference="tJQ-He-9FN"/>
         <segue reference="bpa-Dc-RBh"/>
         <segue reference="XBE-ga-1gF"/>
