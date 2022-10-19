@@ -63,9 +63,7 @@
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:layout_marginBottom="150dp"
-            android:hint="@string/app_name"
-            android:scaleType="centerCrop"
-            />
+            android:scaleType="centerCrop" />
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/profile_name"
@@ -74,7 +72,8 @@
             android:layout_gravity="center"
             android:layout_marginBottom="26dp"
             android:minHeight="48dp"
-            android:text="Nombre"
+            android:hint="Nombre"
+            android:textAlignment="center"
             android:enabled="false"/>
 
         <com.google.android.material.textfield.TextInputEditText
@@ -84,7 +83,8 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:minHeight="48dp"
-            android:text="+5223423424234"
+            android:hint="+5223423424234"
+            android:textAlignment="center"
             android:enabled="false"/>
 
         <com.google.android.material.textfield.TextInputEditText
@@ -92,9 +92,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="45dp"
             android:minHeight="48dp"
-            android:text="Psychologist"
+            android:textAlignment="center"
             android:enabled="false"/>
 
         <com.google.android.material.textfield.TextInputEditText
@@ -105,7 +105,8 @@
             android:layout_marginTop="80dp"
             android:minWidth="48dp"
             android:minHeight="48dp"
-            android:text="34"
+            android:hint="aaaa-mm-dd"
+            android:textAlignment="center"
             android:enabled="false"/>
 
         <Button
@@ -115,7 +116,7 @@
             android:layout_marginBottom="100dp"
             android:backgroundTint="@color/borboleta"
             android:contentDescription="edit_profile"
-            android:text="Editamesta"
+            android:text="Editar"
             android:layout_gravity="center"
             android:layout_marginTop="300dp"
             />
