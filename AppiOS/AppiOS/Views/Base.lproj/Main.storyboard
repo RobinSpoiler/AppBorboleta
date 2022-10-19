@@ -568,6 +568,7 @@ REGRESO</string>
                                             <outlet property="MatchRateRing" destination="vaR-Z7-0Vl" id="9KM-vG-C0U"/>
                                             <outlet property="nameLabel" destination="YjF-Xu-Rpf" id="rPU-Ah-zbB"/>
                                             <outlet property="percentage" destination="bta-aW-Ztf" id="rIW-Oa-t5t"/>
+                                            <segue destination="iNY-ds-zpP" kind="show" identifier="toChatFromMatches" id="tJQ-He-9FN"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -1544,6 +1545,7 @@ REGRESO</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="tJQ-He-9FN"/>
         <segue reference="bpa-Dc-RBh"/>
         <segue reference="XBE-ga-1gF"/>
     </inferredMetricsTieBreakers>
