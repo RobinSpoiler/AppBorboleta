@@ -10,6 +10,14 @@
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Augillion.otf">
+            <string>Augillion-Regular</string>
+        </array>
+        <array key="MavenPro-Regular.ttf">
+            <string>MavenPro-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -29,67 +37,70 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbo-kZ-CEX" userLabel="WelcomeMsg">
-                                <rect key="frame" x="40" y="248.5" width="344" height="84"/>
+                                <rect key="frame" x="40" y="258.5" width="344" height="70.5"/>
                                 <string key="text">BIENVENIDX DE
 REGRESO</string>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <fontDescription key="fontDescription" name="Augillion-Regular" family="Augillion" pointSize="35"/>
                                 <color key="textColor" name="Color1"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dsD-rm-RP2" userLabel="EmailInput">
-                                <rect key="frame" x="40" y="388.5" width="334" height="34"/>
+                                <rect key="frame" x="40" y="387.5" width="334" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dsD-rm-RP2" secondAttribute="height" multiplier="167:17" id="Od4-N0-Fpf"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vc-7Y-LSA" userLabel="PasswordLabel">
-                                <rect key="frame" x="40" y="457.5" width="88" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="40" y="456.5" width="334" height="23.5"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pKk-Zn-4oQ" userLabel="PasswordInput">
-                                <rect key="frame" x="40" y="483.5" width="334" height="34"/>
+                                <rect key="frame" x="40" y="485" width="334" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="pKk-Zn-4oQ" secondAttribute="height" multiplier="167:17" id="zGp-Bm-P82"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhd-xC-98M">
-                                <rect key="frame" x="80" y="582.5" width="254" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhd-xC-98M">
+                                <rect key="frame" x="80" y="584" width="254" height="34.5"/>
                                 <color key="tintColor" name="Color1"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Inicia sesión"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Inicia sesión"/>
+                                    </attributedString>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="odz-8z-BXh"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSx-Rv-eAB" userLabel="EmailLabel">
-                                <rect key="frame" x="40" y="362.5" width="53" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="40" y="359" width="61" height="23.5"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="20"/>
                                 <color key="textColor" name="Color3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5R0-Ai-hmf" userLabel="EmailErrorLabel">
-                                <rect key="frame" x="40" y="427.5" width="334" height="0.0"/>
+                                <rect key="frame" x="40" y="426.5" width="334" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.7783303802" green="0.17659440139999999" blue="0.13845421599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhv-L7-Opo" userLabel="PasswordErrorLabel">
-                                <rect key="frame" x="40" y="522.5" width="334" height="0.0"/>
+                                <rect key="frame" x="40" y="524" width="334" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.7783303802" green="0.17659440139999999" blue="0.13845421599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6y-1r-9eW">
-                                <rect key="frame" x="328" y="483.5" width="26" height="26"/>
+                                <rect key="frame" x="328" y="485" width="26" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="xmr-WT-qSQ"/>
                                     <constraint firstAttribute="width" constant="26" id="yQg-Vo-m0g"/>
@@ -110,14 +121,14 @@ REGRESO</string>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h5B-pu-4Tu">
-                                <rect key="frame" x="40" y="522.5" width="334" height="1"/>
+                                <rect key="frame" x="40" y="524" width="334" height="1"/>
                                 <color key="backgroundColor" name="Color3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="oD6-FU-k6u"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNd-eR-o2X">
-                                <rect key="frame" x="40" y="427.5" width="334" height="1"/>
+                                <rect key="frame" x="40" y="426.5" width="334" height="1"/>
                                 <color key="backgroundColor" name="Color3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="shX-Nn-ScE"/>
@@ -156,6 +167,7 @@ REGRESO</string>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NNd-eR-o2X" secondAttribute="trailing" constant="40" id="bpt-py-24h"/>
                             <constraint firstItem="mhv-L7-Opo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="dWW-mD-Viz"/>
                             <constraint firstItem="dsD-rm-RP2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="f7h-sG-yM2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Vc-7Y-LSA" secondAttribute="trailing" constant="40" id="gBH-qj-mFe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pKk-Zn-4oQ" secondAttribute="trailing" constant="40" id="h99-O8-FgE"/>
                             <constraint firstItem="pKk-Zn-4oQ" firstAttribute="top" secondItem="4Vc-7Y-LSA" secondAttribute="bottom" constant="5" id="nWh-oA-04k"/>
                             <constraint firstItem="dsD-rm-RP2" firstAttribute="top" secondItem="MSx-Rv-eAB" secondAttribute="bottom" constant="5" id="oft-fc-ZWT"/>
@@ -200,25 +212,25 @@ REGRESO</string>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X26-WO-JLF" userLabel="EmailLabel">
-                                <rect key="frame" x="40" y="342.5" width="53" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="40" y="344" width="334" height="20"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kd9-Ma-Oab" userLabel="PasswordLabel">
-                                <rect key="frame" x="40" y="437.5" width="88" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="40" y="438" width="334" height="20"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirma contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8y7-jY-1Vv" userLabel="ConfirmLabel">
-                                <rect key="frame" x="40" y="532.5" width="160" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="40" y="532" width="334" height="20"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rmV-5X-P3l" userLabel="NameField">
-                                <rect key="frame" x="40" y="273.5" width="334" height="34"/>
+                                <rect key="frame" x="40" y="275" width="334" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="TG6-M8-Mhv"/>
                                 </constraints>
@@ -226,7 +238,7 @@ REGRESO</string>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fs5-ZD-hK7" userLabel="EmailField">
-                                <rect key="frame" x="40" y="368.5" width="334" height="34"/>
+                                <rect key="frame" x="40" y="369" width="334" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="fbJ-z7-eVG"/>
                                 </constraints>
@@ -234,7 +246,7 @@ REGRESO</string>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tp4-B3-44o" userLabel="PasswordField">
-                                <rect key="frame" x="40" y="463.5" width="334" height="34"/>
+                                <rect key="frame" x="40" y="463" width="334" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="s8O-V2-Cqx"/>
@@ -243,7 +255,7 @@ REGRESO</string>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ehm-dR-u2p" userLabel="ConfirmPassword">
-                                <rect key="frame" x="40" y="558.5" width="334" height="34"/>
+                                <rect key="frame" x="40" y="557" width="334" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="8C3-1g-mjB"/>
@@ -252,13 +264,13 @@ REGRESO</string>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WdX-gN-0RC" userLabel="NameLabel">
-                                <rect key="frame" x="40" y="247.5" width="334" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="40" y="250" width="334" height="20"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ux-31-Pqn" userLabel="NextButton">
-                                <rect key="frame" x="319" y="632.5" width="45" height="45"/>
+                                <rect key="frame" x="319" y="631" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="ICx-eG-dUE"/>
                                     <constraint firstAttribute="height" constant="45" id="eW3-cn-30C"/>
@@ -272,7 +284,7 @@ REGRESO</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcV-vF-jla" userLabel="PasswordVisibility">
-                                <rect key="frame" x="328" y="463.5" width="26" height="26"/>
+                                <rect key="frame" x="328" y="463" width="26" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="26" id="OMb-yA-Gxh"/>
                                     <constraint firstAttribute="height" constant="26" id="sqE-ee-exE"/>
@@ -285,7 +297,7 @@ REGRESO</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOZ-e9-qS4">
-                                <rect key="frame" x="328" y="558.5" width="26" height="26"/>
+                                <rect key="frame" x="328" y="557" width="26" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="26" id="Zoi-13-5yb"/>
                                     <constraint firstAttribute="height" constant="26" id="j8W-iM-vCe"/>
@@ -298,57 +310,63 @@ REGRESO</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKA-J4-2yZ" userLabel="NameError">
-                                <rect key="frame" x="40" y="312.5" width="334" height="0.0"/>
+                                <rect key="frame" x="40" y="314" width="334" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.7783303802" green="0.17659440139999999" blue="0.13845421599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDw-hF-Oo4" userLabel="EmailError">
-                                <rect key="frame" x="40" y="407.5" width="334" height="0.0"/>
+                                <rect key="frame" x="40" y="408" width="334" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.7783303802" green="0.17659440139999999" blue="0.13845421599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XJ-Ea-w9b" userLabel="PasswordError">
-                                <rect key="frame" x="40" y="502.5" width="334" height="0.0"/>
+                                <rect key="frame" x="40" y="502" width="334" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.7783303802" green="0.17659440139999999" blue="0.13845421599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QkD-XU-T5A" userLabel="ConfirmError">
-                                <rect key="frame" x="40" y="597.5" width="334" height="0.0"/>
+                                <rect key="frame" x="40" y="596" width="334" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.7783303802" green="0.17659440139999999" blue="0.13845421599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="65G-cq-2ms">
-                                <rect key="frame" x="40" y="312.5" width="334" height="1"/>
+                                <rect key="frame" x="40" y="314" width="334" height="1"/>
                                 <color key="backgroundColor" name="Color3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="daq-4Q-es5"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FUI-yp-Ta4">
-                                <rect key="frame" x="40" y="402.5" width="334" height="1"/>
+                                <rect key="frame" x="40" y="403" width="334" height="1"/>
                                 <color key="backgroundColor" name="Color3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="13g-y6-iTd"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nhd-r3-2Cv">
-                                <rect key="frame" x="40" y="502.5" width="334" height="1"/>
+                                <rect key="frame" x="40" y="502" width="334" height="1"/>
                                 <color key="backgroundColor" name="Color3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="LUO-XV-Cln"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAb-AA-TkQ">
-                                <rect key="frame" x="40" y="597.5" width="334" height="1"/>
+                                <rect key="frame" x="40" y="596" width="334" height="1"/>
                                 <color key="backgroundColor" name="Color3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="HU7-GR-nvu"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREA UNA CUENTA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ay-Gd-LgP">
+                                <rect key="frame" x="40" y="184.5" width="283.5" height="35.5"/>
+                                <fontDescription key="fontDescription" name="Augillion-Regular" family="Augillion" pointSize="35"/>
+                                <color key="textColor" name="Color1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="des-xy-VC8"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
@@ -376,6 +394,7 @@ REGRESO</string>
                             <constraint firstItem="des-xy-VC8" firstAttribute="trailing" secondItem="OOZ-e9-qS4" secondAttribute="trailing" constant="60" id="I82-ac-y8Z"/>
                             <constraint firstItem="8y7-jY-1Vv" firstAttribute="top" secondItem="Tp4-B3-44o" secondAttribute="bottom" constant="35" id="Ib9-RJ-lrt"/>
                             <constraint firstItem="des-xy-VC8" firstAttribute="trailing" secondItem="4ux-31-Pqn" secondAttribute="trailing" constant="50" id="JPB-vF-gLL"/>
+                            <constraint firstItem="des-xy-VC8" firstAttribute="trailing" secondItem="8y7-jY-1Vv" secondAttribute="trailing" constant="40" id="Kya-Qy-aXJ"/>
                             <constraint firstItem="X26-WO-JLF" firstAttribute="top" secondItem="rmV-5X-P3l" secondAttribute="bottom" constant="35" id="LtC-Lu-Gnm"/>
                             <constraint firstItem="eAb-AA-TkQ" firstAttribute="leading" secondItem="des-xy-VC8" secondAttribute="leading" constant="40" id="OzM-De-9t4"/>
                             <constraint firstItem="gKA-J4-2yZ" firstAttribute="leading" secondItem="des-xy-VC8" secondAttribute="leading" constant="40" id="TCq-hg-bLO"/>
@@ -385,6 +404,7 @@ REGRESO</string>
                             <constraint firstItem="eAb-AA-TkQ" firstAttribute="top" secondItem="QkD-XU-T5A" secondAttribute="bottom" id="aYU-7I-Fyx"/>
                             <constraint firstItem="QkD-XU-T5A" firstAttribute="leading" secondItem="des-xy-VC8" secondAttribute="leading" constant="40" id="b1y-21-CRJ"/>
                             <constraint firstItem="des-xy-VC8" firstAttribute="trailing" secondItem="ehm-dR-u2p" secondAttribute="trailing" constant="40" id="c5x-ka-rFx"/>
+                            <constraint firstItem="WdX-gN-0RC" firstAttribute="top" secondItem="5ay-Gd-LgP" secondAttribute="bottom" constant="30" id="cv3-g4-dD8"/>
                             <constraint firstItem="Kd9-Ma-Oab" firstAttribute="centerY" secondItem="Fc8-gr-cIy" secondAttribute="centerY" id="d0s-KN-1Qh"/>
                             <constraint firstItem="des-xy-VC8" firstAttribute="trailing" secondItem="QkD-XU-T5A" secondAttribute="trailing" constant="40" id="eW5-KA-sLg"/>
                             <constraint firstItem="nhd-r3-2Cv" firstAttribute="top" secondItem="8XJ-Ea-w9b" secondAttribute="bottom" id="ehx-xd-bIy"/>
@@ -405,8 +425,11 @@ REGRESO</string>
                             <constraint firstItem="8XJ-Ea-w9b" firstAttribute="top" secondItem="Tp4-B3-44o" secondAttribute="bottom" constant="5" id="uc4-zj-kgs"/>
                             <constraint firstItem="aDw-hF-Oo4" firstAttribute="leading" secondItem="des-xy-VC8" secondAttribute="leading" constant="40" id="vbW-Tp-24G"/>
                             <constraint firstItem="fs5-ZD-hK7" firstAttribute="leading" secondItem="des-xy-VC8" secondAttribute="leading" constant="40" id="vw0-5K-1zn"/>
+                            <constraint firstItem="des-xy-VC8" firstAttribute="trailing" secondItem="X26-WO-JLF" secondAttribute="trailing" constant="40" id="yCP-Iv-pcW"/>
                             <constraint firstItem="des-xy-VC8" firstAttribute="trailing" secondItem="fs5-ZD-hK7" secondAttribute="trailing" constant="40" id="yW4-GD-i2t"/>
                             <constraint firstItem="65G-cq-2ms" firstAttribute="top" secondItem="gKA-J4-2yZ" secondAttribute="bottom" id="yhm-sJ-fH0"/>
+                            <constraint firstItem="5ay-Gd-LgP" firstAttribute="leading" secondItem="des-xy-VC8" secondAttribute="leading" constant="40" id="yy5-xb-x6u"/>
+                            <constraint firstItem="des-xy-VC8" firstAttribute="trailing" secondItem="Kd9-Ma-Oab" secondAttribute="trailing" constant="40" id="zcT-80-tyT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" style="editor" id="q3e-UR-4gN"/>
@@ -457,8 +480,53 @@ REGRESO</string>
                     <view key="view" contentMode="scaleToFill" id="LnT-Ag-Arv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INICIO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="711-8k-ddI">
+                                <rect key="frame" x="40" y="88" width="334" height="35.5"/>
+                                <fontDescription key="fontDescription" name="Augillion-Regular" family="Augillion" pointSize="35"/>
+                                <color key="textColor" name="Color1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCF-HS-bAL">
+                                <rect key="frame" x="40" y="153.5" width="334" height="221"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aCF-HS-bAL" secondAttribute="height" multiplier="1.51:1" id="KBe-Ii-kZM"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" cornerRadius="20" image="website"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToWebsite:" destination="7fh-eu-usI" eventType="touchUpInside" id="uK1-a9-sOb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJr-65-QGr">
+                                <rect key="frame" x="40" y="404.5" width="334" height="221.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yJr-65-QGr" secondAttribute="height" multiplier="1.51:1" id="rGU-cD-J7u"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" cornerRadius="20" image="podcast"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goTopPodcast:" destination="7fh-eu-usI" eventType="touchUpInside" id="P1h-Gf-rW3"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Dew-IW-E48"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aCF-HS-bAL" firstAttribute="top" secondItem="711-8k-ddI" secondAttribute="bottom" constant="30" id="0Hr-G0-rM1"/>
+                            <constraint firstItem="Dew-IW-E48" firstAttribute="trailing" secondItem="711-8k-ddI" secondAttribute="trailing" constant="40" id="4Xx-Q6-JD1"/>
+                            <constraint firstItem="yJr-65-QGr" firstAttribute="leading" secondItem="Dew-IW-E48" secondAttribute="leading" constant="40" id="BVm-MP-MsF"/>
+                            <constraint firstItem="yJr-65-QGr" firstAttribute="top" secondItem="aCF-HS-bAL" secondAttribute="bottom" constant="30" id="Doc-IW-XcR"/>
+                            <constraint firstItem="aCF-HS-bAL" firstAttribute="leading" secondItem="Dew-IW-E48" secondAttribute="leading" constant="40" id="Mkt-3n-KTt"/>
+                            <constraint firstItem="Dew-IW-E48" firstAttribute="trailing" secondItem="aCF-HS-bAL" secondAttribute="trailing" constant="40" id="OxC-cO-Jmm"/>
+                            <constraint firstItem="Dew-IW-E48" firstAttribute="trailing" secondItem="yJr-65-QGr" secondAttribute="trailing" constant="40" id="PgJ-XV-kIc"/>
+                            <constraint firstItem="711-8k-ddI" firstAttribute="top" secondItem="Dew-IW-E48" secondAttribute="top" constant="40" id="hSA-Es-0F1"/>
+                            <constraint firstItem="711-8k-ddI" firstAttribute="leading" secondItem="Dew-IW-E48" secondAttribute="leading" constant="40" id="rhm-nR-SDL"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="S2v-lB-o5V"/>
                 </viewController>
@@ -568,13 +636,14 @@ REGRESO</string>
                                             <outlet property="MatchRateRing" destination="vaR-Z7-0Vl" id="9KM-vG-C0U"/>
                                             <outlet property="nameLabel" destination="YjF-Xu-Rpf" id="rPU-Ah-zbB"/>
                                             <outlet property="percentage" destination="bta-aW-Ztf" id="rIW-Oa-t5t"/>
+                                            <segue destination="iNY-ds-zpP" kind="show" identifier="toChatFromMatches" id="tJQ-He-9FN"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VAMOS A ENCONTRARTE UN MATCH" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WI7-hm-7O9">
-                                <rect key="frame" x="40" y="88" width="334" height="107.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VAMOS A ENCONTRARTE UN MATCH" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WI7-hm-7O9">
+                                <rect key="frame" x="40" y="88" width="334" height="105.5"/>
+                                <fontDescription key="fontDescription" name="Augillion-Regular" family="Augillion" pointSize="35"/>
                                 <color key="textColor" name="Color1"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -622,8 +691,8 @@ REGRESO</string>
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chats" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPv-2j-m2D">
-                                        <rect key="frame" x="15" y="69" width="87" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                        <rect key="frame" x="15" y="69.5" width="83.5" height="35.5"/>
+                                        <fontDescription key="fontDescription" name="Augillion-Regular" family="Augillion" pointSize="35"/>
                                         <color key="textColor" name="Color1"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -776,33 +845,154 @@ REGRESO</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37G-xG-PO3">
-                                <rect key="frame" x="20" y="428" width="374" height="40"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cbj-Lf-TPX">
+                                <rect key="frame" x="40" y="163.5" width="334" height="609.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hV1-xm-qeG">
+                                        <rect key="frame" x="127" y="25" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="Sjq-ge-2FQ"/>
+                                            <constraint firstAttribute="height" constant="80" id="gWb-o2-FVF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eEI-OX-f4H">
+                                        <rect key="frame" x="30" y="208" width="274" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="g6b-La-wCW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icM-9T-klf">
+                                        <rect key="frame" x="30" y="159" width="274" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18" id="YfB-FX-KVb"/>
+                                            <constraint firstAttribute="height" constant="18" id="vns-PD-5jc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTa-B2-E9Z">
+                                        <rect key="frame" x="30" y="336" width="274" height="35"/>
+                                        <color key="backgroundColor" name="Color1"/>
+                                        <color key="tintColor" name="BackgroundColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Editar informacion"/>
+                                        <connections>
+                                            <action selector="editProfileInfo:" destination="nSr-DC-nk0" eventType="touchUpInside" id="Yhu-pu-Abg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKz-Lu-s04">
+                                        <rect key="frame" x="30" y="391" width="274" height="35"/>
+                                        <color key="backgroundColor" name="Color1"/>
+                                        <color key="tintColor" name="BackgroundColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Eliminar cuenta"/>
+                                        <connections>
+                                            <action selector="deleteAccount:" destination="nSr-DC-nk0" eventType="touchUpInside" id="oYc-cn-q9r"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J2y-Rg-YGQ">
+                                        <rect key="frame" x="30" y="120" width="274" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="JJ6-sU-406"/>
+                                            <constraint firstAttribute="height" constant="34" id="K1T-78-uWP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1PJ-2p-eEc">
+                                        <rect key="frame" x="30" y="187" width="274" height="1"/>
+                                        <color key="backgroundColor" name="Color3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="NSH-oJ-MTl"/>
+                                        </constraints>
+                                    </view>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cz1-5q-MMg" customClass="DropDown" customModule="iOSDropDown">
+                                        <rect key="frame" x="30" y="252" width="274" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="zXz-8J-c4A"/>
+                                    <constraint firstItem="zKz-Lu-s04" firstAttribute="leading" secondItem="Cbj-Lf-TPX" secondAttribute="leading" constant="30" id="0fo-33-nBn"/>
+                                    <constraint firstItem="gTa-B2-E9Z" firstAttribute="leading" secondItem="Cbj-Lf-TPX" secondAttribute="leading" constant="30" id="1Wo-4J-4vt"/>
+                                    <constraint firstItem="cz1-5q-MMg" firstAttribute="top" secondItem="eEI-OX-f4H" secondAttribute="bottom" constant="10" id="4US-iC-kAZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="zKz-Lu-s04" secondAttribute="trailing" constant="30" id="5KB-pG-72c"/>
+                                    <constraint firstItem="hV1-xm-qeG" firstAttribute="top" secondItem="Cbj-Lf-TPX" secondAttribute="top" constant="25" id="62z-zT-oay"/>
+                                    <constraint firstItem="1PJ-2p-eEc" firstAttribute="top" secondItem="icM-9T-klf" secondAttribute="bottom" constant="10" id="8Vn-EC-ClA"/>
+                                    <constraint firstItem="J2y-Rg-YGQ" firstAttribute="top" secondItem="hV1-xm-qeG" secondAttribute="bottom" constant="15" id="BmY-Kv-buN"/>
+                                    <constraint firstItem="gTa-B2-E9Z" firstAttribute="top" secondItem="cz1-5q-MMg" secondAttribute="bottom" constant="50" id="GLP-NM-d4V"/>
+                                    <constraint firstAttribute="trailing" secondItem="eEI-OX-f4H" secondAttribute="trailing" constant="30" id="Gbb-bl-z0o"/>
+                                    <constraint firstItem="eEI-OX-f4H" firstAttribute="top" secondItem="1PJ-2p-eEc" secondAttribute="bottom" constant="20" id="JrP-Al-dLk"/>
+                                    <constraint firstItem="hV1-xm-qeG" firstAttribute="centerX" secondItem="Cbj-Lf-TPX" secondAttribute="centerX" id="Lhu-4O-g1P"/>
+                                    <constraint firstItem="zKz-Lu-s04" firstAttribute="leading" secondItem="Cbj-Lf-TPX" secondAttribute="leading" constant="30" id="NJ4-TK-Xo0"/>
+                                    <constraint firstItem="eEI-OX-f4H" firstAttribute="leading" secondItem="Cbj-Lf-TPX" secondAttribute="leading" constant="30" id="NrF-iR-5Dg"/>
+                                    <constraint firstAttribute="trailing" secondItem="gTa-B2-E9Z" secondAttribute="trailing" constant="30" id="OUK-rd-hzu"/>
+                                    <constraint firstAttribute="trailing" secondItem="icM-9T-klf" secondAttribute="trailing" constant="30" id="P7N-5p-5ju"/>
+                                    <constraint firstAttribute="trailing" secondItem="zKz-Lu-s04" secondAttribute="trailing" constant="30" id="Q1v-7a-0Ox"/>
+                                    <constraint firstItem="icM-9T-klf" firstAttribute="top" secondItem="J2y-Rg-YGQ" secondAttribute="bottom" constant="5" id="QrC-GA-XHP"/>
+                                    <constraint firstItem="cz1-5q-MMg" firstAttribute="leading" secondItem="Cbj-Lf-TPX" secondAttribute="leading" constant="30" id="TRA-mo-Cta"/>
+                                    <constraint firstItem="1PJ-2p-eEc" firstAttribute="leading" secondItem="Cbj-Lf-TPX" secondAttribute="leading" constant="30" id="Uqp-Vu-bOp"/>
+                                    <constraint firstAttribute="trailing" secondItem="cz1-5q-MMg" secondAttribute="trailing" constant="30" id="VVw-Z4-mqp"/>
+                                    <constraint firstAttribute="trailing" secondItem="icM-9T-klf" secondAttribute="trailing" constant="30" id="Xte-3i-Kb3"/>
+                                    <constraint firstItem="icM-9T-klf" firstAttribute="leading" secondItem="Cbj-Lf-TPX" secondAttribute="leading" constant="30" id="Ybc-Hg-8SB"/>
+                                    <constraint firstItem="icM-9T-klf" firstAttribute="leading" secondItem="Cbj-Lf-TPX" secondAttribute="leading" constant="30" id="Z59-QZ-Jwg"/>
+                                    <constraint firstItem="zKz-Lu-s04" firstAttribute="top" secondItem="gTa-B2-E9Z" secondAttribute="bottom" constant="20" id="euL-91-04s"/>
+                                    <constraint firstItem="gTa-B2-E9Z" firstAttribute="leading" secondItem="Cbj-Lf-TPX" secondAttribute="leading" constant="30" id="kQt-o3-e08"/>
+                                    <constraint firstAttribute="trailing" secondItem="gTa-B2-E9Z" secondAttribute="trailing" constant="30" id="ptm-UE-yoi"/>
+                                    <constraint firstItem="J2y-Rg-YGQ" firstAttribute="leading" secondItem="Cbj-Lf-TPX" secondAttribute="leading" constant="30" id="u5z-m3-gE1"/>
+                                    <constraint firstAttribute="trailing" secondItem="1PJ-2p-eEc" secondAttribute="trailing" constant="30" id="wRY-Aw-ovX"/>
+                                    <constraint firstAttribute="trailing" secondItem="J2y-Rg-YGQ" secondAttribute="trailing" constant="30" id="xXb-RW-7gF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PERFIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axh-Wi-4zj">
+                                <rect key="frame" x="40" y="88" width="334" height="35.5"/>
+                                <fontDescription key="fontDescription" name="Augillion-Regular" family="Augillion" pointSize="35"/>
+                                <color key="textColor" name="Color1"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="atx-vz-33g">
-                                <rect key="frame" x="43" y="121" width="329" height="282"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUu-F0-acQ">
+                                <rect key="frame" x="336" y="88" width="38" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="Eym-v7-rya"/>
+                                    <constraint firstAttribute="height" constant="35" id="eM5-ag-Qds"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="logout"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="logOut:" destination="nSr-DC-nk0" eventType="touchUpInside" id="l1B-hE-Jkx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5vu-DT-noi"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="37G-xG-PO3" firstAttribute="centerY" secondItem="KJm-s9-B3T" secondAttribute="centerY" id="DK0-bu-KfN"/>
-                            <constraint firstItem="37G-xG-PO3" firstAttribute="leading" secondItem="5vu-DT-noi" secondAttribute="leading" constant="20" id="dKG-jt-JiM"/>
-                            <constraint firstItem="5vu-DT-noi" firstAttribute="trailing" secondItem="37G-xG-PO3" secondAttribute="trailing" constant="20" id="dhk-CS-JHF"/>
+                            <constraint firstItem="5vu-DT-noi" firstAttribute="bottom" secondItem="Cbj-Lf-TPX" secondAttribute="bottom" constant="40" id="0Ln-41-mVu"/>
+                            <constraint firstItem="5vu-DT-noi" firstAttribute="trailing" secondItem="UUu-F0-acQ" secondAttribute="trailing" constant="40" id="3Re-k3-jio"/>
+                            <constraint firstItem="axh-Wi-4zj" firstAttribute="leading" secondItem="5vu-DT-noi" secondAttribute="leading" constant="40" id="A1i-eO-2KH"/>
+                            <constraint firstItem="5vu-DT-noi" firstAttribute="trailing" secondItem="axh-Wi-4zj" secondAttribute="trailing" constant="40" id="Bbw-EO-EIh"/>
+                            <constraint firstItem="Cbj-Lf-TPX" firstAttribute="leading" secondItem="5vu-DT-noi" secondAttribute="leading" constant="40" id="MaG-DB-XQR"/>
+                            <constraint firstItem="axh-Wi-4zj" firstAttribute="top" secondItem="5vu-DT-noi" secondAttribute="top" constant="40" id="SmL-Me-o4p"/>
+                            <constraint firstItem="5vu-DT-noi" firstAttribute="trailing" secondItem="Cbj-Lf-TPX" secondAttribute="trailing" constant="40" id="TFh-kk-Ino"/>
+                            <constraint firstItem="Cbj-Lf-TPX" firstAttribute="top" secondItem="axh-Wi-4zj" secondAttribute="bottom" constant="40" id="h37-Gp-JMS"/>
+                            <constraint firstItem="UUu-F0-acQ" firstAttribute="top" secondItem="5vu-DT-noi" secondAttribute="top" constant="40" id="kg1-dF-QU5"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" image="person" catalog="system" id="BYN-1T-TnA"/>
                     <connections>
-                        <outlet property="tview" destination="atx-vz-33g" id="kI6-j5-ju9"/>
-                        <outlet property="userLabel" destination="37G-xG-PO3" id="ePY-V7-ck9"/>
+                        <outlet property="accType" destination="icM-9T-klf" id="Qpv-Ln-gXm"/>
+                        <outlet property="deleteAcc" destination="zKz-Lu-s04" id="ysD-vn-1ZH"/>
+                        <outlet property="editInfo" destination="gTa-B2-E9Z" id="NgO-WV-c0m"/>
+                        <outlet property="nameField" destination="J2y-Rg-YGQ" id="3Ab-2Y-Wud"/>
+                        <outlet property="pfp" destination="hV1-xm-qeG" id="hgf-qy-QtD"/>
+                        <outlet property="phoneNumber" destination="eEI-OX-f4H" id="bmA-Bm-daG"/>
+                        <outlet property="pronounsDD" destination="cz1-5q-MMg" id="am0-5U-pP8"/>
+                        <segue destination="AcT-yR-Vbc" kind="show" identifier="toLogin" id="ZDe-rv-fri"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gRJ-zw-Org" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -825,19 +1015,19 @@ REGRESO</string>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número de télefono" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbM-Uz-G0C" userLabel="PhoneLabel">
-                                <rect key="frame" x="40" y="108" width="151" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="40" y="108" width="154.5" height="20"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pronombres" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sa-0H-fq6" userLabel="PronounsLabel">
-                                <rect key="frame" x="40" y="203" width="93" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="40" y="202" width="93" height="20"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5s7-N1-ayw">
-                                <rect key="frame" x="40" y="134" width="334" height="34"/>
+                                <rect key="frame" x="40" y="133" width="334" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="2U6-pT-wH7"/>
                                 </constraints>
@@ -845,13 +1035,13 @@ REGRESO</string>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cumpleaños" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCe-1M-0MN" userLabel="BirthdayLabel">
-                                <rect key="frame" x="40" y="299" width="96" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="40" y="297" width="95" height="20"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jgx-49-ee6" customClass="DropDown" customModule="iOSDropDown">
-                                <rect key="frame" x="40" y="229" width="334" height="34"/>
+                                <rect key="frame" x="40" y="227" width="334" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="N4O-lA-9MY"/>
                                 </constraints>
@@ -865,27 +1055,27 @@ REGRESO</string>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nh7-NT-Z19">
-                                <rect key="frame" x="40" y="263" width="334" height="1"/>
+                                <rect key="frame" x="40" y="261" width="334" height="1"/>
                                 <color key="backgroundColor" name="Color3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="ywa-71-pnm"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yKm-0m-55h">
-                                <rect key="frame" x="40" y="168" width="334" height="1"/>
+                                <rect key="frame" x="40" y="167" width="334" height="1"/>
                                 <color key="backgroundColor" name="Color3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="q4Z-7g-9rV"/>
                                 </constraints>
                             </view>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="oSd-qZ-Tl8">
-                                <rect key="frame" x="40" y="330" width="334" height="180"/>
+                                <rect key="frame" x="40" y="327" width="334" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="oCt-OZ-IKN"/>
                                 </constraints>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qyr-Fb-qGT">
-                                <rect key="frame" x="329" y="550" width="45" height="45"/>
+                                <rect key="frame" x="329" y="547" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="6rF-yh-OqH"/>
                                     <constraint firstAttribute="height" constant="45" id="T35-mT-e3p"/>
@@ -965,47 +1155,63 @@ REGRESO</string>
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="1300"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="pWd-Uv-gqS">
-                                                <rect key="frame" x="0.0" y="0.0" width="344" height="1315.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="344" height="1310.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="4sN-GY-tiW">
-                                                        <rect key="frame" x="0.0" y="0.0" width="237" height="158.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="240.5" height="158"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaV-cI-EnG">
-                                                                <rect key="frame" x="0.0" y="0.0" width="237" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="240.5" height="20"/>
                                                                 <string key="text">1. ¿Qué tipo de terapia buscas?
 </string>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbq-Ot-ZLU">
-                                                                <rect key="frame" x="0.0" y="20.5" width="210.5" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="20" width="210.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Cognitivo conductual"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system">
+                                                                    <attributedString key="attributedTitle">
+                                                                        <fragment content="Cognitivo conductual"/>
+                                                                    </attributedString>
+                                                                </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="Q1OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="AT7-ZE-h30"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nU-GZ-WPW">
-                                                                <rect key="frame" x="0.0" y="55" width="146" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="54.5" width="146" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Psicoanálisis"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system">
+                                                                    <attributedString key="attributedTitle">
+                                                                        <fragment content="Psicoanálisis"/>
+                                                                    </attributedString>
+                                                                </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="Q1OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="o2o-MC-4aN"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xt-Gg-T6y">
-                                                                <rect key="frame" x="0.0" y="89.5" width="123" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="89" width="123" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Sistémica"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system">
+                                                                    <attributedString key="attributedTitle">
+                                                                        <fragment content="Sistémica"/>
+                                                                    </attributedString>
+                                                                </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="Q1OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="RRW-gG-2O3"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9l-KJ-hgb">
-                                                                <rect key="frame" x="0.0" y="124" width="130.5" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="123.5" width="130.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Humanista"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system">
+                                                                    <attributedString key="attributedTitle">
+                                                                        <fragment content="Humanista"/>
+                                                                    </attributedString>
+                                                                </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="Q1OptionSelected:" destination="xLP-wC-Xvg" eventType="touchUpInside" id="wLo-rF-wf0"/>
                                                                 </connections>
@@ -1013,19 +1219,19 @@ REGRESO</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Fcs-ED-DT6">
-                                                        <rect key="frame" x="0.0" y="176.5" width="274" height="110"/>
+                                                        <rect key="frame" x="0.0" y="176" width="278.5" height="109"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9w-ET-FHv">
-                                                                <rect key="frame" x="0.0" y="0.0" width="274" height="41"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="278.5" height="40"/>
                                                                 <string key="text">2. ¿Con qué tipo de personalidad te 
      identificas más?
 </string>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7th-bT-XvS">
-                                                                <rect key="frame" x="0.0" y="41" width="210.5" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="40" width="210.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Cognitivo conductual"/>
                                                                 <connections>
@@ -1033,7 +1239,7 @@ REGRESO</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0i-tm-Fd3">
-                                                                <rect key="frame" x="0.0" y="75.5" width="146" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="74.5" width="146" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Psicoanálisis"/>
                                                                 <connections>
@@ -1043,19 +1249,19 @@ REGRESO</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="pxR-4d-jS1">
-                                                        <rect key="frame" x="0.0" y="304.5" width="344" height="213.5"/>
+                                                        <rect key="frame" x="0.0" y="303" width="344" height="212.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FID-HI-Ucl">
-                                                                <rect key="frame" x="0.0" y="0.0" width="294.5" height="41"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="300.5" height="40"/>
                                                                 <string key="text">3. ¿Cuáles son tus expectativas de ir a 
     terapia?
 </string>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yub-kt-XpX">
-                                                                <rect key="frame" x="0.0" y="41" width="185.5" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="40" width="185.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Conocerme mejor"/>
                                                                 <connections>
@@ -1063,7 +1269,7 @@ REGRESO</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3o-WG-iki">
-                                                                <rect key="frame" x="0.0" y="75.5" width="344" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="74.5" width="344" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Buscar soluciones a mis problemáticas"/>
                                                                 <connections>
@@ -1071,7 +1277,7 @@ REGRESO</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ps0-02-lj7">
-                                                                <rect key="frame" x="0.0" y="110" width="317" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="109" width="317" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Aprender a manejar mis emociones"/>
                                                                 <connections>
@@ -1079,7 +1285,7 @@ REGRESO</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8LL-gd-g1T">
-                                                                <rect key="frame" x="0.0" y="144.5" width="306.5" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="143.5" width="306.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Entender la raíz de mis problemas"/>
                                                                 <connections>
@@ -1087,7 +1293,7 @@ REGRESO</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ok6-xA-BRq">
-                                                                <rect key="frame" x="0.0" y="179" width="275.5" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="178" width="275.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Definir qué hacer en mi futuro"/>
                                                                 <connections>
@@ -1097,18 +1303,18 @@ REGRESO</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ndW-UL-YYR">
-                                                        <rect key="frame" x="0.0" y="536" width="296.5" height="213.5"/>
+                                                        <rect key="frame" x="0.0" y="533.5" width="299.5" height="212.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8q-yR-24H">
-                                                                <rect key="frame" x="0.0" y="0.0" width="296.5" height="41"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="299.5" height="40"/>
                                                                 <string key="text">4. ¿Cuál es tu presupuesto esperado a 
      pagar por sesión?</string>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wl-R1-gXb">
-                                                                <rect key="frame" x="0.0" y="41" width="160" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="40" width="160" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="$300 o menos"/>
                                                                 <connections>
@@ -1116,7 +1322,7 @@ REGRESO</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZ3-zH-5fj">
-                                                                <rect key="frame" x="0.0" y="75.5" width="138.5" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="74.5" width="138.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="$300 a 500"/>
                                                                 <connections>
@@ -1124,7 +1330,7 @@ REGRESO</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LD-bB-VTN">
-                                                                <rect key="frame" x="0.0" y="110" width="137.5" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="109" width="137.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="$500 a 700"/>
                                                                 <connections>
@@ -1132,7 +1338,7 @@ REGRESO</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o54-RQ-urk">
-                                                                <rect key="frame" x="0.0" y="144.5" width="148.5" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="143.5" width="148.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="$700 a 1,000"/>
                                                                 <connections>
@@ -1140,7 +1346,7 @@ REGRESO</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HwO-3x-k9b">
-                                                                <rect key="frame" x="0.0" y="179" width="161" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="178" width="161" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="$1,000 a 1,300"/>
                                                                 <connections>
@@ -1150,21 +1356,21 @@ REGRESO</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Xbl-Sh-jSY">
-                                                        <rect key="frame" x="0.0" y="767.5" width="331.5" height="337"/>
+                                                        <rect key="frame" x="0.0" y="764" width="335.5" height="336"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0BZ-W1-y66">
-                                                                <rect key="frame" x="0.0" y="0.0" width="331.5" height="61"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="335.5" height="60"/>
                                                                 <string key="text">5. ¿Cuáles son los principales temas que te 
     gustaría tratar en terapia? (selecciona 
     todas las opciones que aplican)
 
 </string>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVi-iD-I6I">
-                                                                <rect key="frame" x="0.0" y="61" width="96.5" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="60" width="96.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Estrés"/>
                                                                 <connections>
@@ -1172,7 +1378,7 @@ REGRESO</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Yx-W3-BE8">
-                                                                <rect key="frame" x="0.0" y="95.5" width="120" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="94.5" width="120" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Ansiedad"/>
                                                                 <connections>
@@ -1180,7 +1386,7 @@ REGRESO</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARs-pL-aeL">
-                                                                <rect key="frame" x="0.0" y="130" width="127" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="129" width="127" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Depresión"/>
                                                                 <connections>
@@ -1188,7 +1394,7 @@ REGRESO</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Og-8i-4JR">
-                                                                <rect key="frame" x="0.0" y="164.5" width="207" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="163.5" width="207" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Problemas familiares"/>
                                                                 <connections>
@@ -1196,7 +1402,7 @@ REGRESO</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qx5-LI-bKf">
-                                                                <rect key="frame" x="0.0" y="199" width="206" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="198" width="206" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Relaciones de pareja"/>
                                                                 <connections>
@@ -1204,7 +1410,7 @@ REGRESO</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FpZ-dK-CVw">
-                                                                <rect key="frame" x="0.0" y="233.5" width="242.5" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="232.5" width="242.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Relaciones empresariales"/>
                                                                 <connections>
@@ -1212,7 +1418,7 @@ REGRESO</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWv-4p-X4n">
-                                                                <rect key="frame" x="0.0" y="268" width="318" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="267" width="318" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Trastornos de conducta alimentaria"/>
                                                                 <connections>
@@ -1220,7 +1426,7 @@ REGRESO</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1Q-BK-5DL">
-                                                                <rect key="frame" x="0.0" y="302.5" width="324" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="301.5" width="324" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Orientación profesional y vocacional"/>
                                                                 <connections>
@@ -1230,18 +1436,18 @@ REGRESO</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Lms-s2-YDo">
-                                                        <rect key="frame" x="0.0" y="1122.5" width="242.5" height="193"/>
+                                                        <rect key="frame" x="0.0" y="1118" width="242.5" height="192.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laQ-cz-C8j">
-                                                                <rect key="frame" x="0.0" y="0.0" width="210" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="214.5" height="20"/>
                                                                 <string key="text">6. ¿Cómo te definirías más?
 </string>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8z-La-Tcf">
-                                                                <rect key="frame" x="0.0" y="20.5" width="129.5" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="20" width="129.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Estudiante"/>
                                                                 <connections>
@@ -1249,7 +1455,7 @@ REGRESO</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5iA-zb-1Xr">
-                                                                <rect key="frame" x="0.0" y="55" width="94.5" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="54.5" width="94.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Godín"/>
                                                                 <connections>
@@ -1257,7 +1463,7 @@ REGRESO</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hm-nA-3bk">
-                                                                <rect key="frame" x="0.0" y="89.5" width="153" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="89" width="153" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Emprendedor"/>
                                                                 <connections>
@@ -1265,7 +1471,7 @@ REGRESO</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eU-BU-hrR">
-                                                                <rect key="frame" x="0.0" y="124" width="186.5" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="123.5" width="186.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Intraemprendedor"/>
                                                                 <connections>
@@ -1273,7 +1479,7 @@ REGRESO</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oul-bf-azK">
-                                                                <rect key="frame" x="0.0" y="158.5" width="242.5" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="158" width="242.5" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Emprendedor de impacto"/>
                                                                 <connections>
@@ -1396,9 +1602,9 @@ REGRESO</string>
                                 <rect key="frame" x="40" y="93" width="334" height="2"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TERMINOS DE USO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yP-0H-cj2">
-                                        <rect key="frame" x="57" y="-14" width="220" height="30"/>
+                                        <rect key="frame" x="47.5" y="-14" width="239.5" height="30"/>
                                         <color key="backgroundColor" name="BackgroundColor"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Augillion-Regular" family="Augillion" pointSize="30"/>
                                         <color key="textColor" name="Color1"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1413,6 +1619,42 @@ REGRESO</string>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aXi-d4-xPj">
                                 <rect key="frame" x="40" y="125" width="334" height="677"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="miL-of-qz0">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="1500"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWe-MT-h9E">
+                                                <rect key="frame" x="8" y="0.0" width="318" height="327"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="327" id="Rem-0F-Zgy"/>
+                                                </constraints>
+                                                <string key="text">It is a dark time for the Rebellion. Although the Death Star has been destroyed, Imperial troops have driven the Rebel forces from their hidden base and pursued them across the galaxy.
+
+Evading the dreaded Imperial Starfleet, a group of freedom fighters led by Luke Skywalker has established a new secret base on the remote ice world of Hoth.
+
+The evil lord Darth Vader, obsessed with finding young Skywalker, has dispatched thousands of remote probes into the far reaches of space….</string>
+                                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="DWe-MT-h9E" firstAttribute="top" secondItem="miL-of-qz0" secondAttribute="top" id="5SZ-Fd-E4R"/>
+                                            <constraint firstAttribute="height" constant="1500" id="MLP-d6-zdt"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DWe-MT-h9E" secondAttribute="trailing" constant="8" id="Wgk-6w-Bk0"/>
+                                            <constraint firstItem="DWe-MT-h9E" firstAttribute="leading" secondItem="miL-of-qz0" secondAttribute="leadingMargin" id="o8s-tS-Tpc"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="miL-of-qz0" secondAttribute="trailing" id="FZE-tR-23v"/>
+                                    <constraint firstItem="miL-of-qz0" firstAttribute="width" secondItem="aXi-d4-xPj" secondAttribute="width" multiplier="0.718563" constant="94" id="HyA-0t-MyV"/>
+                                    <constraint firstItem="miL-of-qz0" firstAttribute="top" secondItem="aXi-d4-xPj" secondAttribute="top" id="RIt-VH-4iB"/>
+                                    <constraint firstItem="miL-of-qz0" firstAttribute="leading" secondItem="aXi-d4-xPj" secondAttribute="leading" id="cdG-rR-O7C"/>
+                                    <constraint firstAttribute="trailing" secondItem="miL-of-qz0" secondAttribute="trailing" id="hZr-Vg-aVp"/>
+                                    <constraint firstAttribute="bottom" secondItem="miL-of-qz0" secondAttribute="bottom" constant="-823" id="oQn-hk-GBz"/>
+                                </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f5R-Vn-95j">
                                 <rect key="frame" x="199.5" y="807" width="15" height="55"/>
@@ -1527,8 +1769,9 @@ REGRESO</string>
         <!--Navigation Controller-->
         <scene sceneID="l59-zC-VIG">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AcT-yR-Vbc" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="AcT-yR-Vbc" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="rEQ-eM-Rac"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AvC-iC-8Fz">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1544,6 +1787,7 @@ REGRESO</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="q54-qk-tza"/>
         <segue reference="bpa-Dc-RBh"/>
         <segue reference="XBE-ga-1gF"/>
     </inferredMetricsTieBreakers>
@@ -1559,8 +1803,11 @@ REGRESO</string>
         <image name="eye" catalog="system" width="128" height="79"/>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="house" catalog="system" width="128" height="104"/>
+        <image name="logout" width="512" height="512"/>
         <image name="person" catalog="system" width="128" height="121"/>
+        <image name="podcast" width="1741" height="1152"/>
         <image name="square" catalog="system" width="128" height="114"/>
+        <image name="website" width="872" height="578"/>
         <namedColor name="BackgroundColor">
             <color red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

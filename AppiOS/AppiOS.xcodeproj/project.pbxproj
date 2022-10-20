@@ -80,6 +80,8 @@
 		9DE9FC2328E2011900531B46 /* iOSDropDown in Frameworks */ = {isa = PBXBuildFile; productRef = 9DE9FC2228E2011900531B46 /* iOSDropDown */; };
 		9DF4483528EB7A2C0051ED92 /* Checkboxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF4483428EB7A2C0051ED92 /* Checkboxes.swift */; };
 		9DF4483728EBD96C0051ED92 /* TOSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF4483628EBD96C0051ED92 /* TOSViewController.swift */; };
+		9DFC4D162900BF9600483288 /* Augillion.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9DFC4D152900BF9500483288 /* Augillion.otf */; };
+		9DFC4D182900BFB800483288 /* MavenPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DFC4D172900BFB800483288 /* MavenPro-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +139,8 @@
 		9DCDB37228EA108C00FC4091 /* OptionSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSelected.swift; sourceTree = "<group>"; };
 		9DF4483428EB7A2C0051ED92 /* Checkboxes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkboxes.swift; sourceTree = "<group>"; };
 		9DF4483628EBD96C0051ED92 /* TOSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOSViewController.swift; sourceTree = "<group>"; };
+		9DFC4D152900BF9500483288 /* Augillion.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Augillion.otf; path = ../../../../../Downloads/Augillion.otf; sourceTree = "<group>"; };
+		9DFC4D172900BFB800483288 /* MavenPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MavenPro-Regular.ttf"; path = "../../../../../Downloads/MavenPro-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +283,8 @@
 			isa = PBXGroup;
 			children = (
 				90B39FCF28CEB0FC00326D19 /* Main.storyboard */,
+				9DFC4D172900BFB800483288 /* MavenPro-Regular.ttf */,
+				9DFC4D152900BF9500483288 /* Augillion.otf */,
 				9D84B0FE28F9CF9500A04F98 /* ChatCell.swift */,
 				9D84B0FF28F9CF9500A04F98 /* ChatCell.xib */,
 				9D84CDD428FCF0EE00233662 /* BubbleCell.swift */,
@@ -457,11 +463,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				90B39FD628CEB0FC00326D19 /* LaunchScreen.storyboard in Resources */,
+				9DFC4D162900BF9600483288 /* Augillion.otf in Resources */,
 				9D05CF4A28DABD7000AA7E76 /* GoogleService-Info.plist in Resources */,
 				9D84B10128F9CF9500A04F98 /* ChatCell.xib in Resources */,
 				90B39FD328CEB0FC00326D19 /* Assets.xcassets in Resources */,
 				90B39FD128CEB0FC00326D19 /* Main.storyboard in Resources */,
 				9D84CDD728FCF0EE00233662 /* BubbleCell.xib in Resources */,
+				9DFC4D182900BFB800483288 /* MavenPro-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

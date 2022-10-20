@@ -9,21 +9,22 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func goToWebsite(_ sender: UIButton) {
+        if let url = URL(string: "https://linktr.ee/borboletamx") {
+            UIApplication.shared.open(url)
+        }
     }
-    */
-
+    @IBAction func goTopPodcast(_ sender: UIButton) {
+        if let url = URL(string: "https://open.spotify.com/show/0MAY6vcrhDT46Czrs3ZLus?si=88fe1c636f164eea") {
+            UIApplication.shared.open(url)
+        }
+    }
+    
 }

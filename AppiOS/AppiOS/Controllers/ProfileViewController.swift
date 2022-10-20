@@ -12,40 +12,139 @@ import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
 import FirebaseStorage
-import SDWebImage
+import iOSDropDown
 
 class ProfileViewController: UIViewController {
 
-    @IBOutlet weak var userLabel: UILabel!
-    @IBOutlet weak var tview: UIView!
+    @IBOutlet weak var accType: UILabel!
+    @IBOutlet weak var pfp: UIImageView!
+    @IBOutlet weak var phoneNumber: UITextField!
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var editInfo: UIButton!
+    @IBOutlet weak var deleteAcc: UIButton!
+    @IBOutlet weak var pronounsDD: DropDown!
+    
+    var editingEnabled = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        userLabel.text = Auth.auth().currentUser?.email
         // Do any additional setup after loading the view.
         
         let storageRef = Storage.storage().reference()
-        let pfpRef = storageRef.child("profilePics/puser1@gmail.com.png")
+        let docRef = Firestore.firestore().collection("users").document(Auth.auth().currentUser!.email!)
+        let pfpRef = storageRef.child("profilePics/\(Auth.auth().currentUser!.email!).png")
+        
+        self.phoneNumber.borderStyle = .none
+        self.nameField.borderStyle = .none
+        self.pronounsDD.borderStyle = .none
+        
+        editInfo.layer.cornerRadius = 12
+        deleteAcc.layer.cornerRadius = 12
+        
+        pronounsDD.optionArray = ["ella", "el", "elle"]
+        
+        phoneNumber.keyboardType = UIKeyboardType.numberPad
+        
+        self.nameField.isUserInteractionEnabled = false
+        self.phoneNumber.isUserInteractionEnabled = false
+        self.pronounsDD.isUserInteractionEnabled = false
+        
+        docRef.getDocument { document, error in
+            if let e = error {
+                print(e)
+            }
+            else {
+                if let document = document, document.exists {
+                    let userData = document["data"] as! [String: Any]
+                    let userName = userData["name"] as! String
+                    let accountType = userData["accountType"] as! String
+                    let phoneNum = userData["phone"] as! String
+                    
+                    self.accType.text = accountType
+                    self.phoneNumber.text = phoneNum
+                    self.nameField.text = userName
+                }
+            }
+        }
         
         // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
         pfpRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
             if let e = error {
+                self.pfp.image = UIImage(named: "defaultPFP")!
                 print(e)
             } else {
-                self.tview.backgroundColor = UIColor(patternImage: UIImage(data: data!)!)
-                let gradient = CAGradientLayer()
-                gradient.frame = self.tview.bounds
-                let startColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0).cgColor
-                let endColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.6).cgColor
-                gradient.colors = [startColor, endColor]
-                self.tview.layer.insertSublayer(gradient, at: 1)
+                self.pfp.image = UIImage(data: data!)
             }
         }
         
+        pfp.layer.cornerRadius = pfp.frame.height / 2
+        
     }
     
-
+    @IBAction func editProfileInfo(_ sender: UIButton) {
+        // cambiar a modo de vista
+        if editingEnabled {
+            self.editInfo.setTitle("Editar informacion", for: .normal)
+            self.editingEnabled = false
+            
+            self.nameField.isUserInteractionEnabled = false
+            self.phoneNumber.isUserInteractionEnabled = false
+            self.pronounsDD.isUserInteractionEnabled = false
+            
+            self.phoneNumber.borderStyle = .none
+            self.nameField.borderStyle = .none
+            self.pronounsDD.borderStyle = .none
+            
+            let docRef = Firestore.firestore().collection("users").document(Auth.auth().currentUser!.email!)
+            
+            docRef.updateData([
+                "data.name": nameField.text!,
+                "data.phone" : phoneNumber.text!,
+                "data.pronouns" : pronounsDD.text!
+            ])
+        }
+        // cambiar a modo de edicion
+        else {
+            self.editInfo.setTitle("Guardar cambios", for: .normal)
+            self.editingEnabled = true
+            
+            self.nameField.isUserInteractionEnabled = true
+            self.phoneNumber.isUserInteractionEnabled = true
+            self.pronounsDD.isUserInteractionEnabled = true
+            
+            self.phoneNumber.borderStyle = .roundedRect
+            self.nameField.borderStyle = .roundedRect
+            self.pronounsDD.borderStyle = .roundedRect
+        }
+    }
+    
+    @IBAction func logOut(_ sender: UIButton) {
+        try! Auth.auth().signOut()
+        performSegue(withIdentifier: "toLogin", sender: self)
+    }
+    
+    @IBAction func deleteAccount(_ sender: UIButton) {
+        let alert = UIAlertController(
+            title: "Deseas eliminar tu cuenta?",
+            message: "Esta accion no puede ser revertida",
+            preferredStyle: .alert
+        )
+        
+        let cancel = UIAlertAction(title: "Cancelar", style: .destructive)
+        let delete = UIAlertAction(title: "Continuar", style: .default) { _ in
+            let db = Firestore.firestore()
+            let collection = db.collection("users")
+            let document = collection.document((Auth.auth().currentUser?.email)!)
+            document.delete()
+            (Auth.auth().currentUser!).delete()
+            try! Auth.auth().signOut()
+            self.performSegue(withIdentifier: "toLogin", sender: self)
+        }
+        alert.addAction(cancel)
+        alert.addAction(delete)
+        
+        present(alert, animated: true)
+    }
     /*
     // MARK: - Navigation
 

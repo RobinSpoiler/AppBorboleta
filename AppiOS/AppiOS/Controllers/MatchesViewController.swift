@@ -16,19 +16,18 @@ import SDWebImage
 
 class UserCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var nameLabel: UILabel!
-    
     @IBOutlet weak var Img: UIImageView!
-    
     @IBOutlet weak var percentage: UILabel!
-    var userID: String? = nil
     
+    var userID: String? = nil
+    let db = Firestore.firestore()
+    
+    // redireccionar a chat
     @IBAction func ChatButton(_ sender: UIButton) {
         print("Starting chat with: \(userID!)")
     }
     
     @IBOutlet weak var MatchRateRing: CircularProgressView!
-    
-    var hasGradient = false
 }
 
 struct User {
@@ -50,6 +49,101 @@ struct User {
 }
 
 class MatchesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "toChatFromMatches" else { return }
+        guard let cell = sender as? UICollectionViewCell else { return }
+        guard let indexPath = collectionView.indexPath(for: cell) else { return }
+        guard let dest = segue.destination as? ChatViewController else { return }
+        let i = indexPath.row
+        
+        let currentUser = Auth.auth().currentUser!.email!
+        let cellUser = self.users[i]
+        let selectedUser = cellUser.id
+        
+        for activeChat in self.activeChats! {
+            let with = activeChat["with"] as! String
+            let chatID = activeChat["chatID"] as! String
+            
+            // se encontro chat con psicologo seleccionado
+            if selectedUser == with {
+                print(123)
+                print(chatID)
+                print(selectedUser)
+                print(with)
+                let chat = Chat(
+                    chatID: chatID,
+                    pfp: cellUser.pfp,
+                    with: selectedUser,
+                    name: cellUser.name,
+                    message: Message(message: " ", sender: " ", timestamp: " ")
+                )
+                dest.chat = chat
+            }
+        }
+        // se buscaron todos los chats activos y no se encontro el chat con el psicologo
+        // crear chat
+        if dest.chat == nil {
+            let userDocRef = db.collection("users").document((Auth.auth().currentUser?.email!)!)
+            let receiverDocRef = db.collection("users").document(cellUser.id)
+            let chatsRef = db.collection("chats")
+            
+            let chat = Chat(
+                chatID: "\(currentUser)&&\(selectedUser)",
+                pfp: cellUser.pfp,
+                with: selectedUser,
+                name: cellUser.name,
+                message: Message(message: " ", sender: " ", timestamp: " ")
+            )
+            
+            chatsRef.document("\(currentUser)&&\(selectedUser)").setData([
+                "messages": []
+            ])
+            
+            userDocRef.updateData([
+                "activeChats": FieldValue.arrayUnion([
+                    [
+                        "chatID": "\(currentUser)&&\(selectedUser)",
+                        "chatName": cellUser.name,
+                        "with": cellUser.id,
+                        "lastMessage": [
+                            "message": "Hola",
+                            "sender": currentUser,
+                            "time": "20-10-2022 14:12:32"
+                        ]
+                    ]
+                ])
+            ])
+            
+            receiverDocRef.updateData([
+                "activeChats": FieldValue.arrayUnion([
+                    [
+                        "chatID": "\(currentUser)&&\(selectedUser)",
+                        "chatName": cellUser.name,
+                        "with": cellUser.id,
+                        "lastMessage": [
+                            "message": "Hola",
+                            "sender": currentUser,
+                            "time": "20-10-2022 14:12:32"
+                        ]
+                    ]
+                ])
+            ])
+            
+            dest.chat = chat
+            
+            self.activeChats?.append([
+                "chatID": "\(currentUser)&&\(selectedUser)",
+                "chatName": cellUser.name,
+                "with": cellUser.id,
+                "lastMessage": [
+                    "message": "Hola",
+                    "sender": currentUser,
+                    "time": "20-10-2022 14:12:32"
+                ]
+            ])
+        }
+    }
     
     @IBOutlet weak var ActInd: UIActivityIndicatorView!
     let db = Firestore.firestore()
@@ -94,6 +188,7 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     let cellPercentWidth: CGFloat = 0.7
     var centeredCollectionViewFlowLayout: CenteredCollectionViewFlowLayout!
+    var activeChats: [ [String: Any] ]? = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,13 +196,21 @@ class MatchesViewController: UIViewController, UICollectionViewDelegate, UIColle
         let query = db.collection("users").whereField("data.accountType", isEqualTo: "psychologist")
         let group = DispatchGroup()
         
+//        let activeChats: [ [String: Any] ] = []
+        
         self.ActInd.startAnimating()
         
         let userDocRef = db.collection("users").document((Auth.auth().currentUser?.email!)!)
         
+        
         userDocRef.getDocument { document, error in
             if let document = document, document.exists {
                 let userPreferences = document["preferences"] as! [String: Any]
+                self.activeChats = document["activeChats"] as? [ [String: Any] ]
+                
+                if self.activeChats == nil {
+                    userDocRef.updateData(["activeChats" : []])
+                }
 //                print(userPreferences?.count)
                 query.getDocuments(completion: { QuerySnapshot, err in
                     if let e = err {
