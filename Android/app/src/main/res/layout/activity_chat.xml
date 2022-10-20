@@ -6,44 +6,70 @@
     android:layout_height="match_parent"
     tools:context=".ChatActivity">
 
+
     <EditText
         android:id="@+id/messageTextField"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="240dp"
+        android:layout_height="31dp"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="52dp"
+        android:background="@android:color/transparent"
         android:ems="10"
-        android:hint="Escribe Mensaje"
+        android:fontFamily="@font/poppins_medium"
+        android:hint="Escribe un mensaje"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/sendMessageButton"
+        app:layout_constraintHorizontal_bias="0.303"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/sendMessageButton"
+    <ImageButton
+        android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="16dp"
-        android:text="Enviar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/group" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/messagesRecylerView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="393dp"
+        android:layout_height="539dp"
         android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toTopOf="@+id/messageTextField"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/item_message" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="268dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="CHAT"
+        android:textColor="#092D74"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/messagesRecylerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.214" />
+
+    <ImageButton
+        android:id="@+id/sendMessageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/sendbutton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,7 +9,6 @@
         android:id="@+id/myMessageLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:autoSizeTextType="uniform"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -22,7 +21,6 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:autoSizeTextType="uniform"
             android:background="@drawable/vista_esquina_redondeada_yo"
             android:fontFamily="@font/poppins_medium"
             android:gravity="end"
@@ -61,7 +59,6 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="64dp"
             android:layout_marginBottom="8dp"
-            android:autoSizeTextType="uniform"
             android:background="@drawable/vista_esquina_redondeada"
             android:fontFamily="@font/poppins_medium"
             android:padding="8dp"

@@ -5,42 +5,64 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ListOfChatsActivity">
+
     <EditText
         android:id="@+id/newChatText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="251dp"
+        android:layout_height="44dp"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="116dp"
         android:ems="10"
-        android:hint="Email"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toStartOf="@+id/newChatButton"
 
+        app:layout_constraintHorizontal_bias="0.395"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/newChatButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="Chat"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#31446D"
+        android:text="@string/chat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listChatsRecyclerView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="409dp"
+        android:layout_height="524dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
+        android:background="#E0E0E0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/newChatButton"
+        app:layout_constraintVertical_bias="0.634"
         tools:listitem="@layout/item_chat" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="124dp"
+        android:layout_height="43dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/textview_title_chats"
+        android:textColor="#002B69"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/newChatText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.412" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

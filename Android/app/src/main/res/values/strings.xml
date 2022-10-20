@@ -103,5 +103,10 @@ Mi ipsum faucibus vitae aliquet nec ullamcorper. Erat imperdiet sed euismod nisi
     <string name="homeicon"></string>
     <string name="leonardo">Leonardo</string>
     <string name="textview">TextView</string>
+    <string name="email">Email</string>
+    <string name="chat">Chat</string>
+    <string name="TextView_chat">TextView</string>
+    <string name="chats">Chats</string>
+    <string name="textview_title_chats">CHATS</string>
 
 </resources>
