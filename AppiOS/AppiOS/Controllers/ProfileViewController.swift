@@ -12,21 +12,60 @@ import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
 import FirebaseStorage
-import SDWebImage
+import iOSDropDown
 
 class ProfileViewController: UIViewController {
 
-    @IBOutlet weak var userLabel: UILabel!
+    @IBOutlet weak var accType: UILabel!
     @IBOutlet weak var pfp: UIImageView!
+    @IBOutlet weak var phoneNumber: UITextField!
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var editInfo: UIButton!
+    @IBOutlet weak var deleteAcc: UIButton!
+    @IBOutlet weak var pronounsDD: DropDown!
+    
+    var editingEnabled = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        userLabel.text = Auth.auth().currentUser?.email
         // Do any additional setup after loading the view.
         
         let storageRef = Storage.storage().reference()
+        let docRef = Firestore.firestore().collection("users").document(Auth.auth().currentUser!.email!)
         let pfpRef = storageRef.child("profilePics/\(Auth.auth().currentUser!.email!).png")
+        
+        self.phoneNumber.borderStyle = .none
+        self.nameField.borderStyle = .none
+        self.pronounsDD.borderStyle = .none
+        
+        editInfo.layer.cornerRadius = 12
+        deleteAcc.layer.cornerRadius = 12
+        
+        pronounsDD.optionArray = ["ella", "el", "elle"]
+        
+        phoneNumber.keyboardType = UIKeyboardType.numberPad
+        
+        self.nameField.isUserInteractionEnabled = false
+        self.phoneNumber.isUserInteractionEnabled = false
+        self.pronounsDD.isUserInteractionEnabled = false
+        
+        docRef.getDocument { document, error in
+            if let e = error {
+                print(e)
+            }
+            else {
+                if let document = document, document.exists {
+                    let userData = document["data"] as! [String: Any]
+                    let userName = userData["name"] as! String
+                    let accountType = userData["accountType"] as! String
+                    let phoneNum = userData["phone"] as! String
+                    
+                    self.accType.text = accountType
+                    self.phoneNumber.text = phoneNum
+                    self.nameField.text = userName
+                }
+            }
+        }
         
         // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
         pfpRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
@@ -40,6 +79,43 @@ class ProfileViewController: UIViewController {
         
         pfp.layer.cornerRadius = pfp.frame.height / 2
         
+    }
+    
+    @IBAction func editProfileInfo(_ sender: UIButton) {
+        // cambiar a modo de vista
+        if editingEnabled {
+            self.editInfo.setTitle("Editar informacion", for: .normal)
+            self.editingEnabled = false
+            
+            self.nameField.isUserInteractionEnabled = false
+            self.phoneNumber.isUserInteractionEnabled = false
+            self.pronounsDD.isUserInteractionEnabled = false
+            
+            self.phoneNumber.borderStyle = .none
+            self.nameField.borderStyle = .none
+            self.pronounsDD.borderStyle = .none
+            
+            let docRef = Firestore.firestore().collection("users").document(Auth.auth().currentUser!.email!)
+            
+            docRef.updateData([
+                "data.name": nameField.text!,
+                "data.phone" : phoneNumber.text!,
+                "data.pronouns" : pronounsDD.text!
+            ])
+        }
+        // cambiar a modo de edicion
+        else {
+            self.editInfo.setTitle("Guardar cambios", for: .normal)
+            self.editingEnabled = true
+            
+            self.nameField.isUserInteractionEnabled = true
+            self.phoneNumber.isUserInteractionEnabled = true
+            self.pronounsDD.isUserInteractionEnabled = true
+            
+            self.phoneNumber.borderStyle = .roundedRect
+            self.nameField.borderStyle = .roundedRect
+            self.pronounsDD.borderStyle = .roundedRect
+        }
     }
     
     @IBAction func logOut(_ sender: UIButton) {
